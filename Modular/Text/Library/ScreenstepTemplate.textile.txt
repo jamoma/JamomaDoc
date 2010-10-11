@@ -1,0 +1,75 @@
+[-- START CONFIGURATION --]
+
+web safe= true
+web safe delimiter=_
+text style= textile
+text encoding= utf8
+newline = unix
+image format=png
+step image position = bottom
+media folder= images/@LESSON_NAME
+max image width on side=
+max image height on side=
+max image width when centered=
+max image height when centered=
+
+
+[-- END CONFIGURATION --]
+
+[-- START CONTENT --]
+
+<!--alias to use instead of the whole url -->
+[jamoma]http://jamoma.org
+[forum]http://jamoma.org/forum.html
+[papers]http://jamoma.org.papers.html
+[download]http://jamoma.org/download.html
+[redmine]http://redmine.jamoma.org/projects
+[blog]http://groupware.bek.no/groups/jamoma/blog/
+[gh]http://github.com/jamoma
+[pledgie]http://pledgie.com/campaigns/5615
+
+[tap]http://blog.74objects.com/
+[tl]http://www.trondlossius.no/
+[arj]http://www.arj.no/
+[pb]http://zkrx.org/
+
+[c74]http://www.cycling74.com
+[bek]http://bek.no
+
+h3. %LessonTitle%
+
+%LESSON_DESCRIPTION%
+
+%LESSON_STEPS%
+[-- END CONTENT --]
+
+
+[-- START LESSON DESCRIPTION --]
+%LessonDescription%	
+[-- END LESSON DESCRIPTION --]
+
+[-- START STEP --]
+%STEP_TITLE%
+%STEP_INSTRUCTIONS%
+%MEDIA:IMAGE%
+
+[-- END STEP --]
+
+
+[-- START STEP TITLE --]
+h4(LessonTitle). <span class="StepNumber">%StepNumber%</span>%Title%
+
+[-- END STEP TITLE --]
+
+
+[-- START STEP INSTRUCTIONS --]
+%Instructions%
+[-- END STEP INSTRUCTIONS --]
+
+[-- START MEDIA:TEXT --]
+%text%
+[-- END MEDIA:TEXT --]
+
+[-- START MEDIA:IMAGE --]
+!(lightbox)%source%!
+[-- END MEDIA:IMAGE --]
