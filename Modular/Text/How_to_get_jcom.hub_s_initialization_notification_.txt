@@ -1,0 +1,36 @@
+
+<!--alias to use instead of the whole url -->
+[jamoma]http://jamoma.org
+[forum]http://jamoma.org/forum.html
+[papers]http://jamoma.org.papers.html
+[download]http://jamoma.org/download.html
+[redmine]http://redmine.jamoma.org/projects
+[blog]http://groupware.bek.no/groups/jamoma/blog/
+[gh]http://github.com/jamoma
+[pledgie]http://pledgie.com/campaigns/5615
+
+[tap]http://blog.74objects.com/
+[tl]http://www.trondlossius.no/
+[arj]http://www.arj.no/
+[pb]http://zkrx.org/
+
+[c74]http://www.cycling74.com
+[bek]http://bek.no
+
+h3. How to get jcom.hub's initialization notification ?
+
+There are some situations where you may want to know when your modules are created, when a specific module is properly initialized for example. Thanks to Jamoma framework remote communication possibilities, a number of events notifications can be listened to or queried.	
+
+h4(LessonTitle). <span class="StepNumber">1</span>Getting when a module is initialized
+
+Whereas Max's %(maxobj)loadbang% object can be used to know when a patch is properly loaded, it is of no use when trying to get when a Jamoma module is properly initialized. Indeed, for each module, a number of operations, such as initialization of jcom.parameters, loading of preset, etc. has to be done by "(jamobj)jcom.hub":components/hub.html.  Thus Jamoma has a specific object somewhat similar to %(maxobj)loadbang% that comes to help.
+
+"jcom.init":components/init.html  works like a loadbang but is local to a module. That is, it connects to "(jamobj)jcom.hub":components/hub.html  found in the same abstraction and outputs a @'bang'@ when the module is properly initialized. Note that "(jamobj)jcom.init":components/init.html  can be placed in any sub-patcher as long as it does not contain another "(jamobj)jcom.hub":components/hub.html 
+
+!(lightbox)images/jcom.hub_initialization_notification_1.png!
+
+What if you want to know from a module that another module is properly initialized. For example, you may need to know that "jmod.mySamplePlayer" is properly initialized before "jmod.myStepSequencer" starts playing its control sequence. Thanks to Jamoma remote communication possibilities, such a problem can be easily dealt using "(jamobj)jcom.initialized":components/initialized.html . //REPHRASE + DETAILS //
+
+
+!(lightbox)images/jcom.hub_initialization_notification_2.png!
+
