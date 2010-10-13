@@ -1,0 +1,96 @@
+
+<!--alias to use instead of the whole url -->
+[jamoma]http://jamoma.org
+[forum]http://jamoma.org/forum.html
+[papers]http://jamoma.org.papers.html
+[download]http://jamoma.org/download.html
+[redmine]http://redmine.jamoma.org/projects
+[blog]http://groupware.bek.no/groups/jamoma/blog/
+[gh]http://github.com/jamoma
+[pledgie]http://pledgie.com/campaigns/5615
+
+[tap]http://blog.74objects.com/
+[tl]http://www.trondlossius.no/
+[arj]http://www.arj.no/
+[pb]http://zkrx.org/
+
+[c74]http://www.cycling74.com
+[bek]http://bek.no
+
+h3. Hosting Jamoma modules at Github
+
+
+
+
+So you developed some fabulous modules that you would like to put under "Git":http://git-scm.com/ "version control":http://en.wikipedia.org/wiki/Revision_control, whether it is to keep history of all changes you made, to have a backup of your files or just because you feel it is fun. Here for the sake of the example, we will look into hosting your sources to "Github":http://www.github.com where all Jamoma source reside. However, following these steps will also gets you to the tracks for hosting your work at other hosting site or on your personnal server.
+
+
+
+
+!(lightbox)images/add_repo_to_Github.png!
+
+h4(LessonTitle). <span class="StepNumber">1</span>Create a repository at Github
+
+Once logged in to Github with your personnal account, go to the @"Dashboard":https://github.com/dashboard/yours@ page %(seq)1% and click the @"New Repository":http://github.com/repositories/new@ button %(seq)2%.
+
+
+
+Now you need to set up  the name of your project %(seq)1%, a short description %(seq)2% and optionally a url %(seq)3% leading to your site. All these informations will be displayed on your project page. When all fields are completed, click the @Create Repository@.
+!(lightbox)images/Create_a_repository_at_Github.png!
+
+
+When done, Github should get you to your project page. From here, copy your project Git url (i.e @git@github.com:username/yourProject.git@) that you will use to clone the project on your  computer.
+!(lightbox)images/media_1286564413532.png!
+
+
+
+!(lightbox)images/media_1286564418460.png!
+
+h4(LessonTitle). <span class="StepNumber">2</span>Put your project under Git control
+
+If you have not yet done so, create a folder on your computer where you want to store your project. Here we create a folder named @myUserLib@ on the Desktop.
+
+
+
+
+!(lightbox)images/media_1286564424750.png!
+
+
+Open Terminal.app (which resides in Applications/Utilities/, under OSX), then from the command line, type the following to go to that folder :
+@cd /path/to/myUserLib@ (where "/path/to/myUserLib" is the path leading to the folder where you created your project).[1] 
+
+fn1. If you are not comfortable with the command line, note that under OSX, you can type @cd @ and drag the folder on the Terminal window.
+!(lightbox)images/media_1286564433822.png!
+
+
+Now you need to set your project folder as a Git local repository. To do so, type @git init@.
+!(lightbox)images/media_1286564439994.png!
+
+
+Switch to the Finder or File Explorer and drag and copy your project files in your Git repository. Here, we copy the folder @myFabulousModule@ and its contained files (Max patch, .html documentation and .xml preset file).
+!(lightbox)images/media_1286564445361.png!
+
+
+Although we copied our files into the folder, we need to specify Git to "add":http://www.kernel.org/pub/software/scm/git/docs/git-add.html these files under revision control. We do this be running the @git add@ command. The @--all@ option as shown in the illustration below, allows to add all files contained in the @UserLib@ folder.
+!(lightbox)images/media_1286564452991.png!
+
+
+Now we can store the current content in a new "commit":http://www.kernel.org/pub/software/scm/git/docs/git-commit.html, using the command @git commit@. We will also add a log message using the @-m@ option follow by a message under quotes to describe the changes.
+!(lightbox)images/media_1286564466946.png!
+
+
+We now need to add a "remote":http://www.kernel.org/pub/software/scm/git/docs/git-remote.html for the repository at Github. Run the following command to do so:
+
+@git remote add origin git@github:username/yourProject.git@
+!(lightbox)images/media_1286564475848.png!
+
+
+Finally, we can now "update":http://www.kernel.org/pub/software/scm/git/docs/git-push.html the remote repository with the changes:
+
+@git push origin HEAD@
+!(lightbox)images/media_1286564481585.png!
+
+
+
+!(lightbox)images/media_1286564489047.png!
+
