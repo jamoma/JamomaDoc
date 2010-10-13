@@ -1,0 +1,16 @@
+j + tab -> Jamoma 
+
+Max shortcuts:
+jc + tab -> "(jamobj)jcom.{var}":components/{var}.html 
+jm + tab -> "(jamobj)jmod.{var}":modules/{var}.html 
+
+Team:
+tap + tab -> "Timothy Place":http://www.74objects.com/  with or without url
+same for tl, to, pb, np, jln, arj
+
+Site:
+www + tab -> "{var(page name)}":http://jamoma.org/{var(page name)}.html page 
+
+Picture:
+lightbox + tab -> !(lightbox)http://site.com/image(Title)!
+thumb + tab -> !(lightbox-thb)http://site.com/image(Title)!
