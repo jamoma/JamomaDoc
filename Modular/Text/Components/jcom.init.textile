@@ -1,0 +1,54 @@
+
+<!--alias to use instead of the whole url
+[jamoma]http://jamoma.org
+[forum]http://jamoma.org/forum.html
+[papers]http://jamoma.org.papers.html
+[download]http://jamoma.org/download.html
+[redmine]http://redmine.jamoma.org/projects
+[blog]http://groupware.bek.no/groups/jamoma/blog/
+[gh]http://github.com/jamoma
+[pledgie]http://pledgie.com/campaigns/5615
+
+[tap]http://blog.74objects.com/
+[tl]http://www.trondlossius.no/
+[arj]http://www.arj.no/
+[pb]http://zkrx.org/
+
+[c74]http://www.cycling74.com
+[bek]http://bek.no
+
+You can delete the aliases above once the text is compiled as html -->
+
+h2(LessonTitle). jcom.init
+
+p. Utility for initialization of module
+
+h3. Description
+
+p. "jcom.init":components/init.html is a kind of loadbang that outputs a 'bang' when a module is initialized. It connects to jmod.hub in order to link to all other instances of jmod.init within the same module. It also makes jmod.hub reset all parameters to the default preset.
+
+h3. Outputs
+
+|_.Output number | _.Description |
+| 1st output | "jcom.init":components/init.html outputs a 'bang' when the module containingit is initialized |
+
+h3. Arguments
+
+|_.Argument name | _.Type | _.Description |
+| name | string | Set a name for "jcom.init":components/init.html  |
+
+h3. Attributes
+
+|_.Attribute name | _.Value type | _.Description |
+| @name | string | Set a name for "jcom.init":components/init.html |
+
+h3. Messages
+
+|_.Message name | _.Argument type | _.Description |
+| bang | generic | Make "jcom.hub":components/hub.html reset all parameters to the default preset |
+| name/get | generic | Make "jcom.hub":components/hub.html to output its name out of its right-most outlet |
+
+h3(seealso). See also
+
+#"jmod.initialized":modules/initialized.html 
+#"jcom.hub":components/hub.html 
