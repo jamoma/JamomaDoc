@@ -1,0 +1,58 @@
+To be overwritten
+
+----------------------------
+
+h3. my Header
+
+RedCloth output:
+
+<h3>my Header</h3> 
+
+Desired output:
+
+<h3><a name=my_Header>my Header</a></h3>
+
+This would allow pointing to other tutorials, etc.
+
+----------------------------
+
+!(class)my_image.png(titre)!:http://jdfjkfdgkhbc.org
+
+RedCloth output:
+
+<img src="my_image.png" alt="" />
+
+Desired output:
+
+<a href="images/my_image.png" class="image" target="_blank" rel="group1"><img src="images/my_image.png" alt="my image" title="my image"/></a>
+
+this way, image links will be correctly set up for the lightbox(-like) plugin used in the html.
+
+Optionally, the alt+title tags could be still overwritten if defined: !my_image.png(my title)!
+
+----------------------------
+
+!(thumb)my_image.png!
+
+RedCloth output:
+
+<img class="thumb"src="my_image.png" alt="" />
+
+Desired output:
+
+<a href="images/my_image-thb.png" class="image" target="_blank" rel="group1"><img src="images/my_image.png" alt="my image" title="my image"/></a>
+
+Assuming a convention to end thumbnail pictures with "-thb"
+
+----------------------------
+
+!(nozoom)my_image.png! 
+
+RedCloth output:
+
+<img class="nozoom"src="my_image.png" alt="" />
+
+
+could stand for the default conversion: <img src="my_image.png"/>
+
+----------------------------

@@ -17,46 +17,34 @@
 [c74]http://www.cycling74.com
 [bek]http://bek.no
 
-h3. Installing Jamoma Modular stable version
+h2(LessonTitle). Installing Jamoma Modular stable version
 
-
-
-h4(LessonTitle). <span class="StepNumber">1</span>Downloading Jamoma installer
+h3(StepTitle). <span class="StepNumber">1</span>Downloading Jamoma installer
 
 Installer can be downloaded from "Jamoma web site":jamoma. Please visit jamoma.org %(seq)1% and follow the "download":http://jamoma.org/download.html link %(seq)2%.
-!(lightbox)images/download_installer_1.png!
+!images/download_installer_1.png!
 
+From the %(samp)download% menu, follow the %(samp)Jamoma Modular% link %(seq)3%, then download the desired OS version by clicking on the appropriate link %(seq)4%.
+!images/download_installer_2.png!
 
-From the @download@ menu, follow the @Jamoma Modular@ link %(seq)3%, then download the desired OS version by clicking on the appropriate link %(seq)4%.
-!(lightbox)images/download_installer_2.png!
+h3(StepTitle). <span class="StepNumber">2</span>Running the installer package
 
-h4(LessonTitle). <span class="StepNumber">2</span>Running the installer package
+In your download folder, find the archive (.dmg on Mac, .zip on Windows) and double-click to open it. Once having read the %(samp)License.rtf% and %(samp)ReadMe.rtf% files, launch Jamoma Modular installer by double-clicking %(samp)Jamoma-x.x.x.pkg% on Mac, or %(samp)Jamoma.msi% on Windows.
 
-In your download folder (by default), find the archive (.dmg on Mac, .zip on Windows) and double-click to open it. Once having read the @License.rtf@ and @ReadMe.rtf@ files, launch Jamoma Modular installer by double-clicking @Jamoma-x.x.x.pkg@ on Mac, or @Jamoma.msi@ on Windows.
+Follow the various steps proposed by the installer until the installation is completed. When done, Jamoma Modular should be correctly installed on your computer.
+!images/installer_1.png!
+!images/installer_2.png!
 
+bq. For some reasons (i.e. installing an older version of Jamoma Modular), if you ever needed to uninstall Jamoma Modular, you will find in the disk image a shell script to automate the process of removing all installed Jamoma files.
 
+h3(StepTitle). <span class="StepNumber">3</span>Setting up Max 5 preferences
 
-Follow the various steps proposed by the installer until the installation is completed. When done, Jamoma Modular should be correctly installed on your computer.[1]
-!(lightbox)images/installer_1.png!
+Jamoma modules are based on UI objects which default appearance need to be set. To do so, launch Max 5 and go to the %(samp)Object Defaults% window, found in the %(samp)Options% menu.
+!images/Max_obj_setup_2.png!
 
-
-
-!(lightbox)images/installer_2.png!
-
-
-fn1. For some reasons (i.e. installing an older version of Jamoma Modular), if you ever needed to uninstall Jamoma Modular, you will find in the disk image a shell script to automate the process of removing all installed Jamoma files.
-
-
-h4(LessonTitle). <span class="StepNumber">3</span>Setting up Max 5 preferences
-
-Jamoma modules are based on UI objects which default appearance need to be set. To do so, launch Max 5 and go to the @Object Defaults@ window, found in the @Options@ menu.
-!(lightbox)images/Max_obj_setup_2.png!
-
-
-In the @Object Defaults@ window, click the @Load Settings@ button in the lower-left corner of the window %(seq)1%. Then, from the popup menu, select @JamomaMax@ %(seq)2% so all Jamoma modules will be displayed as expected.
-!(lightbox)images/Max_obj_setup_1.png!
-
+In the %(samp)Object Defaults% window, click the %(samp)Load Settings% button in the lower-left corner of the window %(seq)1%. Then, from the popup menu, select %(samp)JamomaMax% %(seq)2% so all Jamoma modules will be displayed as expected.
+!images/Max_obj_setup_1.png!
 
 Max is now properly set up for Jamoma. Have fun exploring the various provided modules "and":Index_of_modules.html examples !
-!(lightbox)images/Max_obj_setup_3.png!
+!images/Max_obj_setup_3.png!
 
