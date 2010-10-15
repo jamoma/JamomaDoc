@@ -1,0 +1,34 @@
+
+<!--alias to use instead of the whole url
+[jamoma]http://jamoma.org
+[forum]http://jamoma.org/forum.html
+[papers]http://jamoma.org.papers.html
+[download]http://jamoma.org/download.html
+[redmine]http://redmine.jamoma.org/projects
+[blog]http://groupware.bek.no/groups/jamoma/blog/
+[gh]http://github.com/jamoma
+[pledgie]http://pledgie.com/campaigns/5615
+
+[tap]http://blog.74objects.com/
+[tl]http://www.trondlossius.no/
+[arj]http://www.arj.no/
+[pb]http://zkrx.org/
+
+[c74]http://www.cycling74.com
+[bek]http://bek.no
+
+You can delete the aliases above once the text is compiled as html -->
+
+h2(LessonTitle). jcmo.whatever
+
+p(description). Object description
+
+h3(StepTitle). %(StepNumber)1% Your title header
+
+p. text bloc
+
+bc. code bloc
+
+bq. bloc quote
+
+h3(StepTitle). %(StepNumber)2% Your second title header

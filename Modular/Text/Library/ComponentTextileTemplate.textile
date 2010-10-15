@@ -1,0 +1,62 @@
+
+<!--alias to use instead of the whole url
+[jamoma]http://jamoma.org
+[forum]http://jamoma.org/forum.html
+[papers]http://jamoma.org.papers.html
+[download]http://jamoma.org/download.html
+[redmine]http://redmine.jamoma.org/projects
+[blog]http://groupware.bek.no/groups/jamoma/blog/
+[gh]http://github.com/jamoma
+[pledgie]http://pledgie.com/campaigns/5615
+
+[tap]http://blog.74objects.com/
+[tl]http://www.trondlossius.no/
+[arj]http://www.arj.no/
+[pb]http://zkrx.org/
+
+[c74]http://www.cycling74.com
+[bek]http://bek.no
+
+You can delete the aliases above once the text is compiled as html -->
+
+h2(LessonTitle). jcom.whatever
+
+p. Short object description
+
+h3. Description
+
+p. Some info about the external
+
+h3. Inputs
+
+|_.Input number | _.Description |
+| 1st input | This input is used for blablbla |
+| 2d input | This input is used for blablbla |
+| 3d input | This input is used for blablbla |
+
+h3. Outputs
+
+|_.Output number | _.Description |
+| 1st output | This output is used for blablbla |
+| 2d output | This output is used for blablbla |
+| 3d output | This output is used for blablbla |
+
+h3. Arguments
+
+|_.Argument name | _.Type | _.Description |
+| foo | {integer/decimal/boolean/string/array/generic} | Description |
+
+h3. Attributes
+
+|_.Attribute name | _.Type | _.Description |
+| foo | {integer/decimal/boolean/string/array/generic} | Description |
+
+h3. Messages
+
+|_.Message name | _.Type | _.Description |
+| foo/bar | {integer/decimal/boolean/string/array/generic} | Description |
+
+h3(seealso). See also
+
+#"jcom.object":components/object.html
+#"jcom.object2":components/object2.html 
