@@ -21,7 +21,7 @@ h2(LessonTitle). How to get jcom.hub's initialization notification ?
 
 There are some situations where you may want to know when your modules are created, when a specific module is properly initialized for example. Thanks to Jamoma framework remote communication possibilities, a number of events notifications can be listened to or queried.	
 
-h3(StepTitle). <span class="StepNumber">1</span>Getting when a module is initialized
+h3(StepTitle). %(StepNumber)1% Getting when a module is initialized
 
 Whereas Max's %(maxobj)loadbang% object can be used to know when a patch is properly loaded, it is of no use when trying to get when a Jamoma module is properly initialized. Indeed, for each module, a number of operations, such as initialization of jcom.parameters, loading of preset, etc. has to be done by "(jamobj)jcom.hub":components/hub.html.  Thus Jamoma has a specific object somewhat similar to %(maxobj)loadbang% that comes to help.
 

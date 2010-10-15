@@ -21,7 +21,7 @@ h2(LessonTitle). Create new module in a patch
 
 Jamoma Modular can really make the design of a Max interactive application easier. Start by creating a module in a patch using one of the following options.
 
-h3(StepTitle). <span class="StepNumber">1</span>Using Jamoma modules as abstractions
+h3(StepTitle). %(StepNumber)1% Using Jamoma modules as abstractions
 
 Modules can be created as "abstractions":http://www.cycling74.com/docs/max5/vignettes/core/abstractions.html, just like any regular Max patch saved to disk. In Max, open a blank patcher window and double-click in the window or press the %(kbd)n% key to create a new object.
 
@@ -43,7 +43,7 @@ bq. Assuming you properly set up Max, note that you can create an object box con
 % + %(kbd)m% key combo.
 !images/new_obj_4.png!
 
-h3(StepTitle). <span class="StepNumber">2</span>Using module as bpatcher
+h3(StepTitle). %(StepNumber)2% Using module as bpatcher
 
 If you prefer to have the GUI displayed in the main patch, Jamoma module are ready to be used within "bpatchers":http://www.cycling74.com/docs/max5/refpages/max-ref/bpatcher.html. Create a bpatcher in your Max window.
 
@@ -60,7 +60,7 @@ bq. Jamoma also have some shortcuts to ease the creation of modules as bpatchers
 % + %(kbd)d% or %(kbd)SHIFT% + %(kbd)b% to create a bpatcher box with containers for module name and arguments.
 !images/new_bpatcher_4.png!
 
-h3(StepTitle). <span class="StepNumber">3</span>Using jcom.layout
+h3(StepTitle). %(StepNumber)3% Using jcom.layout
 
 Now that you know how to create an initial module, here is a special module which can come handy to build a whole patch. First, as explained previously, create a bpatcher containing Jamoma module named "jmod.layout":components/jmod.layout.html %(seq)1%. Once the module is initialized, click the top-right %(samp)EDIT% button %(seq)2%.
 
@@ -85,7 +85,7 @@ Once a module selected, you may optionally set a name to the module using the te
 You can insert as many modules as you like. When all your modules are created, you can close the window using the %(samp)Done% button %(seq)3%.
 !images/using_jcom.layout_4.png!
 
-h3(StepTitle). <span class="StepNumber">4</span>Summary
+h3(StepTitle). %(StepNumber)4% Summary
 
 - Modules can be created inside regular object boxes or as bpatchers
 - Modules can be created using %(kbd)SHIFT% + %(kbd)m%, %(kbd)SHIFT% + %(kbd)d% or %(kbd)SHIFT% + %(kbd)b%

@@ -23,7 +23,7 @@ So you developed some fabulous modules that you would like to put under "Git":ht
 
 !images/add_repo_to_Github.png!
 
-h3(StepTitle). <span class="StepNumber">1</span>Create a repository at Github
+h3(StepTitle). %(StepNumber)1% Create a repository at Github
 
 Once logged in to Github with your personnal account, go to the %(samp)"Dashboard":https://github.com/dashboard/yours% page %(seq)1% and click the %(samp)"New Repository":http://github.com/repositories/new% button %(seq)2%.
 
@@ -35,7 +35,7 @@ When done, Github should get you to your project page. From here, copy your proj
 
 !images/media_1286564418460.png!
 
-h3(StepTitle). <span class="StepNumber">2</span>Put your project under Git control
+h3(StepTitle). %(StepNumber)2% Put your project under Git control
 
 If you have not yet done so, create a folder on your computer where you want to store your project. Here we create a folder named _myUserLib_ on the Desktop.
 
