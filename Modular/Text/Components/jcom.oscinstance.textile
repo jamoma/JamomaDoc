@@ -1,0 +1,59 @@
+
+<!--alias to use instead of the whole url
+[jamoma]http://jamoma.org
+[forum]http://jamoma.org/forum.html
+[papers]http://jamoma.org.papers.html
+[download]http://jamoma.org/download.html
+[redmine]http://redmine.jamoma.org/projects
+[blog]http://groupware.bek.no/groups/jamoma/blog/
+[gh]http://github.com/jamoma
+[pledgie]http://pledgie.com/campaigns/5615
+
+[tap]http://blog.74objects.com/
+[tl]http://www.trondlossius.no/
+[arj]http://www.arj.no/
+[pb]http://zkrx.org/
+
+[c74]http://www.cycling74.com
+[bek]http://bek.no
+
+You can delete the aliases above once the text is compiled as html -->
+
+h2(LessonTitle). jcom.oscinstance
+
+p. Retrieve instance number or ID from incomming OSC messages.
+
+h3. Description
+
+p. "jcom.oscinstance":components/oscinstance.html retrieves instance number or ID from incomming OSC messages.
+
+h3. Inputs
+
+|_.Input number |_.Description |
+| 1st input | Incoming OSC messages |
+
+h3. Outputs
+
+|_.Output number |_.Description |
+| 1st output | OSC instance number or ID |
+| 2d output | The arguments of the incomming OSC message |
+| 3d output | dumpout / overflow from non-matching input |
+
+h3. Arguments
+
+This object does not use any argument.
+
+h3. Attributes
+
+This object does not use any attribute.
+
+h3. Messages
+
+|_.Message name |_.Type |_.Description |
+| OSC message | string | Any OSC message containing an instance identifier (i.e a dot followed by an integer or symbol) in its first branch will be split amongst the first 3 according outlets. |
+| anything | {integer|decimal|boolean|string|array|generic} | Messages composed of an integer, a decimal, a string not formated as an OSC message or any OSC address not containing an instance identifier in its first branch is passed to the rightmost output. |
+
+h3(seealso). See also
+
+# "jcom.oscroute~":components/oscroute~.html _Route of open sound control messages_
+# "jcom.pass":components/pass.html _Direct messages and numbers to different outlets_
