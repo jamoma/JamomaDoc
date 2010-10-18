@@ -22,9 +22,11 @@ h2(LessonTitle). Installing Jamoma Modular stable version
 h3(StepTitle). %(StepNumber)1% Downloading Jamoma installer
 
 Installer can be downloaded from "Jamoma web site":jamoma. Please visit jamoma.org %(seq)1% and follow the "download":http://jamoma.org/download.html link %(seq)2%.
+
 !images/download_installer_1.png!
 
 From the %(samp)download% menu, follow the %(samp)Jamoma Modular% link %(seq)3%, then download the desired OS version by clicking on the appropriate link %(seq)4%.
+
 !images/download_installer_2.png!
 
 h3(StepTitle). %(StepNumber)2% Running the installer package
@@ -32,7 +34,9 @@ h3(StepTitle). %(StepNumber)2% Running the installer package
 In your download folder, find the archive (.dmg on Mac, .zip on Windows) and double-click to open it. Once having read the %(samp)License.rtf% and %(samp)ReadMe.rtf% files, launch Jamoma Modular installer by double-clicking %(samp)Jamoma-x.x.x.pkg% on Mac, or %(samp)Jamoma.msi% on Windows.
 
 Follow the various steps proposed by the installer until the installation is completed. When done, Jamoma Modular should be correctly installed on your computer.
+
 !images/installer_1.png!
+
 !images/installer_2.png!
 
 bq. For some reasons (i.e. installing an older version of Jamoma Modular), if you ever needed to uninstall Jamoma Modular, you will find in the disk image a shell script to automate the process of removing all installed Jamoma files.
@@ -40,11 +44,14 @@ bq. For some reasons (i.e. installing an older version of Jamoma Modular), if yo
 h3(StepTitle). %(StepNumber)3% Setting up Max 5 preferences
 
 Jamoma modules are based on UI objects which default appearance need to be set. To do so, launch Max 5 and go to the %(samp)Object Defaults% window, found in the %(samp)Options% menu.
+
 !images/Max_obj_setup_2.png!
 
 In the %(samp)Object Defaults% window, click the %(samp)Load Settings% button in the lower-left corner of the window %(seq)1%. Then, from the popup menu, select %(samp)JamomaMax% %(seq)2% so all Jamoma modules will be displayed as expected.
+
 !images/Max_obj_setup_1.png!
 
 Max is now properly set up for Jamoma. Have fun exploring the various provided modules "and":Index_of_modules.html examples !
+
 !images/Max_obj_setup_3.png!
 

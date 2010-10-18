@@ -29,26 +29,26 @@ p. "jcom.init":components/init.html is a kind of loadbang that outputs a 'bang' 
 
 h3. Outputs
 
-|_.Output number | _.Description |
+|_.Output number |_.Description |
 | 1st output | "jcom.init":components/init.html outputs a 'bang' when the module containingit is initialized |
 
 h3. Arguments
 
-|_.Argument name | _.Type | _.Description |
+|_.Argument name |_.Type |_.Description |
 | name | string | Set a name for "jcom.init":components/init.html  |
 
 h3. Attributes
 
-|_.Attribute name | _.Value type | _.Description |
+|_.Attribute name |_.Value type |_.Description |
 | @name | string | Set a name for "jcom.init":components/init.html |
 
 h3. Messages
 
-|_.Message name | _.Argument type | _.Description |
+|_.Message name |_.Argument type |_.Description |
 | bang | generic | Make "jcom.hub":components/hub.html reset all parameters to the default preset |
 | name/get | generic | Make "jcom.hub":components/hub.html to output its name out of its right-most outlet |
 
 h3(seealso). See also
 
-#"jmod.initialized":modules/initialized.html 
-#"jcom.hub":components/hub.html 
+* "jmod.initialized":modules/initialized.html 
+* "jcom.hub":components/hub.html 

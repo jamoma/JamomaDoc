@@ -31,46 +31,51 @@ Now you need to set up  the name of your project %(seq)1%, a short description %
 !images/Create_a_repository_at_Github.png!
 
 When done, Github should get you to your project page. From here, copy your project Git url (i.e @git@github.com:username/yourProject.git@) that you will use to clone the project on your computer.
-!images/media_1286564413532.png!
+!images/Create_a_repository_at_Github_2_.png!
 
-!images/media_1286564418460.png!
+!images/Create_a_repository_at_Github_3_.png!
 
 h3(StepTitle). %(StepNumber)2% Put your project under Git control
 
 If you have not yet done so, create a folder on your computer where you want to store your project. Here we create a folder named _myUserLib_ on the Desktop.
 
-!images/media_1286564424750.png!
+!images/Put_project_under_Git_control_1.png!
 
+!images/Put_project_under_Git_control_2.png!
 
 Open Terminal.app (which resides in Applications/Utilities/, under OSX), then from the command line, type the following to go to that folder :
 @cd /path/to/myUserLib@ (where "/path/to/myUserLib" is the path leading to the folder where you created your project).
 
+!images/Put_project_under_Git_control_3.png!
+
 bq. If you are not comfortable with the command line, note that under OSX, you can type @cd @ and drag the folder on the Terminal window.
-!images/media_1286564433822.png!
 
 Now you need to set your project folder as a Git local repository. To do so, type :
 
-code. git init
+bc. git init
 
-!images/media_1286564439994.png!
+!images/Put_project_under_Git_control_4.png!
 
 Switch to the Finder or File Explorer and drag and copy your project files in your Git repository. Here, we copy the folder _myFabulousModule_ and its contained files (Max patch, .html documentation and .xml preset file).
-!images/media_1286564445361.png!
+
+!images/Put_project_under_Git_control_5.png!
 
 Although we copied our files into the folder, we need to specify Git to "add":http://www.kernel.org/pub/software/scm/git/docs/git-add.html these files under revision control. We do this be running the @git add@ command. The @--all@ option as shown in the illustration below, allows to add all files contained in the _UserLib_ folder.
-!images/media_1286564452991.png!
+
+!images/Put_project_under_Git_control_6.png!
 
 Now we can store the current content in a new "commit":http://www.kernel.org/pub/software/scm/git/docs/git-commit.html, using the command @git commit@. We will also add a log message using the @-m@ option follow by a message under quotes to describe the changes.
-!images/media_1286564466946.png!
+
+!images/Put_project_under_Git_control_7.png!
 
 We now need to add a "remote":http://www.kernel.org/pub/software/scm/git/docs/git-remote.html for the repository at Github. Run the following command to do so:
 
-@git remote add origin git@github:username/yourProject.git@
-!images/media_1286564475848.png!
+bc. git remote add origin git@github:username/yourProject.git
+
+!images/Put_project_under_Git_control_8.png!
 
 Finally, we can now "update":http://www.kernel.org/pub/software/scm/git/docs/git-push.html the remote repository with the changes:
 
-@git push origin HEAD@
-!images/media_1286564481585.png!
+bc. git push origin HEAD
 
-!images/media_1286564489047.png!
+!images/Put_project_under_Git_control_9.png!

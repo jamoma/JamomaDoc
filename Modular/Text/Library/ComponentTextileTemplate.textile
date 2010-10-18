@@ -29,31 +29,31 @@ p. Some info about the external
 
 h3. Inputs
 
-|_.Input number | _.Description |
+|_.Input number |_.Description |
 | 1st input | This input is used for blablbla |
 | 2d input | This input is used for blablbla |
 | 3d input | This input is used for blablbla |
 
 h3. Outputs
 
-|_.Output number | _.Description |
+|_.Output number |_.Description |
 | 1st output | This output is used for blablbla |
 | 2d output | This output is used for blablbla |
 | 3d output | This output is used for blablbla |
 
 h3. Arguments
 
-|_.Argument name | _.Type | _.Description |
+|_.Argument name |_.Type |_.Description |
 | foo | {integer/decimal/boolean/string/array/generic} | Description |
 
 h3. Attributes
 
-|_.Attribute name | _.Type | _.Description |
+|_.Attribute name |_.Type |_.Description |
 | foo | {integer/decimal/boolean/string/array/generic} | Description |
 
 h3. Messages
 
-|_.Message name | _.Type | _.Description |
+|_.Message name |_.Type |_.Description |
 | foo/bar | {integer/decimal/boolean/string/array/generic} | Description |
 
 h3(seealso). See also
