@@ -1,0 +1,45 @@
+h2. Installed files
+
+h3. Installed files under OSX
+
+* /Applications/Max5/Cycling '74/Jamoma
+* /Applications/Max5/Cycling '74/default-definitions/jcom.textslider.maxdefines
+* /Applications/Max5/Cycling '74/default-definitions/jcom.ui.maxdefines
+* /Applications/Max5/Cycling '74/default-settings/JamomaArarat.maxdefaults
+* /Applications/Max5/Cycling '74/default-settings/JamomaDark.maxdefaults
+* /Applications/Max5/Cycling '74/default-settings/JamomaGraphite.maxdefaults
+* /Applications/Max5/Cycling '74/default-settings/JamomaKulerBologna.maxdefaults
+* /Applications/Max5/Cycling '74/default-settings/JamomaKulerQuietCry.maxdefaults
+* /Applications/Max5/Cycling '74/default-settings/JamomaLight.maxdefaults
+* /Applications/Max5/Cycling '74/default-settings/JamomaMax.maxdefaults
+* /Applications/Max5/Cycling '74/default-settings/JamomaNoir.maxdefaults
+
+* /Applications/Max5/patches/extras/jamoma-overview.maxpat
+
+* /Applications/Max5/patches/templates/_Jamoma_Patcher_.maxpat
+* /Applications/Max5/patches/templates/jalg.template.audio~.maxpat
+* /Applications/Max5/patches/templates/jalg.template.video%.maxpat
+* /Applications/Max5/patches/templates/jmod.template.audio~.maxpat
+* /Applications/Max5/patches/templates/jmod.template.control.maxpat
+* /Applications/Max5/patches/templates/jmod.template.maxhelp
+* /Applications/Max5/patches/templates/jmod.template.video%.maxpat
+* /Applications/Max5/patches/templates/layout.xml
+
+* /Library/Application Support/Jamoma/Extensions/AnalysisLib.ttdylib
+* /Library/Application Support/Jamoma/Extensions/AudioUnit.ttdylib
+* /Library/Application Support/Jamoma/Extensions/Clipper.ttdylib
+* /Library/Application Support/Jamoma/Extensions/Crossfade.ttdylib
+* /Library/Application Support/Jamoma/Extensions/DataspaceLib.ttdylib
+* /Library/Application Support/Jamoma/Extensions/EffectsLib.ttdylib
+* /Library/Application Support/Jamoma/Extensions/FFTLib.ttdylib
+* /Library/Application Support/Jamoma/Extensions/FilterLib.ttdylib
+* /Library/Application Support/Jamoma/Extensions/FunctionLib.ttdylib
+* /Library/Application Support/Jamoma/Extensions/GeneratorLib.ttdylib
+* /Library/Application Support/Jamoma/Extensions/Label.ttdylib
+* /Library/Application Support/Jamoma/Extensions/MathLib.ttdylib
+* /Library/Application Support/Jamoma/Extensions/SpatDisplay.ttdylib
+* /Library/Application Support/Jamoma/Extensions/WindowFunctionLib.ttdylib
+
+h3. Installed files under Windows
+
+Not yet available.
