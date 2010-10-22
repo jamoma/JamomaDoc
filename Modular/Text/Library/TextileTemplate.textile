@@ -29,6 +29,6 @@ p. text bloc
 
 bc. code bloc
 
-bq. bloc quote
+bq. quote bloc
 
 h3(StepTitle). %(StepNumber)2% Your second title header

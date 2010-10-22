@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Hosting_Jamoma_modules_at_Github.html</string>
+	<string>Library/html/jcom.init.html</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,33 +21,19 @@
 	<integer>315</integer>
 	<key>metaData</key>
 	<dict>
-		<key>Hosting_Jamoma_modules_at_Github.html</key>
+		<key>How_to_add_project_to_User_Library.textile</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>112</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>353</integer>
-			<key>firstVisibleLine</key>
-			<integer>76</integer>
-		</dict>
-		<key>Hosting_Jamoma_modules_at_Github.textile</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
+				<integer>48</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>15</integer>
 		</dict>
 		<key>How_to_get_jcom.hub_s_initialization_notification_.textile</key>
 		<dict>
@@ -91,18 +77,91 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>Library/ComponentTextileTemplate.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>35</integer>
+				<key>line</key>
+				<integer>3</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>16</integer>
+		</dict>
+		<key>Library/PurpleCloth_specification.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>8</integer>
+				<key>line</key>
+				<integer>48</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>13</integer>
+		</dict>
+		<key>Library/TextileTemplate.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>34</integer>
+				<key>line</key>
+				<integer>23</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Library/html/jcom.init.html</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>7</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>6</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>7</integer>
+			</dict>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>Hosting_Jamoma_modules_at_Github.html</string>
-		<string>Hosting_Jamoma_modules_at_Github.textile</string>
+		<string>Library/html/jcom.init.html</string>
+		<string>How_to_add_project_to_User_Library.textile</string>
 		<string>How_to_get_jcom.hub_s_initialization_notification_.textile</string>
-		<string>Installing_Jamoma_Modular_development_version.textile</string>
-		<string>Installing_Jamoma_Modular_stable_version.textile</string>
+		<string>Library/ComponentTextileTemplate.textile</string>
+		<string>Library/TextileTemplate.textile</string>
+		<string>Library/PurpleCloth_specification.textile</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{328, 0}, {1111, 878}}</string>
+	<string>{{318, 0}, {1111, 878}}</string>
 </dict>
 </plist>

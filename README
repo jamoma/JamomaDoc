@@ -1,0 +1,5 @@
+Regarding the use of branches
+
+The 'master' branch is where all documents ready to be published are to reside. Note that in the (hopefully not too distant) future, all materials in the master branch will be automatically converted from textile to html when building the Jamoma installer. 
+
+Thus, when starting to work on a tutorial or documentation bit, it is advised to work on the "unpublished" branch or create a specific branch if needed. Once you are done with writing the documntation part, merge the branch into 'master' or use Git 'cherrypick' command.
