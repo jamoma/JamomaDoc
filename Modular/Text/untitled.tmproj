@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Library/html/jcom.init.html</string>
+	<string>Index_of_components.textile</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -18,7 +18,7 @@
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>315</integer>
+	<integer>257</integer>
 	<key>metaData</key>
 	<dict>
 		<key>How_to_add_project_to_User_Library.textile</key>
@@ -43,6 +43,20 @@
 				<integer>0</integer>
 				<key>line</key>
 				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Index_of_components.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>45</integer>
+				<key>line</key>
+				<integer>103</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -149,11 +163,41 @@
 				<integer>7</integer>
 			</dict>
 		</dict>
+		<key>Sending messages to modules.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>23</integer>
+				<key>line</key>
+				<integer>94</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>toc.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>28</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>Library/html/jcom.init.html</string>
+		<string>Sending messages to modules.textile</string>
 		<string>How_to_add_project_to_User_Library.textile</string>
+		<string>Index_of_components.textile</string>
 		<string>How_to_get_jcom.hub_s_initialization_notification_.textile</string>
 		<string>Library/ComponentTextileTemplate.textile</string>
 		<string>Library/TextileTemplate.textile</string>
@@ -162,6 +206,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{318, 0}, {1111, 878}}</string>
+	<string>{{301, 0}, {1131, 878}}</string>
 </dict>
 </plist>
