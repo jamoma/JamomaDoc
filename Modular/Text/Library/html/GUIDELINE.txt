@@ -1,0 +1,40 @@
+CSS classes:
+
+(info)
+(lightbox)
+
+Usage:
+
+Add this class to image link you want to be set up for Lightbox usage. Textmate macro will then setup <img class="lightbox"> appropriately.
+
+!(lightbox)adding_module_to_Github_1.png!
+
+(lightbox-thb)
+
+Usage:
+idem but + using a thumbnail
+
+@(kbd)exerpt from screen messages@
+
+@(seq)tag number in the picture@
+
+
+Code Classes:
+
+These classes call a syntax highlighter plugin with the approriate language
+
+Usage:
+
+Use these with Textile "code".
+
+@(ruby)My Ruby command@
+
+code(cpp). exerpt from source code
+
+Implemented classes 
+
+(ruby)
+(cpp)
+(xml)
+(maxobj)
+(jamobj)
