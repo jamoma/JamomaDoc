@@ -1,0 +1,121 @@
+h2. Sending messages to modules
+
+p. In this tutorial we will look at how to communicate with the Jamoma modules, and learn the basic structures that the modules utilize for communication.
+
+h3. Open Sound Control (OSC)
+
+p. Jamoma uses the (OSC) (Open Sound Control) protocol. This is a protocol for communication among computers, sound synthesizers, and other multimedia devices that is optimized for modern networking technology.
+
+OpenSoundControl basically means that all parameters that we might want to access or monitor, have been given an address in the form of a Max message or symbol. The addresses are organized in a tree-like structure, with the slash (/) sign prepending each branch. The result is straight-forward and resembles the last part of common Unix or URL paths. Here are some examples of possible OSC addresses:
+
+bc.
+/Abraham/Isaac/Jacob/Judah
+/animals/mammals/cats/lion
+/guitar/filter/frequency
+
+p. This is all that we need to know for the time being in order to be able to use OSC with Jamoma. Later on, as we start making our own modules, we will look into how to deal with OSC messages in further detail.
+
+However, if you want to learn more about OSC, this is a good place to start. The Jamoma team has proposed some extensions to the OSC protocol in order to cater for functionalities required in Jamoma. These are discussed in two papers presented at the NIME 2008 and ICMC 2008 conferences. Please check the "papers":http://jamoma.org/papers.html section for further details.
+
+h3. Messages to and from modules
+
+p. We will continue to work with a simple patch containing modules for audio input and output, and one module doing effect processing. It will be useful to use an effect module where it's very simple to hear subtle changes to the parameters, so this time we will be using the jmod.tremolo~ module.
+
+h3. Setting up the patch
+
+p. Make the patch much the same way as in the previous tutorial, and while you are at it, connect a message box to the leftmost output of the tremolo module as illustrated below.
+
+!messages_to_modules.png!
+
+Now we have to set up each of the modules so that we have some sound to play around with:
+
+* Input module:
+** Click the Open button and select a sound file to play. For this tutorial we recommend that you find a sound file with relative static content, e.g. a loop with one or more organ chords.
+** Turn on audio using the Audio On/Off button on top of the input module.
+** Hit the Play button, so that the sound file start playing.
+** Bring up the master gain of the input module.
+* Tremolo module
+** Unmute the module by clicking the mute button.
+** Bring up the level using the gain (green) dial in the top of the module..
+** Make sure that the output from the module is 100% wet using the mix (blue) dial at the top of the module.
+* Output module
+** Finally bring up the master gain of the output module so that you have sound coming out.
+
+h3. Receiving OSC messages from the module
+
+p. You will notice that whenever you change a parameter in the tremolo module, this gets reported out the left outlet of the module and shows up in the message box. In the screen shot above you can see that the audio gain level has been set to 100.
+
+The messages sent out from the module are all OSC messages, containing the OSC address and the value of the parameter. Here are some examples of output from the tremolo module:
+
+bc.
+/audio/gain 100.
+/audio/mix 100.
+/audio/mute 0
+/lfo/frequency 5.
+/lfo/depth 50.
+
+p. One of the benefits of OSC is that the messages above are easy to read and we quickly get an idea of what parameter each of them are referring to.
+
+h3. Passing OSC messages to the module
+
+p. We can pass messages to the module the same way. Let us try adjusting the LFO frequency and depth by sending messages to the module, by doing a few additions to the patch:
+
+!messages_to_modules_2.png!
+
+Now you are able to control the LFO frequency and depth not only in the GUI of the module, but also by passing OSC messages to the module.
+
+h3. Ramping to new values
+
+p. Passing OSC messages this way cause the module to update to the new parameter value instantly. In real use we often want changes to happen more gradually. For instance we might want the LFO depth to change gradually from 0 % to 100 % over 5 seconds. This is something that Jamoma excels at.
+
+Let's make two more message boxes and connect to the leftmost inlet of the tremolo module. The content of the two message boxes will be @/lfo/depth 0 ramp 5000@ and @/lfo/depth 100 ramp 5000@ respectively:
+
+!messages_to_modules_3.png!
+
+Now try clicking first one and then the other message box. You will see that the LFO depth gradually moves to 0 % and 100 % respectively over 5 seconds (5000 ms), starting of from the value it had just before the ramp was triggered. The syntax to achieve this is really simple: Just add ramp and the amount of time you want the ramp to last for, expressed in milliseconds, to the end of the OSC message.
+
+If you try starting one ramp before the other one is done, the new ramp takes precedence, starting from whatever value the parameter had just before.
+
+If you change the parameter while the ramp is still running, either by interacting with the GUI of the module, or by sending a new OSC message to the module, you will see that this brings the previous ramp to a hault.
+
+You can also try adding more message boxes to the patch, so that you can interact with several parameters simultaneously. You will find that the module is able to cope with several parameters ramping at the same time, each of which can be started independently and run for different amounts of time.
+
+In this example, the ramp is linear. In a later tutorial we will look further into ramping in Jamoma, and see how we can use different ramping curves and more.
+
+h3. Documentation of the module
+
+p. Fortunately we don't have to remember the OSC address of each and every parameter of all the Jamoma modules we use in order to address them. Jamoma offers several ways of helping us discovering the OSC namespace of each module.
+
+h3. Pop-up namespace reminder
+
+p. If you click and hold the mouse over the displayed name of the module (tremolo~) almost all the way to the left in the module toolbar, a pop-up menu shows up, listing all parameters, messages and returns of this particular module. We will discuss the difference between parameters, messages and returns later on. For now it is sufficient ot notice that even for such a simple module, the namespace is quite extensive.
+
+!messages_to_modules_5.png!
+
+h3. HTML reference page
+
+p. If you instead click further to the left, you will bring up another pop-up menu. In the previous tutorial we used this to peek inside the module, by choosing the "View Internal Components" menu item. Now it is time to try a few other options that aid in documenting the module.
+
+If you select "Open reference Page" a web page will show up in your default web browser. This will provide you with a detailed list of all parameters, messages and returns, a description explaining what the parameter does, and additional information on how it behaves, e.g:
+
+* What type of data is expected (decimal, integer, etc.).
+* The default range of the parameter.
+* Whether it is clipping or not at the boundaries of the default range.
+* The default function used for ramping.
+* The default mechanism used to drive the ramping.
+* What dataspace the parameter use, if any.
+* Whether or not repeted values will be filtered out.
+
+Some of this will make more sense as we move further.
+
+
+h3. Help files for modules
+
+p. Finally, if you select "Open Help Patch" from the pop-up menu, a help patch opens up, where you can interactively examine the module. The help file also contains links to the HTML reference page, and offers simple ways of viewing what issues or bugs (if any) are currently registered for the module.
+
+h3. Summary
+
+* The leftmost inlet and outlet of modules is reserved for OSC communication to and from the module.
+* Parameters can be updated by sending OSC messages to the module.
+* Parameters can also be changed gradually by applying a ramp.
+* Each module is documented in a number of ways, including a HTML reference page and a help patch.
