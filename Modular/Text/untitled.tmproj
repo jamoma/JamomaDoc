@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Library/html/jcom.init.html</string>
+	<string>Hosting_Jamoma_modules_at_Github.textile</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -16,11 +16,31 @@
 			<key>sourceDirectory</key>
 			<string></string>
 		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Library/html/GUIDELINE.txt</string>
+			<key>lastUsed</key>
+			<date>2010-10-22T16:57:48Z</date>
+		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>315</integer>
 	<key>metaData</key>
 	<dict>
+		<key>Hosting_Jamoma_modules_at_Github.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>2</integer>
+				<key>line</key>
+				<integer>78</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>145</integer>
+			<key>firstVisibleLine</key>
+			<integer>39</integer>
+		</dict>
 		<key>How_to_add_project_to_User_Library.textile</key>
 		<dict>
 			<key>caret</key>
@@ -110,9 +130,23 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>34</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>23</integer>
+				<integer>34</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Library/html/GUIDELINE.txt</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>20</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -153,6 +187,8 @@
 	<key>openDocuments</key>
 	<array>
 		<string>Library/html/jcom.init.html</string>
+		<string>Library/html/GUIDELINE.txt</string>
+		<string>Hosting_Jamoma_modules_at_Github.textile</string>
 		<string>How_to_add_project_to_User_Library.textile</string>
 		<string>How_to_get_jcom.hub_s_initialization_notification_.textile</string>
 		<string>Library/ComponentTextileTemplate.textile</string>
@@ -162,6 +198,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{318, 0}, {1111, 878}}</string>
+	<string>{{322, -1}, {1111, 878}}</string>
 </dict>
 </plist>
