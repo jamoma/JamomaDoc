@@ -56,6 +56,11 @@ h3. Messages
 |_.Message name |_.Type |_.Description |_.Default Unit |_.Default Value |
 | foo/bar | {integer/decimal/boolean/string/array/generic} | Description |
 
+h3. User Action
+|_.Action |_.Description |
+| Mouse click | Mouse clicking do some nice stuff. |
+| cmd + click | Even more nice stuff. |
+
 h3(seealso). See also
 
 #"jcom.object":components/object.html
