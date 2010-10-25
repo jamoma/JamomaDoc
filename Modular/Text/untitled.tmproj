@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Hosting_Jamoma_modules_at_Github.textile</string>
+	<string>Components/jcom.delta.textile</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -22,11 +22,91 @@
 			<key>lastUsed</key>
 			<date>2010-10-22T16:57:48Z</date>
 		</dict>
+		<dict>
+			<key>expanded</key>
+			<true/>
+			<key>name</key>
+			<string>Tools</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>../../../../@Jamoma/JamomaDoc/Tools</string>
+		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>315</integer>
+	<integer>257</integer>
 	<key>metaData</key>
 	<dict>
+		<key>Components/jcom.dbap.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>3</integer>
+				<key>line</key>
+				<integer>27</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>39</integer>
+		</dict>
+		<key>Components/jcom.delta.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>66</integer>
+				<key>line</key>
+				<integer>33</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Components/jcom.init.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>34</integer>
+				<key>line</key>
+				<integer>46</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>9</integer>
+		</dict>
+		<key>Components/jcom.meter~.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>27</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Components/jcom.oscinstance.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>85</integer>
+				<key>line</key>
+				<integer>58</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>14</integer>
+		</dict>
 		<key>Hosting_Jamoma_modules_at_Github.textile</key>
 		<dict>
 			<key>caret</key>
@@ -69,6 +149,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>Index_of_components.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>45</integer>
+				<key>line</key>
+				<integer>103</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>Installing_Jamoma_Modular_development_version.textile</key>
 		<dict>
 			<key>caret</key>
@@ -97,20 +191,6 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Library/ComponentTextileTemplate.textile</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>35</integer>
-				<key>line</key>
-				<integer>3</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>16</integer>
-		</dict>
 		<key>Library/PurpleCloth_specification.textile</key>
 		<dict>
 			<key>caret</key>
@@ -124,20 +204,6 @@
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>13</integer>
-		</dict>
-		<key>Library/TextileTemplate.textile</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>34</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
 		</dict>
 		<key>Library/html/GUIDELINE.txt</key>
 		<dict>
@@ -183,21 +249,39 @@
 				<integer>7</integer>
 			</dict>
 		</dict>
+		<key>toc.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>28</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>Library/html/jcom.init.html</string>
-		<string>Library/html/GUIDELINE.txt</string>
-		<string>Hosting_Jamoma_modules_at_Github.textile</string>
 		<string>How_to_add_project_to_User_Library.textile</string>
+		<string>Index_of_components.textile</string>
 		<string>How_to_get_jcom.hub_s_initialization_notification_.textile</string>
-		<string>Library/ComponentTextileTemplate.textile</string>
-		<string>Library/TextileTemplate.textile</string>
 		<string>Library/PurpleCloth_specification.textile</string>
+		<string>Hosting_Jamoma_modules_at_Github.textile</string>
+		<string>toc.textile</string>
+		<string>Components/jcom.meter~.textile</string>
+		<string>Components/jcom.delta.textile</string>
+		<string>Components/jcom.oscinstance.textile</string>
+		<string>Components/jcom.init.textile</string>
+		<string>Components/jcom.dbap.textile</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{322, -1}, {1111, 878}}</string>
+	<string>{{301, 0}, {1131, 878}}</string>
 </dict>
 </plist>
