@@ -53,7 +53,7 @@ h3. Attributes
 
 h3. Messages
 
-|_.Message name |_.Type |_.Description |_.Default Unit |_.Default Value |
+|_.Message name |_.Argument Type |_.Description |_.Default Unit |_.Default Value |
 | foo/bar | {integer/decimal/boolean/string/array/generic} | Description |
 
 h3. User Action
