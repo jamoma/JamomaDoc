@@ -1,0 +1,34 @@
+h2(LessonTitle). jcom.delta
+
+p. Calculate difference, second order difference and velocity of incoming data stream.
+
+h3. Description
+
+p. jcom.delta calculates difference, second order difference and velocity of incoming data stream.
+
+h3. Inputs
+
+|_.Input number |_.Description |
+| 1st input | Input data stream to be filtered. |
+
+h3. Outputs
+
+|_.Output number |_.Description |
+| 1st output | 1st order difference. Δx = x[n]-x[n-1] |
+| 2d output | 2d order difference. Δ^2(x) = x[n]-2*x[n-1]+x[n-2] |
+| 3d output | Velocity calculated from incoming stream of data as difference divided by delta time in milliseconds: velocity = 1000*Δx/Δt . |
+| 4th output | Dumpout |
+
+h3. Messages
+
+|_.Message name |_.Argument Type |_.Description |_.Default Unit |_.Default Value |
+| bang | generic | A 'bang' sent at the input calculates and outputs difference, second order difference and velocity using currently stored values. | | |
+| int | integer | An integer sent at the input is converted to decimal value. | | |
+| float | decimal | A decimal sent at the input is stored as the most recent value x[n] , and difference, second order difference and velocity is calculated and output. | | |
+| clear | string | The message 'clear' sent at the input clears the history of previously received values. Next time a value is received, x[n-1] and x[n-2] are set equal to x[n]. | | |
+| set | decimal (set float) | The message 'set' followed by a decimal sent at the input stores its value as the most recent (x[n]) without performing any calculation or producing any output. | | |
+
+h3(seealso). See also
+
+* "jcom.stats":components/stats.html
+* "expr":http://cycling74.com/docs/max5/refpages/max-ref/expr.html
