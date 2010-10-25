@@ -1,15 +1,22 @@
-j + tab -> Jamoma 
+j + tab -> Jamoma
+
+www + tab -> "{var(page name)}":http://jamoma.org/{var(page name)}.html page 
+
+arj + tab -> "Alexander Refsum Jensenius":http://www.arj.no/ 
+jln + tab -> Julien Rabin 
+np + tab -> Nils Peters 
+pb + tab -> "Pascal Baltazar":http://zkrx.org/ 
+tap + tab -> "Timothy Place":http://www.74objects.com/
+tl + tab -> "Trond Lossius":http://www.trondlossius.no/ 
+to + tab -> Théo De La Hogue 
 
 Max shortcuts:
-jc + tab -> "(jamobj)jcom.{var}":components/{var}.html 
-jm + tab -> "(jamobj)jmod.{var}":modules/{var}.html 
+jc + tab -> "jcom.{var}":components/{var}.html 
+jm + tab -> "jmod.{var}":modules/{var}.html 
+maxref + tab -> "{print}":http://cycling74.com/docs/max5/refpages/max-ref/{print}.html 
+mspref + tab -> "{cycle}~":http://cycling74.com/docs/max5/refpages/msp-ref/{cycle}~.html
+jitref + tab -> "jit.{matrix}":http://cycling74.com/docs/max5/refpages/msp-ref/jit.{matrix}.html 
 
-Team:
-tap + tab -> "Timothy Place":http://www.74objects.com/  with or without url
-same for tl, to, pb, np, jln, arj
-
-Site:
-www + tab -> "{var(page name)}":http://jamoma.org/{var(page name)}.html page 
 
 Picture:
 lightbox + tab -> !(lightbox)http://site.com/image(Title)!
@@ -18,7 +25,6 @@ thumb + tab -> !(lightbox-thb)http://site.com/image(Title)!
 img + tab -> !http://site.com/image(Title)!
 
 Other:
-
 info + tab -> p(info). $1
 
 Note that bc. can be use instead, since, the css is the same so far.
