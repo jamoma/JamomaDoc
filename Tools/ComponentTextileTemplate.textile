@@ -57,6 +57,7 @@ h3. Messages
 | foo/bar | {integer/decimal/boolean/string/array/generic} | Description |
 
 h3. User Action
+
 |_.Action |_.Description |
 | Mouse click | Mouse clicking do some nice stuff. |
 | cmd + click | Even more nice stuff. |
