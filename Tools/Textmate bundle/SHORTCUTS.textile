@@ -46,4 +46,8 @@ a + tab -> array
 s + tab -> string
 b + tab -> boolean
 ? + tab -> generic
-
+mess + tab -> message
+m + tab -> module
+attr + tab -> attribute
+arg + tab -> argument
+o + tab -> object
