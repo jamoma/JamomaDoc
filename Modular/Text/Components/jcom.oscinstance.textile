@@ -41,11 +41,10 @@ h3. Outputs
 
 h3. Arguments
 
-This object does not use any argument.
-
+_none_
 h3. Attributes
 
-This object does not use any attribute.
+_none_
 
 h3. Messages
 
