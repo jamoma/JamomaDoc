@@ -1,35 +1,83 @@
-
-<!--alias to use instead of the whole url -->
-[jamoma]http://jamoma.org
-[forum]http://jamoma.org/forum.html
-[papers]http://jamoma.org.papers.html
-[download]http://jamoma.org/download.html
-[redmine]http://redmine.jamoma.org/projects
-[blog]http://groupware.bek.no/groups/jamoma/blog/
-[gh]http://github.com/jamoma
-[pledgie]http://pledgie.com/campaigns/5615
-
-[tap]http://blog.74objects.com/
-[tl]http://www.trondlossius.no/
-[arj]http://www.arj.no/
-[pb]http://zkrx.org/
-
-[c74]http://www.cycling74.com
-[bek]http://bek.no
-
-h2(LessonTitle). How to get jcom.hub's initialization notification ?
+h2. How to get jcom.hub's initialization notification?
 
 There are some situations where you may want to know when your modules are created, when a specific module is properly initialized for example. Thanks to Jamoma framework remote communication possibilities, a number of events notifications can be listened to or queried.	
 
-h3(StepTitle). %(StepNumber)1% Getting when a module is initialized
+h3. Receive initialization notification from within a module
 
-Whereas Max's %(maxobj)loadbang% object can be used to know when a patch is properly loaded, it is of no use when trying to get when a Jamoma module is properly initialized. Indeed, for each module, a number of operations, such as initialization of jcom.parameters, loading of preset, etc. has to be done by "(jamobj)jcom.hub":components/hub.html.  Thus Jamoma has a specific object somewhat similar to %(maxobj)loadbang% that comes to help.
+Whereas Max's "loadbang":http://cycling74.com/docs/max5/refpages/max-ref/loadbang.html  object can be used to know when a patch is properly loaded, it is of no use when trying to get when a Jamoma module is properly initialized. Indeed, for each module, a number of operations, such as initialization of "jcom.parameters":components/parameter.html, loading of preset, etc. has to be done by "jcom.hub":components/hub.html.  Thus Jamoma has a specific object somewhat similar to "loadbang":http://cycling74.com/docs/max5/refpages/max-ref/loadbang.html that comes to help.
 
-"jcom.init":components/init.html  works like a loadbang but is local to a module. That is, it connects to "(jamobj)jcom.hub":components/hub.html  found in the same abstraction and outputs a @'bang'@ when the module is properly initialized. Note that "(jamobj)jcom.init":components/init.html  can be placed in any sub-patcher as long as it does not contain another "(jamobj)jcom.hub":components/hub.html 
+"jcom.init":components/init.html works like a "loadbang":http://cycling74.com/docs/max5/refpages/max-ref/loadbang.html but is local to a module. That is, it connects to "jcom.hub":components/hub.html found in the same abstraction and outputs a @bang@ when the module is properly initialized. Note that "jcom.init":components/init.html can be placed in any sub-patcher as long as it does not contain another "jcom.hub":components/hub.html 
 
 !images/jcom.hub_initialization_notification_1.png!
 
-What if you want to know from a module that another module is properly initialized. For example, you may need to know that "jmod.mySamplePlayer" is properly initialized before "jmod.myStepSequencer" starts playing its control sequence. Thanks to Jamoma remote communication possibilities, such a problem can be easily dealt using "(jamobj)jcom.initialized":components/initialized.html . //REPHRASE + DETAILS //
+h3. Receive initialization notification outside of a module
+
+What if you want to know from a module that another module is properly initialized? For example, you may want to know that "jmod.mySamplePlayer" is properly initialized so your "jmod.myStepSequencer" can start playing its control sequence. Thanks to Jamoma remote communication possibilities, such a problem can be easily dealt with using "jcom.initialized":components/initialized.html.
 
 !images/jcom.hub_initialization_notification_2.png!
 
+Go to the example folder provided with this documentation and open the patch named _initialization notification_ or copy the compressed version below. 
+
+bc(max).
+----------begin_max5_patcher----------
+1090.3ocyX00ajZCE84Y9U3hpTjplNwevm8sp1G5S8kJ0WpVUQ.GFm.1yZLM
+I6pM+1qwFRX1AlAlkAsJJvXyE6y83685i4yqW4bm3YZoC3W.+CX0pOud0JSW
+0crpo8Jmh3mSxiKMl4jHJJnbkyF6yTzmUl9+CpjBXk.0NJnHNik.9gVa3UEL
+dNUYF.TSm2KytyNuvsvMctf1BAenwn8wpjcLd1+JoIJq0HXXsU9lqHDp9FF1
+4czylnR0Ncv1oSvU73BpAq+pjEm2hNVpoOwcO7yDWmNlWx9jwbDdKrt2urdc
+8kMijn3zmzi4Q7zCZBbKiyTZHnmfTvsEu7WuvU65ksfCSDQQFF.RL2H1VQCR
+Ds7tsK0K6o1gww4sW3.N5uoxzXdbKpRD4BY65kOJxGF91hFwGFD5V+q.n9In
+2FvNTa+LK7hX1gBAu8VveR0LpR.TURNPvAwUoLAHlmBhSenpTA9OQdUgNPkC
+to3keON4FyCuoYM3l1wLmwoIhJtYfIWi3XebPsUd91ENOy63FNSAx3YLP9Dz
+8S6hUfXvSBdJUdeUNnj9wJJOgdkR9cIFqvVtCEPl0re30O6euj8NS1K0Lbld
+nw2ItyoOimy.kBZYYbF83.EESmxggZbeqRjkkSAnd4.7IJ6i6lmfP1pdgyV4
+tAIHzLRP2YbLprWmmLryisK8dtFul.sbfK7rderLqYycGS0t2c9SvKc7dT3a
+PskndnPjtU+16qTutU6cZ31ZydIsTWnHVwD7tKcVX6gBOF8yWlkZfXpSjW4S
+vlhtdla3ykXMXHUcJ8zhpPKfPie50oli44aTS4A8quEFs06x3iRVFW61SjRH
+WeJINsT9pV0QcYDf9udIHuyGvDX29AdNwmtmgg1z8Wl+mHmgu9blQEDUBbmJ
+Y0TzBCMb1Y2p18TYWszylKJYCsPp5EkIRM7o5c4jrrrApyiNKkg7swWX+yvY
+3AKleAwRvkPIv8Rq.wW.+HBTvRYSsFUCEQvXaJXzBoCHZFYmGKyYoCDcbJWO
+xtCkukAHlnCOxziNZxnNHSpiqF3Le4EeJGjKDOVsWezFfmGvGB7C.AnKbYuU
+3uKZAyL7VJEfmuxPneGQvAST+2ukKRdbpJ.I8K.7iETkTLR8eXa.azQXe4IP
+hUq2HjPi6iBsenlSPgaNV8S2Zr8SlH3tXYgfyRJGoj52Ov7fxoMyu46X7Ued
+OC4T2+grbonRlz5GMU7.uSNozREiavQGaPGXyNVZJk28Ln5J76E55LMPXfU7
+whHuQfnnu6PTvhhH2Qfn5C8+8FjV1HIxXhsgKJj9JFneLQlFjPjv5yvgrmWA
+66Y+pYcaEX0XZOrWciuQ2.MlUazxF.hF0xcn1Hz3wjmdKLuZ8WFQYMeXRSqE
+Cs3kiAwiASjowfeqXZLILdKafFbLzj6zvTStIRq9WeyWK8ss0hf1ksvL5fPn
+SDmcoPR23Kq+eBWupfC
+-----------end_max5_patcher-----------
+
+
+In this example, we built a similar situation using three modules from Jamoma Modular core distribution ("jmod.qmetro":modules/qmetro.html that we will use as a clock, "jmod.10harmonics~":modules/10harmonics~.html that we will use as mini synthesizer and "jmod.output~":modules/output~.html so you can enjoy the wonderful 5 notes-based arpeggio composed for this example...). Similarly to the example aforementioned, we want to make sure that our synth is properly initialized before starting to play our sequence.  "jcom.initialized":components/initialized.html can then be used to send a @bang@ when the module defined as its argument is properly initialized. From then, the @bang@ message can trigger the message box that it is connected to and send to "jmod.qmetro /myClock":modules/qmetro.html the following couple of message to set a speed and to turn it on.
+
+code.
+/time 200
+/toggle 1
+
+bq.
+Remember that there is currently no way to define an initialization order for each module. While the patch we used works for our demonstration purpose, it may be trickier in a complex patch involving a lot of modules. For example, you would probably want to make sure @myClock@ is also properly initialized before receiving any message. We will let this as an exercise for the reader.
+
+"Fine. But how does this really works?" Glad you ask.
+
+"jcom.initialized":components/initialized.html is a Max patch-based component (_abstraction_) that wraps a special feature of "jcom.receive":components/receive.html. 
+
+!images/jcom.intitialized_inside.png!
+
+When provided @'notifications'@ as argument, "jcom.receive":components/receive.html can be used to notify of various operations done in Jamoma framework, i.e module creation, module deletion and more importantly here: module initialization. Thus, for each module in a patch, "jcom.receive notifications":components/receive.html will send the message @module.initialized@ followed by the class of the module and its instance name. In the previously used example, "jcom.receive":components/receive.html would send the following messages: 
+
+bc.
+module.new jmod.output~ /myDac
+module.new jmod.qmetro /myClock
+module.new jmod.10harmonics~ /mySynth
+module.initialized jmod.output~ /myDac
+module.initialized jmod.qmetro /myClock
+module.initialized jmod.10harmonics~ /mySynth
+
+Thus "jcom.initialized":components/initialized.html is a handy component that filters out notifications sent by "jcom.receive notifications":components/receive.html and sends a @bang@ when matching initialization notification for a given named module defined as argument.
+
+h3(seealso). See also
+
+* "jcom.init":components/init.html
+* "jmod.initialization":modules/initialization.html
+* "jcom.receive":components/receive.html
+<!-- * "Remote_communication_within_Jamoma" TODO -->
