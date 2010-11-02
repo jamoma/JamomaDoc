@@ -43,24 +43,27 @@ h3. Outputs
 
 h3. Arguments
 
-|_.Argument name |_.Type |_.Description |_.Default Unit |_.Default Value |
+|_.Argument name |_.Type |_.Description |_.Default Unit |_.Default Value |_.Presence [1] |
 | foo | {integer/decimal/boolean/string/array/generic} | Description |
 
 h3. Attributes
 
-|_.Attribute name |_.Type |_.Description |_.Default Unit |_.Default Value |
+|_.Attribute name |_.Value Type |_.Description |_.Default Unit |_.Default Value |_.Presence [1] |
 | foo | {integer/decimal/boolean/string/array/generic} | Description |
 
 h3. Messages
 
-|_.Message name |_.Argument Type |_.Description |_.Default Unit |_.Default Value |
-| foo/bar | {integer/decimal/boolean/string/array/generic} | Description |
+|_.Inlet |_.Message name |_.Argument Type |_.Description |_.Default Unit |_.Default Value |
+| 0 | foo/bar | {integer/decimal/boolean/string/array/generic} | Description |
 
 h3. User Action
 
-|_.Action |_.Description |
-| Mouse click | Mouse clicking do some nice stuff. |
-| cmd + click | Even more nice stuff. |
+|_.Key Pressed |_.Mouse Action |_.Description |
+| | click | Mouse clicking do some nice stuff. |
+| cmd | click | Even more nice stuff happens with cmd key down. |
+| any | | Typing anything will get displayed on the textfield |
+
+fn1. _r_ = _r_equired, _o_ = _o_ptional
 
 h3(seealso). See also
 
