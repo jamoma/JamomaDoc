@@ -1,0 +1,79 @@
+h2. Retrieving information about existing Jamoma modules
+
+In order to control modules , we need to be able to access them remotely using OSC. In order to do so, we need to know the OSC namespace, that is the OSC addresses of all nodes of all modules that we are currently working with.
+
+Setting this up by hand would be a laborious and error-prone approach. Instead, in this tutorial we will illustrate how to query available Jamoma modules for information on their OSC namespace and the state of all OSC nodes.
+
+Before we start investigating the namespace, let us make a few modules so that we have something to play around with. In the example below we are using:
+* jmod.input~ - an audio input module. We will give it the name /input~
+* jmod.echo~ - an echo module. We will give this module the name /echo~
+* jmod.output~ - an output module. We will give this module the name /output~
+
+!images/a_simple_test_patch.png!
+
+h3. Investigate current OSC name space and state
+
+h4. Get name of available modules
+
+The first component we will look into is "jcom.getModuleNames":components/jcom.getModuleNames.html. When banged, the abstraction dumps the name of all available modules. We can use this to build a list of all modules:
+
+!images/get_name_of_modules.png!
+
+h4. Get list of all parameters in a module
+
+Once we know the name of the available modules, we can start investigating each of them. The component "jcom.getParameterNames":components/jcom.getParameterNames.html will give us a list of all parameters in the module. It works in much the same way as "jcom.getModuleNames":components/jcom.getModuleNames.html did, but instead of banging it, we need to provide the name of the module we want to investigate.
+
+!images/get_parameters_name.png!
+
+Similar abstractions are available for retrieving names of all messages and returns in the module. These abstractions are named "jcom.getMessageNames":components/jcom.getMessageNames.html and "jcom.getReturnNames":components/jcom.getReturnNames.html respectively.
+
+h4. Get the attributes of a parameter
+
+In Jamoma, modules parameter, message and return objects have a number of attributes. We can now go on to retrieve the names of these attributes as well as their value or state, using "jcom.getAllAttributes":components/jcom.getAllAttributes.html. We need to feed two arguments to "jcom.getAllAttributes":components/jcom.getAllAttributes.html: 
+
+* The name of the module (right inlet)
+* The name of the parameter, message or return that we would like to inspect (left inlet)
+
+!images/get_all_attributes.png!
+
+h4. Getting the value of one attribute only
+
+Dumping all attributes is overkill if you only really want to know the value of one of them. "jcom.getOneAttribute":components/jcom.getOneAttribute.html to the rescue:
+
+!images/get_one_attribute_value.png!
+
+The patch we have been working on so far, can be in the example folder:
+
+h3. What is going on under the hood?
+
+So far we have looked into a number of components that might help us retrieve information on the OSC namespace of modules:
+
+* Get info on modules:
+** jcom.getModuleNames
+* Get info on parameters etc:
+** jcom.getMessageNames
+** jcom.getParameterNames
+** jcom.getReturnNames
+* Get info on attributes:
+** jcom.getAllAttributes
+** jcom.getOneAttribute
+
+All of these are abstractions or Max patches. If you open one of them, you will see that the two externals "jcom.send":components/jcom.send.html and "jcom.receive":components/jcom.receive.html do most of the magic. These externals are able to communicate directly with all existing copies of "jcom.hub":components/jcom.hub.html. As "jcom.hub":components/jcom.hub.html is the central brain of Jamoma modules, this means that we can set up direct communication to and from the modules.
+
+"jcom.hub":components/jcom.hub.html, "jcom.parameter":components/jcom.parameter.html and the other core Jamoma externals have functionalities that enables us to query their properties. The details of this is outlined in a "paper published at NIME 2008":http://www.jamoma.org/papers/jamoma-nime2008.pdf. You can find this paper in the paper section of the Jamoma web site.
+
+The components discussed above provides us with some useful functionalities for development of meta modules (modules controlling modules). But you should also consider the components examples; they illustrate how to retrieve information from modules. If you need other functionalities, hopefully you will be able to use one or mroe of them as a starting point for development of custom solutions.
+
+h3. Tapping into the stream
+
+We will end this tutorial with an example on how to tap into live streams of data passing through Jamoma in performance.
+
+"jcom.send":components/jcom.send.html and "jcom.receive":components/jcom.receive.html mostly behave the same way as their Max siblings. But if you provide the argument @jcom.remote.module.from@ to "jcom.receive":components/jcom.receive.html, it will produce output whenever a module is returning information from the leftmost outlet.
+
+This can be used e.g. to record live streams of control data generated by modules. You can use "jcom.send":components/jcom.send.html in combination with "jcom.oscroute":components/jcom.oscroute.html in order to be more selective about what parts of the data streams you want to tap into.
+
+The argument to "jcom.receive":components/jcom.receive.html can be changed on the fly with the @name@ message. This can be used to temporarily stop listening to the data stream. Below is an example that can be insterted into the patch above:
+
+!images/remote.module.from.png!
+
+Turn the toggle on, and try changing parameter values in the various modules.
