@@ -9,7 +9,7 @@ h3. Jamoma Modular
 h3. Using Jamoma Modules
 
 * "Browsing the Various Modules":Browsing_the_various_modules.html
-* "Create New Module in a Match":Create_new_module_in_a_patch.html
+* "Create New Module in a Patch":Create_new_module_in_a_patch.html
 * "Sending Messages to Modules":Sending_messages_to_modules.html
 
 h3. Developping Modules Using Jamoma Framework
