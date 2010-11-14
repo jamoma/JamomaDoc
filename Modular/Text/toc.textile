@@ -1,4 +1,11 @@
-h2. Table of Content
+--- 
+title: Table of Content
+description:
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: [index, toc]
+objref: []
+---
 
 h3. Jamoma Modular
 

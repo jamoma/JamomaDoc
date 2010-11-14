@@ -1,23 +1,11 @@
-
-<!--alias to use instead of the whole url -->
-[jamoma]http://jamoma.org
-[forum]http://jamoma.org/forum.html
-[papers]http://jamoma.org.papers.html
-[download]http://jamoma.org/download.html
-[redmine]http://redmine.jamoma.org/projects
-[blog]http://groupware.bek.no/groups/jamoma/blog/
-[gh]http://github.com/jamoma
-[pledgie]http://pledgie.com/campaigns/5615
-
-[tap]http://blog.74objects.com/
-[tl]http://www.trondlossius.no/
-[arj]http://www.arj.no/
-[pb]http://zkrx.org/
-
-[c74]http://www.cycling74.com
-[bek]http://bek.no
-
-h2(LessonTitle). Create new module in a patch
+--- 
+title: New module in a patch
+description: This tutorial explains how to create new module in a patch
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: []
+objref: [jmod.layout, jmod.degrade~]
+---
 
 Jamoma Modular can really make the design of a Max interactive application easier. Start by creating a module in a patch using one of the following options.
 
@@ -60,7 +48,7 @@ bq. Jamoma also have some shortcuts to ease the creation of modules as bpatchers
 % + %(kbd)d% or %(kbd)SHIFT% + %(kbd)b% to create a bpatcher box with containers for module name and arguments.
 !images/new_bpatcher_4.png!
 
-h3(StepTitle). %(StepNumber)3% Using jcom.layout
+h3(StepTitle). %(StepNumber)3% Using jmod.layout
 
 Now that you know how to create an initial module, here is a special module which can come handy to build a whole patch. First, as explained previously, create a bpatcher containing Jamoma module named "jmod.layout":components/jmod.layout.html %(seq)1%. Once the module is initialized, click the top-right %(samp)EDIT% button %(seq)2%.
 

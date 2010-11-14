@@ -1,4 +1,11 @@
-h2. Index of components
+--- 
+title: Index of components
+description: An index of all components sorted by kind
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: [index, component]
+objref: []
+---
 
 h3. Audio Graph Components
 

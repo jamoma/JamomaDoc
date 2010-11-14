@@ -1,23 +1,11 @@
-
-<!--alias to use instead of the whole url -->
-[jamoma]http://jamoma.org
-[forum]http://jamoma.org/forum.html
-[papers]http://jamoma.org.papers.html
-[download]http://jamoma.org/download.html
-[redmine]http://redmine.jamoma.org/projects
-[blog]http://groupware.bek.no/groups/jamoma/blog/
-[gh]http://github.com/jamoma
-[pledgie]http://pledgie.com/campaigns/5615
-
-[tap]http://blog.74objects.com/
-[tl]http://www.trondlossius.no/
-[arj]http://www.arj.no/
-[pb]http://zkrx.org/
-
-[c74]http://www.cycling74.com
-[bek]http://bek.no
-
-h2(LessonTitle). Hosting Jamoma modules at Github
+--- 
+title: Hosting Jamoma modules on Github
+description: This tutorial explains how to host your modules on Github
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: [tag1, tag2]
+objref: []
+---
 
 So you developed some fabulous modules that you would like to put under "Git":http://git-scm.com/ "version control":http://en.wikipedia.org/wiki/Revision_control, whether it is to keep history of all changes you made, to have a backup of your files or just because you feel it is fun. Here for the sake of the example, we will look into hosting your sources to "Github":http://www.github.com where all Jamoma source reside. However, following these steps will also gets you to the tracks for hosting your work at other hosting site or on your personnal server.
 

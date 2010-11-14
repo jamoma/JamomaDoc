@@ -1,25 +1,13 @@
+--- 
+title: Installing Jamoma Modular development version
+description: This tutorial explains how to get and install Jamoma Modular development version
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: [github, git, install]
+objref: []
+---
 
-<!--alias to use instead of the whole url -->
-[jamoma]http://jamoma.org
-[forum]http://jamoma.org/forum.html
-[papers]http://jamoma.org.papers.html
-[download]http://jamoma.org/download.html
-[redmine]http://redmine.jamoma.org/projects
-[blog]http://groupware.bek.no/groups/jamoma/blog/
-[gh]http://github.com/jamoma
-[pledgie]http://pledgie.com/campaigns/5615
-
-[tap]http://blog.74objects.com/
-[tl]http://www.trondlossius.no/
-[arj]http://www.arj.no/
-[pb]http://zkrx.org/
-
-[c74]http://www.cycling74.com
-[bek]http://bek.no
-
-h2(LessonTitle). Installing Jamoma Modular development version
-
-Jamoma source codes are maintained using "Git":http://git-scm.com/ "version control system":http://en.wikipedia.org/wiki/Revision_control and can be downloaded freely from the public "Github":gh repository where they are hosted. In order to get Jamoma source code on your computer, first make sure you have Git installed and set up.
+Jamoma source codes are maintained using "Git":http://git-scm.com/ "version control system":http://en.wikipedia.org/wiki/Revision_control and can be downloaded freely from the public "Github":http://www.github.com repository where they are hosted. In order to get Jamoma source code on your computer, first make sure you have Git installed and set up.
 
 bq. As the name suggests it, please note that development version is not for prime use and may contains some bugs being worked on.
 

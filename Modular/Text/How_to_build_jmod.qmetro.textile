@@ -1,4 +1,11 @@
-h2(LessonTitle). jmod.qmetro - a simple control module
+--- 
+title: How to create a Jamoma module
+description: This lesson goes thru the creation of a basic Jamoma module
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: []
+objref: [jcom.oscroute, jcom.parameter, jcom.message, jcom.pass, jcom.return, jcom.ui, jcom.hub, jcom.parameterCreate, jmod.qmetro]
+---
 
 h3. A simple qmetro patch
 

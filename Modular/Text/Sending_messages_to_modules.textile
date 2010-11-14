@@ -1,6 +1,11 @@
-h2. Sending messages to modules
-
-In this tutorial we will look at how to communicate with the Jamoma modules, and learn the basic structures that the modules utilize for communication.
+--- 
+title: Sending messages to modules
+description: This tutorial explains how to communicate with the Jamoma modules
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: [osc, message, setup, feature]
+objref: [jmod.tremolo~]
+---
 
 h3. Open Sound Control (OSC)
 

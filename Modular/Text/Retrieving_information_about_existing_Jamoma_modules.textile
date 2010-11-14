@@ -1,6 +1,13 @@
-h2. Retrieving information about existing Jamoma modules
+--- 
+title: Retrieving information about existing Jamoma modules
+description: This tutorial illustrates how to query Jamoma modules for information on their OSC namespace and the state of all OSC nodes
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: [remote communication, namespace, attribute]
+objref: [jcom.getModuleNames, jcom.getParameterNames, jcom.getReturnNames, jcom.getMessageNames, jcom.getAllAttributes, jcom.getOneAttribute, jcom.send, jcom.receive, jcom.hub, jcom.parameter, jcom.oscroute]
+---
 
-In order to control modules , we need to be able to access them remotely using OSC. In order to do so, we need to know the OSC namespace, that is the OSC addresses of all nodes of all modules that we are currently working with.
+In order to control modules, we need to be able to access them remotely using OSC. In order to do so, we need to know the OSC namespace, that is the OSC addresses of all nodes of all modules that we are currently working with.
 
 Setting this up by hand would be a laborious and error-prone approach. Instead, in this tutorial we will illustrate how to query available Jamoma modules for information on their OSC namespace and the state of all OSC nodes.
 

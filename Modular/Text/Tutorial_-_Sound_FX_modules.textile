@@ -1,4 +1,11 @@
-h2. Tutorial - Sound FX modules
+--- 
+title: Sound FX modules
+description: This tutorial explains how to add an audio effect module
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: [FX, modules]
+objref: [jmod.input~, jmod.echo~, jmod.degrade~, jmod.delay~, jmod.equalizer~, jmod.filter~, jmod.limiter~, jmod.multidelay~, jmod.noisegate~, jmod.saturation~, jmod.spectralShift~, jmod.tremolo~, jmod.vst~]
+---
 
 In this tutorial we will add an audio effect module offering a simple stereo echo with feedback, filtering and limiting. At the same time we will start looking into some of the features that are common to many or all Jamoma modules. But we will start of with some useful shortcuts.
 

@@ -1,6 +1,11 @@
-h2. Index of modules
-
-p. Index of all installed Jamoma modules
+--- 
+title: Index of modules
+description: An index of all installed Jamoma modules sorted by kind
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: [index, modules]
+objref: []
+---
 
 h3. Audio modules 
 

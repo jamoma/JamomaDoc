@@ -1,4 +1,11 @@
-h2. Shortcuts in Jamoma Modular
+--- 
+title: Shortcuts in Jamoma Modular
+description: An index of all Jamoma Modular shortcuts to be used in Max/MSP
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: [index, shortcut]
+objref: []
+---
 
 h3. Key commands for patching convenience
 

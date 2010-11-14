@@ -1,4 +1,11 @@
-h2. How to get jcom.hub's initialization notification?
+--- 
+title: Working with jcom.hub's notifications
+description: This tutorial explains two kind of notifications that can be used using jcom.hub
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: [initialization, loadbang, notification]
+objref: [jcom.init, jcom.ui, jcom.parameter, jcom.message, jcom.initialized, jmod.10harmonics, jmod.output~, jmod.qmetro, jcom.receive]
+---
 
 There are some situations where you may want to know when your modules are created, when a specific module is properly initialized for example. Thanks to Jamoma framework remote communication possibilities, a number of events notifications can be listened to or queried.	
 
