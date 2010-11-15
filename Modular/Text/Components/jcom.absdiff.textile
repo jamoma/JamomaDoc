@@ -1,6 +1,11 @@
-h2. jcom.absdiff
-
-p. Calculate the absolute difference between two numbers.
+--- 
+title: jcom.absdiff
+description: Calculate the absolute difference between two numbers
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: [operator, difference]
+objref: [jcom.op!, abs, expr]
+---
 
 h3. Description
 

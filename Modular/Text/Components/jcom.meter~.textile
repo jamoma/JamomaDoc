@@ -1,6 +1,11 @@
-h2(LessonTitle). jcom.meter~
-
-p. Logarithmic GUI level meter
+--- 
+title: jcom.meter~
+description: Logarithmic GUI level meter
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: []
+objref: [display, dB, gui, envelope]
+---
 
 h3. Description
 

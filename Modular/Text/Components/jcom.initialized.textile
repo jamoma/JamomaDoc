@@ -1,6 +1,11 @@
-h2. jcom.initialized
-
-p. Send a 'bang' when a module has been initialized
+--- 
+title: jcom.initialized
+description: Send a 'bang' when a module has been initialized
+created_at: 2010/11/11
+mtime: 2010/11/12
+tags: []
+objref: [loadbang, initialization, order, loading]
+---
 
 h3. Description
 
