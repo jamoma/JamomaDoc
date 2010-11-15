@@ -3,7 +3,6 @@ title: Introduction to Jamoma modules
 description: This tutorial gives a general overview of Jamoma modules and their working inside of a Max/MSP patch
 author: [Jamoma, Trond Lossius]
 created_at: 2010/11/11
-mtime: 2010/11/12
 tags: [introduction, overview]
 objref: [jmod.input~, jcom.textslider, jmod.output~, jcom.meter~]
 ---

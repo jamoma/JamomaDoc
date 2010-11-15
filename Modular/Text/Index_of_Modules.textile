@@ -3,7 +3,6 @@ title: Index of modules
 description: An index of all installed Jamoma modules sorted by kind
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
-mtime: 2010/11/12
 tags: [index, modules]
 objref: []
 ---

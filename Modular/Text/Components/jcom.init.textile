@@ -3,7 +3,6 @@ title: jcom.init
 description: Utility for initialization of module
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
-mtime: 2010/11/12
 tags: [initialization, loadbang]
 objref: []
 ---

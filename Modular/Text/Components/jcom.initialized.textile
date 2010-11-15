@@ -3,7 +3,6 @@ title: jcom.initialized
 description: Send a 'bang' when a module has been initialized
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
-mtime: 2010/11/12
 tags: [loadbang, initialization, order, loading]
 objref: []
 ---

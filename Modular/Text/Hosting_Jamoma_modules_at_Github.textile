@@ -3,7 +3,6 @@ title: Hosting Jamoma modules on Github
 description: This tutorial explains how to host your modules on Github
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
-mtime: 2010/11/12
 tags: [tag1, tag2]
 objref: []
 ---

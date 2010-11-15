@@ -3,7 +3,6 @@ title: Installing Jamoma Modular stable version
 description: This tutorial explains how to get and install Jamoma stable release
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
-mtime: 2010/11/12
 tags: [stable, install, package]
 objref: []
 ---

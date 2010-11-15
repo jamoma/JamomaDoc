@@ -3,7 +3,6 @@ title: Installed files
 description: An log file listing all files installed by Jamoma Modular
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
-mtime: 2010/11/12
 tags: [log, installer, system]
 objref: []
 ---
