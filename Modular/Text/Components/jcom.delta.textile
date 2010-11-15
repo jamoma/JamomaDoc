@@ -1,6 +1,7 @@
 --- 
 title: jcom.delta
 description: Calculate difference, second order difference and velocity of incoming data stream
+author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
 mtime: 2010/11/12
 tags: [mapping, conversion, ramp]

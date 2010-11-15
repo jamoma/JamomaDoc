@@ -1,6 +1,7 @@
 --- 
 title: Sound FX modules
 description: This tutorial explains how to add an audio effect module
+author: [Jamoma, Trond Lossius]
 created_at: 2010/11/11
 mtime: 2010/11/12
 tags: [FX, modules]

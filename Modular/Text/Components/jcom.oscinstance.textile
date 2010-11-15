@@ -1,6 +1,7 @@
 --- 
 title: jcom.oscinstance
 description: Retrieve instance number or ID from incomming OSC messages
+author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
 mtime: 2010/11/12
 tags: [instance number, osc]

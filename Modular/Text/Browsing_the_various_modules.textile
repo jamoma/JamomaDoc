@@ -1,6 +1,7 @@
 --- 
 title: Browsing the various modules
 description: This tutorial goes thru the various ways to browse modules in Jamoma Modular
+author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
 mtime: 2010/11/12
 tags: []

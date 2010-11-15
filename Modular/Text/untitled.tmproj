@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Library/html/jcom.dbap.html</string>
+	<string>How_to_build_jmod.qmetro.textile</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -30,14 +30,14 @@
 			<key>regexFolderFilter</key>
 			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
 			<key>sourceDirectory</key>
-			<string>../../../../@Jamoma/JamomaDoc/Tools</string>
+			<string>../../Tools</string>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>257</integer>
 	<key>metaData</key>
 	<dict>
-		<key>../../../../@Jamoma/JamomaDoc/Tools/Textmate bundle/SHORTCUTS.textile</key>
+		<key>../../Tools/Textmate bundle/SHORTCUTS.textile</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -51,14 +51,28 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>Browsing_the_various_modules.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>Components/jcom.dbap.textile</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>15</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>4</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -70,9 +84,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>66</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>33</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -98,9 +112,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>34</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>46</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -114,7 +128,7 @@
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>27</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -126,42 +140,42 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>85</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>58</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>14</integer>
 		</dict>
-		<key>Hosting_Jamoma_modules_at_Github.html</key>
+		<key>Create_new_module_in_a_patch.textile</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>67</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>20</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>0</integer>
+			<integer>286</integer>
 			<key>firstVisibleLine</key>
-			<integer>1</integer>
+			<integer>41</integer>
 		</dict>
 		<key>Hosting_Jamoma_modules_at_Github.textile</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>2</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>78</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>145</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>39</integer>
+			<integer>0</integer>
 		</dict>
 		<key>How_to_add_project_to_User_Library.textile</key>
 		<dict>
@@ -170,14 +184,58 @@
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>48</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>15</integer>
+			<integer>0</integer>
+		</dict>
+		<key>How_to_build_jmod.qmetro.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>28</integer>
+				<key>line</key>
+				<integer>3</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>16</integer>
+				<key>line</key>
+				<integer>3</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>28</integer>
+				<key>line</key>
+				<integer>3</integer>
+			</dict>
 		</dict>
 		<key>How_to_get_jcom.hub_s_initialization_notification_.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Index_of_Modules.textile</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -196,9 +254,23 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>45</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>103</integer>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Installer_log.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -220,6 +292,20 @@
 			<integer>0</integer>
 		</dict>
 		<key>Installing_Jamoma_Modular_stable_version.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Introduction_to_Jamoma_modules.textile</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -261,20 +347,6 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Library/html/jcom.dbap.html</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>62</integer>
-				<key>line</key>
-				<integer>6</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
 		<key>Library/html/jcom.init.html</key>
 		<dict>
 			<key>caret</key>
@@ -288,6 +360,62 @@
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>34</integer>
+		</dict>
+		<key>Retrieving_information_about_existing_Jamoma_modules.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Sending_messages_to_modules.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Shortcuts_in_Jamoma.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Tutorial_-_Sound_FX_modules.textile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>toc.textile</key>
 		<dict>
@@ -306,26 +434,26 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>Library/html/jcom.init.html</string>
-		<string>How_to_add_project_to_User_Library.textile</string>
-		<string>Index_of_components.textile</string>
-		<string>How_to_get_jcom.hub_s_initialization_notification_.textile</string>
-		<string>Library/PurpleCloth_specification.textile</string>
+		<string>Browsing_the_various_modules.textile</string>
+		<string>Create_new_module_in_a_patch.textile</string>
 		<string>Hosting_Jamoma_modules_at_Github.textile</string>
-		<string>toc.textile</string>
-		<string>Components/jcom.meter~.textile</string>
-		<string>Components/jcom.delta.textile</string>
-		<string>Components/jcom.init.html</string>
-		<string>../../../../@Jamoma/JamomaDoc/Tools/Textmate bundle/SHORTCUTS.textile</string>
-		<string>Components/jcom.oscinstance.textile</string>
-		<string>Components/jcom.init.textile</string>
-		<string>Components/jcom.dbap.textile</string>
-		<string>Library/html/jcom.dbap.html</string>
-		<string>Hosting_Jamoma_modules_at_Github.html</string>
+		<string>How_to_add_project_to_User_Library.textile</string>
+		<string>How_to_build_jmod.qmetro.textile</string>
+		<string>How_to_get_jcom.hub_s_initialization_notification_.textile</string>
+		<string>Index_of_components.textile</string>
+		<string>Index_of_Modules.textile</string>
+		<string>Installer_log.textile</string>
+		<string>Installing_Jamoma_Modular_development_version.textile</string>
+		<string>Installing_Jamoma_Modular_stable_version.textile</string>
+		<string>Retrieving_information_about_existing_Jamoma_modules.textile</string>
+		<string>Sending_messages_to_modules.textile</string>
+		<string>Shortcuts_in_Jamoma.textile</string>
+		<string>Tutorial_-_Sound_FX_modules.textile</string>
+		<string>Introduction_to_Jamoma_modules.textile</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{283, 0}, {1131, 878}}</string>
+	<string>{{301, 0}, {1131, 878}}</string>
 </dict>
 </plist>
