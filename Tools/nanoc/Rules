@@ -10,8 +10,12 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do
+compile '/css/*/' do
   # don’t filter or layout
+end
+
+route '/css/*/' do
+  item.identifier.chop + '.css'
 end
 
 compile '/images/*/' do
@@ -22,18 +26,18 @@ route '/images/*/' do
   item.identifier.chop + '.' + item[:extension]
 end
 
-compile '/testr/*/' do
-    filter :redcloth, :erb
-    layout 'default'
-    filter :relativize_paths, :type => :html
-  end
+compile '/patches/*/' do
+end
 
-route '/testr/*/' do 
-  if item[:content_filename] =~ /\/index.*$/ 
-    item.identifier + 'index.html' 
-  else 
-    item.identifier.chop + '.html' 
-  end 
+route '/patches/*/' do
+  item.identifier.chop + '.' + item[:extension]
+end
+
+compile '/js/images/*/' do
+end
+
+route '/js/images/*/' do
+  item.identifier.chop + '.' + item[:extension]
 end
 
 compile '*' do
@@ -42,10 +46,6 @@ compile '*' do
   filter :redcloth, :erb
   layout 'default'
   filter :relativize_paths, :type => :html
-end
-
-route '/stylesheet/' do
-  '/style.css'
 end
 
 # By default, nanoc use the page name as folder name and add an index.html page (as in first case). Here, unless the page is named "index.something" we keep the page name.
