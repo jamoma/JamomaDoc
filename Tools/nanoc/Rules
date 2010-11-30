@@ -10,53 +10,45 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-#TODO redo with rules based on extensions (item[:extension])
-compile '/css/*/' do
-  # don’t filter or layout
-end
-
-route '/css/*/' do
-  item.identifier.chop + '.css'
-end
-
-compile '/images/*/' do
-  # do nothing
-end
-
-route '/images/*/' do
-  item.identifier.chop + '.' + item[:extension]
-end
-
-compile '/patches/*/' do
-end
-
-route '/patches/*/' do
-  item.identifier.chop + '.' + item[:extension]
-end
-
-compile '/js/images/*/' do
-end
-
-route '/js/images/*/' do
-  item.identifier.chop + '.' + item[:extension]
-end
 
 compile '*' do
-  filter :addref
-  filter :pretextile
-  filter :redcloth, :erb
-  layout 'default'
-  filter :relativize_paths, :type => :html
+  case item[:extension]
+    when 'css'
+      # nothing
+    when 'js'
+      # nothing
+    when 'png'
+      # nothing
+    when 'jpg'
+      # nothing
+    when 'textile'
+      filter :addref
+      filter :pretextile
+      filter :redcloth, :erb
+      layout 'default'
+      filter :relativize_paths, :type => :html
+    end
 end
 
 # By default, nanoc use the page name as folder name and add an index.html page (as in first case). Here, unless the page is named "index.something" we keep the page name.
 
-route '*' do 
-  if item[:content_filename] =~ /\/index.*$/ 
-    item.identifier + 'index.html' 
-  else 
-    item.identifier.chop + '.html' 
-  end 
+route '*' do
+  case item[:extension]
+    when 'css'
+      item.identifier.chop + '.' + item[:extension]
+    when 'js'
+      item.identifier.chop + '.' + item[:extension]
+    when 'png'
+      item.identifier.chop + '.' + item[:extension]
+    when 'jpg'
+      item.identifier.chop + '.' + item[:extension]
+    when 'textile'
+      if item[:content_filename] =~ /\/index.*$/ 
+        item.identifier + 'index.html' 
+      else 
+        item.identifier.chop + '.html'
+      end
+    end 
 end
 
 layout '*', :erb
