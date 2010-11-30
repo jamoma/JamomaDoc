@@ -1,0 +1,236 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata&subset=latin);
+
+/* @group Resets */
+
+html, body, div, span, a, img,
+h1, h2, h3, h4, h5, h6, hgroup, p,
+dl, dialog, dt, dd, ol, ul, li, 
+abbr, acronym, address, b, big, blockquote, 
+cite, code, del, dfn, em, i, ins, kbd, pre, q, 
+samp, tt, var, small, strong, sub, sup, 
+object, iframe, form, fieldset, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, footer, header, nav, section,
+figure, menu, time, mark, audio, video						{ font-family: inherit; font-size: 100%; font-weight: inherit; font-style: inherit; vertical-align: baseline; white-space: normal; text-align: left; margin: 0; padding: 0; border: 0; outline: 0; background: transparent; }
+textarea													{ font-family: inherit; font-size: 100%; font-weight: normal; font-style: normal; white-space: normal; text-align: left; margin: 0; padding: 0; }
+article, aside, footer, header, nav, section,
+dialog, figure, hgroup, menu								{ display: block; }
+
+h1, h2, h3, h4, h5, h6										{ font-size: 100%; font-weight: normal; }
+
+del, ins													{ text-decoration: none; }
+ol, ul														{ list-style: none; }
+nav ul														{ list-style-type: none; }
+table														{ border-collapse: separate; border-spacing: 0; background-color: transparent; width: auto; height: auto; }
+:focus														{ outline: 0; }
+blockquote:before, blockquote:after, q:before, q:after		{ content: ""; }
+blockquote, q												{ quotes: "" ""; }
+input														{ margin: 0; }
+
+/* @end */
+
+
+body {
+	margin: 0;
+	background-color: #fcffff;
+	text-transform: none;
+	color: #363737;
+	font: 0.8em/1.5em Arial, Verdana, "Lucida Grande", Lucida, sans-serif;
+}
+
+div#doc{
+	
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+div#doc h2 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+div#doc h1, h2, h3, h4, h5, h6{
+	font-weight: bold;
+}
+div#doc h3 {
+	font-style: normal;
+}
+div#doc h3 {
+}
+
+#footer{
+	border-top: 1px solid #cacaca;
+}
+
+.description{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	letter-spacing: 0.1em;
+}
+div.seealso {
+	position: absolute;
+	overflow: visible;
+	float: none;
+	bottom: 1%;
+	right: -151px;
+	visibility: visible;
+	height: 100px;
+	width: 100px;
+	display: block;
+	border: 1px solid #dadada;
+	padding: 10px;
+}
+
+a {
+	color: #ac0075;
+	text-decoration: none;
+	border-bottom: 1px dotted rgba(153,0,98,0.25);
+}
+a:hover{
+	border-bottom: 1px dotted #990062;
+}
+
+li{
+	background: url(./images/bullet.png) no-repeat left center;
+	padding-left: 10px;
+}
+code{
+	font-family: Inconsolata;
+	background-color: #fdfeda;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+/* @group imageStuff */
+
+a.image img{
+	width: 400px;
+	border: 1px double #c1c1c1;
+		box-shadow:0px 5px 20px #bbbdbd;
+		-webkit-box-shadow: 0px 5px 20px #bbbdbd;
+		-moz-box-shadow: 0px 5px 20px #bbbdbd;
+}
+
+
+
+div.imageZoom{
+	width: 400px;
+	padding: 5px;
+	box-shadow:0px 5px 20px #3B3B3B;
+		-webkit-box-shadow: 0px 5px 20px #A4A4A4;
+		-moz-box-shadow: 0px 5px 20px #bbbdbd;
+
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border: 1px solid #aaaba7;
+	background-color: #fefffe;
+}
+
+.imageZoom:hover {
+	-webkit-box-shadow: 0px 0px 30px #8CB7FF;
+	-moz-box-shadow: 0px 0px 30px #8CB7FF;
+	-o-box-shadow: 0px 0px 30px #8CB7FF;
+	box-shadow: 0px 0px 30px #8CB7FF;
+
+	transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+
+}
+
+/* @end */
+
+.tagNavigation li{
+	background-image: none;
+}
+.tagBox {
+	display: inline;
+}
+.tagBox a{
+	border-radius: 10px;
+	border: 1px solid #babcbc;
+	text-decoration: none;
+	font-weight: lighter;
+	font-style: normal;
+	font-variant: small-caps;
+	color: #434141;
+	letter-spacing: 0.2em;
+	display: inline;
+	background: #d7d7d7 url(../../../Downloads/cc/white/16x16/tag.png) no-repeat right top;
+	padding-left: 0.7em;
+	padding-right: 1.5em;
+}
+.tagBox a:hover{
+	background-color: #555352;
+	color: #d9dddd;
+}
+.tagBox a.selected, .tagBox a.selected:hover {
+	color: #434141;
+	background-color: #d4dafe;
+}
+/*.tagBox a:after{
+	content:url(images/zoom.png);
+	padding-left: 5px;
+}*/
+
+.tagRef{
+	margin-left: 5px;
+	list-style-position: inside;
+}
+table{
+	width: 100%;
+	text-align: left;
+		border: 1px solid #e6e6e6;
+
+}
+
+tbody{
+	border: 1px solid #e6e6e6;
+}
+
+tr{
+	
+}
+
+th{
+	background-color: #e6e6e6;
+}
+
+td{
+	border: 1px solid #e6e6e6;
+}
+
+table								{ border-collapse: collapse; border-top: solid 3px #000; position: relative; margin-top: 18px; }
+
+th, td								{ line-height: 18px; padding: 9px 18px 8px 0;
+}
+thead th, thead td					{ padding-top: 7px; }
+tfoot th, tfoot td					{ padding-bottom: 8px;
+}
+tbody th, tbody td,
+tfoot th, tfoot td					{ border-top: solid 1px #000;
+}
+ 
+th:first-child, td:first-child		{ padding-left: 0;
+}
+th:last-child, td:last-child		{ padding-right: 0;
+}
+
+tr:nth-child(even) td				{
+}
+tbody tr:nth-child(odd) td			{ background: rgba(0, 0, 0, 0.035);
+}
+
+caption								{ top: 5px; margin-bottom: 18px; }
+
+
+/* @group special cases */
+
+h2.LessonTitle + p {
+	font-style: italic;
+	font-family: Georgia;
+}
+
+
+
+/* @end */
