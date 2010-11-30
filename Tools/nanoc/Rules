@@ -38,6 +38,7 @@ end
 
 compile '*' do
   filter :addref
+  filter :pretextile
   filter :redcloth, :erb
   layout 'default'
   filter :relativize_paths, :type => :html

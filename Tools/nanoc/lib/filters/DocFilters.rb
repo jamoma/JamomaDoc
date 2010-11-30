@@ -10,6 +10,7 @@ end
 class PreTextileFilter < Nanoc3::Filter
   identifier :pretextile
   
-  def run(content, params={})
+  def anotherrun(content, params={})
+    content.gsub(/(\()(\d+)(\))/,'\1<span class="figurePointer">\2</span>\3')
   end
 end
