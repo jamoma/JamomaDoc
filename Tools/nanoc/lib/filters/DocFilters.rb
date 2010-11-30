@@ -9,8 +9,8 @@ end
 
 class PreTextileFilter < Nanoc3::Filter
   identifier :pretextile
-  
-  def anotherrun(content, params={})
+# TODO turn these rules in a class extenting Redcloth -> should be usable in non-nanoc generated html
+  def run(content, params={})
     content.gsub(/(\()(\d+)(\))/,'\1<span class="figurePointer">\2</span>\3')
   end
 end
