@@ -9,6 +9,7 @@ objref: [jmod.layout, jmod.degrade~]
 
 Jamoma Modular can really make the design of a Max interactive application easier. Start by creating a module in a patch using one of the following options.
 
+
 h3(StepTitle). %(StepNumber)1% Using Jamoma modules as abstractions
 
 Modules can be created as "abstractions":http://www.cycling74.com/docs/max5/vignettes/core/abstractions.html, just like any regular Max patch saved to disk. In Max, open a blank patcher window and double-click in the window or press the %(kbd)n% key to create a new object.
