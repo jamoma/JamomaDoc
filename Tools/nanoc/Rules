@@ -10,6 +10,7 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+#TODO redo with rules based on extensions (item[:extension])
 compile '/css/*/' do
   # don’t filter or layout
 end
