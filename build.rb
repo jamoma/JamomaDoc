@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby -wKU
 
+#TODO redirect nanoc output to Terminal
 glibdir = "."
 Dir.chdir glibdir
 glibdir = Dir.pwd
