@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+
+# A few helpful tips about the Rules file:
+#
+# * The order of rules is important: for each item, only the first matching
+#   rule is applied.
+#
+# * Item identifiers start and end with a slash (e.g. “/about/” for the file
+#   “content/about.html”). To select all children, grandchildren, … of an
+#   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
+#   because “*” matches zero or more characters.
+
+compile '/stylesheet/' do
+  # don’t filter or layout
+end
+
+compile '/images/*/' do
+  # do nothing
+end
+
+route '/images/*/' do
+  item.identifier.chop + '.' + item[:extension]
+end
+
+compile '/testr/*/' do
+    filter :redcloth, :erb
+    layout 'default'
+    filter :relativize_paths, :type => :html
+  end
+
+route '/testr/*/' do 
+  if item[:content_filename] =~ /\/index.*$/ 
+    item.identifier + 'index.html' 
+  else 
+    item.identifier.chop + '.html' 
+  end 
+end
+
+compile '*' do
+  filter :addref
+  filter :redcloth, :erb
+  layout 'default'
+  filter :relativize_paths, :type => :html
+end
+
+route '/stylesheet/' do
+  '/style.css'
+end
+
+# By default, nanoc use the page name as folder name and add an index.html page (as in first case). Here, unless the page is named "index.something" we keep the page name.
+
+route '*' do 
+  if item[:content_filename] =~ /\/index.*$/ 
+    item.identifier + 'index.html' 
+  else 
+    item.identifier.chop + '.html' 
+  end 
+end
+
+layout '*', :erb
+
+# TODO Filter images and whatever media file based on extension rather than on directory.

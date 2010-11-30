@@ -1,0 +1,6 @@
+<% if @item[:author] %>
+	<% authArray = @item[:author] %>
+	<% authArray.each do |md| %>
+	<meta name="author" content="<%= md %>">
+	<% end %>
+<% end %>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @item[:title] %></title>
+    <link rel="stylesheet" type="text/css" href="/JDoc.css" media="screen">
+    <meta name="generator" content="nanoc 3.1.5">
+	<%= render 'metadata' %>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script>
+  $(document).ready(function() {
+    $("#tabs").tabs();
+  });
+  </script> -->
+  </head>
+  <body>
+	<h1><%= @item[:title] %></h1>
+	<p class="description"><%= @item[:description] %></p>
+    <div id="main">
+      <%= yield %>
+    </div>
+	<%= render 'tagBlock'%>
+	<%= render 'objreferences'%>
+	<div class="dateInfo">
+		<p><%= "Creation date : " + @item[:created_at].to_s %>. <%= @item.mtime.strftime("Last modified: %B %d, %Y") %></p>
+	</div>
+	<%= render 'footer' %>
+  </body>
+</html>

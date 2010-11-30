@@ -1,0 +1,34 @@
+<% unless @item[:tags].nil? or @item[:tags].empty? %>
+<script type="text/javascript" charset="utf-8">
+                $(function () {
+                        var tabContainers = $('div.tagBlock > div');
+                        tabContainers.hide().filter(':first').show();
+                        
+                        $('div.tagBlock ul.tagNavigation a').click(function () {
+                                tabContainers.hide();
+                                tabContainers.filter(this.hash).show();
+                                $('div.tagBlock ul.tagNavigation a').removeClass('selected');
+                                $(this).addClass('selected');
+                                return false;
+                        }).filter(':first').click();
+                });
+</script>
+<!-- Tag section-->
+<div id="tabs" class="tagBlock">
+	<h3>Tags</h3>
+	<ul class="tagNavigation">
+		<% @item[:tags].each do |tag| %>
+		<li class="tagBox"><a href="#<%= tag %>"><%= tag %></a></li>
+		<% end %>
+	</ul>
+	<% @item[:tags].each do |tag| %> 
+	<div id="<%= tag %>">
+	   <ul>
+	   <% items_with_tag(tag).each do |item| %>
+	       <li class="tagRef"><a href="<%= item.path %>"><%= item[:title] %> - <%= item[:description] %></a></li>
+	   <% end %>
+	   </ul>
+	</div>
+	<% end %>
+</div>
+<% end %>

@@ -1,0 +1,15 @@
+<%# Basically, this layout is a placeholder so far. A helper should be made to list all jcom ref in a page and extract description %>
+<% unless @item[:objref].nil? or @item[:objref].empty? %>
+	<div class="objRefBlock">
+		<h3>References</h3>
+		<ul>
+		<% @item[:objref].each do |obj| %>
+			<% if obj =~ /jcom/ %>		
+				<li><a href="./Components/<%= obj %>.html"><%= obj %></a></li>
+			<% elsif obj =~ /jmod/ %>
+				<li><a href="./Modules/<%= obj %>.html"><%= obj %></a></li>
+			<% end %>
+		<% end %>
+		</ul>
+	</div>
+<% end %>
