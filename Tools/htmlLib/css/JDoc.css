@@ -16,7 +16,10 @@ textarea													{ font-family: inherit; font-size: 100%; font-weight: norma
 article, aside, footer, header, nav, section,
 dialog, figure, hgroup, menu								{ display: block; }
 
-h1, h2, h3, h4, h5, h6										{ font-size: 100%; font-weight: normal; }
+h1, h2, h3, h4, h5, h6										{ font-size: 100%; font-weight: normal;
+	letter-spacing: 0;
+	color: #2b2b2b;
+}
 
 del, ins													{ text-decoration: none; }
 ol, ul														{ list-style: none; }
@@ -107,6 +110,23 @@ a:hover{
 	border-bottom: 1px dotted #990062;
 }
 
+a.jcom {
+	border-left: 1px solid #aeaeae;
+	border-radius:5px;
+	border-right: 1px solid #aeaeae;
+	display: inline-block;
+	padding-bottom: 0.1em;
+	padding-left: 0.35em;
+	padding-right: 0.35em;
+	/*border: 1px solid #9f9f9f;*/
+	border-bottom: 1px solid #d9d9d9;
+	border-top: 2px solid #ddd;
+}
+
+a.jcom:hover{
+	background-color: #f7f7f7;
+}
+
 li{
 	background: url(./images/bullet.png) no-repeat left center;
 	padding-left: 10px;
@@ -130,30 +150,35 @@ span.seq{
 }
 /* @group imageStuff */
 
-a.image img{
-	width: 400px;
-	border: 1px double #c1c1c1;
-	box-shadow:0px 5px 20px #bbbdbd;
-		-webkit-box-shadow: 0px 5px 20px #bbbdbd;
+a.image{
+	max-width: 70%;
+	box-shadow:0px 5px 20px #3B3B3B;
+		-webkit-box-shadow: 0px 5px 20px #A4A4A4;
 		-moz-box-shadow: 0px 5px 20px #bbbdbd;
+	border: 1px double #c1c1c1;
+	padding: px;
+	display: inline-block;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+a.image img{
+	border: 1px double #c1c1c1;
 }
 
 
 
 div.imageZoom{
-	width: 400px;
 	padding: 5px;
-	box-shadow:0px 5px 20px #3B3B3B;
-		-webkit-box-shadow: 0px 5px 20px #A4A4A4;
-		-moz-box-shadow: 0px 5px 20px #bbbdbd;
-
 	margin-top: 40px;
 	margin-bottom: 40px;
-	border: 1px solid #aaaba7;
-	background-color: #fefffe;
+	/*border: 1px solid #aaaba7;
+	background-color: #fefffe;*/
+	text-align: center;
 }
 
-.imageZoom:hover {
+a.image:hover {
 	-webkit-box-shadow: 0px 0px 30px #8CB7FF;
 	-moz-box-shadow: 0px 0px 30px #8CB7FF;
 	-o-box-shadow: 0px 0px 30px #8CB7FF;
@@ -196,7 +221,7 @@ div.imageZoom{
 	color: #434141;
 	letter-spacing: 0.2em;
 	display: inline;
-	background: #d7d7d7 url(172-pricetag.png) no-repeat left center;
+	background: #d7d7d7 url(./../172-pricetag.png) no-repeat left center;
 	padding-right: 0.7em;
 	padding-left: 2em;
 }
