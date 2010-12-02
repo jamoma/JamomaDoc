@@ -9,20 +9,21 @@
     <meta name="generator" content="nanoc 3.1.5">
 	<%= render 'metadata' %>
 	<script src="js/jquery-1.4.4.min.js" type="text/javascript"></script>
-	<script src="js/jquery.hyphenator.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/jquery.lightbox.js"></script>
   </head>
   <body>
     <div id="doc">
-		<h1><%= @item[:title] %></h1>
-		<p class="description"><%= @item[:description] %></p>
-      	<%= yield %>
-		<%= render 'tagBlock'%>
-		<%= render 'objreferences'%>
-    </div>
-	<div class="dateInfo">
-		<p><%= "Creation date : " + @item[:created_at].to_s %>. <%= @item.mtime.strftime("Last modified: %B %d, %Y") %></p>
-	</div>
+		<div class="textSection">
+			<h1><%= @item[:title] %></h1>
+			<p class="description"><%= @item[:description] %></p>
+	      	<%= yield %>
+			<%= render 'tagBlock'%>
+			<%= render 'objreferences'%>
+			<div class="dateInfo">
+				<p><%= "Creation date : " + @item[:created_at].to_s %>. <%= @item.mtime.strftime("Last modified: %B %d, %Y") %></p>
+			</div>
+		</div>	<!-- END TextSection-->
+	</div> <!-- END doc -->
 	<%= render 'footer' %>
   </body>
 </html>
