@@ -34,7 +34,7 @@ input														{ margin: 0; }
 
 
 body {
-	margin: 50px;
+	margin: 0px;
 	text-transform: none;
 	color: #363737;
 	font: 0.8em/1.5em Arial, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial;
@@ -42,11 +42,36 @@ body {
 	/*letter-spacing: 0.1em;*/
 	-webkit-font-smoothing:antialiased;
 	padding: 20px;
+	text-align: justify;
 }
 
 #doc{
 	background-color: rgba(255,255,255, .8);
+}
+
+blockquote{
+	margin-top: 2em;
+	border: 1px solid #c0c1c1;
 	padding: 10px;
+	border-radius:8px;
+	background-color: #fffeff;
+}
+blockquote:before{
+	content:url(187-pencil.png);
+	float: left;
+	padding-right: 20px;
+	padding-left: 5px;
+	padding-top: 5px;
+	background-color: #fffeff;
+}
+blockquote p{
+	padding: 5px;
+	margin: 0;
+}
+.textSection{
+	margin-top: 2em;
+	margin-left: 20%;
+	margin-right: 20%;
 }
 
 #footer{
@@ -55,11 +80,6 @@ body {
 }
 #footer p{
 	margin: 0 0 1em;
-}
-div#doc{
-	
-	margin-left: 10%;
-	margin-right: 10%;
 }
 
 div#doc h2 {
@@ -100,10 +120,18 @@ div.seealso {
 }
 
 p{
-	margin-bottom: 2em;
+	/*margin-top: 2em;*/
+	text-align: justify;
 }
+
+p + p {
+	margin-top: 1em;
+}
+
+
+
 a {
-	color: #ac0075;
+	color: #990062;
 	text-decoration: none;
 	border-bottom: 1px dotted rgba(153,0,98,0.25);
 }
@@ -176,15 +204,14 @@ div.imageZoom:before{
 }
 
 div.imageZoom{
-	padding: 5px;
-	margin-top: 40px;
+	margin-top: 2em;
 	margin-bottom: 40px;
 	background-color: #fefffe;
 	text-align: center;
 	background-image: url(http://www.loudentax.com/_img/bg_lite.png);
 	border-top: 1px solid #bdbdbd;
 	border-bottom: 1px solid #dadada;
-
+	padding: 5px;
 }
 
 a.image:hover {
@@ -211,7 +238,7 @@ a.image:hover {
 	-moz-border-radius: 6px;
 	display: block;
 	margin: 25px auto 15px auto;
-	
+
 }
 
 .tagNavigation li{
@@ -247,10 +274,23 @@ a.image:hover {
 	padding-left: 5px;
 }*/
 
-.tagRef{
+li.tagRef a{
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
 	margin-left: 5px;
-	list-style-position: inside;
+	/*list-style-position: inside;*/
+	width:100%;
+	cursor:pointer;
+	display: inline-block;
 }
+
+li.tagRef a:hover{
+	white-space: normal;
+	text-align: justify;
+}
+
 table{
 	width: 100%;
 	text-align: left;
