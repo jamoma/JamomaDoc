@@ -13,13 +13,13 @@
 	<script type="text/javascript" src="js/jquery.lightbox.js"></script>
   </head>
   <body>
-	<h1><%= @item[:title] %></h1>
-	<p class="description"><%= @item[:description] %></p>
     <div id="doc">
-      <%= yield %>
+		<h1><%= @item[:title] %></h1>
+		<p class="description"><%= @item[:description] %></p>
+      	<%= yield %>
+		<%= render 'tagBlock'%>
+		<%= render 'objreferences'%>
     </div>
-	<%= render 'tagBlock'%>
-	<%= render 'objreferences'%>
 	<div class="dateInfo">
 		<p><%= "Creation date : " + @item[:created_at].to_s %>. <%= @item.mtime.strftime("Last modified: %B %d, %Y") %></p>
 	</div>
