@@ -4,7 +4,7 @@ identifier :addref
   def run(content, params={})
     content.gsub(/(\s)(jcom.\w+)/,' "(jcom)\2":./components/\2.html') # add link to ref file if missing
     content.gsub(/(\s)(jmod.[\w|\.]+)/,' "(jcom)\2":./modules/\2.html') # idem for modules
-    content.gsub(/("j)([c|m])(o)([m|d]\S+")/, '"(jcom)j\2\3\4') #add jcom css class if missing
+    content.gsub(/("j)([c|m])(o)([m|d]\S+":)/, '"(jcom)j\2\3\4') #add jcom css class if missing
   end
 end
 
