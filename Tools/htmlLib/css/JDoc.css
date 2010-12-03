@@ -34,19 +34,22 @@ input														{ margin: 0; }
 
 
 body {
-	margin: 0px;
-	text-transform: none;
-	color: #363737;
+	/*text-transform: none;*/
+	color: #323232;
 	font: 0.8em/1.5em Arial, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial;
-	background-image: url(http://www.loudentax.com/_img/bg_lite.png);
 	/*letter-spacing: 0.1em;*/
 	-webkit-font-smoothing:antialiased;
-	padding: 20px;
 	text-align: justify;
 }
 
 #doc{
-	background-color: rgba(255,255,255, .8);
+	/*background-color: rgba(255,255,255, .8);*/
+}
+
+.textSection{
+	margin-top: 2em;
+	margin-left: 20%;
+	margin-right: 20%;
 }
 
 blockquote{
@@ -68,11 +71,6 @@ blockquote p{
 	padding: 5px;
 	margin: 0;
 }
-.textSection{
-	margin-top: 2em;
-	margin-left: 20%;
-	margin-right: 20%;
-}
 
 #footer{
 	letter-spacing: 0.2em;
@@ -84,7 +82,6 @@ blockquote p{
 
 div#doc h2 {
 	font-size: 1em;
-	font-weight: bold;
 }
 
 div#doc h1, h2, h3, h4, h5, h6{
@@ -92,8 +89,10 @@ div#doc h1, h2, h3, h4, h5, h6{
 }
 div#doc h3 {
 	font-style: normal;
+	margin-top:5em;
 }
-div#doc h3 {
+h3 + p {
+	margin-top:0.8em;
 }
 
 #footer{
@@ -124,7 +123,7 @@ p{
 	text-align: justify;
 }
 
-p + p {
+.textSection p + p {
 	margin-top: 1em;
 }
 
@@ -161,7 +160,7 @@ li{
 	padding-left: 10px;
 }
 code{
-	font-family: Inconsolata;
+	font-family: Inconsolata, "Courier New", Courier, mono;
 	background-color: #fdfeda;
 	padding-left: 0.2em;
 	padding-right: 0.2em;
@@ -205,13 +204,13 @@ div.imageZoom:before{
 
 div.imageZoom{
 	margin-top: 2em;
-	margin-bottom: 40px;
+	/*margin-bottom: 40px;*/
 	background-color: #fefffe;
 	text-align: center;
 	background-image: url(http://www.loudentax.com/_img/bg_lite.png);
 	border-top: 1px solid #bdbdbd;
 	border-bottom: 1px solid #dadada;
-	padding: 5px;
+	/*padding: 5px;*/
 }
 
 a.image:hover {
