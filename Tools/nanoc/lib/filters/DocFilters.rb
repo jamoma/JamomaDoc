@@ -14,6 +14,7 @@ class PreTextileFilter < Nanoc3::Filter
   def run(content, params={})
     content.gsub(/(\()(\d+)(\))/,'\1<span class="figurePointer">\2</span>\3')
     content.gsub(/(!)(\S+)(!)/,'</div><div class="imageZoom"><a href="\2" class="image" target="_blank" rel="lightbox[modular]"><img src="\2"></a></div><div class="textSection">')
+    content.gsub(/(h\d)\sSummary/,'</div><div class="SummarySection">\1 Summary')
   end
 end
 
