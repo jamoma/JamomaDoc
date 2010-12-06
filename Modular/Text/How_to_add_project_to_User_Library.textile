@@ -25,7 +25,7 @@ Once our project is added, we can initialize the submodule in which it is contai
 
 !images/add_submodule_3.png!
 
-As with any other changes made, you need to commit them to your local repository. Be sure to add a log message using the @-m@ option so other users can explicitely know about your addition to the user lib.
+Then, you need to update the list of submodules using @git submodule update@. As with any other changes made, you need to commit them to your local repository. Be sure to add a log message using the @-m@ option so other users can explicitely know about your addition to the user lib.
 
 !images/add_submodule_4.png!
 
