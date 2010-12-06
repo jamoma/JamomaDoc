@@ -80,19 +80,32 @@ blockquote p{
 	margin: 0 0 1em;
 }
 
-div#doc h2 {
-	font-size: 1em;
-}
-
 div#doc h1, h2, h3, h4, h5, h6{
 	font-weight: bold;
+	color: #3c3c3c;
 }
-div#doc h3 {
-	font-style: normal;
-	margin-top:5em;
-}
-h3 + p {
-	margin-top:0.8em;
+
+div#doc h1{ font-size: 1.1em; }
+
+/*div#doc h2 { font-size: 1em; }*/
+
+div#doc h3 { margin-top:5em; font-size:1em; }
+
+div#doc h3 { margin-top:5em; font-size:1em; }
+
+h3 + p { margin-top:0.8em; }
+
+div#doc h4 { margin-top:2em; color: #787878; }
+
+h4 + p { margin-top:0.5em; }
+
+a.logo img{
+	width: 50px;
+	display: inline-block;
+	float: left;
+	bottom: 10px;
+	position: relative;
+	margin-right: 20px;
 }
 
 #footer{
@@ -100,10 +113,11 @@ h3 + p {
 }
 
 .description{
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-style: italic;
 	letter-spacing: 0.1em;
+	color: #212121;
+	font: italic 0.9em Georgia, "Times New Roman", Times, serif;
 }
+
 div.seealso {
 	position: absolute;
 	overflow: visible;
