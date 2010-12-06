@@ -9,7 +9,27 @@
 #   “content/about.html”). To select all children, grandchildren, … of an
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
+# ---------
 
+# TODO turn this into a helper/filter i.e. if file not in main /content/ turn href into ""../""
+compile '/components/*/' do
+  case item[:extension]
+    when 'css'
+      # nothing
+    when 'js'
+      # nothing
+    when 'png'
+      # nothing
+    when 'jpg'
+      # nothing
+    when 'textile'
+      filter :addref
+      filter :pretextile
+      filter :redcloth, :erb
+      layout 'component'
+      filter :relativize_paths, :type => :html
+    end
+end
 
 compile '*' do
   case item[:extension]
