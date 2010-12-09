@@ -12,7 +12,12 @@
 	<script type="text/javascript" src="./js/jquery.fancybox-1.3.4.pack.js"></script>
 	<script>
 		$(document).ready(function(){
-			$("a.image").fancybox();
+			$("a.image").fancybox({
+				'overlayColor'		: 'white',
+				'overlayOpacity'	: 0.85,
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'elastic'
+			});
 		});
 	</script>
   </head>

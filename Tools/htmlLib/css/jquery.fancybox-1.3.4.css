@@ -15,6 +15,7 @@
  *   http://www.gnu.org/licenses/gpl.html
  */
 
+
 #fancybox-loading {
 	position: fixed;
 	top: 50%;
@@ -56,6 +57,8 @@
 }
 
 #fancybox-wrap {
+	max-height:90%;
+	max-width:90%;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -69,7 +72,12 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background: #fff;
+	background: rgba(0,0,0,0.30);
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
 }
 
 #fancybox-content {
@@ -80,7 +88,8 @@
 	position: relative;
 	overflow: hidden;
 	z-index: 1102;
-	border: 0px solid #fff;
+	border: 1px solid #fff;
+	border-radius:2px;
 }
 
 #fancybox-hide-sel-frame {
@@ -103,6 +112,7 @@
 	cursor: pointer;
 	z-index: 1103;
 	display: none;
+	border-style: none;
 }
 
 #fancybox-error {
@@ -115,12 +125,12 @@
 #fancybox-img {
 	width: 100%;
 	height: 100%;
-	padding: 0;
+	padding: 0px;
 	margin: 0;
-	border: none;
 	outline: none;
 	line-height: 0;
 	vertical-align: top;
+	border: 0px solid #d5d5d5;
 }
 
 #fancybox-frame {
@@ -140,6 +150,7 @@
 	background: transparent url('blank.gif');
 	z-index: 1102;
 	display: none;
+	border-style: none;
 }
 
 #fancybox-left {
@@ -195,63 +206,63 @@
 	z-index: 1001;
 }
 
-#fancybox-bg-n {
+/*#fancybox-bg-n {
 	top: -20px;
 	left: 0;
 	width: 100%;
 	background-image: url('fancybox-x.png');
-}
+}*/
 
-#fancybox-bg-ne {
+/*#fancybox-bg-ne {
 	top: -20px;
 	right: -20px;
 	background-image: url('fancybox.png');
 	background-position: -40px -162px;
-}
+}*/
 
-#fancybox-bg-e {
+/*#fancybox-bg-e {
 	top: 0;
 	right: -20px;
 	height: 100%;
 	background-image: url('fancybox-y.png');
 	background-position: -20px 0px;
-}
+}*/
 
-#fancybox-bg-se {
+/*#fancybox-bg-se {
 	bottom: -20px;
 	right: -20px;
 	background-image: url('fancybox.png');
 	background-position: -40px -182px; 
-}
+}*/
 
-#fancybox-bg-s {
+/*#fancybox-bg-s {
 	bottom: -20px;
 	left: 0;
 	width: 100%;
 	background-image: url('fancybox-x.png');
 	background-position: 0px -20px;
-}
+}*/
 
-#fancybox-bg-sw {
+/*#fancybox-bg-sw {
 	bottom: -20px;
 	left: -20px;
 	background-image: url('fancybox.png');
 	background-position: -40px -142px;
-}
+}*/
 
-#fancybox-bg-w {
+/*#fancybox-bg-w {
 	top: 0;
 	left: -20px;
 	height: 100%;
 	background-image: url('fancybox-y.png');
-}
+}*/
 
-#fancybox-bg-nw {
+/*#fancybox-bg-nw {
 	top: -20px;
 	left: -20px;
 	background-image: url('fancybox.png');
 	background-position: -40px -122px;
-}
+}*/
 
 #fancybox-title {
 	font-family: Helvetica;
