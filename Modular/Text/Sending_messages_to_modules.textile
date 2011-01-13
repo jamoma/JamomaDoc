@@ -13,8 +13,7 @@ Jamoma uses the OSC (Open Sound Control) protocol. This is a protocol for commun
 
 OpenSoundControl basically means that all parameters that we might want to access or monitor, have been given an address in the form of a Max message or symbol. The addresses are organized in a tree-like structure, with the slash (/) sign prepending each branch. The result is straight-forward and resembles the last part of common Unix or URL paths. Here are some examples of possible OSC addresses:
 
-bc.
-/Abraham/Isaac/Jacob/Judah
+bc. /Abraham/Isaac/Jacob/Judah
 /animals/mammals/cats/lion
 /guitar/filter/frequency
 
