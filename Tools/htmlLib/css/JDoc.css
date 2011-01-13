@@ -40,16 +40,30 @@ body {
 	/*letter-spacing: 0.1em;*/
 	-webkit-font-smoothing:antialiased;
 	text-align: justify;
+	z-index: 1;
 }
 
 #doc{
-	/*background-color: rgba(255,255,255, .8);*/
+	margin-left: 20%;
+	padding-left: 20px;
+	background: rgba(254,255,254,0.9) url(images/border2.png) repeat-y;
 }
 
+#doc:before{
+	content: url(images/JamomaDoc-01.png);
+	background: url(images/JamomaDoc-01.png) no-repeat fixed;
+	/*width: 100px;
+	height: 100px;*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -10;
+}
 .textSection{
 	margin-top: 2em;
-	margin-left: 20%;
+	/*margin-left: 20%;*/
 	margin-right: 20%;
+	padding-left: 10px;
 }
 
 blockquote{
@@ -89,9 +103,9 @@ div#doc h1{ font-size: 1.1em; }
 
 /*div#doc h2 { font-size: 1em; }*/
 
-div#doc h3 { margin-top:5em; font-size:1em; }
+div.textSection > h3 { margin-top:5em; font-size:1em; }
 
-div#doc h3 { margin-top:5em; font-size:1em; }
+/*div#doc h3 { margin-top:5em; font-size:1em; }*/
 
 h3 + p { margin-top:0.8em; }
 
@@ -139,6 +153,11 @@ p{
 
 .textSection p + p {
 	margin-top: 1em;
+}
+
+div#doc > div.textSection {
+	padding-top: 2em;
+	margin-top: 0px;
 }
 
 
@@ -205,6 +224,7 @@ a.image{
 	padding-left: 5px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	background-color: #fefffe;
 }
 
 a.image img{
@@ -212,19 +232,22 @@ a.image img{
 	max-width: 100%;
 }
 
-div.imageZoom:before{
-	/* pour ombre supérieure */
-}
+/*div.imageZoom:before{
+	-webkit-box-shadow: 0px 5px 20px #A4A4A4;
+	 pour ombre supérieure 
+}*/
 
 div.imageZoom{
 	margin-top: 2em;
 	/*margin-bottom: 40px;*/
-	background-color: #fefffe;
+	/*background-color: rgba(108,108,108,0.54);*/
 	text-align: center;
-	background-image: url(http://www.loudentax.com/_img/bg_lite.png);
-	border-top: 1px solid #bdbdbd;
-	border-bottom: 1px solid #dadada;
+	/*background-image: url(http://www.loudentax.com/_img/bg_lite.png);*/
+	/*border-top: 1px solid #bdbdbd;
+	border-bottom: 1px solid #dadada;*/
 	/*padding: 5px;*/
+		margin-right: 20%;
+
 }
 
 a.image:hover {
@@ -242,23 +265,31 @@ a.image:hover {
 
 /* @end */
 
-.tagBlock{
-	padding: 10px 12px; 
+.tagBlock{ 
 	background-color: rgba(0,0,0, .1);
 	border: 1px solid #bbb;
 	border-radius: 6px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	display: block;
-	margin: 25px auto 15px auto;
-
+	margin-right: auto;
+	margin-top: 25px;
+	margin-left: auto;
+	padding: 10px;
 }
 
+/*div.tagBlock > h3{
+	margin: 5px;
+	padding: 5px;
+	top: 1px;
+	bottom: 1px;
+}*/
 .tagNavigation li{
 	background-image: none;
 }
 .tagBox {
 	display: inline;
+	padding-left: 0;
 }
 .tagBox a{
 	border-radius: 10px;
@@ -293,7 +324,7 @@ li.tagRef a{
 	overflow:hidden;
 	white-space:nowrap;
 	margin-left: 5px;
-	/*list-style-position: inside;*/
+	list-style-position: inside;
 	width:100%;
 	cursor:pointer;
 	display: inline-block;
