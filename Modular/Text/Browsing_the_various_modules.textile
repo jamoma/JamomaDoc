@@ -14,17 +14,17 @@ Jamoma comes with a number of patchs (modules in the Jamoma terminology) ready t
 However, Jamoma offers different ways to help you to discover available modules or find the one fitting your needs.
 !(lightbox)images/media_1257711487759.png!
 
-h4(LessonTitle). <span class="StepNumber">1</span>Using Overview patch
+h3. Using Overview patch
 
 
 
 
-h4(LessonTitle). <span class="StepNumber">2</span>Using Max file browser
+h3. Using Max file browser
 
 
 
 
-h4(LessonTitle). <span class="StepNumber">3</span>Using Jamoma jmod.layout module
+h3. Using Jamoma jmod.layout module
 
 ??
 

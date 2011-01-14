@@ -7,7 +7,7 @@ tags: [stable, install, package]
 objref: []
 ---
 
-h3(StepTitle). %(StepNumber)1% Downloading Jamoma installer
+h3. Downloading Jamoma installer
 
 Installer can be downloaded from "Jamoma web site":jamoma. Please visit jamoma.org %(seq)1% and follow the "download":http://jamoma.org/download.html link %(seq)2%.
 
@@ -17,7 +17,7 @@ From the %(samp)download% menu, follow the %(samp)Jamoma Modular% link %(seq)3%,
 
 !images/download_installer_2.png!
 
-h3(StepTitle). %(StepNumber)2% Running the installer package
+h3. Running the installer package
 
 In your download folder, find the archive (.dmg on Mac, .zip on Windows) and double-click to open it. Once having read the %(samp)License.rtf% and %(samp)ReadMe.rtf% files, launch Jamoma Modular installer by double-clicking %(samp)Jamoma-x.x.x.pkg% on Mac, or %(samp)Jamoma.msi% on Windows.
 
@@ -29,7 +29,7 @@ Follow the various steps proposed by the installer until the installation is com
 
 bq. For some reasons (i.e. installing an older version of Jamoma Modular), if you ever needed to uninstall Jamoma Modular, you will find in the disk image a shell script to automate the process of removing all installed Jamoma files.
 
-h3(StepTitle). %(StepNumber)3% Setting up Max 5 preferences
+h3. Setting up Max 5 preferences
 
 Jamoma modules are based on UI objects which default appearance need to be set. To do so, launch Max 5 and go to the %(samp)Object Defaults% window, found in the %(samp)Options% menu.
 

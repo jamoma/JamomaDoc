@@ -18,7 +18,7 @@ The input and output modules are used often, so Jamoma adds two shortcuts to the
 * With the patch in edit mode, we can type %(kbd)SHIFT% + %(kbd)I% to create an input module. The module will show up at the position the mouse is pointing at when we type the shortcut.
 * In the same way we can type %(kbd)SHIFT% + %(kbd)O% to create an output module.
 
-bq. The "Shortcuts_in_Jamoma":Shortcuts in Jamoma.html reference page lists all available key combinations jn Jamoma.
+bq. The "Shortcuts_in_Jamoma":Shortcuts_in_Jamoma.html in Jamoma.html reference page lists all available key combinations jn Jamoma.
 
 h4. Naming instances
 

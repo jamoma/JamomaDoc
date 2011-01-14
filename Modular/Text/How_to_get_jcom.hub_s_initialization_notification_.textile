@@ -25,8 +25,7 @@ What if you want to know from a module that another module is properly initializ
 
 Go to the example folder provided with this documentation and open the patch named _initialization notification_ or copy the compressed version below. 
 
-bc(max).
-----------begin_max5_patcher----------
+bc(max). ----------begin_max5_patcher----------
 1090.3ocyX00ajZCE84Y9U3hpTjplNwevm8sp1G5S8kJ0WpVUQ.GFm.1yZLM
 I6pM+1qwFRX1AlAlkAsJJvXyE6y83685i4yqW4bm3YZoC3W.+CX0pOud0JSW
 0crpo8Jmh3mSxiKMl4jHJJnbkyF6yTzmUl9+CpjBXk.0NJnHNik.9gVa3UEL
@@ -57,14 +56,12 @@ SDmcoPR23Kq+eBWupfC
 
 In this example, we built a similar situation using three modules from Jamoma Modular core distribution ("jmod.qmetro":modules/jmod.qmetro.html that we will use as a clock, "jmod.10harmonics~":modules/jmod.10harmonics~.html that we will use as mini synthesizer and "jmod.output~":modules/jmod.output~.html so you can enjoy the wonderful 5 notes-based arpeggio composed for this example...). Similarly to the example aforementioned, we want to make sure that our synth is properly initialized before starting to play our sequence.  "jcom.initialized":components/jcom.initialized.html can then be used to send a @bang@ when the module defined as its argument is properly initialized. From then, the @bang@ message can trigger the message box that it is connected to and send to "jmod.qmetro /myClock":modules/jmod.qmetro.html the following couple of message to set a speed and to turn it on.
 
-code.
-/time 200
+bc. /time 200
 /toggle 1
 
-bq.
-Remember that there is currently no way to define an initialization order for each module. While the patch we used works for our demonstration purpose, it may be trickier in a complex patch involving a lot of modules. For example, you would probably want to make sure @myClock@ is also properly initialized before receiving any message. We will let this as an exercise for the reader.
+bq. Remember that there is currently no way to define an initialization order for each module. While the patch we used works for our demonstration purpose, it may be trickier in a complex patch involving a lot of modules. For example, you would probably want to make sure @myClock@ is also properly initialized before receiving any message. We will let this as an exercise for the reader.
 
-"Fine. But how does this really works?" Glad you ask.
+"Fine. But how does this really works?" Glad you asked.
 
 "jcom.initialized":components/jcom.initialized.html is a Max patch-based component (_abstraction_) that wraps a special feature of "jcom.receive":components/jcom.receive.html. 
 
@@ -72,8 +69,7 @@ Remember that there is currently no way to define an initialization order for ea
 
 When provided @'notifications'@ as argument, "jcom.receive":components/jcom.receive.html can be used to notify of various operations done in Jamoma framework, i.e module creation, module deletion and more importantly here: module initialization. Thus, for each module in a patch, "jcom.receive notifications":components/jcom.receive.html will send the message @module.initialized@ followed by the class of the module and its instance name. In the previously used example, "jcom.receive":components/jcom.receive.html would send the following messages: 
 
-bc.
-module.new jmod.output~ /myDac
+bc. module.new jmod.output~ /myDac
 module.new jmod.qmetro /myClock
 module.new jmod.10harmonics~ /mySynth
 module.initialized jmod.output~ /myDac
