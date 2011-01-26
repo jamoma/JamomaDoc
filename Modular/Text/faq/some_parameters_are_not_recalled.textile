@@ -1,0 +1,50 @@
+--- 
+title: Why some parameters do not get triggered when recalling a preset?
+description:
+author: [Jamoma, Julien Rabin]
+created_at: 2011/1/15
+tags: [preset, repetitions, priority]
+objref: [jcom.parameter, jmod.degrade~]
+---
+
+There may be different reasons for such a problem. 
+
+First thing is to check if the presets are correctly saved on your hard drive. Presets for a Jamoma module are saved as an XML(eXtensible Markup Language) formatted file that can then be opened in any regular text editor. As an example, we can open the presets file for the "jmod.degrade~":modules/jmod.degrade~.html module. It should similar to what is displayed below (Note that the syntax coloring may be different or nonexistent, depending on your text editor settings).
+
+bc[xml]. <?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+<jamoma version='0.4'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'>
+	<preset number='1' name='default'>
+		<item name='audio/bypass' type='boolean'>0</item>
+		<item name='audio/gain' type='decimal'>0.000000</item>
+		<item name='audio/meters/freeze' type='boolean'>0</item>
+		<item name='audio/mix' type='decimal'>100.000000</item>
+		<item name='audio/mute' type='boolean'>1</item>
+		<item name='bitdepth' type='integer'>24</item>
+		<item name='samplerateRatio' type='decimal'>1.000000</item>
+	</preset>
+	<preset number='2' name='crunchy'>
+		<item name='audio/bypass' type='boolean'>0</item>
+		<item name='audio/gain' type='integer'>0</item>
+		<item name='audio/meters/freeze' type='boolean'>0</item>
+		<item name='audio/mix' type='decimal'>0.000000</item>
+		<item name='audio/mute' type='boolean'>0</item>
+		<item name='bitdepth' type='integer'>5</item>
+		<item name='samplerateRatio' type='decimal'>0.050000</item>
+	</preset>
+</jamoma>
+
+As you can see, a preset is defined by a set of items surrounded by an opening @[xml] <preset>@ tag containing a number and a name for the preset (@[xml] number='1' name='default'@) and a closing @[xml]</preset>@ tag. Each parameter is defined by an @[xml] <item>@ tag containing the name of the "jcom.parameter":components/jcom.parameter.html in your module and its type (@[xml] name='samplerateRatio' type='decimal'@), followed by its value (@1.00@) and a closing @[xml] <item>@ tag. Thus, the first preset for "jmod.degrade~":modules/jmod.degrade~.html looks like this:
+	
+bc[xml]. <preset number='1' name='default'>
+	<item name='samplerateRatio' type='decimal'>1.000000</item>
+	<item name='bitdepth' type='integer'>24</item>
+	<item name='audio/mute' type='boolean'>1</item>
+	<item name='audio/mix' type='decimal'>100.000000</item>
+	<item name='audio/meters/freeze' type='boolean'>0</item>
+	<item name='audio/gain' type='decimal'>0.000000</item>
+	<item name='audio/bypass' type='boolean'>0</item>
+</preset>
+
+Another cause for the asked problem may be related to one of the "jcom.parameter":components/jcom.parameter.html options. Indeed, a particular attribute which is often overseen is the @repetitions/allow@ attribute. This attribute (set to @0@ by default) defined whether "jcom.parameter":components/jcom.parameter.html should trigger its output when receiving a value identical to the current one. For example, assuming you built a sampler module containing a "jcom.parameter example/play @repetitions/allow 0":components/jcom.parameter.html with its value set to @1@, sending %(maxMessage)/example/play 1% to your module will cause no output from your "jcom.parameter":components/jcom.parameter.html. It will only trigger its output when sending a value different than @1@ (in this case). On the contrary, when @repetitions/allow@ is set to @1@, sending %(maxMessage)/example/play 1% twice will cause "jcom.parameter":components/jcom.parameter.html to output its value each time the message is received.
