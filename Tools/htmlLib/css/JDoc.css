@@ -183,16 +183,9 @@ a:hover{
 }
 
 a.jcom {
-	border-left: 1px solid #aeaeae;
 	border-radius:5px;
-	border-right: 1px solid #aeaeae;
-	display: inline-block;
-	padding-bottom: 0.1em;
-	padding-left: 0.35em;
-	padding-right: 0.35em;
-	/*border: 1px solid #9f9f9f;*/
-	border-bottom: 1px solid #d9d9d9;
-	border-top: 2px solid #ddd;
+	border: 1px solid #bfbfbf;
+	padding: 0.1em 0.35em 0.2em;
 }
 
 a.jcom:hover{
