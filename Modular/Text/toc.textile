@@ -20,6 +20,7 @@ h3. Using Jamoma Modules
 
 h3. Developing Modules Using Jamoma Framework
 
+* "How to create a Jamoma module":How_to_build_jmod.qmetro.html
 * "How to Get jcom.hub's Initialization Notification":How_to_get_jcom.hub_s_initialization_notification_.html
 
 h3. Participating to Jamoma Project
@@ -28,6 +29,7 @@ h3. Participating to Jamoma Project
 
 h3. Annexes
 
+* "Anatomy of a preset":anatomy_of_a_preset.html
 * "Hosting Jamoma Modules at Github":Hosting_Jamoma_modules_at_Github.html
 * "Index of Modules":Index_of_Modules.html
 * "Index of Components":Index_of_components.html 
