@@ -19,9 +19,9 @@ Now you need to set up  the name of your project %(seq)1%, a short description %
 !images/Create_a_repository_at_Github.png!
 
 When done, Github should get you to your project page. From here, copy your project Git url (i.e @git@github.com:username/yourProject.git@) that you will use to clone the project on your computer.
-!images/Create_a_repository_at_Github_2_.png!
+!images/Create_a_repository_at_Github_2.png!
 
-!images/Create_a_repository_at_Github_3_.png!
+!images/Create_a_repository_at_Github_3.png!
 
 h3. Put your project under Git control
 
