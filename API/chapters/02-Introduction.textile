@@ -1,0 +1,22 @@
+h1. Introduction to the Jamoma Platform
+
+The Jamoma Platform is composed of a layered framework architecture that creates an object model and then specializes that object model for advanced purposes such as audio and graphics.
+
+* Foundation : 
+* DSP : 
+* Graph :
+* Audio Graph :
+* Graphics :
+* Modular :
+
+
+
+TTBlue is a reflective...  (copy and paste from website).
+
+Discuss the vocabulary/jargon term-by-term.
+
+
+
+
+
+
