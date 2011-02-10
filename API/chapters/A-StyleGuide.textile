@@ -1,6 +1,10 @@
-h1. Appendix A: C++ Coding Style Guide
-
-
+--- 
+title: Appendix A
+description: Appendix A: C++ Coding Style Guide
+author: [Jamoma, Timothy Place]
+created_at: 2011/2/10
+tags: [coding style, API]
+---
 
 h2. Variables
 
@@ -8,7 +12,6 @@ Declare all variables on separate lines.
 If a variable is assigned immediately, then give it a default value in the declaration.
 Prefer explicit types, e.g. TTObjectPtr rather than TTObject*.
 User tabular formatting, as mentioned in the section "Whitespace"
-
 
 h2. Functions
 
@@ -20,20 +23,19 @@ Functions always appear:
 3. The open curly brace is on the line below the function name -- not the same line.
 4. The closing curly brace is always on its own line
 
+<pre class ="cpp>"
 TTHashPtr	TTNodeDirectory::getDirectory()
 {
 	return this->directory;
 }
+</pre>
 
 Whitespace between two functions should generally be two blank lines.
 There should never be two consecutive blank lines within a function.
 
-
 h2. Arguments
 
-Prefer passing arguments as TTValueRef or const TTValueRef.  
-
-
+Prefer passing arguments as TTValueRef or const TTValueRef.
 
 h2. Whitespace
 
@@ -55,14 +57,9 @@ Variables
 4. Constants begin with a 'k'
 5. Globals begin with 'g'
 6. Statics begin with 's'
-
 7. member method names begin with lower-case letters
-
-7. Classes or Global scope functions beggin with upper-case letters.
-8. Library functions begin with 'TT', non-library functions do not.
-
-
-
+8. Classes or Global scope functions beggin with upper-case letters.
+9. Library functions begin with 'TT', non-library functions do not.
 
 h2. Casting
 
@@ -73,14 +70,11 @@ Readability is the most important thing.  So we dont always use the crazy C++ ca
 2. Prefer C++ Style int(someValue) casts to (int)someValue casts.  
 
 
-
-
-
 h2. Constructors
 
-0. for TTObject subclasses, use the appropriate macro (such as TT_OBJECT_CONSTRUCTOR) to implement the function signature correctly
-1. prefer initializers to assigning values
-2. initializers should be indented one tab
+1. for TTObject subclasses, use the appropriate macro (such as TT_OBJECT_CONSTRUCTOR) to implement the function signature correctly
+2. prefer initializers to assigning values
+3. initializers should be indented one tab
 
 
 
