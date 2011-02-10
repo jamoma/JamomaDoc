@@ -65,7 +65,7 @@ bq. Remember that there is currently no way to define an initialization order fo
 
 "jcom.initialized":components/jcom.initialized.html is a Max patch-based component (_abstraction_) that wraps a special feature of "jcom.receive":components/jcom.receive.html. 
 
-!images/jcom.intitialized_inside.png!
+!images/jcom.initialization_inside.png!
 
 When provided @'notifications'@ as argument, "jcom.receive":components/jcom.receive.html can be used to notify of various operations done in Jamoma framework, i.e module creation, module deletion and more importantly here: module initialization. Thus, for each module in a patch, "jcom.receive notifications":components/jcom.receive.html will send the message @module.initialized@ followed by the class of the module and its instance name. In the previously used example, "jcom.receive":components/jcom.receive.html would send the following messages: 
 
