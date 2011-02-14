@@ -12,7 +12,7 @@ To run a unit test, the easiest way to do it is in ruby.  In the DSP/Tests folde
 <pre class="ruby">
 	#!/usr/bin/ruby
 
-	require 'TTRuby'
+	require 'Jamoma'
 
 	o = TTObject.new "gain"
 	o.send "test"
