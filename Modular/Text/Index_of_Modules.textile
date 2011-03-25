@@ -31,7 +31,7 @@ h3. Audio modules
 | "jmod.saturation~":modules/jmod.saturation~.html | Stereo saturation/distortion effect |
 | "jmod.scope~":modules/jmod.scope~.html | Visualization of audio signal |
 | "jmod.sine~":modules/jmod.sine~.html | Playing simple waveforms |
-| "jmod.spectralShift~:modules/jmod.spectralShift~.html | 4 in 1 kinderegg": Pitch shift frequency shift feedback delay and limiter |
+| "jmod.spectralShift~":modules/jmod.spectralShift~.html | 4 in 1 kinderegg: Pitch shift frequency shift feedback delay and limiter |
 | "jmod.spectrogram~":modules/jmod.spectrogram~.html | Spectrogram display of input audio |
 | "jmod.tremolo~":modules/jmod.tremolo~.html | Stereo tremolo effect with channel phase offset |
 | "jmod.vst~":modules/jmod.vst~.html | VST plug-ins hosting module |
