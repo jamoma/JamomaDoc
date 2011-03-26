@@ -81,13 +81,14 @@ Then, in the File Preferences window, add the following folder to Max 5 search p
 
 - @~/Jamoma/builds/MaxMSP@
 - @~/Jamoma/Modules/Modular/Max@
+- @~/Jamoma/Modules/Dependencies/Max/Mac@ resp. @/Jamoma/Modules/Dependencies/Max/WinXP@
 - @~/Jamoma/UserLib@
 
 !images/Max_pref_setup.png!
 
 Max 5 objects default appearance also need to be set up so all Jamoma modules are displayed as expected. From Max 5 %(samp)Options% menu %(seq)1%, choose the %(samp)Object Defaults% item %(seq)2%
 
-!images/Max_pref_setup_2_.png!
+!images/Max_pref_setup_2.png!
 
 In the %(samp)Object Defaults% window, click the %(samp)Load Settings% button in the lower-left corner of the window %(seq)1%. Then, from the popup menu, select %(samp)JamomaMax% %(seq)2% so all Jamoma modules will be displayed as expected.
 

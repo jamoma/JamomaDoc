@@ -7,19 +7,20 @@ tags: []
 objref: []
 ---
 
-Jamoma comes with a number of patchs (modules in the Jamoma terminology) ready to be used in the Max environment. They can be accessed thru the OS's file browser by going to the modules folder placed inside blablabla A list of all available modules can be found on the "Index of modules":Index%20of%20modules.html page of this manual.
+Jamoma comes with a number of patchs (modules in the Jamoma terminology) ready to be used in the Max environment. They can be accessed thru the OS's file browser by going to the modules folder placed inside blablabla A list of all available modules can be found on the "Index of modules":Index_of_modules.html page of this manual.
 
 
 
 However, Jamoma offers different ways to help you to discover available modules or find the one fitting your needs.
-!(lightbox)images/media_1257711487759.png!
+!images/media_1257711487759.png!
+
 
 h3. Using Overview patch
 
 
-
-
 h3. Using Max file browser
+
+Us­ing Max 5's file browser features, Jamoma include clippings for all of its modules. Just drag a patch from the file browser or use Max contextual menu to drop a module and start patching.
 
 
 
