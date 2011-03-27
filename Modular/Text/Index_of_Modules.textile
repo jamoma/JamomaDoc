@@ -76,13 +76,13 @@ h3. Data modules
 h3. OpenGL modules
 
 |_.Module name |_.Module description |
-| "jmod.gl.alphamixer%":modules/jmod.gl.alphamixer%.html | A four layer slab-based video mixer using alpha channel for each layer |
-| "jmod.gl.chromakey%":modules/jmod.gl.chromakey%.html | Slab-based keying based on chromatic distance |
-| "jmod.gl.edgeblend%":modules/jmod.gl.edgeblend%.html | Slab-based edge blending with alpha channel |
-| "jmod.gl.background%":modules/jmod.gl.background%.html | Slab-based background extractor (foreground remover) |
-| "jmod.gl.td.rota%":modules/jmod.gl.td.rota%.html | Slab-based rotation and repositioning |
-| "jmod.gl.text2d%":modules/jmod.gl.text2d%.html | Read text file and display as OpenGL bitmap text |
-| "jmod.gl.videoplane%":modules/jmod.gl.videoplane%.html | Map incoming video as texture to OpenGL videoplane |
+| "jmod.gl.alphamixer%":modules/jmod.gl.alphamixer%25.html | A four layer slab-based video mixer using alpha channel for each layer |
+| "jmod.gl.chromakey%":modules/jmod.gl.chromakey%25.html | Slab-based keying based on chromatic distance |
+| "jmod.gl.edgeblend%":modules/jmod.gl.edgeblend%25.html | Slab-based edge blending with alpha channel |
+| "jmod.gl.background%":modules/jmod.gl.background%25.html | Slab-based background extractor (foreground remover) |
+| "jmod.gl.td.rota%":modules/jmod.gl.td.rota%25.html | Slab-based rotation and repositioning |
+| "jmod.gl.text2d%":modules/jmod.gl.text2d%25.html | Read text file and display as OpenGL bitmap text |
+| "jmod.gl.videoplane%":modules/jmod.gl.videoplane%25.html | Map incoming video as texture to OpenGL videoplane |
 
 h3. Spatialization modules
 
@@ -113,32 +113,32 @@ h3. Spatialization modules
 h3. Video modules
 
 |_.Module name |_.Module description |
-| "jmod.alphablend%":modules/jmod.alphablend%.html | Alpha blending of two video layers |
-| "jmod.avg4%":modules/jmod.avg4%.html | Average 4 pixels of input for each pixel of output |
-| "jmod.background%":modules/jmod.background%.html | Background video substraction |
-| "jmod.blur%":modules/jmod.blur%.html | Video blur effect |
-| "jmod.box%":modules/jmod.box%.html | Add boxes around objects in the video |
-| "jmod.brcosa%":modules/jmod.brcosa%.html | Control brightness contrast and saturation |
-| "jmod.chromakey%":modules/jmod.chromakey%.html | Choke chromakey 2 sources |
-| "jmod.edge%":modules/jmod.edge%.html | Edge detection |
-| "jmod.emboss%":modules/jmod.emboss%.html | Cheesy embossing effect |
-| "jmod.fluoride%":modules/jmod.fluoride%.html | Neon glow effect |
-| "jmod.foregroundMask%":modules/jmod.foregroundMask%.html | Create mask based on image foreground. |
-| "jmod.input%":modules/jmod.input%.html | Generic video input module |
-| "jmod.keyscreen%":modules/jmod.keyscreen%.html | Choke chromakey 3 sources |
-| "jmod.mblur%":modules/jmod.mblur%.html | Motion blur effect |
-| "jmod.motion%":modules/jmod.motion%.html | Display a motion image |
-| "jmod.motion2%":modules/jmod.motion2%.html | A simplified motion module |
-| "jmod.motiongram%":modules/jmod.motiongram%.html | Create motiongrams from video stream |
-| "jmod.moviePlayer%":modules/jmod.moviePlayer%.html | Playback of Quicktime movies |
-| "jmod.op%":modules/jmod.op%.html | Mathematical operations on one or two matrices |
-| "jmod.orsize%":modules/jmod.orsize%.html | Change orientation and size of video |
-| "jmod.output%":modules/jmod.output%.html | Output video to an OpenGl driven window |
-| "jmod.plur%":modules/jmod.plur%.html | Video feedback/washout effet |
-| "jmod.record%":modules/jmod.record%.html | A module for recording video to disk |
-| "jmod.similarity%":modules/jmod.similarity%.html | Create a similarity matrix from a video stream |
-| "jmod.slitscan%":modules/jmod.slitscan%.html | Slit-scanning effect based on xray.jit.timecube |
-| "jmod.television%":modules/jmod.television%.html | Bad TV' effect |
-| "jmod.wake%":modules/jmod.wake%.html | Video feedback/washout effect |
-| "jmod.xfade%":modules/jmod.xfade%.html | Crossfade between two incoming video matrices |
-| "jmod.yfade%":modules/jmod.yfade%.html | Crossfade (Pan) a source to two outputs |
+| "jmod.alphablend%":modules/jmod.alphablend%25.html | Alpha blending of two video layers |
+| "jmod.avg4%":modules/jmod.avg4%25.html | Average 4 pixels of input for each pixel of output |
+| "jmod.background%":modules/jmod.background%25.html | Background video substraction |
+| "jmod.blur%":modules/jmod.blur%25.html | Video blur effect |
+| "jmod.box%":modules/jmod.box%25.html | Add boxes around objects in the video |
+| "jmod.brcosa%":modules/jmod.brcosa%25.html | Control brightness contrast and saturation |
+| "jmod.chromakey%":modules/jmod.chromakey%25.html | Choke chromakey 2 sources |
+| "jmod.edge%":modules/jmod.edge%25.html | Edge detection |
+| "jmod.emboss%":modules/jmod.emboss%25.html | Cheesy embossing effect |
+| "jmod.fluoride%":modules/jmod.fluoride%25.html | Neon glow effect |
+| "jmod.foregroundMask%":modules/jmod.foregroundMask%25.html | Create mask based on image foreground. |
+| "jmod.input%":modules/jmod.input%25.html | Generic video input module |
+| "jmod.keyscreen%":modules/jmod.keyscreen%25.html | Choke chromakey 3 sources |
+| "jmod.mblur%":modules/jmod.mblur%25.html | Motion blur effect |
+| "jmod.motion%":modules/jmod.motion%25.html | Display a motion image |
+| "jmod.motion2%":modules/jmod.motion2%25.html | A simplified motion module |
+| "jmod.motiongram%":modules/jmod.motiongram%25.html | Create motiongrams from video stream |
+| "jmod.moviePlayer%":modules/jmod.moviePlayer%25.html | Playback of Quicktime movies |
+| "jmod.op%":modules/jmod.op%25.html | Mathematical operations on one or two matrices |
+| "jmod.orsize%":modules/jmod.orsize%25.html | Change orientation and size of video |
+| "jmod.output%":modules/jmod.output%25.html | Output video to an OpenGl driven window |
+| "jmod.plur%":modules/jmod.plur%25.html | Video feedback/washout effet |
+| "jmod.record%":modules/jmod.record%25.html | A module for recording video to disk |
+| "jmod.similarity%":modules/jmod.similarity%25.html | Create a similarity matrix from a video stream |
+| "jmod.slitscan%":modules/jmod.slitscan%25.html | Slit-scanning effect based on xray.jit.timecube |
+| "jmod.television%":modules/jmod.television%25.html | Bad TV' effect |
+| "jmod.wake%":modules/jmod.wake%25.html | Video feedback/washout effect |
+| "jmod.xfade%":modules/jmod.xfade%25.html | Crossfade between two incoming video matrices |
+| "jmod.yfade%":modules/jmod.yfade%25.html | Crossfade (Pan) a source to two outputs |
