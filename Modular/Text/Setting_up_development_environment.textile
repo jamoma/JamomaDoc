@@ -1,0 +1,33 @@
+---
+title: Setting up development environment
+description: This tutorial goes thru the various setup process to get and compile Jamoma
+author: [Jamoma, Pascal Baltazar, Julien Rabin]
+created_at: 2011/06/05
+tags: [xcode, setup, install]
+objref: []
+---
+
+Before downloading Jamoma sources and compile them a few steps are required to properly setting up your development environment.
+
+h2. Mac
+
+Install Apple's "Xcode":http://developer.apple.com/TOOLS/xcode/ tools.
+
+bq.The current version is 4, but we recommend using 3.X until more testing has been done.
+
+If you don't have it, you can download it from developer.apple.com. It is roughly 4GB of downloading and requires a free login.
+
+When done, go to your application folder and select Max application.
+Then, show the package contents (ctrl-click on the application) of Max, go to Contents/Frameworks and copy the four framework folders to /Library/Frameworks
+
+Read the readme.txt in the root folder of the Jamoma project for further instructions.
+
+h2. Windows
+
+Go to www.cygwin.com
+Click the "install now" icon in the upper-right corner of the page.
+Choose to install from the internet.
+When asked, choose to install for "All Users" and "Unix/binary" default text file type.
+When it asks to select packages to install, make sure that you install everything in the "Devel" and "Interpreters" categories. (click on the 'Default' next to it until is says 'Install'). Leave everything else as the default.
+Click the "Next" button at the bottom to start the installation. Warning -- it will take a long time!
+When you are done, it is important to keep the "setup.exe" program(!) so that you can later add or update packages. (Instructions for how to actually compile with GCC on windows will be here when we actually get it to happen.)
