@@ -13,7 +13,7 @@ We could start these tutorials with a lengthy discussion on what Jamoma is all a
 
 In Max terminology patches wrapped so that they can behave as objects in other patches are sometimes called "abstractions":http://www.cycling74.com/docs/max5/vignettes/core/abstractions.html.
 
-h3. Prerequistits
+h3. Prerequisites
 
 This tutorial assume:
 * You are running Max 5.0.8 or later (Mac or Windows).

@@ -18,7 +18,7 @@ outputs:
  - name: 2
    desc: "2d order difference. Δ^2(x) = x[n]-2*x[n-1]+x[n-2]"
  - name: 3
-   desc: Velocity calculated from incoming stream of data as difference divided by delta time in milliseconds: velocity = 1000*Δx/Δt
+   desc: "Velocity calculated from incoming stream of data as difference divided by delta time in milliseconds: velocity = 1000*Δx/Δt"
  - name: 4
    desc: Dumpout
 

@@ -1,0 +1,70 @@
+--- 
+title: Setting up development environment on Windows
+description: This tutorial explains how to install and set up Windows for developing in Jamoma
+author: [Adrian Gierakowski]
+created_at: 2011/16/05
+tags: [settings, git, install]
+objref: []
+---
+
+h2. Setting up development environment in Windows
+
+"download and install MSVC 2008":http://download.microsoft.com/download/A/5/4/A54BADB6-9C3F-478D-8657-93B3FC9FE62D/vcsetup.exe
+
+"install cygwin":http://cygwin.com/install.html
+
+the setup lets you select, which packages you want to have installed. You’ll need to add the following to the default selection:
+* ruby,
+* git (core files and optionally git-completion, git-gui and gitk),
+* openssh (if want to be able to commit),
+* Info-zip (used by the installer.rb script)
+
+Optionally you can install an alternative terminal app (like rxvt), your preferred shell and command line text editor.
+
+An advantage of using rxtv is that it allows you to select and copy text from the terminal. Once you download it, create a shortcut to it, then right click on this shortcut and enter the following in the Target filed:
+
+code. C:\PATH\TO\cygwin\bin\rxvt.exe -sl 1500 -fn "Lucida Console-12" -bg black -fg grey -sr  -e C:\PATH\TO\cygwin\bin\bash --login -i
+
+replacing the @C:\PATH\TO\@ with a path to your cygwin installation folder. You can modify these settings to customise the looks of your terminal.
+(more on this  here: http://infrablue.tripod.com/cygwin.html and here: http://www.khngai.com/emacs/bash.php)
+
+!images/rxvt_shortcuts.png!_
+
+You will also probably want to put the path to cygwin\home
+USERNAME in the @Start in:@ filed in the same window.
+
+Once you have cygwin setup, follow the instructions here: http://redmine.jamoma.org/projects/jamoma/wiki/Installing_and_setting_up_GIT to set up git.
+possible problems:
+
+1- In windows vista and 7 you might encounter some permissions problems. To avoid them, always run cygwin as admisitrator. You can do it by right clicking on the shortcut icon and selecting Run As Administrator 
+
+!images/run_as_admin.png!
+
+or you can permanently set it to run as administrator by selecting this option in the Compatibility tab of the application Properties dialog:
+
+!images/compatibility_tab.png!
+!images/compatibility_tab2.png!
+
+2- If you get something like this:
+
+code. $ ruby build.rb Deployment clean
+          1 [main] ruby 2540 C:\cygwin\bin\ruby.exe: *** fatal error - unable to remap \\?\C:\cygwin\lib\ruby\1.8\
+i386-cygwin\etc.so to same address as parent: 0x190000 != 0x250000
+Stack trace:
+Frame         Function  Args
+02408248  6102796B  (02408248, 00000000, 00000000, 00000000)
+02408538  6102796B  (6117EC60, 00008000, 00000000, 61180977)
+02409568  61004F1B  (611A7FAC, 6124355C, 00190000, 00250000)
+End of stack trace
+
+You’ll need to run ash.exe:
+@:\PATH\TO\cygwin\bin\ash.exe@
+
+then in the shell window:
+code. cd /bin
+./rebaseall
+exit
+
+(source http://dancarroll.org/blog/2010/12/cygwin-unable-to-remap/)
+you might need to install ash and rebase first. You can do it by just running cygwins setup.exe (the same you used for the initial installation) and selecting the additional packages.
+specifically how to update your local copy with the fixes and enhancements done on the Jamoma Git repository.
