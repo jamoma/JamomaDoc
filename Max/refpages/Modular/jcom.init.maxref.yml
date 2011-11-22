@@ -13,9 +13,9 @@ outputs:
    type: Outputs a 'bang' when the module containingit is initialized.
 
 args:
-  - name: name
-    type: string
-    desc: Set a name for jcom.init.
+ - name: name
+   type: string
+   desc: Set a name for jcom.init.
 
 attributes:
  - name: name
