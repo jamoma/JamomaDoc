@@ -104,13 +104,37 @@ class YamlToMaxref
         messagedesc.text = m["desc"]
         message.add_element messagedesc
 
-        # TODO: add arg list
-
         e.add_element message
       }
     end
 
     root.add_element e
+
+    # ARGUMENTS ---------------------------------------------------------------------
+    
+    e = Element.new("objarglist")
+    
+    args = yaml["args"]
+    if args
+      args.each { |a|
+       arg = Element.new("objarg")
+       arg.attributes["name"] = a["name"]
+       arg.attributes["type"] = a["type"]
+
+       argumentdig = Element.new("digest")
+       argumentdig.text = a["desc"]
+       arg.add_element argumentdig
+    
+       argumentdesc = Element.new("description")
+       argumentdesc.text = a["desc"]
+       arg.add_element argumentdesc
+    
+        e.add_element arg
+      }
+    end
+    
+    root.add_element e
+
 
 
     # SEEALSO ---------------------------------------------------------------------
