@@ -227,6 +227,7 @@ class YamlToMaxref
     s.gsub! /(\s)(jcom\S*)/, ' <jcom>\2</jcom>' #Jamoma objects
     s.gsub! /(\s)(jmod\S*)/, ' <jmod>\2</jmod>' #Jamoma modules
     
+    # todo Regexp should be non greedy ?
     # Textile related substitutions ≈ pseudo RedCloth
     s.gsub! /\s_(\s*.*)_/, ' <i>\1</i>' # italic
     s.gsub! /\s_(\s*.*)_/, ' <b>\1</b>' # bold
