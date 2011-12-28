@@ -19,7 +19,7 @@ outputs:
 messages:
  - name: bang
    type: generic
-   desc: A (m)bang message sent at the input clears peak indication.
+   desc: A @bang@ message sent at the input clears peak indication.
    unit:
    default:
  - name: int

@@ -7,13 +7,13 @@ brief: Send a (m)bang when a module has been initialized
 
 
 desc: >
- jcom.initialized is somewhat similar to Max's (o)loadbang and sends a (m)bang when a particular module has been initialized.
+ jcom.initialized is somewhat similar to Max's #loadbang and sends a @bang@ when a particular module has been initialized.
 
 inputs:
 
 outputs:
  - name: 1
-   desc: A (m)bang is output when the module defined as argument is initialized.
+   desc: A @bang@ is output when the module  defined as argument is initialized.
 
 args:
  - name: name
@@ -21,7 +21,7 @@ args:
    desc: Defines the module instance name (such as @/myModule.1@) to get initialization notification from.
  - name: output delay
    type: integer/decimal
-   desc: This optional argument defines a delay time before outputting a (m)bang.
+   desc: This optional argument defines a delay time before outputting a @bang@.
    unit: millisecond
    default: 0
 

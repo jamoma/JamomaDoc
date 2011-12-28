@@ -6,11 +6,11 @@ tags: [initialization, loadbang]
 brief: Utility for initialization of module
 
 desc: >
- jcom.init is a kind of #loadbang that outputs a (m)bang when a module is initialized. It connects to jcom.hub in order to link to all other instances of jcom.init within the same module. It also makes jcom.hub reset all parameters to the default preset.
+ jcom.init is a kind of #loadbang that outputs a @bang@ when a module is initialized. It connects to jcom.hub in order to link to all other instances of jcom.init within the same module. It also makes jcom.hub reset all parameters to the default preset.
 
 outputs:
  - name: 1
-   type: Outputs a 'bang' when the module containingit is initialized.
+   type: Outputs a @bang@ when the module containingit is initialized.
 
 args:
  - name: name

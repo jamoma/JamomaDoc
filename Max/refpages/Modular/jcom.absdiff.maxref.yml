@@ -40,7 +40,7 @@ messages:
     value:
   - name: set
     type: list
-    desc: The message (m)set in the first inlet sets the number to be used for absolute difference but does not cause the jcom.absdiff to output the result.
+    desc: The message @set@ in the first inlet sets the number to be used for absolute difference but does not cause the jcom.absdiff to output the result.
     unit:
     value:
 

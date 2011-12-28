@@ -25,7 +25,7 @@ outputs:
 messages:
  - name: bang
    type: generic
-   desc: "A 'bang' sent at the input calculates and outputs difference, second order difference and velocity using currently stored values."
+   desc: "A @bang@ sent at the input calculates and outputs difference, second order difference and velocity using currently stored values."
    unit:
    default:
  - name: int
@@ -40,12 +40,12 @@ messages:
    default:
  - name: clear
    type: string
-   desc: "The message 'clear' sent at the input clears the history of previously received values. Next time a value is received, x[n-1] and x[n-2] are set equal to x[n]."
+   desc: "The message @clear@ sent at the input clears the history of previously received values. Next time a value is received, x[n-1] and x[n-2] are set equal to x[n]."
    unit:
    default:
  - name: set
    type: decimal (set float)
-   desc: "The message 'set' followed by a decimal sent at the input stores its value as the most recent (x[n]) without performing any calculation or producing any output."
+   desc: "The message @set@ followed by a decimal sent at the input stores its value as the most recent (x[n]) without performing any calculation or producing any output."
    unit:
    default:
 
