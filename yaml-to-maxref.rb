@@ -15,6 +15,7 @@ class YamlToMaxref
 
 
   def process filepath
+    imagepath = filepath.sub(/(.*)\.maxref.yml/, '\1.png')
     yaml = YAML.load_file(filepath)
     root = Element.new("c74object")
     root.attributes["name"] = filepath.split('/').last.sub(/\.maxref.yml/,'')
@@ -136,6 +137,17 @@ class YamlToMaxref
     root.add_element e
 
 
+    # IMAGE ---------------------------------------------------------------------
+
+    if File.exist? "#{imagepath}"
+      e = Element.new("examplelist")
+      image = Element.new("example")
+      image.attributes["img"] = imagepath
+      e.add_element image
+      
+      root.add_element e
+    end
+
 
     # SEEALSO ---------------------------------------------------------------------
 
@@ -158,7 +170,7 @@ class YamlToMaxref
     e = Element.new("misc")
     e.attributes["name"] = "Output"
 
-    outputs = yaml["output"]
+    outputs = yaml["outputs"]
     if outputs
       outputs.each { |o|
         output = Element.new("entry")
@@ -180,11 +192,9 @@ class YamlToMaxref
 
         e.add_element output
        }
-    end
-
+    end    
+    
     root.add_element e
-
-
 
     # FINISH UP ---------------------------------------------------------------------
 
@@ -231,7 +241,6 @@ if ARGV.size < 2
   puts "    ./yaml-to-maxref.rb ../Modules/Plugtastic/implementations/MaxMSP/jcom.plug.parameter/jcom.plug.parameter#.maxref.yml ../Modules/Plugtastic/implementations/MaxMSP/jcom.plug.parameter/jcom.plug.parameter#.maxref.xml"
   exit
 end
-
 source_path = ARGV[0]
 dest_path = ARGV[1]
 
