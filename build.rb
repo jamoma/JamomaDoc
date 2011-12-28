@@ -18,5 +18,5 @@ maxrefs.each do |ref|
  dest = ref.sub(/\.(.*jcom.*maxref)\.yml/,"#{glibdir}"'\1.xml')
  ref = ref.sub(/\.(.*jcom.*maxref.yml)/,"#{glibdir}"'\1')
 `ruby #{glibdir}/yaml-to-maxref.rb #{ref} #{dest}`
- `cp #{dest} /Applications/Max5/patches/docs/refpages/jamoma`
+`cp #{dest} /Applications/Max5/patches/docs/refpages/jamoma`
 end
