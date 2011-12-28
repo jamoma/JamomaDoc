@@ -220,10 +220,20 @@ class YamlToMaxref
     # todo: investigate the formatters thing to have something cleaner than the following
     s.gsub! /<\?.*\?>/, '<?xml version="1.0" encoding="utf-8" standalone="yes"?>
     <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>'
+    
     # Now that we have the XML, perform additional substitutions
     s.gsub! /(\s\#)(\S*)/ , ' <o>\2</o>' # Max objects
+    s.gsub! /\s@(.*)@([\s\.])/, ' <m>\1</m>\2' # Max messages
     s.gsub! /(\s)(jcom\S*)/, ' <jcom>\2</jcom>' #Jamoma objects
     s.gsub! /(\s)(jmod\S*)/, ' <jmod>\2</jmod>' #Jamoma modules
+    
+    # Textile related substitutions ≈ pseudo RedCloth
+    s.gsub! /\s_(\s*.*)_/, ' <i>\1</i>' # italic
+    s.gsub! /\s_(\s*.*)_/, ' <b>\1</b>' # bold
+    s.gsub! /\s\+(\s*.*)\+/, ' <u>\1</u>' # underline
+    s.gsub! /\s-(\s*.*)-/, ' <s>\1</s>' # strikethrough
+    s.gsub! /\s\^(.*)\^/, ' <sup>\1</sup>' # superscript
+    s.gsub! /\s~(\s*.*)~/, ' <sub>\1</sub>' # subscript
 
     f.write(s)
     f.close
