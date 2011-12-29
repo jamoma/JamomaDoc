@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>"Alexander Refsum Jensenius":http://www.arj.no/ $0</string>
+	<key>name</key>
+	<string>Alexander + url</string>
+	<key>tabTrigger</key>
+	<string>arj</string>
+	<key>uuid</key>
+	<string>9D16264A-B7B5-4679-ACF3-8878492B06B7</string>
+</dict>
+</plist>
