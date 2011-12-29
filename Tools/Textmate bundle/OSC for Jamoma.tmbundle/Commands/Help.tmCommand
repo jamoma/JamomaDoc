@@ -8,7 +8,7 @@
 	<string>#!/usr/bin/env bash
 
 . "$TM_SUPPORT_PATH/lib/webpreview.sh"
-html_header "OSC Bundle Help" "OSC"
+html_header "OSC for Jamoma Bundle Help" "OSC"
 
 "$TM_SUPPORT_PATH/lib/markdown_to_help.rb" &lt;&lt;'MARKDOWN'
 

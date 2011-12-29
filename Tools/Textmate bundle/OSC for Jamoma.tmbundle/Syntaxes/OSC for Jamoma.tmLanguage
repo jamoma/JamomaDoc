@@ -11,7 +11,7 @@
 	<key>keyEquivalent</key>
 	<string>@C</string>
 	<key>name</key>
-	<string>OSC</string>
+	<string>OSC for Jamoma</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -20,7 +20,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.osc</string>
+					<string>punctuation.definition.comment.osc-jamoma</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -28,7 +28,7 @@
 			<key>match</key>
 			<string>(?:^[ \t]+)?(#).*$\n?</string>
 			<key>name</key>
-			<string>comment.line.number-sign.osc</string>
+			<string>comment.line.number-sign.osc-jamoma</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -38,7 +38,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.osc</string>
+					<string>punctuation.definition.comment.osc-jamoma</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -46,7 +46,7 @@
 			<key>end</key>
 			<string> </string>
 			<key>name</key>
-			<string>constant.language.keycue.osc</string>
+			<string>constant.language.keycue.osc-jamoma</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -56,7 +56,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.osc</string>
+					<string>punctuation.definition.comment.osc-jamoma</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -64,7 +64,7 @@
 			<key>end</key>
 			<string> </string>
 			<key>name</key>
-			<string>constant.language.cue.osc</string>
+			<string>constant.language.cue.osc-jamoma</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -74,7 +74,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.osc</string>
+					<string>punctuation.definition.comment.osc-jamoma</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -82,7 +82,7 @@
 			<key>end</key>
 			<string> </string>
 			<key>name</key>
-			<string>constant.other.ramp.osc</string>
+			<string>constant.other.ramp.osc-jamoma</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -92,7 +92,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.osc</string>
+					<string>punctuation.definition.comment.osc-jamoma</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -100,7 +100,7 @@
 			<key>end</key>
 			<string> </string>
 			<key>name</key>
-			<string>constant.language.wait.osc</string>
+			<string>constant.language.wait.osc-jamoma</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -110,7 +110,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.osc</string>
+					<string>punctuation.definition.comment.osc-jamoma</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -118,7 +118,7 @@
 			<key>end</key>
 			<string> </string>
 			<key>name</key>
-			<string>constant.other.config.osc</string>
+			<string>constant.other.config.osc-jamoma</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -128,7 +128,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.osc</string>
+					<string>punctuation.definition.comment.osc-jamoma</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -136,7 +136,7 @@
 			<key>end</key>
 			<string> </string>
 			<key>name</key>
-			<string>constant.other.autofollow.osc</string>
+			<string>constant.other.autofollow.osc-jamoma</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -146,7 +146,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.osc</string>
+					<string>punctuation.definition.comment.osc-jamoma</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -154,7 +154,7 @@
 			<key>end</key>
 			<string> </string>
 			<key>name</key>
-			<string>constant.other.global.osc</string>
+			<string>constant.other.global.osc-jamoma</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -162,7 +162,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.osc</string>
+					<string>punctuation.definition.comment.osc-jamoma</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -170,7 +170,7 @@
 			<key>match</key>
 			<string>(/)[a-zA-Z_]+(~?)\w*</string>
 			<key>name</key>
-			<string>variable.other.osc-adress.osc</string>
+			<string>variable.other.osc-adress.osc-jamoma</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -178,7 +178,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.osc</string>
+					<string>punctuation.definition.comment.osc-jamoma</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -186,7 +186,7 @@
 			<key>match</key>
 			<string>[:]</string>
 			<key>name</key>
-			<string>constant.other.osc-subspace.osc</string>
+			<string>constant.other.osc-subspace.osc-jamoma</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -196,7 +196,7 @@
 			<key>end</key>
 			<string>"</string>
 			<key>name</key>
-			<string>string.quoted.double.untitled</string>
+			<string>string.quoted.double.osc-jamoma</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -209,7 +209,7 @@
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.osc</string>
+	<string>source.osc-jamoma</string>
 	<key>uuid</key>
 	<string>939233E6-74EC-47D5-80AC-1743C3B10106</string>
 </dict>
