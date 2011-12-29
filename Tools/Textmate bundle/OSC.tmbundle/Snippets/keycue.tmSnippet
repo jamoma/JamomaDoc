@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>###########################################################################
+KEYCUE $0
+###########################################################################
+
+# (fold)
+
+</string>
+	<key>name</key>
+	<string>keycue</string>
+	<key>tabTrigger</key>
+	<string>key</string>
+	<key>uuid</key>
+	<string>18CF690F-0FE6-402D-8A2A-DF2541D93A8A</string>
+</dict>
+</plist>

@@ -8,16 +8,12 @@
 	<string>\\begin\{.*\}|#.*\(fold\)\s*$</string>
 	<key>foldingStopMarker</key>
 	<string>\\end\{.*\}|#.*\(end\)\s*$</string>
+	<key>keyEquivalent</key>
+	<string>@C</string>
 	<key>name</key>
 	<string>OSC</string>
 	<key>patterns</key>
 	<array>
-		<dict>
-			<key>match</key>
-			<string>\b(if|while|for|return)\b</string>
-			<key>name</key>
-			<string>keyword.control.untitled</string>
-		</dict>
 		<dict>
 			<key>captures</key>
 			<dict>
@@ -27,10 +23,30 @@
 					<string>punctuation.definition.comment.osc</string>
 				</dict>
 			</dict>
+			<key>comment</key>
+			<string>Comments starting with #</string>
 			<key>match</key>
 			<string>(?:^[ \t]+)?(#).*$\n?</string>
 			<key>name</key>
 			<string>comment.line.number-sign.osc</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>KEYCUE</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>A key cue is an absolute cue in jcom.cuemanager</string>
+			<key>end</key>
+			<string> </string>
+			<key>name</key>
+			<string>constant.language.keycue.osc</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -43,10 +59,30 @@
 					<string>punctuation.definition.comment.osc</string>
 				</dict>
 			</dict>
+			<key>comment</key>
+			<string>The start of a new cue</string>
 			<key>end</key>
 			<string> </string>
 			<key>name</key>
 			<string>constant.language.cue.osc</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>ramp</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Ramp to new value</string>
+			<key>end</key>
+			<string> </string>
+			<key>name</key>
+			<string>constant.other.ramp.osc</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -59,10 +95,66 @@
 					<string>punctuation.definition.comment.osc</string>
 				</dict>
 			</dict>
+			<key>comment</key>
+			<string>Wait for set number of milliseconds before proceeding</string>
 			<key>end</key>
 			<string> </string>
 			<key>name</key>
 			<string>constant.language.wait.osc</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/CONFIG</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Config is used by jmod.cuemanager for absolute cues</string>
+			<key>end</key>
+			<string> </string>
+			<key>name</key>
+			<string>constant.other.config.osc</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/AUTOFOLLOW</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Autofollow</string>
+			<key>end</key>
+			<string> </string>
+			<key>name</key>
+			<string>constant.other.autofollow.osc</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>global</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Global cue rampåing in jmod.cuemanager</string>
+			<key>end</key>
+			<string> </string>
+			<key>name</key>
+			<string>constant.other.global.osc</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -75,6 +167,8 @@
 					<string>punctuation.definition.comment.osc</string>
 				</dict>
 			</dict>
+			<key>comment</key>
+			<string>OSC addresses starts with a slash and ends at a space</string>
 			<key>end</key>
 			<string> </string>
 			<key>name</key>
@@ -83,6 +177,8 @@
 		<dict>
 			<key>begin</key>
 			<string>"</string>
+			<key>comment</key>
+			<string>Mainly used for file paths</string>
 			<key>end</key>
 			<string>"</string>
 			<key>name</key>
