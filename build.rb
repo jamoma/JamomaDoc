@@ -23,3 +23,5 @@ maxrefs.each do |ref|
 FileUtils.mkdir_p("/Applications/Max5/patches/docs/refpages/jamoma") unless File.exist?("/Applications/Max5/patches/docs/refpages/jamoma")
 `cp #{dest} /Applications/Max5/patches/docs/refpages/jamoma`
 end
+
+`cp "#{glibdir}/max/support/refpages/_jdoc_ref_common.xsl" /Applications/Max5/patches/docs/refpages/jamoma`
