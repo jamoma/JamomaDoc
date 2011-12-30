@@ -23,7 +23,7 @@ attributes:
    desc: Set a name for jcom.init.
 
 messages:
- - name : bang
+ - name: bang
    type: generic
    desc: Make jcom.hub reset all parameters to the default preset.
  - name: name/get
