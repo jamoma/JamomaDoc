@@ -17,10 +17,10 @@ maxrefs = Array::new
 maxrefs = search.split("\n")
 # Create refpages folder and copy XLS file for Max 5  - comment this out if you don't want it
 FileUtils.mkdir_p("/Applications/Max5/patches/docs/refpages/jamoma-ref") unless File.exist?("/Applications/Max5/patches/docs/refpages/jamoma-ref")
-`cp "#{glibdir}/max/support/refpages/_jdoc_ref_common.xsl" /Applications/Max5/patches/docs/refpages/jamoma-ref`
+`cp "#{glibdir}/max/support/refpages/jamoma/_jdoc_ref.xsl" /Applications/Max5/patches/docs/refpages/jamoma-ref`
 # Create refpages folder and copy XLS file for Max 6  - comment this out if you don't want it
 FileUtils.mkdir_p("/Applications/Max6/patches/docs/refpages/jamoma-ref") unless File.exist?("/Applications/Max6/patches/docs/refpages/jamoma-ref")
-`cp "#{glibdir}/max/support/refpages/_jdoc_ref_common.xsl" /Applications/Max6/patches/docs/refpages/jamoma-ref`
+`cp "#{glibdir}/max/support/refpages/jamoma/_jdoc_ref.xsl" /Applications/Max6/patches/docs/refpages/jamoma-ref`
 
 maxrefs.each do |ref|
  dest = ref.sub(/\.(.*jcom.*maxref)\.yml/,"#{glibdir}"'\1.xml')
