@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>"jcom.parameter":components/jcom.parameter.html $0</string>
+	<key>name</key>
+	<string>Jcom.parameter</string>
+	<key>scope</key>
+	<string>text.html.textile</string>
+	<key>tabTrigger</key>
+	<string>p</string>
+	<key>uuid</key>
+	<string>01F39292-7149-47BD-8BE3-99E922CBF3D8</string>
+</dict>
+</plist>

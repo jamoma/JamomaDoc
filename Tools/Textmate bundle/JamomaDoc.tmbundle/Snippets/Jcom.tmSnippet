@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>"jcom.${1:osc-route}${2: @attribute any}":components/jcom.${1:enumerate}.html $0</string>
+	<key>name</key>
+	<string>Jcom</string>
+	<key>scope</key>
+	<string>text.html.textile</string>
+	<key>tabTrigger</key>
+	<string>jc</string>
+	<key>uuid</key>
+	<string>E9711C32-62A4-4E31-A835-ED0BE237442A</string>
+</dict>
+</plist>

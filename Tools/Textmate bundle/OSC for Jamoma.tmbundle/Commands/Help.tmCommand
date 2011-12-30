@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+
+. "$TM_SUPPORT_PATH/lib/webpreview.sh"
+html_header "OSC for Jamoma Bundle Help" "OSC"
+
+"$TM_SUPPORT_PATH/lib/markdown_to_help.rb" &lt;&lt;'MARKDOWN'
+
+# Introduction
+
+The "Show CUE List" command will scan your current document (on disk) or documents in your project for lines containing certain tags (see below).
+You will be presented with a row of “Tabs” that are counting matches while the search is going on. Once the search finishes a list for each of the tags and their context is shown. Each entry can be clicked to jump to that line in that file. The lists can be ordered by clicking on their column titles. Clicking on the Tabs will jump to the corresponding list.
+
+TextMate will ignore files whose full path matches the regular expression defined by the environment variable `TM_CUE_IGNORE`.
+
+Note: This command requires Ruby 1.8
+
+# Tags
+
+Preconfigured tags are:
+
+* &lt;span style="color: #A00000;"&gt;CUE&lt;/span&gt; - Regular cues
+* &lt;span style="color: #A00000;"&gt;KEYCUE&lt;/span&gt; - If using the jmod.cuemanager module, this will be an absolute cue, containing information on all parameters of all tracked modules.
+
+# Hints
+
+* The list can be printed using _Print…_ (⌘P) from the _File_ menu.
+* The Command will abort when the project directory resolves to the root folder.
+* Access keys: `⌃` + first letter of the tag (like `⌃T` for “TODO”) will jump to the respective section.
+
+MARKDOWN
+
+html_footer
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Help</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>uuid</key>
+	<string>580B912C-9A1C-4A05-8DBE-0909598D0C13</string>
+</dict>
+</plist>

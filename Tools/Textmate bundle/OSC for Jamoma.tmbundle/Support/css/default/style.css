@@ -1,0 +1,110 @@
+#cue_list table {
+	clear: both;
+	border-collapse: collapse;
+}
+
+#cue_list h3 {
+	clear: both;
+}
+
+#cue_list_list td, #cue_list th {
+	font-family: monospace;
+}
+
+#cue_list th {
+	white-space: nowrap;
+	border-bottom: 1px solid #000;
+	text-align: left;
+}
+
+#cue_list th a {
+	text-decoration: none;
+}
+
+#cue_list td {
+	font-size: 9pt;
+	padding: 0.5ex 1ex 0.5ex 0;
+	vertical-align: top;
+}
+
+#cue_list tr.alternate {
+	background-color: rgba(127,127,127,0.15);
+}
+
+#cue_list td.file {
+/*	max-width: 16em;
+	text-wrap: unrestricted;
+	word-wrap: break-word;*/
+	white-space: nowrap;
+}
+
+#cue_list td.comment {
+	min-width: 20em;
+}
+
+#cue_list .counters {
+	padding: 0;
+	overflow: hidden;
+}
+
+#cue_list .counters li {
+	display: block;
+	float: left;
+	padding: 1ex;
+	border: 1px solid #444;
+	border-collapse: collapse;
+	min-width: 6em;
+	text-align: center;
+}
+
+#cue_list .counters li a {
+	color: #FFF;
+}
+
+#cue_list .bg_total, #cue_list #total_count {
+	color: #FFF;
+	background-color: #000;
+}
+
+#cue_list td.type {
+	padding: 2px;
+}
+
+#cue_list .cue_content_hidden {
+	display: none;
+}
+
+/* TODO: alternate row bg colors don't work anymore with filtering */
+/*#cue_list table.cue_content_content tr[class=""]:nth-child(even) {
+  background-color: rgba(127,127,127,0.15);
+}*/
+
+#toplink {
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+}
+
+label.filter {
+  position: absolute;
+  padding-top: 4px;
+}
+
+label.disabled {
+  opacity: .66;
+}
+
+#filter, #trigger_relative_paths {
+	margin-left: 4em;
+}
+
+fieldset {
+	clear: both;
+}
+fieldset p {
+	margin: 0;
+}
+
+fieldset p ~ p {
+	margin-top: 1ex;
+}

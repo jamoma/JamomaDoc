@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>"${1:download}":http://jamoma.org/${1:enumerate}.html page $0</string>
+	<key>name</key>
+	<string>Site page</string>
+	<key>scope</key>
+	<string>text.html.textile</string>
+	<key>tabTrigger</key>
+	<string>www</string>
+	<key>uuid</key>
+	<string>5EBBA5D0-2558-41CD-AF66-B39585488BDD</string>
+</dict>
+</plist>

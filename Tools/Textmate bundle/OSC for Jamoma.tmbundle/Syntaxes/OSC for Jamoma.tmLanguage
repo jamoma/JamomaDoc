@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array/>
+	<key>foldingStartMarker</key>
+	<string>\\begin\{.*\}|#.*\(fold\)\s*$</string>
+	<key>foldingStopMarker</key>
+	<string>\\end\{.*\}|#.*\(end\)\s*$</string>
+	<key>keyEquivalent</key>
+	<string>@C</string>
+	<key>name</key>
+	<string>OSC for Jamoma</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc-jamoma</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Comments starting with #</string>
+			<key>match</key>
+			<string>(?:^[ \t]+)?(#).*$\n?</string>
+			<key>name</key>
+			<string>comment.line.number-sign.osc-jamoma</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>KEYCUE</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc-jamoma</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>A key cue is an absolute cue in jcom.cuemanager</string>
+			<key>end</key>
+			<string> </string>
+			<key>name</key>
+			<string>constant.language.keycue.osc-jamoma</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>CUE</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc-jamoma</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>The start of a new cue</string>
+			<key>end</key>
+			<string> </string>
+			<key>name</key>
+			<string>constant.language.cue.osc-jamoma</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>ramp</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc-jamoma</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Ramp to new value</string>
+			<key>end</key>
+			<string> </string>
+			<key>name</key>
+			<string>constant.other.ramp.osc-jamoma</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>WAIT</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc-jamoma</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Wait for set number of milliseconds before proceeding</string>
+			<key>end</key>
+			<string> </string>
+			<key>name</key>
+			<string>constant.language.wait.osc-jamoma</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/CONFIG</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc-jamoma</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Config is used by jmod.cuemanager for absolute cues</string>
+			<key>end</key>
+			<string> </string>
+			<key>name</key>
+			<string>constant.other.config.osc-jamoma</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/AUTOFOLLOW</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc-jamoma</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Autofollow</string>
+			<key>end</key>
+			<string> </string>
+			<key>name</key>
+			<string>constant.other.autofollow.osc-jamoma</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>global</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc-jamoma</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Global cue rampåing in jmod.cuemanager</string>
+			<key>end</key>
+			<string> </string>
+			<key>name</key>
+			<string>constant.other.global.osc-jamoma</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc-jamoma</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>OSC addresses starts with a slash and ends at a space</string>
+			<key>match</key>
+			<string>(/)[a-zA-Z_]+(~?)\w*</string>
+			<key>name</key>
+			<string>variable.other.osc-adress.osc-jamoma</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.osc-jamoma</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Colon is used when accessing the OSC subnamespace of a parameter</string>
+			<key>match</key>
+			<string>[:]</string>
+			<key>name</key>
+			<string>constant.other.osc-subspace.osc-jamoma</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>"</string>
+			<key>comment</key>
+			<string>Mainly used for file paths</string>
+			<key>end</key>
+			<string>"</string>
+			<key>name</key>
+			<string>string.quoted.double.osc-jamoma</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\.</string>
+					<key>name</key>
+					<string>constant.character.escape.untitled</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.osc-jamoma</string>
+	<key>uuid</key>
+	<string>939233E6-74EC-47D5-80AC-1743C3B10106</string>
+</dict>
+</plist>
