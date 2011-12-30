@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/ramp/function:/powerValue $0		# Only valid with power function.</string>
+	<key>name</key>
+	<string>powerValue</string>
+	<key>tabTrigger</key>
+	<string>powerVal</string>
+	<key>uuid</key>
+	<string>541F174B-330C-4B6B-B145-D77BBA58C692</string>
+</dict>
+</plist>

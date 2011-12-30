@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/ramp/function:/coefficient $0		# Only valid with lowpass function. </string>
+	<key>name</key>
+	<string>coefficient</string>
+	<key>tabTrigger</key>
+	<string>coeff</string>
+	<key>uuid</key>
+	<string>750B2FA6-3150-49E4-9E7B-E426B5991BDE</string>
+</dict>
+</plist>

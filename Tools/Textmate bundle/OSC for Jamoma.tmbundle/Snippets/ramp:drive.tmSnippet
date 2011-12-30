@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/ramp/drive $0		# Options are none, scheduler, async and queue</string>
+	<key>name</key>
+	<string>ramp/drive</string>
+	<key>tabTrigger</key>
+	<string>drive</string>
+	<key>uuid</key>
+	<string>9AB57DB6-C89E-4D90-880D-4B81787AD19D</string>
+</dict>
+</plist>

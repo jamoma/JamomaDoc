@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/ramp/function $0
+# Options for regular functions: cosine, exponential, linear, logarithm, lowpass, power, smoothPolynomial, tanh, 
+# Options for window functions: bartlett, blackman, blackmanHarris, expodec, gauss, hamming, hanning, kaiser, nuttall, rectangular, trapezoid, tukey, welch</string>
+	<key>name</key>
+	<string>ramp/function</string>
+	<key>tabTrigger</key>
+	<string>func</string>
+	<key>uuid</key>
+	<string>5FA7C79A-DC32-44A3-A869-C6EE6A884D7D</string>
+</dict>
+</plist>

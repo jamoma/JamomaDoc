@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/range/clipmode $0</string>
+	<key>name</key>
+	<string>range/clipmode</string>
+	<key>tabTrigger</key>
+	<string>clip</string>
+	<key>uuid</key>
+	<string>216A0611-365F-439B-8E8C-CA07AF9CE77D</string>
+</dict>
+</plist>

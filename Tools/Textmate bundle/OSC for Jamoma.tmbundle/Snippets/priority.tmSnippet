@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/priority $0
+# 1 is 1st priority, 2 is 2nd priority, etc. 0 is no priority (lowest priority)</string>
+	<key>name</key>
+	<string>priority</string>
+	<key>tabTrigger</key>
+	<string>pri</string>
+	<key>uuid</key>
+	<string>9378CEA9-58A3-456B-B092-3BF7D89EE85F</string>
+</dict>
+</plist>
