@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/ramp/function:/symmetry $0		# Only valid with power function. Options are none, point and axis</string>
+	<key>name</key>
+	<string>symmetry</string>
+	<key>tabTrigger</key>
+	<string>sym</string>
+	<key>uuid</key>
+	<string>EDA37D1D-8E25-456B-962D-39AC2116B4B5</string>
+</dict>
+</plist>

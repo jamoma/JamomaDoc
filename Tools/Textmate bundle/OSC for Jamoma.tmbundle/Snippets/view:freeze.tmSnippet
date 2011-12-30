@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/view/freeze $0</string>
+	<key>name</key>
+	<string>view/freeze</string>
+	<key>tabTrigger</key>
+	<string>freeze</string>
+	<key>uuid</key>
+	<string>7D47EAE5-5F8F-4F94-9779-B42872A839F7</string>
+</dict>
+</plist>

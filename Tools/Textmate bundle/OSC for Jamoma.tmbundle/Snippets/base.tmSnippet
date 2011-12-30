@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/ramp/function:/base $0		# Only valid with the logarithmic and exponential functions</string>
+	<key>name</key>
+	<string>base</string>
+	<key>tabTrigger</key>
+	<string>base</string>
+	<key>uuid</key>
+	<string>68BD8DED-E59F-4DB4-BB42-4D3DFDD56A95</string>
+</dict>
+</plist>

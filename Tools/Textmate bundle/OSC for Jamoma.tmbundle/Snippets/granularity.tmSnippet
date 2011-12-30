@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/ramp/drive:/granularity $0		# Only valid for the scheduler drive. Interval between updates in ms.</string>
+	<key>name</key>
+	<string>granularity</string>
+	<key>tabTrigger</key>
+	<string>gran</string>
+	<key>uuid</key>
+	<string>E7D2C30F-2341-4953-987A-2165F809468D</string>
+</dict>
+</plist>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/dataspace $0
+# Possible options: angle, color, distance, gain, none, orientation, position, speed, temperature, time</string>
+	<key>name</key>
+	<string>dataspace</string>
+	<key>tabTrigger</key>
+	<string>data</string>
+	<key>uuid</key>
+	<string>8CB76E67-8247-467B-89FB-DADCF6A707E7</string>
+</dict>
+</plist>

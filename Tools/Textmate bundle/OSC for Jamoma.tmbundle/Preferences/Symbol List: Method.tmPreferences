@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol List: Method</string>
+	<key>scope</key>
+	<string>source.osc-jamoma constant.language.cue.osc-jamoma</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<integer>1</integer>
+		<key>symbolTransformation</key>
+		<string>s/^\s*(KEY)?CUE\s+/ /</string>
+	</dict>
+	<key>uuid</key>
+	<string>C9E9B373-CD43-431F-BA47-36901FA211B6</string>
+</dict>
+</plist>

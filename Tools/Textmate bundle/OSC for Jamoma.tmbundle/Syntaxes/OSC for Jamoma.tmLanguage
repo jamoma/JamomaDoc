@@ -44,9 +44,9 @@
 			<key>comment</key>
 			<string>A key cue is an absolute cue in jcom.cuemanager</string>
 			<key>end</key>
-			<string> </string>
+			<string>\n</string>
 			<key>name</key>
-			<string>constant.language.keycue.osc-jamoma</string>
+			<string>constant.language.cue.osc-jamoma</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -62,7 +62,7 @@
 			<key>comment</key>
 			<string>The start of a new cue</string>
 			<key>end</key>
-			<string> </string>
+			<string>\n</string>
 			<key>name</key>
 			<string>constant.language.cue.osc-jamoma</string>
 		</dict>
