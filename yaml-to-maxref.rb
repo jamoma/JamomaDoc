@@ -19,19 +19,21 @@ class YamlToMaxref
     yaml = YAML.load_file(filepath)
     root = Element.new("c74object")
     root.attributes["name"] = filepath.split('/').last.sub(/\.maxref.yml/,'')
-
+    comment = Comment.new('DIGEST')
+    root.add comment       
     e = Element.new("digest")
     e.text = yaml["brief"]
     root.add_element e
-
+    comment = Comment.new('DESCRIPTION')
+    root.add comment       
     e = Element.new("description")
     e.text = yaml["desc"]
     root.add_element e
 
     # METADATA ---------------------------------------------------------------------
-
+    comment = Comment.new('METADATA')
+    root.add comment   
     e = Element.new("metadatalist")
-
     author = yaml["author"]
     if author
       author.each {|author|
@@ -55,9 +57,9 @@ class YamlToMaxref
     root.add_element e
 
     # ATTRIBUTES ---------------------------------------------------------------------
-
+    comment = Comment.new('ATTRIBUTES')
+    root.add comment   
     e = Element.new("attributelist")
-
     attributes = yaml["attributes"]
     if attributes
       attributes.each { |a|
@@ -88,9 +90,9 @@ class YamlToMaxref
 
 
     # MESSAGES ---------------------------------------------------------------------
-
+    comment = Comment.new('MESSAGES')
+    root.add comment   
     e = Element.new("methodlist")
-
     messages = yaml["messages"]
     if messages
       messages.each { |m|
@@ -112,9 +114,9 @@ class YamlToMaxref
     root.add_element e
 
     # ARGUMENTS ---------------------------------------------------------------------
-    
-    e = Element.new("objarglist")
-    
+    comment = Comment.new('ARGUMENTS')
+    root.add comment       
+    e = Element.new("objarglist")    
     args = yaml["args"]
     if args
       args.each { |a|
@@ -138,7 +140,8 @@ class YamlToMaxref
 
 
     # IMAGE ---------------------------------------------------------------------
-
+    comment = Comment.new('IMAGE')
+    root.add comment       
     if File.exist? "#{imagepath}"
       e = Element.new("examplelist")
       image = Element.new("example")
@@ -150,9 +153,9 @@ class YamlToMaxref
 
 
     # SEEALSO ---------------------------------------------------------------------
-
-    e = Element.new("seealsolist")
-
+    comment = Comment.new('SEE ALSO')
+    root.add comment   
+    e = Element.new("seealsolist")   
     seealsos = yaml["seealso"]
     if seealsos
       seealsos.each { |s|
@@ -166,7 +169,8 @@ class YamlToMaxref
 
 
     # MISC ---------------------------------------------------------------------
-
+    comment = Comment.new('MISC')
+    root.add comment   
     e = Element.new("misc")
     e.attributes["name"] = "Output"
 
