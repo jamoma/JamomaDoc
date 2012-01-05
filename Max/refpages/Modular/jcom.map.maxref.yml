@@ -1,0 +1,65 @@
+title: jcom.map
+author: [Jamoma]
+created_at: 2012/1/1
+tags: [mapping, max]
+
+brief: scaling and mapping of control data 
+
+desc: >
+ scaling and mapping input to output using the Jamoma function library
+
+outputs:
+ - name: 1
+   type: float int list
+   desc: outputs scaled values
+
+inputs:
+  - name: 1
+    type: float int list
+    desc: values to be scaled
+	
+args:
+
+attributes:
+ - name: function
+   type: string
+   desc: type of the mapping function
+   default: linear
+ - name: inputMin
+   type: float
+   desc: minimum input value
+   default: 0.0
+ - name: inputMax
+   type: float
+   desc: maximum input value
+   default: 1.0   
+ - name: outputMin
+   type: float
+   desc: minimum input value
+   default: 0.0
+ - name: outputMax
+   type: float
+   desc: maximum output value
+   default: 1.0
+      
+messages:
+ - name: function.get
+   type: generic
+   desc: returns a list of all mapping functions at the dumpout
+ - name: function.parameters.get
+   type: generic
+   desc: returns a list of all parameter affecting the current mapping function 
+ - name: parameter
+   type: string float
+   desc: ADD_TEXT
+ - name: parameter.get
+   type: string 
+   desc: ADD_TEXT
+
+useraction:
+
+seealso:
+ - jmod.mapperContinuous
+ - jmod.mapper
+ - jcom.function
+ - jcom.dataspace
