@@ -19,8 +19,8 @@ class YamlToMaxref
     yaml = YAML.load_file(filepath)
     root = Element.new("c74object")
     root.attributes["name"] = filepath.split('/').last.sub(/\.maxref.yml/,'')
-    comment = Comment.new('DIGEST')
-    root.add comment       
+    #comment = Comment.new('DIGEST')
+    #root.add comment       
     e = Element.new("digest")
     e.text = yaml["brief"]
     root.add_element e
@@ -31,8 +31,8 @@ class YamlToMaxref
     root.add_element e
 
     # METADATA ---------------------------------------------------------------------
-    comment = Comment.new('METADATA')
-    root.add comment   
+    #comment = Comment.new('METADATA')
+    #root.add comment   
     e = Element.new("metadatalist")
     author = yaml["author"]
     if author
@@ -54,6 +54,63 @@ class YamlToMaxref
        }
     end
 
+    root.add_element e
+    # INLETS ---------------------------------------------------------------------
+    comment = Comment.new('INLETS')
+    root.add comment   
+    e = Element.new("inletlist")
+    inlets = yaml["inlets"]
+    if inlets
+      inlets.each { |a|
+        inlet = Element.new("inlet") 
+        inlet.attributes["id"] = a["id"]
+        if (a["type"])
+          inlet.attributes["type"] = a["type"]
+        else
+          inlet.attributes["type"] = "INLET_TYPE"
+        end
+        
+        inletdig = Element.new("digest")
+        inletdig.text = a["desc"]       
+        inlet.add_element inletdig
+        
+        inletdesc = Element.new("desc")
+        inletdesc.text = a["desc"]
+        inlet.add_element inletdesc
+        
+        e.add_element inlet        
+      }
+    end
+    
+    root.add_element e
+    # OUTLETS ---------------------------------------------------------------------
+    comment = Comment.new('OUTLETS')
+    root.add comment   
+
+    e = Element.new("outletlist")
+    outlets = yaml["outlets"]
+    if outlets
+      outlets.each { |a|
+        outlet = Element.new("outlet") 
+        outlet.attributes["id"] = a["id"]
+        if (a["type"])
+          outlet.attributes["type"] = a["type"]
+        else
+          outlet.attributes["type"] = "OUTLET_TYPE"
+        end
+        
+        outletdig = Element.new("digest")
+        outletdig.text = a["desc"]       
+        outlet.add_element outletdig
+        
+        outletdesc = Element.new("desc")
+        outletdesc.text = a["desc"]
+        outlet.add_element outletdesc
+        
+        e.add_element outlet        
+      }
+    end
+    
     root.add_element e
 
     # ATTRIBUTES ---------------------------------------------------------------------
@@ -140,7 +197,7 @@ class YamlToMaxref
 
 
     # IMAGE ---------------------------------------------------------------------
-    comment = Comment.new('IMAGE')
+    comment = Comment.new('EXAMPLE')
     root.add comment       
     if File.exist? "#{imagepath}"
       e = Element.new("examplelist")
@@ -167,6 +224,15 @@ class YamlToMaxref
 
     root.add_element e
 
+# DISCUSSION ---------------------------------------------------------------------
+    e = Element.new("discussion")   
+    discussion = yaml["discussion"]
+    if discussion
+      e.text = yaml["discussion"]
+    else
+      e.text = ["_"]
+    end
+    root.add_element e
 
     # MISC ---------------------------------------------------------------------
     comment = Comment.new('MISC')
@@ -223,8 +289,10 @@ class YamlToMaxref
 
     # todo: investigate the formatters thing to have something cleaner than the following
     s.gsub! /<\?.*\?>/, '<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-    <?xml-stylesheet href="./_jdoc_ref.xsl" type="text/xsl"?>'
     
+<?xml-stylesheet href="./_jdoc_ref.xsl" type="text/xsl"?>
+
+'    
     # Now that we have the XML, perform additional substitutions
     s.gsub! /(\s\#)(\S*)/ , ' <o>\2</o>' # Max objects
     s.gsub! /\s@(.*)@([\s\.])/, ' <m>\1</m>\2' # Max messages
