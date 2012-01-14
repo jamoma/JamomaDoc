@@ -15,7 +15,8 @@ class YamlToMaxref
 
 
   def process filepath
-    imagepath = filepath.sub(/(.*)\.maxref.yml/, '\1.png')
+    imagepath = filepath.sub(/(.*)\/(jcom.*)\.maxref.yml/, '\1/images/\2.png')
+    puts imagepath
     yaml = YAML.load_file(filepath)
     root = Element.new("c74object")
     root.attributes["name"] = filepath.split('/').last.sub(/\.maxref.yml/,'')
@@ -200,7 +201,7 @@ class YamlToMaxref
 
     # IMAGE ---------------------------------------------------------------------
     comment = Comment.new('EXAMPLE')
-    root.add comment       
+    root.add comment
     if File.exist? "#{imagepath}"
       e = Element.new("examplelist")
       image = Element.new("example")
