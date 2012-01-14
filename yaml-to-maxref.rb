@@ -16,7 +16,6 @@ class YamlToMaxref
 
   def process filepath
     imagepath = filepath.sub(/(.*)\/(jcom.*)\.maxref.yml/, '\1/images/\2.png')
-    puts imagepath
     yaml = YAML.load_file(filepath)
     root = Element.new("c74object")
     root.attributes["name"] = filepath.split('/').last.sub(/\.maxref.yml/,'')
@@ -321,14 +320,19 @@ end
 ##################################################################################
 
 
-if ARGV.size < 2
+if ARGV.size < 1
   puts "must provide the path to the source and the path to the destination (including filename and extension)"
   puts "for example: "
   puts "    ./yaml-to-maxref.rb ../Modules/Plugtastic/implementations/MaxMSP/jcom.plug.parameter/jcom.plug.parameter#.maxref.yml ../Modules/Plugtastic/implementations/MaxMSP/jcom.plug.parameter/jcom.plug.parameter#.maxref.xml"
   exit
 end
 source_path = ARGV[0]
+
+if ARGV.size > 1
 dest_path = ARGV[1]
+else
+  dest_path = ARGV[0].sub(/(.*)\.yml/, '\1.xml')
+end
 
 maxref = YamlToMaxref.new
 maxref.process source_path
