@@ -179,6 +179,8 @@ class YamlToMaxref
       args.each { |a|
        arg = Element.new("objarg")
        arg.attributes["name"] = a["name"]
+       arg.attributes["optional"] = a["optional"]
+      arg.attributes["units"] = a["units"]
        arg.attributes["type"] = a["type"]
 
        argumentdig = Element.new("digest")
