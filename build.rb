@@ -9,29 +9,53 @@ libdir = "."
 Dir.chdir libdir
 libdir = Dir.pwd
 
-# we search all refpages categories (Foundation, Modular, DSP, etc.)
-refsCat = Dir.entries("./Max/refpages/")
-refsCat.delete_if {|nonFolder| nonFolder =~ /^\./} # we remove "." and ".." entries
+# JamomaDocLib contains xml IO and specific doc methods (refpages, tutorials, etc. parsers)
+require "#{libdir}/Tools/JamomaDocLib"
 
-puts "=========================\n"
-puts "WRITING LIST OF MODULES FILE"
-puts "=========================\n"
+# =================================
+# SETUP
+# =================================
 
-puts refsCat
+# create the folder structure we need
+FileUtils.mkdir_p("#{libdir}/Jamoma-doc/refpages")
 
-f = File.new("./Max/refpages/jdoc_ref_modules.xml", "a+")
-f.write("<?xml version='1.0' encoding='UTF-8' standalone='yes'?>\n<root>\n")
-refsCat.each do |m|
-  f.write("<module>\n")
-  f.write("#{m}\n")
-  f.write("</module>\n")
+
+# =================================
+# PROCESS REFPAGES
+# =================================
+
+# build a table of content of all categories (Foundation, Modular, DSP, etc.)
+projects = Dir.entries("#{libdir}/Max/refpages/")
+
+refDir = YamlToMaxDoc.new
+refDir.moduleTOC(projects)
+refDir.write("#{libdir}/Jamoma-doc/refpages/_jdoc_ref_modules.xml")
+
+puts "****** building Table of content for: ******\n"
+puts projects
+puts "\n-> #{libdir}/Jamoma-doc/refpages/_jdoc_ref_modules.xml"
+puts "\nDONE\n"
+
+# build table of content of refpages
+projects.each do |project|
+  refs = Dir.entries("#{libdir}/Max/refpages/#{project}/")
+  
+  puts "BUILDING TABLE OF CONTENT OF ALL REFPAGES IN #{project}"
+  toc = YamlToMaxDoc.new
+  toc.refpagesTOC(refs)
+  toc.write("#{libdir}/Jamoma-doc/refpages/#{project}/_jdoc_contents.xml")
+
+# write refpage  
+  refs.each do |jcom|
+    puts "WRITING REFERENCE PAGE FOR #{jcom}"
+    dest = jcom.sub(/(.*maxref).yml/,'\1.xml')
+    ref = YamlToMaxDoc.new
+    ref.makeRefpage("#{libdir}/Max/refpages/#{project}/#{jcom}")
+    ref.write("#{libdir}/Jamoma-doc/refpages/#{project}/#{dest}")
+  end
 end
-f.write("</root>")
-f.close
 
-puts "DONE\n=========================\n"
-
-
+  
 # search = `find . -name *maxref.yml` # Does this only work on OSX ?
 # 
 # puts search
