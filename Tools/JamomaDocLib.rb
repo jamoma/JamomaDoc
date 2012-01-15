@@ -288,7 +288,7 @@ class YamlToMaxDoc
     docModules.delete_if {|nonFolder| nonFolder =~ /^\./} # we remove "." and ".." entries
     docModules.each do |moduleName|
     m = Element.new("module")
-    m.text = "Jamoma#{moduleName}-ref"
+    m.text = "jamoma#{moduleName}-ref"
     root.add_element m
     end
   @xml.add_element root

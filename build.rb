@@ -20,13 +20,13 @@ dst = "#{libdir}/Jamoma-doc"
 
 # create the folder structure we need
 FileUtils.mkdir_p("#{dst}/refpages")
-#FileUtils.mkdir_p("#{dst}/refpages/JamomaAudioGraph-ref")
-#FileUtils.mkdir_p("#{dst}/refpages/JamomaDSP-ref")
-FileUtils.mkdir_p("#{dst}/refpages/JamomaFoundation-ref")
-FileUtils.mkdir_p("#{dst}/refpages/JamomaGraph-ref")
-#FileUtils.mkdir_p("#{dst}/refpages/JamomaGraphics-ref")
-FileUtils.mkdir_p("#{dst}/refpages/JamomaModular-ref")
-FileUtils.mkdir_p("#{dst}/refpages/JamomaPlugtastic-ref")
+#FileUtils.mkdir_p("#{dst}/refpages/jamomaAudioGraph-ref")
+#FileUtils.mkdir_p("#{dst}/refpages/jamomaDSP-ref")
+FileUtils.mkdir_p("#{dst}/refpages/jamomaFoundation-ref")
+FileUtils.mkdir_p("#{dst}/refpages/jamomaGraph-ref")
+#FileUtils.mkdir_p("#{dst}/refpages/jamomaGraphics-ref")
+FileUtils.mkdir_p("#{dst}/refpages/jamomaModular-ref")
+FileUtils.mkdir_p("#{dst}/refpages/jamomaPlugtastic-ref")
 
 
 # =================================
@@ -51,9 +51,9 @@ projects.each do |project|
   puts "\nBUILDING TABLE OF CONTENT OF ALL REFPAGES IN #{project}"
   toc = YamlToMaxDoc.new
   toc.refpagesTOC(refs)
-  toc.write("#{dst}/refpages/Jamoma#{project}-ref/_jdoc_contents.xml")
+  toc.write("#{dst}/refpages/jamoma#{project}-ref/_jdoc_contents.xml")
   
-  puts "\n-> #{dst}/refpages/Jamoma#{project}-ref/_jdoc_contents.xml\n\n"
+  puts "\n-> #{dst}/refpages/jamoma#{project}-ref/_jdoc_contents.xml\n\n"
 
 # write refpage  
   refs.each do |jcom|
@@ -61,7 +61,7 @@ projects.each do |project|
     dest = jcom.sub(/(.*maxref).yml/,'\1.xml')
     ref = YamlToMaxDoc.new
     ref.makeRefpage("#{src}/refpages/#{project}/#{jcom}")
-    ref.write("#{dst}/refpages/Jamoma#{project}-ref/#{dest}")
+    ref.write("#{dst}/refpages/jamoma#{project}-ref/#{dest}")
   end
 end
 
@@ -73,7 +73,7 @@ puts "================== DONE =================="
 # =================================
 
 projects.each do |project|
-FileUtils.copy("#{src}/support/refpages/jamoma/_jdoc_ref.xsl", "#{dst}/refpages/Jamoma#{project}-ref/_jdoc_ref.xsl")
+FileUtils.copy("#{src}/support/refpages/jamoma/_jdoc_ref.xsl", "#{dst}/refpages/jamoma#{project}-ref/_jdoc_ref.xsl")
 end
 
 
