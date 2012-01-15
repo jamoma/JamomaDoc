@@ -15,9 +15,18 @@ require "#{libdir}/Tools/JamomaDocLib"
 # =================================
 # SETUP
 # =================================
+src = "#{libdir}/Max"
+dst = "#{libdir}/Jamoma-doc"
 
 # create the folder structure we need
-FileUtils.mkdir_p("#{libdir}/Jamoma-doc/refpages")
+FileUtils.mkdir_p("#{dst}/refpages")
+#FileUtils.mkdir_p("#{dst}/refpages/JamomaAudioGraph-ref")
+#FileUtils.mkdir_p("#{dst}/refpages/JamomaDSP-ref")
+FileUtils.mkdir_p("#{dst}/refpages/JamomaFoundation-ref")
+FileUtils.mkdir_p("#{dst}/refpages/JamomaGraph-ref")
+#FileUtils.mkdir_p("#{dst}/refpages/JamomaGraphics-ref")
+FileUtils.mkdir_p("#{dst}/refpages/JamomaModular-ref")
+FileUtils.mkdir_p("#{dst}/refpages/JamomaPlugtastic-ref")
 
 
 # =================================
@@ -25,58 +34,54 @@ FileUtils.mkdir_p("#{libdir}/Jamoma-doc/refpages")
 # =================================
 
 # build a table of content of all categories (Foundation, Modular, DSP, etc.)
-projects = Dir.entries("#{libdir}/Max/refpages/")
+projects = Dir.entries("#{src}/refpages/")
 
 refDir = YamlToMaxDoc.new
 refDir.moduleTOC(projects)
-refDir.write("#{libdir}/Jamoma-doc/refpages/_jdoc_ref_modules.xml")
+refDir.write("#{dst}/refpages/_jdoc_ref_modules.xml")
 
 puts "\nBUILDING TABLE OF CONTENT OF JAMOMA PROJECTS\n"
 puts projects
-puts "\n-> #{libdir}/Jamoma-doc/refpages/_jdoc_ref_modules.xml\n"
+puts "\n-> #{dst}/refpages/_jdoc_ref_modules.xml\n"
 
 # build table of content of refpages
 projects.each do |project|
-  refs = Dir.entries("#{libdir}/Max/refpages/#{project}/")
+  refs = Dir.entries("#{src}/refpages/#{project}/")
   
   puts "\nBUILDING TABLE OF CONTENT OF ALL REFPAGES IN #{project}"
   toc = YamlToMaxDoc.new
   toc.refpagesTOC(refs)
-  toc.write("#{libdir}/Jamoma-doc/refpages/#{project}/_jdoc_contents.xml")
+  toc.write("#{dst}/refpages/Jamoma#{project}-ref/_jdoc_contents.xml")
   
-  puts "\n-> #{libdir}/Jamoma-doc/refpages/#{project}/_jdoc_contents.xml\n\n"
+  puts "\n-> #{dst}/refpages/Jamoma#{project}-ref/_jdoc_contents.xml\n\n"
 
 # write refpage  
   refs.each do |jcom|
     puts "WRITING REFERENCE PAGE FOR #{jcom}"
     dest = jcom.sub(/(.*maxref).yml/,'\1.xml')
     ref = YamlToMaxDoc.new
-    ref.makeRefpage("#{libdir}/Max/refpages/#{project}/#{jcom}")
-    ref.write("#{libdir}/Jamoma-doc/refpages/#{project}/#{dest}")
+    ref.makeRefpage("#{src}/refpages/#{project}/#{jcom}")
+    ref.write("#{dst}/refpages/Jamoma#{project}-ref/#{dest}")
   end
 end
 
 puts "================== DONE =================="
-# search = `find . -name *maxref.yml` # Does this only work on OSX ?
-# 
-# puts search
-# 
-# maxrefs = Array::new
-# maxrefs = search.split("\n")
-# # Create refpages folder and copy XLS file for Max 5  - comment this out if you don't want it
-# FileUtils.mkdir_p("/Applications/Max5/patches/docs/refpages/jamoma-ref") unless File.exist?("/Applications/Max5/patches/docs/refpages/jamoma-ref")
-# `cp "#{libdir}/max/support/refpages/jamoma/_jdoc_ref.xsl" /Applications/Max5/patches/docs/refpages/jamoma-ref`
-# # Create refpages folder and copy XLS file for Max 6  - comment this out if you don't want it
-# FileUtils.mkdir_p("/Applications/Max6/patches/docs/refpages/jamoma-ref") unless File.exist?("/Applications/Max6/patches/docs/refpages/jamoma-ref")
-# `cp "#{libdir}/max/support/refpages/jamoma/_jdoc_ref.xsl" /Applications/Max6/patches/docs/refpages/jamoma-ref`
-# 
-# maxrefs.each do |ref|
-#  dest = ref.sub(/\.(.*jcom.*maxref)\.yml/,"#{libdir}"'\1.xml')
-#  ref = ref.sub(/\.(.*jcom.*maxref.yml)/,"#{libdir}"'\1')
-# `ruby #{libdir}/yaml-to-maxref.rb #{ref} #{dest}`
-# # Copy refpages into Max 5  - comment this out if you don't want it
-# `cp #{dest} /Applications/Max5/patches/docs/refpages/jamoma-ref`
-# # Copy refpages into Max 6  - comment this out if you don't want it
-# `cp #{dest} /Applications/Max6/patches/docs/refpages/jamoma-ref`
-# 
-# end
+
+
+# =================================
+# COPYING XSL FILES AND STUFF
+# =================================
+
+projects.each do |project|
+FileUtils.copy("#{src}/support/refpages/jamoma/_jdoc_ref.xsl", "#{dst}/refpages/Jamoma#{project}-ref/_jdoc_ref.xsl")
+end
+
+
+# =================================
+# INSTALLING
+# =================================
+maxVersion = ["Max5", "Max6"]
+
+maxVersion.each do |v|
+  FileUtils.copy_entry("#{dst}/refpages", "/Applications/#{v}/patches/docs/refpages")
+end
