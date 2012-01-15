@@ -19,6 +19,7 @@ src = "#{libdir}/Max"
 dst = "#{libdir}/Jamoma-doc"
 
 # create the folder structure we need
+FileUtils.remove_entry("#{dst}") if File.exist?("#{dst}")
 FileUtils.mkdir_p("#{dst}/refpages")
 #FileUtils.mkdir_p("#{dst}/refpages/jamomaAudioGraph-ref")
 #FileUtils.mkdir_p("#{dst}/refpages/jamomaDSP-ref")
