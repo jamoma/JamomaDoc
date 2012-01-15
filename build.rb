@@ -31,19 +31,20 @@ refDir = YamlToMaxDoc.new
 refDir.moduleTOC(projects)
 refDir.write("#{libdir}/Jamoma-doc/refpages/_jdoc_ref_modules.xml")
 
-puts "****** building Table of content for: ******\n"
+puts "\nBUILDING TABLE OF CONTENT OF JAMOMA PROJECTS\n"
 puts projects
-puts "\n-> #{libdir}/Jamoma-doc/refpages/_jdoc_ref_modules.xml"
-puts "\nDONE\n"
+puts "\n-> #{libdir}/Jamoma-doc/refpages/_jdoc_ref_modules.xml\n"
 
 # build table of content of refpages
 projects.each do |project|
   refs = Dir.entries("#{libdir}/Max/refpages/#{project}/")
   
-  puts "BUILDING TABLE OF CONTENT OF ALL REFPAGES IN #{project}"
+  puts "\nBUILDING TABLE OF CONTENT OF ALL REFPAGES IN #{project}"
   toc = YamlToMaxDoc.new
   toc.refpagesTOC(refs)
   toc.write("#{libdir}/Jamoma-doc/refpages/#{project}/_jdoc_contents.xml")
+  
+  puts "\n-> #{libdir}/Jamoma-doc/refpages/#{project}/_jdoc_contents.xml\n\n"
 
 # write refpage  
   refs.each do |jcom|
@@ -55,7 +56,7 @@ projects.each do |project|
   end
 end
 
-  
+puts "================== DONE =================="
 # search = `find . -name *maxref.yml` # Does this only work on OSX ?
 # 
 # puts search
