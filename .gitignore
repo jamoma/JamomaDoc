@@ -1,7 +1,3 @@
-# Ignore nanoc stuff
-Tools/nanoc/content
-Tools/nanoc/tmp
-
 # Ignore Mac Finder stuff
 .DS_Store
 
