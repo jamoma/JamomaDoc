@@ -90,12 +90,12 @@ attributes:
    default:
  - name: readonly
    type: toggle
-   desc: 
+   desc: freezes the value of the jcom.parameter so that it can't be updated.
    unit:
    default: 0
  - name: view/freeze
    type: toggle
-   desc: 
+   desc: Mutes the leftmost outlet of jcom.parameter so that the GUI do not update. Useful for Jitter-related work where GUI elements compete with Jitter processing compete with Jitter processing for screen update resources.
    unit:
    default: 0
  - name: value
@@ -114,13 +114,16 @@ attributes:
    unit:
    default: 1.
  - name: mix/weight
-   type: 
-   desc: 
+   type: float
+   desc: If set to 0.0, the parameter is excluded from taking part in preset mixing.
    unit:
    default: 1.
 
 seealso:
  - jcom.message
+ - jcom.return	
  - jcom.hub
  - jcom.ramp
  - jcom.dataspace
+ 
+discussion: Jamoma is a free and open source project. http://www.jamoma.org
