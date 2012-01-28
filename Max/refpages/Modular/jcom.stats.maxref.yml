@@ -73,6 +73,6 @@ messages:
    desc: add new value to stream but do not output
 
 seealso:
- - mean
+ - jcom.average~
 
 discussion: Jamoma is a free and open source project. http://www.jamoma.org
