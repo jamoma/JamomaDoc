@@ -41,7 +41,9 @@ refDir = YamlToMaxDoc.new
 refDir.moduleTOC(projects)
 refDir.write("#{dst}/refpages/_jdoc_ref_modules.xml")
 
-puts "\nBUILDING TABLE OF CONTENT OF JAMOMA PROJECTS\n"
+puts "\n"
+puts "BUILDING TABLE OF CONTENT OF JAMOMA PROJECTS\n"
+puts ""
 puts projects
 puts "\n-> #{dst}/refpages/_jdoc_ref_modules.xml\n"
 
@@ -49,26 +51,35 @@ puts "\n-> #{dst}/refpages/_jdoc_ref_modules.xml\n"
 projects.each do |project|
   refs = Dir.entries("#{src}/refpages/#{project}/")
   
-  puts "\nBUILDING TABLE OF CONTENT OF ALL REFPAGES IN #{project}"
+  puts "\n"  
+  puts "BUILDING TABLE OF CONTENT OF ALL REFPAGES IN #{project}"
+  puts "\n"
   toc = YamlToMaxDoc.new
   toc.refpagesTOC(refs)
   toc.write("#{dst}/refpages/jamoma#{project}-ref/_jdoc_contents.xml")
   
-  puts "\n-> #{dst}/refpages/jamoma#{project}-ref/_jdoc_contents.xml\n\n"
-  #now we copy the images folder if found
-  FileUtils.copy_entry("#{src}/refpages/#{project}/images", "#{dst}/refpages/jamoma#{project}-ref/images") if File.exist?("#{src}/refpages/#{project}/images")
-  puts "-> Copying images folder...\n\n"
-# write refpage  
+  puts "-> #{dst}/refpages/jamoma#{project}-ref/_jdoc_contents.xml\n\n"
+  
+# write refpage
+  puts "\n"
+  puts "WRITING REFPAGES"
+  puts "\n"  
   refs.each do |jcom|
-    puts "WRITING REFERENCE PAGE FOR #{jcom}"
+    puts "Writing reference page for #{jcom}..."
     dest = jcom.sub(/(.*maxref).yml/,'\1.xml')
     ref = YamlToMaxDoc.new
     ref.makeRefpage("#{src}/refpages/#{project}/#{jcom}")
     ref.write("#{dst}/refpages/jamoma#{project}-ref/#{dest}")
   end
+  #now we copy the images folder if found
+  if File.exist?("#{src}/refpages/#{project}/images") then
+    FileUtils.copy_entry("#{src}/refpages/#{project}/images", "#{dst}/refpages/jamoma#{project}-ref/images")
+    puts "\n-> Copying images folder...\n"
+  end
+  
 end
 
-puts "================== DONE =================="
+puts "\n\n DONE "
 
 
 # =================================
