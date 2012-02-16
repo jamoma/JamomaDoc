@@ -6,7 +6,7 @@ tags: [operator, difference]
 brief: Calculate the absolute difference between two numbers.
 
 desc: >
- jcom.absdiff calculates the absolute different between whatever numbers coming in each of its inlets.
+ jcom.absdiff calculates the absolute difference between whatever numbers coming in each of its inlets.
 
 input:
  - name: 1
