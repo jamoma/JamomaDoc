@@ -6,11 +6,11 @@ tags: [interface, control, osc]
 brief: Handling parameters in the Jamoma modules
 
 desc: >
- jcom.parameter creates a parameter in a Jamoma module and interfaces with GUI elements.
+ "jcom.parameter creates a parameter in a Jamoma module and interfaces with GUI elements."
 
 inputs:
  - name: left
-   desc: input from the user interface object
+   desc: "input from the user interface object"
 
 outputs:
  - name: left
@@ -18,15 +18,15 @@ outputs:
  - name: middle
    desc: direct values
  - name: right
-   desc: dumpout
+   desc: "dumpout"
 
 args:
  - name: name
    type: symbol
-   desc: OSC name of the parameter, A couple of names are prohibited because these are reserved names used by the Jamoma module.
-   
+   desc: "OSC name of the parameter, A couple of names are prohibited because these are reserved names used by the Jamoma module."
+
 messages:
-	
+
 attributes:
  - name: type
    type: symbol
@@ -35,7 +35,7 @@ attributes:
    default: generic
  - name: range/bounds
    type: array [low-bound high-bond]
-   desc: Lower and upper boundaries defining the range of possible parameter values.
+   desc: "Lower and upper boundaries defining the range of possible parameter values."
    unit:
    default: 0. 1.
  - name: range/clipmode
@@ -45,19 +45,19 @@ attributes:
    default: none
  - name: ramp/drive
    type: symbol
-   desc: "Determines the mechanism used to drive ramping to new parameter values. Options are: none, scheduler, async, queue" 
+   desc: "Determines the mechanism used to drive ramping to new parameter values. Options are: none, scheduler, async, queue"
    unit:
    default: none
  - name: ramp/function
    type: symbol
-   desc: The mapping function determining the curve of the ramping to new parameter value. For an extensive description of all available functions, see 
+   desc: The mapping function determining the curve of the ramping to new parameter value. # For an extensive description of all available functions, see
    unit:
    default: linear
- - name: repetition/allow
+ - name: repetitions/allow
    type: toggle
-   desc: "Determines whether repeated parameter values will be filtered: when this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)" 
+   desc: "Determines whether repeated parameter values will be filtered: when this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)"
    unit:
-   default: 0 
+   default: 0
  - name: dataspace
    type: symbol
    desc: Set what dataspace used internally by the parameter for unit conversions.
@@ -75,7 +75,7 @@ attributes:
    default: none
  - name: dataspace/unit/display
    type: symbol
-   desc: 
+   desc:
    unit:
    default: none
  - name: priority
@@ -90,32 +90,32 @@ attributes:
    default:
  - name: readonly
    type: toggle
-   desc: 
+   desc:
    unit:
    default: 0
  - name: view/freeze
    type: toggle
-   desc: 
+   desc:
    unit:
    default: 0
  - name: value
-   type: 
-   desc: current parameter value 
+   type:
+   desc: current parameter value
    unit:
-   default: 
+   default:
  - name: value/default
-   type: 
+   type:
    desc: default parameter value
    unit:
    default: NULL
  - name: value/stepsize
-   type: 
+   type:
    desc: step by which the current value is being increased/decreased when a /value/inc or /value/dec message is received
    unit:
    default: 1.
  - name: mix/weight
-   type: 
-   desc: 
+   type:
+   desc:
    unit:
    default: 1.
 
