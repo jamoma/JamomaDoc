@@ -55,7 +55,9 @@ projects.each do |project|
   toc.write("#{dst}/refpages/jamoma#{project}-ref/_jdoc_contents.xml")
   
   puts "\n-> #{dst}/refpages/jamoma#{project}-ref/_jdoc_contents.xml\n\n"
-
+  #now we copy the images folder if found
+  FileUtils.copy_entry("#{src}/refpages/#{project}/images", "#{dst}/refpages/jamoma#{project}-ref/images") if File.exist?("#{src}/refpages/#{project}/images")
+  puts "-> Copying images folder...\n\n"
 # write refpage  
   refs.each do |jcom|
     puts "WRITING REFERENCE PAGE FOR #{jcom}"
