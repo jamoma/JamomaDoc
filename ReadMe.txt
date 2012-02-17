@@ -1,39 +1,14 @@
 --------------------------------------------------
-JAMOMADOC REPOSITORY
+JAMOMA DOCUMENTATION REPOSITORY
 --------------------------------------------------
 
-This is the repository for everything documentation-related. Here are hosted various pieces of reference files, tutorials, etc.
+This is the repository for everything documentation-related. Here are hosted various pieces of reference files, tutorials, etc. for Max implementation as well as some documentation on Jamoma API
 
 
 
 --------------------------------------------------
 BUILDING THE DOCUMENTATION
 --------------------------------------------------
-* DEPENDENCIES
-
-The documentation can be compiled as HTML files. Compilation is done using Ruby and two Ruby gems:
-
-- A static web site generator: nanoc (http://nanoc.stoneship.org/)
-- A set of utilities for nanoc: nutils (https://github.com/arnau/Nutils)
-
-All other dependencies are taken care of by these two gems.
-
-
-* INSTALLATION OF NANOC & NUTILS
-
-If you use a Ruby version < 1.9, first make sure the package manager called Rubygems is installed. Visit the url below and follow the instructions.
-
-http://rubygems.org/pages/download
-
-If you use a Ruby version > 1.9, Rubygems is installed by default.
-
-Then you can install nanoc and nutils by running these two commands from a terminal window:
-
-sudo gem install nanoc
-sudo gem install nutils
-
-Note that you can find some additionnal informations on nanoc website: http://nanoc.stoneship.org/docs/2-installation/#installing-nanoc
-
 
 * BUILDING THE DOCUMENTATION
 
@@ -47,9 +22,10 @@ WRITING DOCUMENTATION
 --------------------------------------------------
 * PREFERRED FORMAT
 
-We chose to write documentation as Textile format as much as possible since it proves to be light, easy to maintain and can be exported in various format. 
+Max's refpages are written as in yaml. There are automatically converted as xml files by the build.rb script. Use the provided template (./Tools/jcom.object-template.maxref.yml) to get you started.
 
-For people not familiar with Textile, there are some templates to get you started.
+Max's tutorials and vignette are written as Textile format as much as possible since it proves to be light, easy to maintain and can be exported in various format. A template is also provided (./Tools/TextileTemplate.textile).
+
 
 * REGARDING THE USE OF BRANCHES
 
