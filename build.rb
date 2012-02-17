@@ -16,7 +16,7 @@ require "#{libdir}/Tools/JamomaDocLib"
 # SETUP
 # =================================
 src = "#{libdir}/Max"
-dst = "#{libdir}/Jamoma-doc"
+dst = "#{libdir}/Builds/Jamoma-doc"
 
 # create the folder structure we need
 FileUtils.remove_entry("#{dst}") if File.exist?("#{dst}")
