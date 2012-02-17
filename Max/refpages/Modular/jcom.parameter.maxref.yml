@@ -50,7 +50,7 @@ attributes:
    default: none
  - name: ramp/function
    type: symbol
-   desc: The mapping function determining the curve of the ramping to new parameter value. # For an extensive description of all available functions, see
+   desc: "The mapping function determining the curve of the ramping to new parameter value." # For an extensive description of all available functions, see
    unit:
    default: linear
  - name: repetitions/allow
@@ -60,17 +60,17 @@ attributes:
    default: 0
  - name: dataspace
    type: symbol
-   desc: Set what dataspace used internally by the parameter for unit conversions.
+   desc: "Set what dataspace used internally by the parameter for unit conversions."
    unit:
    default: none
  - name: dataspace/unit/native
    type: symbol
-   desc: The dataspace unit used internally by the parameter. Presets are stored according to the native unit. Output from the left outlet of jcom.hub (and hence the module) will be according to the native unit of the dataspace.
+   desc: "The dataspace unit used internally by the parameter. Presets are stored according to the native unit. Output from the left outlet of jcom.hub (and hence the module) will be according to the native unit of the dataspace."
    unit:
    default: none
  - name: dataspace/unit/active
    type: symbol
-   desc: 	The dataspace unit used for communication to the algorithm from the outside world.
+   desc: "The dataspace unit used for communication to the algorithm from the outside world."
    unit:
    default: none
  - name: dataspace/unit/display
@@ -90,22 +90,22 @@ attributes:
    default:
  - name: readonly
    type: toggle
-   desc: "Freezes the value of the jcom.parameter so that it can't be updated"
+   desc: "Freezes the value of the jcom.parameter so that it can't be updated."
    unit:
    default: 0
  - name: view/freeze
    type: toggle
-   desc: "Mutes the leftmost outlet of jcom.parameter so that the GUI do not update"
+   desc: "Mutes the leftmost outlet of jcom.parameter so that the GUI do not update. Useful for Jitter-related work where GUI elements compete with Jitter processing compete with Jitter processing for screen update resources."
    unit:
    default: 0
  - name: value
    type:
-   desc: current parameter value
+   desc: "Current parameter value"
    unit:
    default:
  - name: value/default
    type:
-   desc: default parameter value
+   desc: "Default parameter value"
    unit:
    default: NULL
  - name: value/stepsize
@@ -114,13 +114,16 @@ attributes:
    unit:
    default: 1.
  - name: mix/weight
-   type:
-   desc: "If set to 0 allows to exclude a jcom.parameter from taking part in preset mixing"
+   type: float
+   desc: "If set to 0.0, the parameter is excluded from taking part in preset mixing."
    unit:
    default: 1.
 
 seealso:
  - jcom.message
+ - jcom.return
  - jcom.hub
  - jcom.ramp
  - jcom.dataspace
+
+discussion: Jamoma is a free and open source project. http://www.jamoma.org
