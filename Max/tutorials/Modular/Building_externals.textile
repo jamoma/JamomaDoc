@@ -1,0 +1,39 @@
+---
+title: Building Max/MSP externals
+description: This tutorial explains how to compile Jamoma framework and Max/MSP externals
+author: [Jamoma, Julien Rabin, Adrian Gierakowski, Pascal Baltazar]
+created_at: 2011/06/05
+tags: [github, git, compile]
+objref: []
+---
+
+Jamoma has become a fairly large project with a number of dependencies. This page describes how to go about to compile the externals on both Mac and Windows.
+
+h2. On the Mac platform
+
+Assuming you did follow the "Setup instructions":http://redmine.jamoma.org/projects/modular/wiki/Setting_up_a_development_environment, "install git":http://redmine.jamoma.org/projects/jamoma/wiki/Installing_and_setting_up_GIT and "checked out all the Jamoma repositories":http://redmine.jamoma.org/projects/jamoma/wiki/Checking_out_Jamoma_from_GIT, first make sure you do the steps below as an admin user or give yourself write permission to /Library/Frameworks and /Applications/Max5.
+
+From the main Jamoma repository, navigate to the "Tools" folder using the following command:
+
+@cd Tools@
+
+bq. For users incomfortable with the Terminal, just type the command @cd@ followed by a space and drop the Tools folder from the Finder to the Terminal window.
+
+To build all Jamoma projects (i.e. all its subprojects), use the provided Ruby script by running
+
+@ruby build.rb Deployment clean@
+
+Alternatively, you can use "Development clean" as arguments to the script if you want to build on Development mode and be able to debug externals from XCode.
+
+This will build externals, libraries and frameworks. You may have to do the last step twice to get everything to build.
+
+bq. There are also scripts to build only one Jamoma sub-project at a time (e.g. only DSP or modular).
+To do so, navigate to it, e.g. @cd /Modules/DSP@ to build the DSP framework and externals, and then run its specific build.rb script by running (while being in its folder):
+
+@ruby build.rb Deployment clean@
+
+h2. On the Windows platform
+
+NOTE: You first need Cygwin to be set up properly (needs to have the ruby, git, gcc, packages). You also need to have Microsoft Visual C++ 2008 Installed.
+
+Open the Cygwin terminal and run the same scripts as described for building on the Mac.

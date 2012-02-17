@@ -3,35 +3,99 @@
 # this is because version 1.8.7 works, but 1.9.1 does not
 #/usr/bin/env ruby -wKU
 
-#TODO redirect nanoc output to Terminal
-glibdir = "."
-Dir.chdir glibdir
-glibdir = Dir.pwd
+require "FileUtils"
 
-require 'rubygems'
+libdir = "."
+Dir.chdir libdir
+libdir = Dir.pwd
 
-if Gem.available?(/nanoc/)
+# JamomaDocLib contains xml IO and specific doc methods (refpages, tutorials, etc. parsers)
+require "#{libdir}/Tools/JamomaDocLib"
+
+# =================================
+# SETUP
+# =================================
+src = "#{libdir}/Max"
+dst = "#{libdir}/Jamoma-doc"
+
+# create the folder structure we need
+FileUtils.remove_entry("#{dst}") if File.exist?("#{dst}")
+FileUtils.mkdir_p("#{dst}/refpages")
+#FileUtils.mkdir_p("#{dst}/refpages/jamomaAudioGraph-ref")
+#FileUtils.mkdir_p("#{dst}/refpages/jamomaDSP-ref")
+FileUtils.mkdir_p("#{dst}/refpages/jamomaFoundation-ref")
+FileUtils.mkdir_p("#{dst}/refpages/jamomaGraph-ref")
+#FileUtils.mkdir_p("#{dst}/refpages/jamomaGraphics-ref")
+FileUtils.mkdir_p("#{dst}/refpages/jamomaModular-ref")
+FileUtils.mkdir_p("#{dst}/refpages/jamomaPlugtastic-ref")
+
+
+# =================================
+# PROCESS REFPAGES
+# =================================
+
+# build a table of content of all categories (Foundation, Modular, DSP, etc.)
+projects = Dir.entries("#{src}/refpages/")
+
+refDir = YamlToMaxDoc.new
+refDir.moduleTOC(projects)
+refDir.write("#{dst}/refpages/_jdoc_ref_modules.xml")
+
+puts "\n"
+puts "BUILDING TABLE OF CONTENT OF JAMOMA PROJECTS\n"
+puts ""
+puts projects
+puts "\n-> #{dst}/refpages/_jdoc_ref_modules.xml\n"
+
+# build table of content of refpages
+projects.each do |project|
+  refs = Dir.entries("#{src}/refpages/#{project}/")
   
-puts "\n\ncleaning...\n\n"
-`rm -rd #{glibdir}/Tools/nanoc/content`
-`rm -rd #{glibdir}/build`
-
-puts "Copying Jamoma Documentation"
-puts "==================================================="
-`cp -R #{glibdir}/Modular/Text/ #{glibdir}/Tools/nanoc/content`
-`cp -R #{glibdir}/Tools/htmlLib/css #{glibdir}/Tools/nanoc/content`
-`cp -R #{glibdir}/Tools/htmlLib/js #{glibdir}/Tools/nanoc/content`
-
-puts "\n\nCompiling Jamoma Documentation using nanoc"
-puts "==================================================="
-
-Dir.chdir "#{glibdir}/Tools/nanoc"
-
-nanocOutput = `nanoc compile`
-puts nanocOutput
-puts "=================DONE===================="
-
-else
-  puts "===================================================\nDocumentation cannot be compiled. The Ruby gem needed cannot be found.\n\nAssuming you have Rubygem installed, please install last version of nanoc running the following command:\n\n\'sudo gem install nanoc\'\n\nYou also may want to visit nanoc website to learn more about it.\n\nhttp://nanoc.stoneship.org/\n\n==================================================="
+  puts "\n"  
+  puts "BUILDING TABLE OF CONTENT OF ALL REFPAGES IN #{project}"
+  puts "\n"
+  toc = YamlToMaxDoc.new
+  toc.refpagesTOC(refs)
+  toc.write("#{dst}/refpages/jamoma#{project}-ref/_jdoc_contents.xml")
   
+  puts "-> #{dst}/refpages/jamoma#{project}-ref/_jdoc_contents.xml\n\n"
+  
+# write refpage
+  puts "\n"
+  puts "WRITING REFPAGES"
+  puts "\n"  
+  refs.each do |jcom|
+    puts "Writing reference page for #{jcom}..."
+    dest = jcom.sub(/(.*maxref).yml/,'\1.xml')
+    ref = YamlToMaxDoc.new
+    ref.makeRefpage("#{src}/refpages/#{project}/#{jcom}")
+    ref.write("#{dst}/refpages/jamoma#{project}-ref/#{dest}")
+  end
+  #now we copy the images folder if found
+  if File.exist?("#{src}/refpages/#{project}/images") then
+    FileUtils.copy_entry("#{src}/refpages/#{project}/images", "#{dst}/refpages/jamoma#{project}-ref/images")
+    puts "\n-> Copying images folder...\n"
+  end
+  
+end
+
+puts "\n\n DONE "
+
+
+# =================================
+# COPYING XSL FILES AND STUFF
+# =================================
+
+projects.each do |project|
+FileUtils.copy("#{src}/support/refpages/jamoma/_jdoc_ref.xsl", "#{dst}/refpages/jamoma#{project}-ref/_jdoc_ref.xsl")
+end
+
+
+# =================================
+# INSTALLING
+# =================================
+maxVersion = ["Max5", "Max6"]
+
+maxVersion.each do |v|
+  FileUtils.copy_entry("#{dst}/refpages", "/Applications/#{v}/patches/docs/refpages")
 end

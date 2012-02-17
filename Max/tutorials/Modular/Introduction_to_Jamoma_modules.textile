@@ -1,0 +1,147 @@
+--- 
+title: Introduction to Jamoma modules
+description: This tutorial gives a general overview of Jamoma modules and their working inside of a Max/MSP patch
+author: [Jamoma, Trond Lossius]
+created_at: 2010/11/11
+tags: [introduction, overview]
+objref: [jmod.input~, jcom.textslider, jmod.output~, jcom.meter~]
+---
+
+h3. Jamoma modules
+
+We could start these tutorials with a lengthy discussion on what Jamoma is all about. But it is probably better to introduce the concepts along the way in situations where we can play around with them and get a hands-on experience and understanding. So for now we will stick to a very simple description: Jamoma is a bunch of patches that can be loaded in other patches in a modular way. 
+
+In Max terminology patches wrapped so that they can behave as objects in other patches are sometimes called "abstractions":http://www.cycling74.com/docs/max5/vignettes/core/abstractions.html.
+
+h3. Prerequisites
+
+This tutorial assume:
+* You are running Max 5.0.8 or later (Mac or Windows).
+* You have sound working. If not please refer to the "MSP tutorials":http://www.cycling74.com/docs/max5/tutorials/msp-tut/mspindex.html.
+* Jamoma is properly installed.
+* You have a basic knowledge of Max and MSP itself.
+
+h3. Building a simple patch using Jamoma modules
+
+We will start out with a new patcher window, create two modules, connect them, and play around with them. In the process of doing so, we will introduce some fundamental concepts.
+
+If you haven't already, now is the time to start Max. If it running already, it might be an idea to close all open patches, in particular patches processing audio, and then open a new blank patcher window.
+
+h4. Instantiate modules
+
+In this tutorial we will use two simple audio modules, one providing audio input and the other one audio output.
+
+As stated above, Jamoma moduels are patches or abstractions, so they can be instantiated by typing the name of the module into a new object box. We will start of with jmod.input~, and give it the argument /myinput~.
+
+As you can see we get an object with one input and three outputs. If we double-click it a nice little interface shows up:
+
+!images/create_input_module.png!
+
+The interface seems handy to have available in the patcher itself, so we will delete the object and recreate it as a "bpatcher":http://cycling74.com/docs/max5/refpages/max-ref/bpatcher.html instead:
+* Delete the object.
+* Create a new "bpatcher":http://cycling74.com/docs/max5/refpages/max-ref/bpatcher.html object:
+
+!images/create_bpatcher.png!
+
+* Open the inspector and set the patcher file to be "jmod.input~":modules/jmod.input~.html and provide %(samp)/myinput~% as argument to the "bpatcher":http://cycling74.com/docs/max5/refpages/max-ref/bpatcher.html:
+
+!images/set_module_name.png!
+
+* This is what your patch is supposed to look like now if you lock it for edits:
+
+!images/jmod.input_module_GUI.png!
+
+* We will make one more module in the same way by creating another "bpatcher":http://cycling74.com/docs/max5/refpages/max-ref/bpatcher.html, but this time in the "bpatcher":http://cycling74.com/docs/max5/refpages/max-ref/bpatcher.html inspector the Patcher File should be "jmod.output~":modules/jmod.output~.html and the argument to the "bpatcher":http://cycling74.com/docs/max5/refpages/max-ref/bpatcher.html will be %(samp)myoutput~%. When done you're patch should look like this:
+
+!images/patch_with_two_modules.png!
+
+As you can see Jamoma modules strive for a common look. Maybe you have noticed that behind the scene the "bpatchers":http://cycling74.com/docs/max5/refpages/max-ref/bpatcher.html have been automagically resizing themselves to fit the size of the modules?
+
+We could also have created these modules as well by using the __Jamoma_Patcher__ template from the %(samp)New from template% item of the %(samp)File% menu... which can be easier for people not used to Max MSP. If you want to give it a try, the way to go is documented directly in the patch...
+
+h4. Give your modules a name
+
+In the examples above, we have provided an argument to the module (@/myinput~@ and @/myoutput~@ respectively). The argument gives the module a name. At the top menu bar of each module, you can see the name displayed with a slash prepended. Later on we will be able to address and control each of the modules based on the names we have given them. So, even though it will take a few more tutorials before it becomes apparent why it is useful, we strongly suggest that you right away get into the habit of naming your modules.
+
+h4. Connecting modules
+
+We now have one module that generate audio input to the patch, and another providing audio output from the patch. In order to start using the modules, we need to connect them. The way we do this might look strange at first:
+
+!images/connecting_modules.png!
+
+As you can see, we do not follow the MSP convention of the leftmost outlets and outlets being used for audio. Instead Jamoma introduce another convention.
+
+bq. In Jamoma modules the leftmost inlet and outlet is reserved for control messages to and from the module. All remaining inlets and outlets are used for passing signals in and out of the module.
+
+h4. Let's play!
+
+Now we have all that is required to start playing:
+* In the input module:
+** Click the %(samp)Open% button and choose a sound file to play.
+** Click the %(samp)Play% button.
+** Click the %(samp)Audio On/Off% button in the toolbar of the module to start audio.
+** Bring the horizontal level slider up.
+* In the output module:
+** The output module have a separate slider controlling output level. You need to bring this up as well to get sounding output.
+* You can use the %(samp)DSP% button in the menu bar of either module to bring up the DSP Status window.
+
+!images/modules_in_action.png!
+
+The two modules we have created are useful as generic audio input and output modules. Below we will discuss the features of each of them a little further.
+
+h3. A more detailed discussion of the two modules
+
+h4. jmod.input~ - A generic audio input module
+
+The input module enable you to quickly switch between some common input sources using the pop-up umenu:
+* Sound file input.
+** Sound file input can be set to loop or not.
+** The name of the file and playback position will be indicated in the interface.
+* Live stereo input (from "adc~":http://cycling74.com/docs/max5/refpages/msp-ref/adc~.html)
+** Number boxes appear on the left of the level meters and can be used to control what input channels will be used. Generally audio processing need to be restarted for this to take effect.
+Pink noise test signal
+1000 Hz test signal
+* a click signal with one click per second
+** With the numberbox that appears on the right side of the pop-up umenu, the clickrate can be adjusted
+
+Some additional useful features of the module should be mentioned:
+
+* The output level is controlled by the horizontal slider.This slider is one of Jamoma's custom UI objects: "jcom.textslider":components/jcom.textslider.html. See the "Shortcuts in Jamoma":Shortcuts_in_Jamoma.html to learn about the features of "jcom.textslider":components/jcom.textslider.html.
+* The two meters indicate levels on a logarithmic (dB) scale. This is done using one of the custom externals developed for Jamoma: "jcom.meter~":components/jcom.meter~.html. This level indicator can be useful as a GUI object on its own, and we suggest that you check out the help file for it.
+* To the left of the slider controlling output level, there's a dial for controlling panning.
+* The %(samp)DSP% button brings up the DSP Status window
+* The %(samp)Audio On/Off% button means that we don't have to add an ezdac~ or ezadc~ object to the patch to get audio started.
+
+h4. jmod.output~ - A generic audio output module
+
+The output module is doing some mastering of the signal before passing it out:
+# First saturation is applied, softening and distorting peaks in the signal.
+# Next the signal is passed through a limiter.
+# Third DC offset in the signal is filtered out.
+# The final gain level of the output signal is controlled.
+# When audio is turned on and off, a soft fade-in and fade-out is applied.
+
+In addition the mastered signal is forwarded to a "sfrecord~":http://cycling74.com/docs/max5/refpages/msp-ref/sfrecord~.html object so that the signal can be recorded on the fly. The mastering DSP chain has been inspired by how mastering of the output signal was done in the eminent but now discontinued "radiaL":http://cycling74.com/downloads/ looping application, mainly developed by "jhno":http://delicateear.com/.
+
+The file type and bit resolution of the recorded signal can be controlled from the module interface. When you hit the Record button a dialog window prompt you to provide file name for the recorded file. Once that is done, recording will start.
+
+Also from the module user interface saturation and limiter can be enabled or disabled, and some of the settings of the respective processing algorithms can be controlled.
+
+h4. The module control panel
+
+In the toolbar of the module, in the upper right hand corner, there's a tiny %(samp)+% button. Clicking this will bring up the module control panel, a window providing access to additional parameters. This feature can be found in several modules. If the module contain parameters that will be set on initialization, but are not expected to be changed continuously in performance, the parameters might be moved from the main interface of the module to the module control panel, so that the module takes up less screen estate in the completed performance patch.
+
+h3. Summary
+
+* This is a list of the most important concepts introduced so far:
+* Jamoma modules are Max "patchers":http://cycling74.com/docs/max5/refpages/max-ref/patcher.html or "abstractions":http://cycling74.com/docs/max5/vignettes/core/abstractions.html that can be used inside other patches in a modular fashion.
+* Most often Jamoma modules are embedded in "bpatchers":http://cycling74.com/docs/max5/refpages/max-ref/bpatcher.html so that the interface is available in the main patch.
+* Jamoma modules strives for a common look and feel.
+* Jamoma modules need to be named.
+* The leftmost inlet and outlet is reserved for passing control messages to and from the modules. Remaining inlets and outlets are used to pass signals.
+* In some modules additional parameters can be accessed in the module control panel.
+* "jmod.input~":modules/jmod.input~.html and "jmod.output~":modules/jmod.output~.html can be provide generic audio input and output to and from the patch.
+
+h4. What's next?
+
+Now that we have audio input and output working, it is tempting to introduce some sound effect processing between the input and output module.

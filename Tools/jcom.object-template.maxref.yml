@@ -1,0 +1,44 @@
+title: jcom.
+author: [Jamoma]
+created_at: 2010/11/11
+tags: [tag1, tag2]
+
+brief: "TEXT"
+
+desc: >
+ verbose "TEXT"
+
+input:
+ - name: 1
+   desc: "TO PREVENT FROM ERROR BECAUSE OF ILLEGAL CHARACTER, IT IS ADVICED TO PUT TEXT BETWEEN QUOTES"
+
+outputs:
+ - name: 1
+   desc: "Some text"
+
+args:
+  - name: 
+    type: generic|integer|decimal|symbol|array
+    desc: "TEXT"
+    unit:
+    default:
+      
+attributes:
+  - name: description
+    type: symbol
+    desc: "TEXT"
+    unit:
+    default:
+  
+
+messages:
+  - name: number
+    type: integer
+    desc: "TEXT"
+    unit:
+    value: 0
+
+useraction:
+
+seealso:
+ - jcom.object
