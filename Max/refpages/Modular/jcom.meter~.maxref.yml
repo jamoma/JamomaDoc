@@ -22,6 +22,11 @@ messages:
    desc: A @bang@ message sent at the input clears peak indication.
    unit:
    default:
+ - name: defeat
+   type: boolean
+   desc: A defeat 1 message stops updating the meter due to a connected audio signal.
+   default:
+   unit:
  - name: int
    type: integer
    desc: An integer sent at the input is converted to float.

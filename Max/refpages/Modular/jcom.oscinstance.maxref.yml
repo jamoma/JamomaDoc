@@ -25,13 +25,14 @@ args:
 attributes:
 
 messages:
- - name: OSC message
+ - name: OSC-message
    type: string
    desc: Any OSC message containing an instance identifier (i.e a dot followed by an integer or symbol) in its first branch will be split amongst the first 3 according outlets.
  - name: anything
    type: any
-   desc: "Messages composed of an integer, a decimal, a string not formated as an OSC message or any OSC address not containing an instance identifier in its first branch is passed to the rightmost output."
+   desc: Messages composed of an integer, a decimal, a string not formated as an OSC message or any OSC address not containing an instance identifier in its first branch is passed to the rightmost output.
 
 seealso:
  - jcom.oscroute
  - jcom.pass
+ - jcom.instance2instance
