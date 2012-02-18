@@ -202,9 +202,10 @@ class YamlToMaxDoc
     comment = Comment.new('EXAMPLE')
     root.add comment
     if File.exist? "#{imagepath}"
+      imagerelpath = imagepath.sub(/.*(images\/jcom.*png)/,'\1')
       e = Element.new("examplelist")
       image = Element.new("example")
-      image.attributes["img"] = imagepath
+      image.attributes["img"] = imagerelpath
       e.add_element image
       
       root.add_element e
