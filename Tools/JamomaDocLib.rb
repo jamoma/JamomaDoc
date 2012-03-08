@@ -17,8 +17,20 @@ class YamlToMaxDoc
   def makeRefpage filepath
     imagepath = filepath.sub(/(.*)\/(jcom.*)\.maxref.yml/, '\1/images/\2.png')
     yaml = YAML.load_file(filepath)
+    categoryStr  = String.new # adding Jamoma subproject (e.g., DSP) as default cateory ?
+    tags = yaml["tags"] # we use the tags info to create the category attribute
+    if tags
+      tags.each { |tag|
+        categoryStr = categoryStr + ", " + tag
+      }
+      categoryStr[0..1] = '' # removing the first ', ' fom list    
+    end
+    
     root = Element.new("c74object")
     root.attributes["name"] = filepath.split('/').last.sub(/\.maxref.yml/,'')
+    root.attributes["module"] = "Jamoma"   
+    root.attributes["category"] = categoryStr
+    
     #comment = Comment.new('DIGEST')
     #root.add comment       
     e = Element.new("digest")
