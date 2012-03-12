@@ -91,6 +91,7 @@ refDir.write("#{dst}/refpages/_jdoc_ref_modules.xml")
 # =================================
 # COPYING CSS AND XSL STUFF
 # =================================
+FileUtils.copy("#{libdir}/Max/support/refpages/_jdoc_ref_common.xsl", "#{dst}/refpages")
 FileUtils.copy("#{libdir}/Max/support/_jdoc_common.css", dst)
 FileUtils.copy("#{libdir}/Max/support/_jdoc_common.xml", dst)
 FileUtils.copy("#{libdir}/Max/support/_jdoc_common.xsl", dst)
