@@ -24,8 +24,7 @@ FileUtils.remove_entry("#{dst}") if File.exist?("#{dst}")
 Dir.chdir("../.")
 # removing useless stuff
 projects = Dir.entries(".")
-projects.delete(".")
-projects.delete("..")
+projects.delete_if {|nonFolder| nonFolder =~ /^\./} # we remove entries starting with a dot
 projects.delete("Support")
 projects.delete("Documentation")
 
