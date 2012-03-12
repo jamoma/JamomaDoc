@@ -15,7 +15,7 @@ class YamlToMaxDoc
 
 
   def makeRefpage filepath
-    imagepath = filepath.sub(/(.*)\/(jcom.*)\.maxref.yml/, '\1/images/\2.png')
+    imagepath = filepath.sub(/(.*jcom.*)\.maxref.yml/, '\1.png')
     yaml = YAML.load_file(filepath)
     categoryStr  = String.new # adding Jamoma subproject (e.g., DSP) as default cateory ?
     tags = yaml["tags"] # we use the tags info to create the category attribute
@@ -23,28 +23,28 @@ class YamlToMaxDoc
       tags.each { |tag|
         categoryStr = categoryStr + ", " + tag
       }
-      categoryStr[0..1] = '' # removing the first ', ' fom list    
+      categoryStr[0..1] = '' # removing the first ', ' fom list
     end
-    
+
     root = Element.new("c74object")
     root.attributes["name"] = filepath.split('/').last.sub(/\.maxref.yml/,'')
-    root.attributes["module"] = "Jamoma"   
+    root.attributes["module"] = "Jamoma"
     root.attributes["category"] = categoryStr
-    
+
     #comment = Comment.new('DIGEST')
-    #root.add comment       
+    #root.add comment
     e = Element.new("digest")
     e.text = yaml["brief"]
     root.add_element e
     comment = Comment.new('DESCRIPTION')
-    root.add comment       
+    root.add comment
     e = Element.new("description")
     e.text = yaml["desc"]
     root.add_element e
 
     # METADATA ---------------------------------------------------------------------
     #comment = Comment.new('METADATA')
-    #root.add comment   
+    #root.add comment
     e = Element.new("metadatalist")
     author = yaml["author"]
     if author
@@ -69,65 +69,65 @@ class YamlToMaxDoc
     root.add_element e
     # INLETS ---------------------------------------------------------------------
     comment = Comment.new('INLETS')
-    root.add comment   
+    root.add comment
     e = Element.new("inletlist")
     inlets = yaml["inlets"]
     if inlets
       inlets.each { |a|
-        inlet = Element.new("inlet") 
+        inlet = Element.new("inlet")
         inlet.attributes["id"] = a["id"]
         if (a["type"])
           inlet.attributes["type"] = a["type"]
         else
           inlet.attributes["type"] = "INLET_TYPE"
         end
-        
+
         inletdig = Element.new("digest")
-        inletdig.text = a["desc"]       
+        inletdig.text = a["desc"]
         inlet.add_element inletdig
-        
+
         inletdesc = Element.new("desc")
         inletdesc.text = a["desc"]
         inlet.add_element inletdesc
-        
-        e.add_element inlet        
+
+        e.add_element inlet
       }
     end
-    
+
     root.add_element e
     # OUTLETS ---------------------------------------------------------------------
     comment = Comment.new('OUTLETS')
-    root.add comment   
+    root.add comment
 
     e = Element.new("outletlist")
     outlets = yaml["outlets"]
     if outlets
       outlets.each { |a|
-        outlet = Element.new("outlet") 
+        outlet = Element.new("outlet")
         outlet.attributes["id"] = a["id"]
         if (a["type"])
           outlet.attributes["type"] = a["type"]
         else
           outlet.attributes["type"] = "OUTLET_TYPE"
         end
-        
+
         outletdig = Element.new("digest")
-        outletdig.text = a["desc"]       
+        outletdig.text = a["desc"]
         outlet.add_element outletdig
-        
+
         outletdesc = Element.new("desc")
         outletdesc.text = a["desc"]
         outlet.add_element outletdesc
-        
-        e.add_element outlet        
+
+        e.add_element outlet
       }
     end
-    
+
     root.add_element e
 
     # ATTRIBUTES ---------------------------------------------------------------------
     comment = Comment.new('ATTRIBUTES')
-    root.add comment   
+    root.add comment
     e = Element.new("attributelist")
     attributes = yaml["attributes"]
     if attributes
@@ -160,7 +160,7 @@ class YamlToMaxDoc
 
     # MESSAGES ---------------------------------------------------------------------
     comment = Comment.new('MESSAGES')
-    root.add comment   
+    root.add comment
     e = Element.new("methodlist")
     messages = yaml["messages"]
     if messages
@@ -184,8 +184,8 @@ class YamlToMaxDoc
 
     # ARGUMENTS ---------------------------------------------------------------------
     comment = Comment.new('ARGUMENTS')
-    root.add comment       
-    e = Element.new("objarglist")    
+    root.add comment
+    e = Element.new("objarglist")
     args = yaml["args"]
     if args
       args.each { |a|
@@ -198,15 +198,15 @@ class YamlToMaxDoc
        argumentdig = Element.new("digest")
        argumentdig.text = a["desc"]
        arg.add_element argumentdig
-    
+
        argumentdesc = Element.new("description")
        argumentdesc.text = a["desc"]
        arg.add_element argumentdesc
-    
+
         e.add_element arg
       }
     end
-    
+
     root.add_element e
 
 
@@ -214,20 +214,20 @@ class YamlToMaxDoc
     comment = Comment.new('EXAMPLE')
     root.add comment
     if File.exist? "#{imagepath}"
-      imagerelpath = imagepath.sub(/.*(images\/jcom.*png)/,'\1')
+      imagefilename = imagepath.sub(/.*(jcom.*png)/,'\1')
       e = Element.new("examplelist")
       image = Element.new("example")
-      image.attributes["img"] = imagerelpath
+      image.attributes["img"] = imagefilename
       e.add_element image
-      
+
       root.add_element e
     end
 
 
     # SEEALSO ---------------------------------------------------------------------
     comment = Comment.new('SEE ALSO')
-    root.add comment   
-    e = Element.new("seealsolist")   
+    root.add comment
+    e = Element.new("seealsolist")
     seealsos = yaml["seealso"]
     if seealsos
       seealsos.each { |s|
@@ -240,7 +240,7 @@ class YamlToMaxDoc
     root.add_element e
 
 # DISCUSSION ---------------------------------------------------------------------
-    e = Element.new("discussion")   
+    e = Element.new("discussion")
     discussion = yaml["discussion"]
     if discussion
       e.text = yaml["discussion"]
@@ -251,7 +251,7 @@ class YamlToMaxDoc
 
     # MISC ---------------------------------------------------------------------
     comment = Comment.new('MISC')
-    root.add comment   
+    root.add comment
     e = Element.new("misc")
     e.attributes["name"] = "Output"
 
@@ -277,8 +277,8 @@ class YamlToMaxDoc
 
         e.add_element output
        }
-    end    
-    
+    end
+
     root.add_element e
 
     # FINISH UP ---------------------------------------------------------------------
@@ -289,7 +289,7 @@ class YamlToMaxDoc
   def makeTuto filepath
     # TODO
   end
-  
+
   def makeVignette filepath
     # TODO
   end
@@ -297,30 +297,29 @@ class YamlToMaxDoc
 # this creates a file listing all refpages categories (Modular, Foundation, etc.)
   def moduleTOC(docModules)
     root = Element.new("root")
-    
-    docModules.delete_if {|nonFolder| nonFolder =~ /^\./} # we remove "." and ".." entries
+
     docModules.each do |moduleName|
     m = Element.new("module")
-    m.text = "jamoma#{moduleName}-ref"
+    m.text = "Jamoma#{moduleName}"
     root.add_element m
     end
   @xml.add_element root
 
   end
-  
+
   def refpagesTOC(jcomArray)
-    jcomArray.delete_if {|nonFolder| nonFolder =~ /^\./ || nonFolder =~ /images/} # we remove ".", ".." and "images" entries
+#    jcomArray.delete_if {|nonFolder| nonFolder =~ /^\./ || nonFolder =~ /images/} # we remove ".", ".." and "images" entries
     root = Element.new("root")
     jcomArray.each do |j|
-      j = j.sub(/(.*maxref).yml/,'\1.xml')
+      j = j.sub(/.*(jcom.*maxref).yml/,'\1.xml')
       r = Element.new("refpage")
       r.attributes["name"] = j
       root.add_element r
     end
     @xml.add_element root
-  
+
   end
-  
+
   def read filepath
     @xml = Document.new(File.open(filepath))
   end
@@ -345,7 +344,7 @@ class YamlToMaxDoc
     s.gsub!(/\s@(.*)@([\s\.])/, ' <m>\1</m>\2') # Max messages
     s.gsub!(/(\s)(jcom\S*)/, ' <jcom>\2</jcom>') #Jamoma objects
     s.gsub!(/(\s)(jmod\S*)/, ' <jmod>\2</jmod>') #Jamoma modules
-    
+
     # todo Regexp should be non greedy ?
     # Textile related substitutions ≈ pseudo RedCloth
     s.gsub!(/\s_(\s*.*)_/, ' <i>\1</i>') # italic
