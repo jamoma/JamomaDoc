@@ -15,87 +15,89 @@ require "#{libdir}/Tools/JamomaDocLib"
 # =================================
 # SETUP
 # =================================
-src = "#{libdir}/Max"
 dst = "#{libdir}/Builds/Jamoma-doc"
 
 # create the folder structure we need
 FileUtils.remove_entry("#{dst}") if File.exist?("#{dst}")
-FileUtils.mkdir_p("#{dst}/refpages")
-#FileUtils.mkdir_p("#{dst}/refpages/jamomaAudioGraph-ref")
-#FileUtils.mkdir_p("#{dst}/refpages/jamomaDSP-ref")
-FileUtils.mkdir_p("#{dst}/refpages/jamomaFoundation-ref")
-FileUtils.mkdir_p("#{dst}/refpages/jamomaGraph-ref")
-#FileUtils.mkdir_p("#{dst}/refpages/jamomaGraphics-ref")
-FileUtils.mkdir_p("#{dst}/refpages/jamomaModular-ref")
-FileUtils.mkdir_p("#{dst}/refpages/jamomaPlugtastic-ref")
 
+
+Dir.chdir("../.")
+# removing useless stuff
+projects = Dir.entries(".")
+projects.delete(".")
+projects.delete("..")
+projects.delete("Support")
+projects.delete("Documentation")
+
+projectsTOC = Array::new
+
+projects.each do |project|
+  Dir.chdir("#{project}")
+
+  search = `find . -name jcom*maxref.yml`
+  refs = search.split("\n")
 
 # =================================
 # PROCESS REFPAGES
 # =================================
+  unless refs.empty?
+    puts "\n======== #{project} ========\n"
+    FileUtils.mkdir_p("#{dst}/refpages/Jamoma#{project}")
 
-# build a table of content of all categories (Foundation, Modular, DSP, etc.)
-projects = Dir.entries("#{src}/refpages/")
+    projectsTOC.push("#{project}") #if there are some refpages, we add the Jamoma Module to the table of content array
+    puts "WRITING REFPAGES\n"
+    refs.each do |jcom|
+
+      refName = jcom.sub(/.*(jcom.*maxref).yml/,'\1.xml')
+      imagePath = jcom.sub(/(.*jcom.*).maxref.yml/,'\1.png')
+      imageName = imagePath.sub(/.*(jcom.*png)/, '\1')
+
+      puts "Writing reference page for #{refName}..."
+      ref = YamlToMaxDoc.new
+      ref.makeRefpage("#{jcom}")
+      ref.write("#{libdir}/Builds/Jamoma-doc/refpages/Jamoma#{project}/#{refName}")
+        if File.exist?(imagePath) then
+          FileUtils.mkdir("#{dst}/refpages/Jamoma#{project}/images") unless File.exist?("#{dst}/refpages/Jamoma#{project}/images")
+          FileUtils.copy_entry("#{imagePath}", "#{dst}/refpages/Jamoma#{project}/images/#{imageName}")
+        end
+
+    end
+# =================================
+# PROCESS REFPAGES TABLE OF CONTENT
+# =================================
+
+    puts "\n"
+    puts "BUILDING TABLE OF CONTENT OF ALL REFPAGES IN JAMOMA#{project.upcase}"
+    puts "\n"
+    toc = YamlToMaxDoc.new
+    toc.refpagesTOC(refs)
+    toc.write("#{dst}/refpages/Jamoma#{project}/_jdoc_contents.xml")
+
+    FileUtils.copy("#{libdir}/Max/support/refpages/jamoma/_jdoc_ref.xsl", "#{dst}/refpages/Jamoma#{project}/_jdoc_ref.xsl")
+
+  end
+
+  Dir.chdir("../.")
+
+end
+
+# =================================
+# PROCESS JAMOMA MODULES TABLE OF CONTENT
+# =================================
 
 refDir = YamlToMaxDoc.new
-refDir.moduleTOC(projects)
+refDir.moduleTOC(projectsTOC)
 refDir.write("#{dst}/refpages/_jdoc_ref_modules.xml")
-
-puts "\n"
-puts "BUILDING TABLE OF CONTENT OF JAMOMA PROJECTS\n"
-puts ""
-puts projects
-puts "\n-> #{dst}/refpages/_jdoc_ref_modules.xml\n"
-
-# build table of content of refpages
-projects.each do |project|
-  refs = Dir.entries("#{src}/refpages/#{project}/")
-  
-  puts "\n"  
-  puts "BUILDING TABLE OF CONTENT OF ALL REFPAGES IN #{project}"
-  puts "\n"
-  toc = YamlToMaxDoc.new
-  toc.refpagesTOC(refs)
-  toc.write("#{dst}/refpages/jamoma#{project}-ref/_jdoc_contents.xml")
-  
-  puts "-> #{dst}/refpages/jamoma#{project}-ref/_jdoc_contents.xml\n\n"
-  
-# write refpage
-  puts "\n"
-  puts "WRITING REFPAGES"
-  puts "\n"  
-  refs.each do |jcom|
-    puts "Writing reference page for #{jcom}..."
-    dest = jcom.sub(/(.*maxref).yml/,'\1.xml')
-    ref = YamlToMaxDoc.new
-    ref.makeRefpage("#{src}/refpages/#{project}/#{jcom}")
-    ref.write("#{dst}/refpages/jamoma#{project}-ref/#{dest}")
-  end
-  #now we copy the images folder if found
-  if File.exist?("#{src}/refpages/#{project}/images") then
-    FileUtils.copy_entry("#{src}/refpages/#{project}/images", "#{dst}/refpages/jamoma#{project}-ref/images")
-    puts "\n-> Copying images folder...\n"
-  end
-  
-end
-
-puts "\n\n DONE "
-
-
-# =================================
-# COPYING XSL FILES AND STUFF
-# =================================
-
-projects.each do |project|
-FileUtils.copy("#{src}/support/refpages/jamoma/_jdoc_ref.xsl", "#{dst}/refpages/jamoma#{project}-ref/_jdoc_ref.xsl")
-end
-
 
 # =================================
 # INSTALLING
 # =================================
+
+puts "====================\nCOPYING REFPAGES IN MAX FOLDER\n"
 maxVersion = ["Max5", "Max6"]
 
 maxVersion.each do |v|
-  FileUtils.copy_entry("#{dst}/refpages", "/Applications/#{v}/patches/docs/refpages")
+  FileUtils.copy_entry("#{libdir}/Builds", "/Applications/#{v}/patches")
 end
+
+puts "\nDONE"
