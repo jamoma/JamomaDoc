@@ -12,6 +12,11 @@ libdir = Dir.pwd
 # JamomaDocLib contains xml IO and specific doc methods (refpages, tutorials, etc. parsers)
 require "#{libdir}/Tools/JamomaDocLib"
 
+
+puts" "
+puts"Building Jamoma Documentation"
+puts"==================================================="
+
 # =================================
 # SETUP
 # =================================
@@ -40,7 +45,7 @@ projects.each do |project|
 # PROCESS REFPAGES
 # =================================
   unless refs.empty?
-    puts "\n======== #{project} ========\n"
+    puts "\n-------- #{project} --------\n"
     FileUtils.mkdir_p("#{dst}/refpages/Jamoma#{project}")
 
     projectsTOC.push("#{project}") #if there are some refpages, we add the Jamoma Module to the table of content array
@@ -102,11 +107,11 @@ FileUtils.copy("#{libdir}/Max/support/_jdoc_platform.xsl", dst)
 # INSTALLING
 # =================================
 
-puts "====================\nCOPYING REFPAGES IN MAX FOLDER\n"
+puts "--------\nCOPYING REFPAGES IN MAX FOLDER\n"
 maxVersion = ["Max5", "Max6"]
 
 maxVersion.each do |v|
   FileUtils.copy_entry("#{libdir}/Builds", "/Applications/#{v}/patches")
 end
 
-puts "\nDONE"
+puts "\n=================DONE===================="
