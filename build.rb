@@ -53,8 +53,8 @@ projects.each do |project|
     refs.each do |jcom|
 
       refName = jcom.sub(/.*(jcom.*maxref).yml/,'\1.xml')
-      imagePath = jcom.sub(/(.*jcom.*).maxref.yml/,'\1.png')
-      imageName = imagePath.sub(/.*(jcom.*png)/, '\1')
+      imagePath = jcom.sub(/(.*jcom.*).maxref.yml/,'\1.maxref.png')
+      imageName = imagePath.sub(/.*(jcom.*maxref.png)/, '\1')
 
       puts "Writing reference page for #{refName}..."
       ref = YamlToMaxDoc.new

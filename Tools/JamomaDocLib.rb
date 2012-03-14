@@ -15,7 +15,7 @@ class YamlToMaxDoc
 
 
   def makeRefpage filepath
-    imagepath = filepath.sub(/(.*jcom.*)\.maxref.yml/, '\1.png')
+    imagepath = filepath.sub(/(.*jcom.*)\.maxref.yml/, '\1.maxref.png')
     yaml = YAML.load_file(filepath)
     categoryStr  = String.new # adding Jamoma subproject (e.g., DSP) as default cateory ?
     tags = yaml["tags"] # we use the tags info to create the category attribute
@@ -214,7 +214,7 @@ class YamlToMaxDoc
     comment = Comment.new('EXAMPLE')
     root.add comment
     if File.exist? "#{imagepath}"
-      imagefilename = imagepath.sub(/.*(jcom.*png)/,'\1')
+      imagefilename = imagepath.sub(/.*(jcom.*.maxref.png)/,'\1')
       e = Element.new("examplelist")
       image = Element.new("example")
       image.attributes["img"] = imagefilename
