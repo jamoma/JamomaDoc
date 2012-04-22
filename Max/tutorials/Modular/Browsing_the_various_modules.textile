@@ -7,26 +7,32 @@ tags: []
 objref: []
 ---
 
-Jamoma comes with a number of patchs (modules in the Jamoma terminology) ready to be used in the Max environment. They can be accessed thru the OS's file browser by going to the modules folder placed inside blablabla A list of all available modules can be found on the "Index of modules":Index_of_modules.html page of this manual.
-
-
+Jamoma comes with a number of patchs (modules in the Jamoma terminology) ready to be used in the Max environment. They can be accessed thru the OS's file browser by going to the modules folder. A list of all available modules can be found on the "Index of modules":Index_of_modules.html page of this manual.
 
 However, Jamoma offers different ways to help you to discover available modules or find the one fitting your needs.
-!images/media_1257711487759.png!
 
+!images/media_1257711487759.png!
 
 h3. Using Overview patch
 
+Assuming you installed Jamoma Modular from the installer, you will find in Max's %(samp)Extras% menu a Jamoma-overview patch to guide you thru different things offered.
+
+Please open the overview patch, then click the %(samp)Modules% button. This will bring out a window containing all modules included in Jamoma distribution. You will find as well a list of all modules included in the User Library distribution by clicking the %(samp)UserLib% button.
+
+!images/overview.png!
 
 h3. Using Max file browser
 
 Us­ing Max 5's file browser features, Jamoma include clippings for all of its modules. Just drag a patch from the file browser or use Max contextual menu to drop a module and start patching.
 
+In Max/MSP, open a new file browser and click on %(samp)Jamoma modules% smart search. This will bring a list of all modules installed with Jamoma distribution as well as all modules from the User Library.
 
-
+!images/file_browser.png!
 
 h3. Using Jamoma jmod.layout module
 
-??
+Jamoma Modular distribution inclues a very handy module called jmod.layout. While it provides a number of specific feature (such as assisting user to build patch and presentation views), it can be helpful to explore the various modules.
 
+Please see jmod.layout help patch to see how it can help you to go thru all nice modules installed with Jamoma.
 
+!images/layout.png!
