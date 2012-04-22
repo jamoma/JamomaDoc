@@ -63,7 +63,7 @@ This Ruby script will clone and update to the latest version all Git submodules 
 
 h3. Building Jamoma framework and externals
 
-Another Ruby script is provided to automate the building of all framework and Max externals. Assuming your are still running your Terminal session from the _Tools_ folder, execute the provided script by typing @ruby build.rb Development clean@ and hitting %(kbd)&#x21A9;%. The script will compile every component needed and copy them to their appropriate place.
+Another Ruby script is provided to automate the building of all framework and Max externals. Assuming your are still running your Terminal session from the _Tools_ folder, execute the provided script by typing @ruby build.rb Development clean@ and hitting %(kbd)return%. The script will compile every component needed and copy them to their appropriate place.
 
 Wait until the whole process is done. Please note that this can take quite a while.
 
