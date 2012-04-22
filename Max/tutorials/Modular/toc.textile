@@ -15,6 +15,7 @@ h3. First steps with Jamoma Modular
 
 * "Browsing the Various Modules":Browsing_the_various_modules.html
 * "Create New Module in a Patch":Create_new_module_in_a_patch.html
+* "Exploring modules documentation":"Exploring_modules_documentation.html"
 
 h3. Using Jamoma Modules
 
