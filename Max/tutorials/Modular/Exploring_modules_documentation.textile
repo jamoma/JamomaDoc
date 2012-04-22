@@ -1,0 +1,38 @@
+--
+title: Exploring documentation
+description: This tutorial show some of the documentation features included in Jamoma Modular
+created_at: 2010/11/11
+authors: [Jamoma, Trond Lossius?]
+tags: [index, toc]
+objref: []
+---
+
+h3. Documentation of the module
+
+Some modules rely on a high number of parameters, which can make a complex and hard to remember "namespace":http://en.wikipedia.org/wiki/Namespace_%28computer_science%29 or get the inner working of the module. Thanks to Jamoma consistent architecture and GUI, modules offer some input to help you go thru a module.
+
+h3. Pop-up namespace reminder
+
+If you click and hold the mouse over the displayed name of the module almost all the way to the left in the module toolbar, a pop-up menu shows up, listing all parameters, messages and returns of this particular module.
+
+!images/popup_menu.png!
+
+h3. HTML reference page
+
+If you instead click further to the left, you will bring up another pop-up menu. In the previous tutorial we used this to peek inside the module, by choosing the "View Internal Components" menu item. Now it is time to try a few other options that aid in documenting the module.
+
+If you select "Open reference Page" a web page will show up in your default web browser. This will provide you with a detailed list of all parameters, messages and returns, a description explaining what the parameter does, and additional information on how it behaves, e.g:
+
+- What type of data is expected (decimal, integer, etc.).
+- The default range of the parameter.
+- Whether it is clipping or not at the boundaries of the default range.
+- The default function used for ramping.
+- The default mechanism used to drive the ramping.
+- What dataspace the parameter use, if any.
+- Whether or not repeted values will be filtered out.
+
+Some of this will make more sense as we move further.
+
+h3. Help files for modules
+
+Finally, if you select %(samp)Open Help Patch% from the pop-up menu, a help patch opens up, where you can interactively examine the module. The help file also contains links to the HTML reference page, and offers simple ways of viewing what issues or bugs (if any) are currently registered for the module.
