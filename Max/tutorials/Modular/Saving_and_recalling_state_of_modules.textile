@@ -1,0 +1,66 @@
+--- 
+title: Saving and recalling state of modules
+description: This lesson goes thru the save and recall of modules in a patch, using jmod.cueManager
+author: [Jamoma]
+created_at: 2012/04/21
+tags: [cues, presets, states]
+objref: [jcom.cuemanager, jmod.cueManager]
+---
+
+h3. Dealing with module's parameters using jmod.cueManager
+
+p. Jamoma offers several ways to deal with each module's parameters. While using the module's presets can be handy, storing and recalling presets can be limiting when using a high number of modules in the patch for a particular project. Thus, the Jamoma library of module provides a specific module called jmod.cueManager which can be used to save and recall the values of all modules in a patch and offers a number of advanced feature.
+
+bq. Since Jamoma modules rely on a common architecture, jmod.cuemanager will work with all modules using jcom.parameters, including modules from the User Library.
+
+In this tutorials, we will use a simple patch composed of an audio soundfiles player, an equalization modules, an audio processing module based on Max's degrade~ external, a jmod.mapperContinuous allowing us to control any parameter from the jmod.mouse module.
+
+!images/making_cues1.png!
+
+jmod.cueManager relies on the features provided by the Jamoma Modular framework to internally get and set jcom.parameter values from all Jamoma modules in the patch. Hence, no particular patch cord connection between jmod.cueManager and other modules: it will take care of all remote communication needed for us.
+
+bq. When instantiated in a patch, jmod.cueManager will listen to all module addition notification. Thus you will want to create the jmod.cueManager first, then add all you needed modules. Otherwise, you may need to save and re-open your patch so that jmod.cueManager deal with all modules' parameters.
+
+h4. Storing cues
+
+By default, jmod.cueManager contains no stored cues (presets of all modules states). Thus, first step is to create a new file containg all the cues for our project or to loading a cue file previsouly saved to disk. This can be done clicking jmod.cueManager's %(samp)File% menu then selecting the %(samp)New% or %(samp)Load% items as seen below. This cue file will stored all saved cues for our project.
+
+!images/making_cues2.png!
+
+Assuming you selected the %(samp)New% item, jmod.cueManager has now created a blank cue file.
+
+We can now adjust some of the modules' parameters to th desired value. Here, for the demo purpose we will select one of the famous MaxMSP audio file, fill some equalization and degradation settings, "then map":mapping_parameters.html the horizontal position of our mouse to the @audio/mix@ parameter of our "myEQ" module.
+
+!images/making_cues3.png!
+
+Once done, we can store the patch's state by creating a new "cue". From the jmod.cueManager module, click the %(samp)New% button.
+
+!images/making_cues4.png!
+
+!images/making_cues5.png!
+
+This will bring a pop up window with a default name provided for the cue. Hit the %(kbd)return% key and you're done. You just created your first cue !
+
+You may now tweak some settings and create as many cues as you wish using the steps descibed above.
+
+Please note that although we saved differents cues, we need to save these to file. Do so by selecting the save entry in jmod.cueManager's %(samp)File% menu. This will bring a standard window asking for name and location for our cue file or save our cues to disk if we opened a cue file.
+
+bq. All cues are stored in a single text file saved to disk. Be sure to save this file to disk otherwise, all your cues will be lost when closing the patch.
+
+h4. Recalling cues
+
+When storing cues, jmod.cueManager automatically populates its menu with the stored cues. You can recall any stored cue using this menu and selecting the desired cue.
+
+!images/recalling_cues.png!
+
+Alternatively, you may recall a cue using the following message sent to jmod.cueManager:
+
+@/cue <index of cue>@
+	
+When recalling a cue, jmod.cueManager will send internally to all modules the saved parameters values.
+	
+h4. Modifying stored cues
+
+While working on your project, you may want to adjust some settings in a previously stored cue. This can be used using the "update" function.
+
+First select the cue to modify from jmod.cueManager's menu then tweak some settings in your patch. Once happy with the result, click the "update" button from jmod.cueManager GUI. This will update the changes in the previously saved cue.

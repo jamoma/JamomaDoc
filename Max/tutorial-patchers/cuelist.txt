@@ -1,0 +1,33 @@
+
+ 
+ KEYCUE "Init_cue" 
+ 
+ 
+ 	 	 	 	 /CONFIG /myCues 99 1 
+ 	 	 	 	 /AUTOFOLLOW 0 
+ # 
+ ######################## 
+ # 
+ # Module /myCues 
+ 	 	 	 	 /myCues/view/freeze 0 
+ 	 	 	 	 /myCues/view/highlight none 
+ # 
+ ######################## 
+ 
+ 
+ 
+ KEYCUE "high-pass" 
+ 
+ 
+ 	 	 	 	 /CONFIG /myCues 99 1 
+ 	 	 	 	 /AUTOFOLLOW 0 
+ # 
+ ######################## 
+ # 
+ # Module /myCues 
+ 	 	 	 	 /myCues/view/freeze 0 
+ 	 	 	 	 /myCues/view/highlight none 
+ # 
+ ######################## 
+ 
+ 
