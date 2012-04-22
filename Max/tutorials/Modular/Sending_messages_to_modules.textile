@@ -13,9 +13,9 @@ Jamoma uses the OSC (Open Sound Control) protocol. This is a protocol for commun
 
 OpenSoundControl basically means that all parameters that we might want to access or monitor, have been given an address in the form of a Max message or symbol. The addresses are organized in a tree-like structure, with the slash (/) sign prepending each branch. The result is straight-forward and resembles the last part of common Unix or URL paths. Here are some examples of possible OSC addresses:
 
-bc. /Abraham/Isaac/Jacob/Judah
-/animals/mammals/cats/lion
-/guitar/filter/frequency
+- @/Abraham/Isaac/Jacob/Judah@
+- @/animals/mammals/cats/lion@
+- @/guitar/filter/frequency@
 
 This is all that we need to know for the time being in order to be able to use OSC with Jamoma. Later on, as we start making our own modules, we will look into how to deal with OSC messages in further detail.
 
@@ -85,43 +85,8 @@ You can also try adding more message boxes to the patch, so that you can interac
 
 In this example, the ramp is linear. In a later tutorial we will look further into ramping in Jamoma, and see how we can use different ramping curves and more.
 
-h3. Documentation of the module
-
-Fortunately we don't have to remember the OSC address of each and every parameter of all the Jamoma modules we use in order to address them. Jamoma offers several ways of helping us discovering the OSC "namespace":http://en.wikipedia.org/wiki/Namespace_%28computer_science%29 of each module.
-
-h4. Pop-up namespace reminder
-
-If you click and hold the mouse over the displayed name of the module (tremolo~) almost all the way to the left in the module toolbar, a pop-up menu shows up, listing all parameters, messages and returns of this particular module. We will discuss the difference between parameters, messages and returns later on. For now it is sufficient ot notice that even for such a simple module, the namespace is quite extensive.
-
-!images/popup_menu.png!
-
-h3. HTML reference page
-
-If you instead click further to the left, you will bring up another pop-up menu. In the previous tutorial we used this to peek inside the module, by choosing the "View Internal Components" menu item. Now it is time to try a few other options that aid in documenting the module.
-
-If you select "Open reference Page" a web page will show up in your default web browser. This will provide you with a detailed list of all parameters, messages and returns, a description explaining what the parameter does, and additional information on how it behaves, e.g:
-
-* What type of data is expected (decimal, integer, etc.).
-* The default range of the parameter.
-* Whether it is clipping or not at the boundaries of the default range.
-* The default function used for ramping.
-* The default mechanism used to drive the ramping.
-* What dataspace the parameter use, if any.
-* Whether or not repeted values will be filtered out.
-
-Some of this will make more sense as we move further.
-
-h3. Help files for modules
-
-Finally, if you select %(samp)Open Help Patch% from the pop-up menu, a help patch opens up, where you can interactively examine the module. The help file also contains links to the HTML reference page, and offers simple ways of viewing what issues or bugs (if any) are currently registered for the module.
-
 h3. Summary
 
 * The leftmost inlet and outlet of modules is reserved for OSC communication to and from the module.
 * Parameters can be updated by sending OSC messages to the module.
 * Parameters can also be changed gradually by applying a ramp.
-* Each module is documented in a number of ways, including a HTML reference page and a help patch.
-
-h3. What's next?
-
-In the next tutorial we will learn more about presets for modules.
