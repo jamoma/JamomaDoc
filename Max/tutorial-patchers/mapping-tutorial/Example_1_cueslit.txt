@@ -1,0 +1,249 @@
+
+ 
+ KEYCUE "bcf+mouse" 
+ 
+ 
+ 	 	 	 	 /CONFIG /output~ 99 1 /bcf2000 99 1 /input~ 99 1 /filter~ 99 1 /mapper.2 99 1 /mouse 99 1 /mapper.1 99 1 
+ 	 	 	 	 /AUTOFOLLOW 0 
+ # 
+ ######################## 
+ # 
+ # Module /output~ 
+ 	 	 	 	 /output~/audio/active 0 
+ 	 	 	 	 /output~/audio/gain 0.000000 
+ 	 	 	 	 /output~/balance 0.000000 
+ 	 	 	 	 /output~/ch.1 1 
+ 	 	 	 	 /output~/ch.2 2 
+ 	 	 	 	 /output~/limiter/active 1 
+ 	 	 	 	 /output~/limiter/dcblocker/active 1 
+ 	 	 	 	 /output~/limiter/lookahead 64 
+ 	 	 	 	 /output~/limiter/mode exponential 
+ 	 	 	 	 /output~/limiter/postamp 0.000000 
+ 	 	 	 	 /output~/limiter/preamp 6.000000 
+ 	 	 	 	 /output~/limiter/release 300.000000 
+ 	 	 	 	 /output~/limiter/threshold -6.000000 
+ 	 	 	 	 /output~/record/filetype aiff 
+ 	 	 	 	 /output~/record/samptype int24 
+ 	 	 	 	 /output~/saturation/active 1 
+ 	 	 	 	 /output~/saturation/depth 10.000000 
+ 	 	 	 	 /output~/view/color/border 0 
+ 	 	 	 	 /output~/view/color/contentBackground 0 
+ 	 	 	 	 /output~/view/color/toolbarBackground 0 
+ 	 	 	 	 /output~/view/color/toolbarText 0 
+ 	 	 	 	 /output~/view/freeze 0 
+ 	 	 	 	 /output~/view/size 300 140 
+ # 
+ # Module /bcf2000 
+ 	 	 	 	 /bcf2000/midiIn BCF2000 Port 1 
+ 	 	 	 	 /bcf2000/midiOut BCF2000 Port 1 
+ 	 	 	 	 /bcf2000/button.1 0 
+ 	 	 	 	 /bcf2000/button.2 0 
+ 	 	 	 	 /bcf2000/button.3 0 
+ 	 	 	 	 /bcf2000/button.4 0 
+ 	 	 	 	 /bcf2000/foot/control 0 
+ 	 	 	 	 /bcf2000/foot/switch 0 
+ 	 	 	 	 /bcf2000/track.1/pushEncoder.1/press 0 
+ 	 	 	 	 /bcf2000/track.1/pushEncoder.1/turn 0 
+ 	 	 	 	 /bcf2000/track.1/pushEncoder.2/press 0 
+ 	 	 	 	 /bcf2000/track.1/pushEncoder.2/turn 0 
+ 	 	 	 	 /bcf2000/track.1/pushEncoder.3/press 0 
+ 	 	 	 	 /bcf2000/track.1/pushEncoder.3/turn 0 
+ 	 	 	 	 /bcf2000/track.1/pushEncoder.4/press 0 
+ 	 	 	 	 /bcf2000/track.1/pushEncoder.4/turn 0 
+ 	 	 	 	 /bcf2000/track.2/pushEncoder.1/press 0 
+ 	 	 	 	 /bcf2000/track.2/pushEncoder.1/turn 0 
+ 	 	 	 	 /bcf2000/track.2/pushEncoder.2/press 0 
+ 	 	 	 	 /bcf2000/track.2/pushEncoder.2/turn 0 
+ 	 	 	 	 /bcf2000/track.2/pushEncoder.3/press 0 
+ 	 	 	 	 /bcf2000/track.2/pushEncoder.3/turn 0 
+ 	 	 	 	 /bcf2000/track.2/pushEncoder.4/press 0 
+ 	 	 	 	 /bcf2000/track.2/pushEncoder.4/turn 0 
+ 	 	 	 	 /bcf2000/track.3/pushEncoder.1/press 0 
+ 	 	 	 	 /bcf2000/track.3/pushEncoder.1/turn 0 
+ 	 	 	 	 /bcf2000/track.3/pushEncoder.2/press 0 
+ 	 	 	 	 /bcf2000/track.3/pushEncoder.2/turn 0 
+ 	 	 	 	 /bcf2000/track.3/pushEncoder.3/press 0 
+ 	 	 	 	 /bcf2000/track.3/pushEncoder.3/turn 0 
+ 	 	 	 	 /bcf2000/track.3/pushEncoder.4/press 0 
+ 	 	 	 	 /bcf2000/track.3/pushEncoder.4/turn 0 
+ 	 	 	 	 /bcf2000/track.4/pushEncoder.1/press 0 
+ 	 	 	 	 /bcf2000/track.4/pushEncoder.1/turn 0 
+ 	 	 	 	 /bcf2000/track.4/pushEncoder.2/press 0 
+ 	 	 	 	 /bcf2000/track.4/pushEncoder.2/turn 0 
+ 	 	 	 	 /bcf2000/track.4/pushEncoder.3/press 0 
+ 	 	 	 	 /bcf2000/track.4/pushEncoder.3/turn 0 
+ 	 	 	 	 /bcf2000/track.4/pushEncoder.4/press 0 
+ 	 	 	 	 /bcf2000/track.4/pushEncoder.4/turn 0 
+ 	 	 	 	 /bcf2000/track.5/pushEncoder.1/press 0 
+ 	 	 	 	 /bcf2000/track.5/pushEncoder.1/turn 0 
+ 	 	 	 	 /bcf2000/track.5/pushEncoder.2/press 0 
+ 	 	 	 	 /bcf2000/track.5/pushEncoder.2/turn 0 
+ 	 	 	 	 /bcf2000/track.5/pushEncoder.3/press 0 
+ 	 	 	 	 /bcf2000/track.5/pushEncoder.3/turn 0 
+ 	 	 	 	 /bcf2000/track.5/pushEncoder.4/press 0 
+ 	 	 	 	 /bcf2000/track.5/pushEncoder.4/turn 0 
+ 	 	 	 	 /bcf2000/track.6/pushEncoder.1/press 0 
+ 	 	 	 	 /bcf2000/track.6/pushEncoder.1/turn 0 
+ 	 	 	 	 /bcf2000/track.6/pushEncoder.2/press 0 
+ 	 	 	 	 /bcf2000/track.6/pushEncoder.2/turn 0 
+ 	 	 	 	 /bcf2000/track.6/pushEncoder.3/press 0 
+ 	 	 	 	 /bcf2000/track.6/pushEncoder.3/turn 0 
+ 	 	 	 	 /bcf2000/track.6/pushEncoder.4/press 0 
+ 	 	 	 	 /bcf2000/track.6/pushEncoder.4/turn 0 
+ 	 	 	 	 /bcf2000/track.7/pushEncoder.1/press 0 
+ 	 	 	 	 /bcf2000/track.7/pushEncoder.1/turn 0 
+ 	 	 	 	 /bcf2000/track.7/pushEncoder.2/press 0 
+ 	 	 	 	 /bcf2000/track.7/pushEncoder.2/turn 0 
+ 	 	 	 	 /bcf2000/track.7/pushEncoder.3/press 0 
+ 	 	 	 	 /bcf2000/track.7/pushEncoder.3/turn 0 
+ 	 	 	 	 /bcf2000/track.7/pushEncoder.4/press 0 
+ 	 	 	 	 /bcf2000/track.7/pushEncoder.4/turn 0 
+ 	 	 	 	 /bcf2000/track.8/pushEncoder.1/press 0 
+ 	 	 	 	 /bcf2000/track.8/pushEncoder.1/turn 0 
+ 	 	 	 	 /bcf2000/track.8/pushEncoder.2/press 0 
+ 	 	 	 	 /bcf2000/track.8/pushEncoder.2/turn 0 
+ 	 	 	 	 /bcf2000/track.8/pushEncoder.3/press 0 
+ 	 	 	 	 /bcf2000/track.8/pushEncoder.3/turn 0 
+ 	 	 	 	 /bcf2000/track.8/pushEncoder.4/press 0 
+ 	 	 	 	 /bcf2000/track.8/pushEncoder.4/turn 0 
+ 	 	 	 	 /bcf2000/track.1/fader 0 
+ 	 	 	 	 /bcf2000/track.2/fader 0 
+ 	 	 	 	 /bcf2000/track.3/fader 0 
+ 	 	 	 	 /bcf2000/track.4/fader 0 
+ 	 	 	 	 /bcf2000/track.5/fader 0 
+ 	 	 	 	 /bcf2000/track.6/fader 0 
+ 	 	 	 	 /bcf2000/track.7/fader 0 
+ 	 	 	 	 /bcf2000/track.8/fader 0 
+ 	 	 	 	 /bcf2000/track.1/key.lower 0 
+ 	 	 	 	 /bcf2000/track.1/key.upper 0 
+ 	 	 	 	 /bcf2000/track.2/key.lower 0 
+ 	 	 	 	 /bcf2000/track.2/key.upper 0 
+ 	 	 	 	 /bcf2000/track.3/key.lower 0 
+ 	 	 	 	 /bcf2000/track.3/key.upper 0 
+ 	 	 	 	 /bcf2000/track.4/key.lower 0 
+ 	 	 	 	 /bcf2000/track.4/key.upper 0 
+ 	 	 	 	 /bcf2000/track.5/key.lower 0 
+ 	 	 	 	 /bcf2000/track.5/key.upper 0 
+ 	 	 	 	 /bcf2000/track.6/key.lower 0 
+ 	 	 	 	 /bcf2000/track.6/key.upper 0 
+ 	 	 	 	 /bcf2000/track.7/key.lower 0 
+ 	 	 	 	 /bcf2000/track.7/key.upper 0 
+ 	 	 	 	 /bcf2000/track.8/key.lower 0 
+ 	 	 	 	 /bcf2000/track.8/key.upper 0 
+ 	 	 	 	 /bcf2000/view/color/border 0 
+ 	 	 	 	 /bcf2000/view/color/contentBackground 0 
+ 	 	 	 	 /bcf2000/view/color/toolbarBackground 0 
+ 	 	 	 	 /bcf2000/view/color/toolbarText 0 
+ 	 	 	 	 /bcf2000/view/freeze 0 
+ 	 	 	 	 /bcf2000/view/size 300 70 
+ # 
+ # Module /input~ 
+ 	 	 	 	 /input~/audio/active 0 
+ 	 	 	 	 /input~/audio/gain 0.000000 
+ 	 	 	 	 /input~/balance 0.000000 
+ 	 	 	 	 /input~/ch.1 1 
+ 	 	 	 	 /input~/ch.2 2 
+ 	 	 	 	 /input~/clicktrain/rate 1.000001 
+ 	 	 	 	 /input~/soundfile/loop 1 
+ 	 	 	 	 /input~/soundfile/open drumLoop.aif 
+ 	 	 	 	 /input~/soundfile/play 1 
+ 	 	 	 	 /input~/source soundfile 
+ 	 	 	 	 /input~/testtone/frequency 1000 
+ 	 	 	 	 /input~/view/color/border 0 
+ 	 	 	 	 /input~/view/color/contentBackground 0 
+ 	 	 	 	 /input~/view/color/toolbarBackground 0 
+ 	 	 	 	 /input~/view/color/toolbarText 0 
+ 	 	 	 	 /input~/view/freeze 0 
+ 	 	 	 	 /input~/view/size 300 140 
+ # 
+ # Module /filter~ 
+ 	 	 	 	 /filter~/audio/bypass 0 
+ 	 	 	 	 /filter~/audio/gain 105.597946 
+ 	 	 	 	 /filter~/audio/mix 100.000000 
+ 	 	 	 	 /filter~/audio/mute 0 
+ 	 	 	 	 /filter~/filtergain 0.000000 
+ 	 	 	 	 /filter~/filtertype highpass 
+ 	 	 	 	 /filter~/frequency 158.887161 
+ 	 	 	 	 /filter~/q 4.000000 
+ 	 	 	 	 /filter~/view/color/border 0 
+ 	 	 	 	 /filter~/view/color/contentBackground 0 
+ 	 	 	 	 /filter~/view/color/toolbarBackground 0 
+ 	 	 	 	 /filter~/view/color/toolbarText 0 
+ 	 	 	 	 /filter~/view/freeze 0 
+ 	 	 	 	 /filter~/view/size 300 70 
+ # 
+ # Module /mapper.2 
+ 	 	 	 	 /mapper.2/in/module/name /mouse 
+ 	 	 	 	 /mapper.2/mode --> 
+ 	 	 	 	 /mapper.2/in/module/instance 0 
+ 	 	 	 	 /mapper.2/function exponential 
+ 	 	 	 	 /mapper.2/function/symmetry 0 
+ 	 	 	 	 /mapper.2/out/module/name /filter~ 
+ 	 	 	 	 /mapper.2/function/parameter2 0.000000 
+ 	 	 	 	 /mapper.2/out/module/instance 0 
+ 	 	 	 	 /mapper.2/function/parameter1 2.000000 
+ 	 	 	 	 /mapper.2/out/module/parameter /frequency 
+ 	 	 	 	 /mapper.2/in/module/parameter /position/x 
+ 	 	 	 	 /mapper.2/clipmode both 
+ 	 	 	 	 /mapper.2/edit edit 
+ 	 	 	 	 /mapper.2/in/direct 0.000000 
+ 	 	 	 	 /mapper.2/in/max 0.750000 
+ 	 	 	 	 /mapper.2/in/min 0.250000 
+ 	 	 	 	 /mapper.2/in/module/derivative 0 
+ 	 	 	 	 /mapper.2/in/module/listindex 1 
+ 	 	 	 	 /mapper.2/out/max 11025.000000 
+ 	 	 	 	 /mapper.2/out/min 30.000000 
+ 	 	 	 	 /mapper.2/ramp 0 
+ 	 	 	 	 /mapper.2/slide/down 0.000000 
+ 	 	 	 	 /mapper.2/slide/up 0.000000 
+ 	 	 	 	 /mapper.2/view/color/border 0.620000 0.000000 0.360000 1.000000 
+ 	 	 	 	 /mapper.2/view/color/contentBackground 0 
+ 	 	 	 	 /mapper.2/view/color/toolbarBackground 0 
+ 	 	 	 	 /mapper.2/view/color/toolbarText 0 
+ 	 	 	 	 /mapper.2/view/freeze 0 
+ 	 	 	 	 /mapper.2/view/size 600 70 
+ # 
+ # Module /mouse 
+ 	 	 	 	 /mouse/active 1 
+ 	 	 	 	 /mouse/reference screen 
+ 	 	 	 	 /mouse/view/color/border 0 
+ 	 	 	 	 /mouse/view/color/contentBackground 0 
+ 	 	 	 	 /mouse/view/color/toolbarBackground 0 
+ 	 	 	 	 /mouse/view/color/toolbarText 0 
+ 	 	 	 	 /mouse/view/freeze 0 
+ 	 	 	 	 /mouse/view/size 150 70 
+ # 
+ # Module /mapper.1 
+ 	 	 	 	 /mapper.1/in/module/name /bcf2000 
+ 	 	 	 	 /mapper.1/mode --> 
+ 	 	 	 	 /mapper.1/in/module/instance 0 
+ 	 	 	 	 /mapper.1/function linear 
+ 	 	 	 	 /mapper.1/function/symmetry 0 
+ 	 	 	 	 /mapper.1/out/module/name /input~ 
+ 	 	 	 	 /mapper.1/function/parameter2 0.000000 
+ 	 	 	 	 /mapper.1/out/module/instance 0 
+ 	 	 	 	 /mapper.1/function/parameter1 0.000000 
+ 	 	 	 	 /mapper.1/out/module/parameter /audio/gain 
+ 	 	 	 	 /mapper.1/in/module/parameter /track.1/fader 
+ 	 	 	 	 /mapper.1/clipmode both 
+ 	 	 	 	 /mapper.1/edit edit 
+ 	 	 	 	 /mapper.1/in/direct 0.000000 
+ 	 	 	 	 /mapper.1/in/max 127.000000 
+ 	 	 	 	 /mapper.1/in/min 0.000000 
+ 	 	 	 	 /mapper.1/in/module/derivative 0 
+ 	 	 	 	 /mapper.1/in/module/listindex 1 
+ 	 	 	 	 /mapper.1/out/max 127.000000 
+ 	 	 	 	 /mapper.1/out/min 0.000000 
+ 	 	 	 	 /mapper.1/ramp 0 
+ 	 	 	 	 /mapper.1/slide/down 0.000000 
+ 	 	 	 	 /mapper.1/slide/up 0.000000 
+ 	 	 	 	 /mapper.1/view/color/border 0.620000 0.000000 0.360000 1.000000 
+ 	 	 	 	 /mapper.1/view/color/contentBackground 0 
+ 	 	 	 	 /mapper.1/view/color/toolbarBackground 0 
+ 	 	 	 	 /mapper.1/view/color/toolbarText 0 
+ 	 	 	 	 /mapper.1/view/freeze 0 
+ 	 	 	 	 /mapper.1/view/size 600 70 
+ # 
+ ######################## 
+ 
+ 

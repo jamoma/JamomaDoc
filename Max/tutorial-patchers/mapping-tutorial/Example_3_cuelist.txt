@@ -1,0 +1,257 @@
+
+ 
+ KEYCUE "al_the_same " 
+ 
+ 
+ 	 	 	 	 /CONFIG /mapper.2 99 1 /mapper.1 99 1 /input.3 99 1 /input.2 99 1 /input.1 99 1 
+ 	 	 	 	 /AUTOFOLLOW 0 
+ # 
+ ######################## 
+ # 
+ # Module /mapper.2 
+ 	 	 	 	 /mapper.2/in/module/name /input 
+ 	 	 	 	 /mapper.2/mode <-> 
+ 	 	 	 	 /mapper.2/in/module/instance 2 
+ 	 	 	 	 /mapper.2/function linear 
+ 	 	 	 	 /mapper.2/function/symmetry 0 
+ 	 	 	 	 /mapper.2/out/module/name /input 
+ 	 	 	 	 /mapper.2/function/parameter2 0.000000 
+ 	 	 	 	 /mapper.2/out/module/instance 3 
+ 	 	 	 	 /mapper.2/function/parameter1 0.000000 
+ 	 	 	 	 /mapper.2/out/module/parameter /audio/gain 
+ 	 	 	 	 /mapper.2/in/module/parameter /audio/gain 
+ 	 	 	 	 /mapper.2/clipmode both 
+ 	 	 	 	 /mapper.2/edit edit 
+ 	 	 	 	 /mapper.2/in/direct 0.000000 
+ 	 	 	 	 /mapper.2/in/max 127.000000 
+ 	 	 	 	 /mapper.2/in/min 0.000000 
+ 	 	 	 	 /mapper.2/in/module/derivative 0 
+ 	 	 	 	 /mapper.2/in/module/listindex 1 
+ 	 	 	 	 /mapper.2/out/max 127.000000 
+ 	 	 	 	 /mapper.2/out/min 0.000000 
+ 	 	 	 	 /mapper.2/ramp 0 
+ 	 	 	 	 /mapper.2/slide/down 0.000000 
+ 	 	 	 	 /mapper.2/slide/up 0.000000 
+ 	 	 	 	 /mapper.2/view/color/border 0 
+ 	 	 	 	 /mapper.2/view/color/contentBackground 0 
+ 	 	 	 	 /mapper.2/view/color/toolbarBackground 0 
+ 	 	 	 	 /mapper.2/view/color/toolbarText 0 
+ 	 	 	 	 /mapper.2/view/freeze 0 
+ 	 	 	 	 /mapper.2/view/size 600 70 
+ # 
+ # Module /mapper.1 
+ 	 	 	 	 /mapper.1/in/module/name /input 
+ 	 	 	 	 /mapper.1/mode <-> 
+ 	 	 	 	 /mapper.1/in/module/instance 1 
+ 	 	 	 	 /mapper.1/function linear 
+ 	 	 	 	 /mapper.1/function/symmetry 0 
+ 	 	 	 	 /mapper.1/out/module/name /input 
+ 	 	 	 	 /mapper.1/function/parameter2 0.000000 
+ 	 	 	 	 /mapper.1/out/module/instance 2 
+ 	 	 	 	 /mapper.1/function/parameter1 0.000000 
+ 	 	 	 	 /mapper.1/out/module/parameter /audio/gain 
+ 	 	 	 	 /mapper.1/in/module/parameter /audio/gain 
+ 	 	 	 	 /mapper.1/clipmode both 
+ 	 	 	 	 /mapper.1/edit edit 
+ 	 	 	 	 /mapper.1/in/direct 0.000000 
+ 	 	 	 	 /mapper.1/in/max 127.000000 
+ 	 	 	 	 /mapper.1/in/min 0.000000 
+ 	 	 	 	 /mapper.1/in/module/derivative 0 
+ 	 	 	 	 /mapper.1/in/module/listindex 1 
+ 	 	 	 	 /mapper.1/out/max 127.000000 
+ 	 	 	 	 /mapper.1/out/min 0.000000 
+ 	 	 	 	 /mapper.1/ramp 0 
+ 	 	 	 	 /mapper.1/slide/down 0.000000 
+ 	 	 	 	 /mapper.1/slide/up 0.000000 
+ 	 	 	 	 /mapper.1/view/color/border 0 
+ 	 	 	 	 /mapper.1/view/color/contentBackground 0 
+ 	 	 	 	 /mapper.1/view/color/toolbarBackground 0 
+ 	 	 	 	 /mapper.1/view/color/toolbarText 0 
+ 	 	 	 	 /mapper.1/view/freeze 0 
+ 	 	 	 	 /mapper.1/view/size 600 70 
+ # 
+ # Module /input.3 
+ 	 	 	 	 /input.3/audio/active 0 
+ 	 	 	 	 /input.3/audio/gain 0.000000 
+ 	 	 	 	 /input.3/balance 0.000000 
+ 	 	 	 	 /input.3/ch.1 1 
+ 	 	 	 	 /input.3/ch.2 2 
+ 	 	 	 	 /input.3/clicktrain/rate 1.000001 
+ 	 	 	 	 /input.3/soundfile/loop 1 
+ 	 	 	 	 /input.3/soundfile/play 0 
+ 	 	 	 	 /input.3/source soundfile 
+ 	 	 	 	 /input.3/testtone/frequency 1000 
+ 	 	 	 	 /input.3/view/color/border 0 
+ 	 	 	 	 /input.3/view/color/contentBackground 0 
+ 	 	 	 	 /input.3/view/color/toolbarBackground 0 
+ 	 	 	 	 /input.3/view/color/toolbarText 0 
+ 	 	 	 	 /input.3/view/freeze 0 
+ 	 	 	 	 /input.3/view/size 300 140 
+ # 
+ # Module /input.2 
+ 	 	 	 	 /input.2/audio/active 0 
+ 	 	 	 	 /input.2/audio/gain 0.000000 
+ 	 	 	 	 /input.2/balance 0.000000 
+ 	 	 	 	 /input.2/ch.1 1 
+ 	 	 	 	 /input.2/ch.2 2 
+ 	 	 	 	 /input.2/clicktrain/rate 1.000001 
+ 	 	 	 	 /input.2/soundfile/loop 1 
+ 	 	 	 	 /input.2/soundfile/play 0 
+ 	 	 	 	 /input.2/source soundfile 
+ 	 	 	 	 /input.2/testtone/frequency 1000 
+ 	 	 	 	 /input.2/view/color/border 0 
+ 	 	 	 	 /input.2/view/color/contentBackground 0 
+ 	 	 	 	 /input.2/view/color/toolbarBackground 0 
+ 	 	 	 	 /input.2/view/color/toolbarText 0 
+ 	 	 	 	 /input.2/view/freeze 0 
+ 	 	 	 	 /input.2/view/size 300 140 
+ # 
+ # Module /input.1 
+ 	 	 	 	 /input.1/audio/active 0 
+ 	 	 	 	 /input.1/audio/gain 0.000000 
+ 	 	 	 	 /input.1/balance 0.000000 
+ 	 	 	 	 /input.1/ch.1 1 
+ 	 	 	 	 /input.1/ch.2 2 
+ 	 	 	 	 /input.1/clicktrain/rate 1.000001 
+ 	 	 	 	 /input.1/soundfile/loop 1 
+ 	 	 	 	 /input.1/soundfile/play 0 
+ 	 	 	 	 /input.1/source soundfile 
+ 	 	 	 	 /input.1/testtone/frequency 1000 
+ 	 	 	 	 /input.1/view/color/border 0 
+ 	 	 	 	 /input.1/view/color/contentBackground 0 
+ 	 	 	 	 /input.1/view/color/toolbarBackground 0 
+ 	 	 	 	 /input.1/view/color/toolbarText 0 
+ 	 	 	 	 /input.1/view/freeze 0 
+ 	 	 	 	 /input.1/view/size 300 140 
+ # 
+ ######################## 
+ 
+ 
+ 
+ KEYCUE "reverse" 
+ 
+ 
+ 	 	 	 	 /CONFIG /mapper.2 99 1 /mapper.1 99 1 /input.3 99 1 /input.2 99 1 /input.1 99 1 
+ 	 	 	 	 /AUTOFOLLOW 0 
+ # 
+ ######################## 
+ # 
+ # Module /mapper.2 
+ 	 	 	 	 /mapper.2/in/module/name /input 
+ 	 	 	 	 /mapper.2/mode <-> 
+ 	 	 	 	 /mapper.2/in/module/instance 2 
+ 	 	 	 	 /mapper.2/function linear 
+ 	 	 	 	 /mapper.2/function/symmetry 0 
+ 	 	 	 	 /mapper.2/out/module/name /input 
+ 	 	 	 	 /mapper.2/function/parameter2 0.000000 
+ 	 	 	 	 /mapper.2/out/module/instance 3 
+ 	 	 	 	 /mapper.2/function/parameter1 0.000000 
+ 	 	 	 	 /mapper.2/out/module/parameter /audio/gain 
+ 	 	 	 	 /mapper.2/in/module/parameter /audio/gain 
+ 	 	 	 	 /mapper.2/clipmode both 
+ 	 	 	 	 /mapper.2/edit edit 
+ 	 	 	 	 /mapper.2/in/direct 0.000000 
+ 	 	 	 	 /mapper.2/in/max 127.000000 
+ 	 	 	 	 /mapper.2/in/min 0.000000 
+ 	 	 	 	 /mapper.2/in/module/derivative 0 
+ 	 	 	 	 /mapper.2/in/module/listindex 1 
+ 	 	 	 	 /mapper.2/out/max 63.000000 
+ 	 	 	 	 /mapper.2/out/min 0.000000 
+ 	 	 	 	 /mapper.2/ramp 0 
+ 	 	 	 	 /mapper.2/slide/down 0.000000 
+ 	 	 	 	 /mapper.2/slide/up 0.000000 
+ 	 	 	 	 /mapper.2/view/color/border 0 
+ 	 	 	 	 /mapper.2/view/color/contentBackground 0 
+ 	 	 	 	 /mapper.2/view/color/toolbarBackground 0 
+ 	 	 	 	 /mapper.2/view/color/toolbarText 0 
+ 	 	 	 	 /mapper.2/view/freeze 0 
+ 	 	 	 	 /mapper.2/view/size 600 70 
+ # 
+ # Module /mapper.1 
+ 	 	 	 	 /mapper.1/in/module/name /input 
+ 	 	 	 	 /mapper.1/mode <-> 
+ 	 	 	 	 /mapper.1/in/module/instance 1 
+ 	 	 	 	 /mapper.1/function linear 
+ 	 	 	 	 /mapper.1/function/symmetry 0 
+ 	 	 	 	 /mapper.1/out/module/name /input 
+ 	 	 	 	 /mapper.1/function/parameter2 0.000000 
+ 	 	 	 	 /mapper.1/out/module/instance 2 
+ 	 	 	 	 /mapper.1/function/parameter1 0.000000 
+ 	 	 	 	 /mapper.1/out/module/parameter /audio/gain 
+ 	 	 	 	 /mapper.1/in/module/parameter /audio/gain 
+ 	 	 	 	 /mapper.1/clipmode both 
+ 	 	 	 	 /mapper.1/edit edit 
+ 	 	 	 	 /mapper.1/in/direct 0.000000 
+ 	 	 	 	 /mapper.1/in/max 127.000000 
+ 	 	 	 	 /mapper.1/in/min 0.000000 
+ 	 	 	 	 /mapper.1/in/module/derivative 0 
+ 	 	 	 	 /mapper.1/in/module/listindex 1 
+ 	 	 	 	 /mapper.1/out/max 0.000000 
+ 	 	 	 	 /mapper.1/out/min 127.000000 
+ 	 	 	 	 /mapper.1/ramp 0 
+ 	 	 	 	 /mapper.1/slide/down 0.000000 
+ 	 	 	 	 /mapper.1/slide/up 0.000000 
+ 	 	 	 	 /mapper.1/view/color/border 0 
+ 	 	 	 	 /mapper.1/view/color/contentBackground 0 
+ 	 	 	 	 /mapper.1/view/color/toolbarBackground 0 
+ 	 	 	 	 /mapper.1/view/color/toolbarText 0 
+ 	 	 	 	 /mapper.1/view/freeze 0 
+ 	 	 	 	 /mapper.1/view/size 600 70 
+ # 
+ # Module /input.3 
+ 	 	 	 	 /input.3/audio/active 0 
+ 	 	 	 	 /input.3/audio/gain 63.000000 
+ 	 	 	 	 /input.3/balance 0.000000 
+ 	 	 	 	 /input.3/ch.1 1 
+ 	 	 	 	 /input.3/ch.2 2 
+ 	 	 	 	 /input.3/clicktrain/rate 1.000001 
+ 	 	 	 	 /input.3/soundfile/loop 1 
+ 	 	 	 	 /input.3/soundfile/play 0 
+ 	 	 	 	 /input.3/source soundfile 
+ 	 	 	 	 /input.3/testtone/frequency 1000 
+ 	 	 	 	 /input.3/view/color/border 0 
+ 	 	 	 	 /input.3/view/color/contentBackground 0 
+ 	 	 	 	 /input.3/view/color/toolbarBackground 0 
+ 	 	 	 	 /input.3/view/color/toolbarText 0 
+ 	 	 	 	 /input.3/view/freeze 0 
+ 	 	 	 	 /input.3/view/size 300 140 
+ # 
+ # Module /input.2 
+ 	 	 	 	 /input.2/audio/active 0 
+ 	 	 	 	 /input.2/audio/gain 127.000000 
+ 	 	 	 	 /input.2/balance 0.000000 
+ 	 	 	 	 /input.2/ch.1 1 
+ 	 	 	 	 /input.2/ch.2 2 
+ 	 	 	 	 /input.2/clicktrain/rate 1.000001 
+ 	 	 	 	 /input.2/soundfile/loop 1 
+ 	 	 	 	 /input.2/soundfile/play 0 
+ 	 	 	 	 /input.2/source soundfile 
+ 	 	 	 	 /input.2/testtone/frequency 1000 
+ 	 	 	 	 /input.2/view/color/border 0 
+ 	 	 	 	 /input.2/view/color/contentBackground 0 
+ 	 	 	 	 /input.2/view/color/toolbarBackground 0 
+ 	 	 	 	 /input.2/view/color/toolbarText 0 
+ 	 	 	 	 /input.2/view/freeze 0 
+ 	 	 	 	 /input.2/view/size 300 140 
+ # 
+ # Module /input.1 
+ 	 	 	 	 /input.1/audio/active 0 
+ 	 	 	 	 /input.1/audio/gain 0.000000 
+ 	 	 	 	 /input.1/balance 0.000000 
+ 	 	 	 	 /input.1/ch.1 1 
+ 	 	 	 	 /input.1/ch.2 2 
+ 	 	 	 	 /input.1/clicktrain/rate 1.000001 
+ 	 	 	 	 /input.1/soundfile/loop 1 
+ 	 	 	 	 /input.1/soundfile/play 0 
+ 	 	 	 	 /input.1/source soundfile 
+ 	 	 	 	 /input.1/testtone/frequency 1000 
+ 	 	 	 	 /input.1/view/color/border 0 
+ 	 	 	 	 /input.1/view/color/contentBackground 0 
+ 	 	 	 	 /input.1/view/color/toolbarBackground 0 
+ 	 	 	 	 /input.1/view/color/toolbarText 0 
+ 	 	 	 	 /input.1/view/freeze 0 
+ 	 	 	 	 /input.1/view/size 300 140 
+ # 
+ ######################## 
+ 
+ 

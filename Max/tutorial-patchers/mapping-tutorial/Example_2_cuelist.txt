@@ -1,0 +1,71 @@
+
+ 
+ KEYCUE "init" 
+ 
+ 
+ 	 	 	 	 /CONFIG /globalTransport 99 1 /filter~ 99 1 /mapperDiscrete 99 1 
+ 	 	 	 	 /AUTOFOLLOW 0 
+ # 
+ ######################## 
+ # 
+ # Module /globalTransport 
+ 	 	 	 	 /globalTransport/beats 4 
+ 	 	 	 	 /globalTransport/unit 4 
+ 	 	 	 	 /globalTransport/position/bars 1 
+ 	 	 	 	 /globalTransport/position/beats 1 
+ 	 	 	 	 /globalTransport/position/units 0.000000 
+ 	 	 	 	 /globalTransport/mute 1 
+ 	 	 	 	 /globalTransport/view/color/border 0 
+ 	 	 	 	 /globalTransport/view/color/contentBackground 0 
+ 	 	 	 	 /globalTransport/view/color/toolbarBackground 0 
+ 	 	 	 	 /globalTransport/view/color/toolbarText 0 
+ 	 	 	 	 /globalTransport/view/freeze 0 
+ 	 	 	 	 /globalTransport/view/size 300 70 
+ # 
+ # Module /filter~ 
+ 	 	 	 	 /filter~/audio/bypass 0 
+ 	 	 	 	 /filter~/audio/gain 105.597946 
+ 	 	 	 	 /filter~/audio/mix 100.000000 
+ 	 	 	 	 /filter~/audio/mute 0 
+ 	 	 	 	 /filter~/filtergain 0.000000 
+ 	 	 	 	 /filter~/filtertype highpass 
+ 	 	 	 	 /filter~/frequency 543.000000 
+ 	 	 	 	 /filter~/q 4.000000 
+ 	 	 	 	 /filter~/view/color/border 0 
+ 	 	 	 	 /filter~/view/color/contentBackground 0 
+ 	 	 	 	 /filter~/view/color/toolbarBackground 0 
+ 	 	 	 	 /filter~/view/color/toolbarText 0 
+ 	 	 	 	 /filter~/view/freeze 0 
+ 	 	 	 	 /filter~/view/size 300 70 
+ # 
+ # Module /mapperDiscrete 
+ 	 	 	 	 /mapperDiscrete/in/module/name /globalTransport 
+ 	 	 	 	 /mapperDiscrete/in/module/instance 0 
+ 	 	 	 	 /mapperDiscrete/out/module/name /filter~ 
+ 	 	 	 	 /mapperDiscrete/out/module/instance 0 
+ 	 	 	 	 /mapperDiscrete/in/module/parameter /position/beats 
+ 	 	 	 	 /mapperDiscrete/out/module/parameter /q 
+ 	 	 	 	 /mapperDiscrete/edit edit 
+ 	 	 	 	 /mapperDiscrete/in/action 1 
+ 	 	 	 	 /mapperDiscrete/in/direct 0 
+ 	 	 	 	 /mapperDiscrete/in/message 0 
+ 	 	 	 	 /mapperDiscrete/in/module/derivative 0 
+ 	 	 	 	 /mapperDiscrete/in/module/listindex 1 
+ 	 	 	 	 /mapperDiscrete/in/value 4.000000 
+ 	 	 	 	 /mapperDiscrete/in/value/variation 0.000000 
+ 	 	 	 	 /mapperDiscrete/out/action 4 
+ 	 	 	 	 /mapperDiscrete/out/message 0.500000 15 
+ 	 	 	 	 /mapperDiscrete/out/ramp 0 
+ 	 	 	 	 /mapperDiscrete/out/value 0.000000 
+ 	 	 	 	 /mapperDiscrete/time/repeat 0.000000 
+ 	 	 	 	 /mapperDiscrete/time/wait 0.000000 
+ 	 	 	 	 /mapperDiscrete/view/color/border 0 
+ 	 	 	 	 /mapperDiscrete/view/color/contentBackground 0 
+ 	 	 	 	 /mapperDiscrete/view/color/toolbarBackground 0 
+ 	 	 	 	 /mapperDiscrete/view/color/toolbarText 0 
+ 	 	 	 	 /mapperDiscrete/view/freeze 0 
+ 	 	 	 	 /mapperDiscrete/view/size 600 70 
+ # 
+ ######################## 
+ 
+ 
