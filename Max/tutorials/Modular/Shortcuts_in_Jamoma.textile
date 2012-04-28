@@ -1,0 +1,27 @@
+--- 
+title: Shortcuts in Jamoma Modular
+description: An index of all Jamoma Modular shortcuts to be used in Max/MSP
+author: [Jamoma, Julien Rabin]
+created_at: 2010/11/11
+tags: [index, shortcut]
+objref: []
+---
+
+h3. Key commands for patching convenience
+
+|_.Shortcut |_.Description |
+| SHIFT+m | creates an object starting with "jmod." |
+| SHIFT+j | creates an object starting with "jcom." |
+| SHIFT+i | creates a new "jmod.input~":modules/jmod.input~.html module |
+| SHIFT+o | creates a new "jmod.output~":modules/jmod.output~.html module |
+| SHIFT+x | creates a new "jmod.mapperContinuous":modules/jmod.mapperContinuous.html module |
+| SHIFT+b | creates an object starting with "bpatcher @name jmod. @args myModule" |
+| SHIFT+d | creates an object starting with "bpatcher @name jmod." |
+
+h3. Modifier keys for mouse action
+
+|_.Command |_.Description |_.Availability |
+| SHIFT + left mouse click + dragging the mouse | fine resolution change | dials in the menu of a module (jcom.ui) <br />  jcom.textslider  |
+
+
+bq. Some of the Jamoma shortcuts seems to be in conflict with the Max Toolbox. If you have Max Toolbox installed and activated, you might find that some of the Jamoma shortcuts will not work.

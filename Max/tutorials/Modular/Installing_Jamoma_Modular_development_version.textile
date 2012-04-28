@@ -9,7 +9,7 @@ objref: []
 
 Jamoma source codes are maintained using "Git":http://git-scm.com/ "version control system":http://en.wikipedia.org/wiki/Revision_control and can be downloaded freely from the public "Github":http://www.github.com repository where they are hosted. In order to get Jamoma source code on your computer, first make sure you have Git installed and set up.
 
-bq. As the name suggests it, please note that development version is not for prime use and may contains some bugs being worked on.
+bq. As the name suggests it, please note that development version is not for prime use and may contains some bugs being worked on. Check out our "Developer's Corner":http://redmine.jamoma.org/projects/jamoma/wiki/Developer's_Corner for getting started.
 
 h3. Getting Git under OSX
 
@@ -67,6 +67,8 @@ Another Ruby script is provided to automate the building of all framework and Ma
 
 Wait until the whole process is done. Please note that this can take quite a while.
 
+bq. At the very first time building, you may need to run the @ruby build.rb Development clean@ command twice to resolve a circular dependency issue.
+
 !images/build_framework_2.png!
 
 bq. On your daily workflow, you will likely want to run the Ruby script @all.rb@ found in the _Tools_ folder which take care of running both the @update.rb@ and @build.rb@ scripts.
@@ -83,6 +85,7 @@ Then, in the File Preferences window, add the following folder to Max 5 search p
 - @~/Jamoma/Modules/Modular/Max@
 - @~/Jamoma/Modules/Dependencies/Max/Mac@ resp. @/Jamoma/Modules/Dependencies/Max/WinXP@
 - @~/Jamoma/UserLib@
+- @~/Jamoma/Modules/Test/components@ 
 
 !images/Max_pref_setup.png!
 

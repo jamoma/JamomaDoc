@@ -1,0 +1,82 @@
+--- 
+title: How to create a standalone with Jamoma dependencies
+description: This tutorial explains how to create a standalone
+author: [Jamoma, Nils Peters]
+created_at: 2012/04/04
+tags: [index]
+objref: []
+---
+
+
+h3. Let's create a simple Jamoma patch
+
+Let's create a soundfile player with panorama, limiter, and recording function in 5 seconds:
+
+# Press SHIFT+i to create "jmod.input~":modules/jmod.input~.html
+# Press SHIFT+o to create "jmod.output~":modules/jmod.output~.html
+# Connect the left and right signal outlet of jmod.input~ to the left and right signal inlet of jmod.output~
+# Done!
+
+!images/How_to_create_a_standalone_1.png!
+
+
+
+h3. 1. Let's build the standalone app using Max's Application Builder
+
+Select _Build Collective / Application..._ from the menu
+
+!images/How_to_create_a_standalone_2.png!
+
+Since we don't have any extra dependencies, we just press _build_ here.
+In the following dialog, specify the building location.
+
+bq. Don't forget to select 'Application' as the File Format! 
+
+!images/How_to_create_a_standalone_3.png!
+
+
+h3. 2. Half way through
+
+OK, as you can see, we have created a standalone named _foo.app_.
+We are almost there, only one step is missing....
+
+!images/How_to_create_a_standalone_4.png!
+
+h3. 3. Adding the Jamoma dependencies
+
+From the extra menu, select _Jamoma-overview_
+
+!images/How_to_create_a_standalone_5.png!
+
+In the overview patch, click on the _Application builder_
+
+!images/How_to_create_a_standalone_6.png!
+
+In the Application builder, press on the button and select in the following dialog the location of your standalone (in our case, the location of _foo.app_) 
+
+!images/How_to_create_a_standalone_7.png!
+
+Once you confirmed the location, the Application builder will start to work. When it is done, it will close automatically.
+
+!images/How_to_create_a_standalone_8.png!
+
+
+h3. 4. Done!
+
+That's it - just start your standalone and play with it.
+
+!images/How_to_create_a_standalone_10.png!
+
+h3. You want more?
+
+If you want to know what files have been aaded via the Jamoma's Application Builder, let's take a look into our final _foo.app_.
+The following folders and files were added:
+
+* /foo.app/Contents/Jamoma/Extensions
+* /foo.app/Contents/Jamoma/lib
+* /foo.app/Contents/Jamoma/Presets
+* /foo.app/Contents/support/extensions/jcom.loader.mxo
+* /foo.app/Contents/support/jcom.preset_interface.js
+* /foo.app/Contents/support/jcom.preset_interface.maxpat
+
+bq. If you want to add modules wich are not part of the Jamoma distribution or the Jamoma UserLib, you need to copy the XML preset file manually into foo.app/Contents/Jamoma/Presets

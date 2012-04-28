@@ -1,0 +1,159 @@
+--- 
+title: Index of modules
+description: An index of all installed Jamoma modules sorted by kind
+author: [Jamoma, Julien Rabin]
+created_at: 2010/11/11
+tags: [index, modules]
+objref: []
+---
+
+"Control":#control  |  "Data":#data  |  "Audio":#audio  |  "Spatialization":#spat   |   "OpenGL":#openGL   |  "Video":#video
+
+h3(#control). Control modules
+
+|_.Module name |_.Module description |_.Graphical User Interface|
+| "jmod.bcf2000":modules/jmod.bcf2000.html |=. Module interfacing with the Behringer BCF2000 motorized controller |=. !images/modules/jmod.bcf2000.jpg! |
+| "jmod.colorpicker":modules/jmod.colorpicker.html |=. a module for setting up to 12 RGB triplets as a parameter of type array |=. !images/modules/jmod.colorpicker.jpg! |
+| "jmod.continuum":modules/jmod.continuum.html |=. Module interfacing with the Haken Continuum Fingerboard |=. !images/modules/jmod.continuum.jpg! |
+| "jmod.cueComment":modules/jmod.cueComment.html |=. Manages comments for jmod.cueManager |=. !images/modules/jmod.cueComment.jpg! |
+| "jmod.cueManager":modules/jmod.cueManager.html |=. Module for managing cuelists |=. !images/modules/jmod.cueManager.jpg! |
+| "jmod.cueScript":modules/jmod.cueScript.html |=. A module for remote communication to modules by means of a text format cue script |=. !images/modules/jmod.cueScript.jpg! |
+| "jmod.cueTrigger":modules/jmod.cueTrigger.html |=. Graphical interface triggering cues |=. !images/modules/jmod.cueTrigger.jpg! |
+| "jmod.fileBrowser":modules/jmod.fileBrowser.html |=. Choose files to play in your audio or video player |=. !images/modules/jmod.fileBrowser.jpg! |
+| "jmod.fileNameGenerator":modules/jmod.fileNameGenerator.html |=. Generate indexed file names |=. !images/modules/jmod.fileNameGenerator.jpg! |
+| "jmod.globalTransport":modules/jmod.globalTransport.html |=. Control interface to Max's global transport |=. !images/modules/jmod.globalTransport.jpg! |
+| "jmod.hi":modules/jmod.hi.html |=. Use any general human interface device (HID). Outputs OSC-messages. |=. !images/modules/jmod.hi.jpg! |
+| "jmod.layout":modules/jmod.layout.html |=. Store position of this patcher's modules into presets |=. !images/modules/jmod.layout.jpg! |
+| "jmod.mapper":modules/jmod.mapper.html |=. Manage parameter mappings for jamoma modules |=. !images/modules/jmod.mapper.jpg! |
+| "jmod.mapperContinuous":modules/jmod.mapperContinuous.html |=. A one-to-one continuous mapper |=. !images/modules/jmod.mapperContinuous.jpg! |
+| "jmod.mapperDiscrete":modules/jmod.mapperDiscrete.html |=. A one-to-one mapper for discrete events |=. !images/modules/jmod.mapperDiscrete.jpg! |
+| "jmod.messages":modules/jmod.messages.html |=. A performance message display |=. !images/modules/jmod.messages.jpg! |
+| "jmod.midiin":modules/jmod.midiin.html |=. Receive and output messages from a MIDI device |=. !images/modules/jmod.midiin.jpg! |
+| "jmod.mouse":modules/jmod.mouse.html |=. Outputting mouse information |=. !images/modules/jmod.mouse.jpg! |
+| "jmod.mouse.gdif":modules/jmod.mouse.gdif.html |=. Outputting mouse information |=. !images/modules/jmod.mouse.gdif.jpg! |
+| "jmod.multicast":modules/jmod.multicast.html |=. Multicast bonjour core |=. !images/modules/jmod.multicast.jpg! |
+| "jmod.oscnet":modules/jmod.oscnet.html |=. Send and receive Open Sound Control (OSC) on a network port |=. !images/modules/jmod.oscnet.jpg! |
+| "jmod.palette":modules/jmod.palette.html |=. Create various blends of the 1 to 12 colors on the palette. |=. !images/modules/jmod.palette.jpg! |
+| "jmod.polhemus":modules/jmod.polhemus.html |=. Get data from Polhemus electromagnetic trackers |=. !images/modules/jmod.polhemus.jpg! |
+| "jmod.qmetro":modules/jmod.qmetro.html |=. A qmetro module (like metro but can drop frames) |=. !images/modules/jmod.qmetro.jpg! |
+| "jmod.qualisys":modules/jmod.qualisys.html |=. Communicating with the Qualisys Motion Capture system |=. !images/modules/jmod.qualisys.jpg! |
+| "jmod.spacenavigator":modules/jmod.spacenavigator.html |=. Use the Space Navigator from 3D Connexion |=. !images/modules/jmod.spacenavigator.jpg! |
+| "jmod.uc-33":modules/jmod.uc-33.html |=. Module interfacing with the Edirol UC-33 MIDI fader |=. !images/modules/jmod.uc-33.jpg! |
+| "jmod.wacom":modules/jmod.wacom.html |=. Use Wacom graphic tablets |=. !images/modules/jmod.wacom.jpg! |
+
+h3(#data). Data modules
+
+|_.Module name |_.Module description |_.Graphical User Interface|
+| "jmod.condition":modules/jmod.condition.html |=. Condition a control signal |=. !images/modules/jmod.condition.jpg! |
+| "jmod.textwriter":modules/jmod.textwriter.html |=. Write data to a text file with timestamping for each line of values |=. !images/modules/jmod.textwriter.jpg! |
+
+h3(#audio). Audio modules 
+
+|_.Module name |_.Module description |_.Graphical User Interface|
+| "jmod.10harmonics~":modules/jmod.10harmonics~.html	|=. A module for additive synthesis 					|=. !images/modules/jmod.10harmonics~.jpg! |
+| "jmod.audiounit~":modules/jmod.audiounit~.html 		|=. AudioUnit plug-ins hosting module 					|=. !images/modules/jmod.audiounit~.jpg! |
+| "jmod.crossfade~":modules/jmod.crossfade~.html 		|=. Module for fading between two sound sources 		|=. !images/modules/jmod.crossfade~.jpg! |
+| "jmod.degrade~":modules/jmod.degrade~.html 			|=. Degrade audio signal 								|=. !images/modules/jmod.degrade~.jpg! |
+| "jmod.delay~":modules/jmod.delay~.html 				|=. Sample-accurate delay module 						|=. !images/modules/jmod.delay~.jpg! |
+| "jmod.echo~":modules/jmod.echo~.html 				|=. Stereo echo module 									|=. !images/modules/jmod.echo~.jpg! |
+| "jmod.equalizer~":modules/jmod.equalizer~.html 		|=. Audio equalizer module (multi-band filter) 			|=. !images/modules/jmod.equalizer~.jpg! |
+| "jmod.filter~":modules/jmod.filter~.html 			|=. Audio filter module 								|=. !images/modules/jmod.filter~.jpg! |
+| "jmod.fluidsynth~":modules/jmod.fluidsynth~.html 	|=. Synth based on the fluidsynth using soundfonts 		|=. !images/modules/jmod.fluidsynth~.jpg! |
+| "jmod.hilbertModulator~":modules/jmod.hilbertModulator~.html 	|=. One-sided ring modulator using hilbert filter 		|=. !images/modules/jmod.hilbertModulator~.jpg! |
+| "jmod.input~":modules/jmod.input~.html 				|=. Generic stereo audio input module 					|=. !images/modules/jmod.input~.jpg!|
+| "jmod.limiter~":modules/jmod.limiter~.html 			|=. Stereo limiter module |=. !images/modules/jmod.limiter~.jpg! |
+| "jmod.multidelay~":modules/jmod.multidelay~.html 	|=. Sample-accurate delay module with 5 delay lines per channel and feedback |=. !images/modules/jmod.multidelay~.jpg! |
+| "jmod.noisegate~":modules/jmod.noisegate~.html 		|=. A noise gate module 								|=. !images/modules/jmod.noisegate~.jpg! |
+| "jmod.noise~":modules/jmod.noise~.html 				|=. Different noise functions 							|=. !images/modules/jmod.noise~.jpg! |
+| "jmod.output~":modules/jmod.output~.html 			|=. Generic stereo output module with some master fx and recording |=. !images/modules/jmod.output~.jpg! |
+| "jmod.panpot~":modules/jmod.panpot~.html 			|=. A panpot for stereo sources |=. !images/modules/jmod.panpot~.jpg! |
+| "jmod.rissetGlissando~":modules/jmod.rissetGlissando~.html |=. Audio synthesis generating Shepard/Risset infinite glissandi |=. !images/modules/jmod.rissetGlissando~.jpg! |
+| "jmod.sampleplayer2~":modules/jmod.sampleplayer2~.html |=. A sampleplayer with separate control for pitch and speed based on buffer~ groove~ and gizmo~ |=. !images/modules/jmod.samplePlayer2~.jpg! |
+| "jmod.samplePlayer~":modules/jmod.samplePlayer~.html |=. A simple sampleplayer based on buffer~ and groove~ |=. !images/modules/jmod.samplePlayer~.jpg! |
+| "jmod.saturation~":modules/jmod.saturation~.html |=. Stereo saturation/distortion effect |=. !images/modules/jmod.saturation~.jpg! |
+| "jmod.scope~":modules/jmod.scope~.html |=. Visualization of audio signal |=. !images/modules/jmod.scope~.jpg! |
+| "jmod.sine~":modules/jmod.sine~.html |=. Playing simple waveforms |=. !images/modules/jmod.sine~.jpg! |
+| "jmod.sonifyer~":modules/jmod.sonifyer~.html |=. Sonification of a video matrix, preferably based on a motiongram |=. !images/modules/jmod.sonifyer~.jpg! |
+| "jmod.spectralGate~":modules/jmod.spectralGate~.html |=. Spectral purification and noise reduction. this module is based on the brita plugin that was part of the hipno plugins |=. !images/modules/jmod.spectralGate~.jpg! |
+| "jmod.spectralShift~":modules/jmod.spectralShift~.html |=. 4 in 1 kinderegg: Pitch shift frequency shift feedback delay and limiter |=. !images/modules/jmod.spectralShift~.jpg! |
+| "jmod.spectrogram~":modules/jmod.spectrogram~.html |=. Spectrogram display of input audio |=. !images/modules/jmod.spectrogram~.jpg! |
+| "jmod.tremolo~":modules/jmod.tremolo~.html |=. Stereo tremolo effect with channel phase offset |=. !images/modules/jmod.tremolo~.jpg! |
+| "jmod.vst~":modules/jmod.vst~.html |=. VST plug-ins hosting module |=. !images/modules/jmod.vst~.jpg! |
+
+
+h3(#openGL). OpenGL modules
+
+|_.Module name |_.Module description |_.Graphical User Interface|
+| "jmod.gl.alphamixer%":modules/jmod.gl.alphamixer%25.html |=. A four layer slab-based video mixer using alpha channel for each layer |=. !images/modules/jmod.gl.alphamixer%25.jpg! |
+| "jmod.gl.chromakey%":modules/jmod.gl.chromakey%25.html |=. Slab-based keying based on chromatic distance |=. !images/modules/jmod.gl.chromakey%25.jpg! |
+| "jmod.gl.edgeblend%":modules/jmod.gl.edgeblend%25.html |=. Slab-based edge blending with alpha channel |=. !images/modules/jmod.gl.edgeblend%25.jpg! |
+| "jmod.gl.background%":modules/jmod.gl.background%25.html |=. Slab-based background extractor (foreground remover) |=. !images/modules/jmod.gl.background%25.jpg! |
+| "jmod.gl.td.rota%":modules/jmod.gl.td.rota%25.html |=. Slab-based rotation and repositioning |=. !images/modules/jmod.gl.td.rota%25.jpg! |
+| "jmod.gl.text2d%":modules/jmod.gl.text2d%25.html |=. Read text file and display as OpenGL bitmap text |=. !images/modules/jmod.gl.text2d%25.jpg! |
+| "jmod.gl.videoplane%":modules/jmod.gl.videoplane%25.html |=. Map incoming video as texture to OpenGL videoplane |=. !images/modules/jmod.gl.videoplane%25.jpg! |
+
+h3(#spat). Spatialization modules
+
+|_.Module name |_.Module description |_.Graphical User Interface|
+| "jmod.sur.ambi.adjust~":modules/jmod.sur.ambi.adjust~.html |=. Display levels and adjust relative weight for ambisonic components |=. !images/modules/jmod.sur.ambi.adjust~.jpg! |
+| "jmod.sur.ambi.decode~":modules/jmod.sur.ambi.decode~.html |=. Decode ambisonic signal |=. !images/modules/jmod.sur.ambi.decode~.jpg! |
+| "jmod.sur.ambi.encodeM~":modules/jmod.sur.ambi.encodeM~.html |=. Ambisonic encoding of up to 32 mono sources |=. !images/modules/jmod.sur.ambi.encodeM~.jpg! |
+| "jmod.sur.ambipanning~":modules/jmod.sur.ambipanning~.html |=. ICST Ambipanning |=. !images/modules/jmod.sur.ambipanning~.jpg! |
+| "jmod.sur.ambisonics~":modules/jmod.sur.ambisonics~.html |=. ICST Ambisonics encoding and decoding |=. !images/modules/jmod.sur.ambisonics~.jpg! |
+| "jmod.sur.audiounit~":modules/jmod.sur.audiounit~.html |=. Multichannel AudioUnit plug-ins wrapper |=. !images/modules/jmod.sur.audiounit~.jpg! |
+| "jmod.sur.aux~":modules/jmod.sur.aux~.html |=. A module to distribute a multicable to three receivers |=. !images/modules/jmod.sur.aux~.jpg! |
+| "jmod.sur.dbap~":modules/jmod.sur.dbap~.html |=. Distance based amplitude panning |=. !images/modules/jmod.sur.dbap~.jpg! |
+| "jmod.sur.dbapBformat~":modules/jmod.sur.dbapBformat~.html |=. Distance-based amplitude panning of incomming b-format signals |=. !images/modules/jmod.sur.dbapBformat~.jpg! |
+| "jmod.sur.doppler~":modules/jmod.sur.doppler~.html |=. Doppler effect |=. !images/modules/jmod.sur.doppler~.jpg! |
+| "jmod.sur.info~":modules/jmod.sur.info~.html |=. channel information about Jamoma Audio Graph signals |=. !images/modules/jmod.sur.info~.jpg! |
+| "jmod.sur.input~":modules/jmod.sur.input~.html |=. Playback of multichannel audiofiles based on sfplay |=. !images/modules/jmod.sur.input~.jpg! |
+| "jmod.sur.meters~":modules/jmod.sur.meters~.html |=. A multichannel meterbridge |=. !images/modules/jmod.sur.meters~.jpg! |
+| "jmod.sur.multi.in~":modules/jmod.sur.multi.in~.html |=. Put audio signals on a multicable |=. !images/modules/jmod.sur.multi.in~.jpg! |
+| "jmod.sur.multi.out~":modules/jmod.sur.multi.out~.html |=. Unpack up to 32 mono signals from a multicable |=. !images/modules/jmod.sur.multi.out~.jpg! |
+| "jmod.sur.output~":modules/jmod.sur.output~.html |=. Distribute multicable signals directly to dac~ output channels |=. !images/modules/jmod.sur.output~.jpg! |
+| "jmod.sur.position":modules/jmod.sur.position.html |=. Describe position of one surround voice as xyz coordinate |=. !images/modules/jmod.sur.position.jpg! |
+| "jmod.sur.race~":modules/jmod.sur.race~.html |=. Ambiophonics RACE implementation |=. !images/modules/jmod.sur.race~.jpg! |
+| "jmod.sur.rolloff~":modules/jmod.sur.rolloff~.html |=. Free-field amplitude roll-off with distance |=. !images/modules/jmod.sur.rolloff~.jpg! |
+| "jmod.sur.setup":modules/jmod.sur.setup.html |=. Describing arrangements of instances as sets of XYZ coordinates |=. !images/modules/jmod.sur.setup.jpg! |
+| "jmod.sur.speaker.delay~":modules/jmod.sur.speaker.delay~.html |=. Individual delay for up to 32 speakers in surround sound setups to correct for varying distances |=. !images/modules/jmod.sur.speaker.delay~.jpg! |
+| "jmod.sur.speaker.distamp~":modules/jmod.sur.speaker.distamp~.html |=. Module for compensating loudspeaker gains in irregular loudspeaker setups |=. !images/modules/jmod.sur.speaker.distamp~.jpg! |
+| "jmod.sur.vbap~":modules/jmod.sur.vbap~.html |=. Vector Base Amplitude Panning (VBAP) |=. !images/modules/jmod.sur.vbap~.jpg! |
+| "jmod.sur.waveformViewer~":modules/jmod.sur.waveformViewer~.html |=. Display waveform of real-time multi-channel signal as jitter matrix |=. !images/modules/jmod.sur.waveformViewer~.jpg! |
+| "jmod.sur.zoomH2ambi~":modules/jmod.sur.zoomH2ambi~.html |=. Convert a Zoom-H2 four channel recording into a horizontal-only B-format 2nd order |=. !images/modules/jmod.sur.zoomH2ambi~.jpg! |
+
+h3(#video). Video modules
+
+|_.Module name |_.Module description |_.Graphical User Interface|
+| "jmod.alphablend%":modules/jmod.alphablend%25.html |=. Alpha blending of two video layers |=. !images/modules/jmod.alphablend%25.jpg! |
+| "jmod.avg4%":modules/jmod.avg4%25.html |=. Average 4 pixels of input for each pixel of output |=. !images/modules/jmod.avg4%25.jpg! |
+| "jmod.background%":modules/jmod.background%25.html |=. Background video substraction |=. !images/modules/jmod.background%25.jpg! |
+| "jmod.blur%":modules/jmod.blur%25.html |=. Video blur effect |=. !images/modules/jmod.blur%25.jpg! |
+| "jmod.box%":modules/jmod.box%25.html |=. Add boxes around objects in the video |=. !images/modules/jmod.box%25.jpg! |
+| "jmod.brcosa%":modules/jmod.brcosa%25.html |=. Control brightness contrast and saturation |=. !images/modules/jmod.brcosa%25.jpg! |
+| "jmod.chromakey%":modules/jmod.chromakey%25.html |=. Choke chromakey 2 sources |=. !images/modules/jmod.chromakey%25.jpg! |
+| "jmod.edge%":modules/jmod.edge%25.html |=. Edge detection |=. !images/modules/jmod.edge%25.jpg! |
+| "jmod.emboss%":modules/jmod.emboss%25.html |=. Cheesy embossing effect |=. !images/modules/jmod.emboss%25.jpg! |
+| "jmod.fft%":modules/jmod.fft%25.html |=. Perform fast fourier transform on incoming 1 plane image |=. !images/modules/jmod.fft%25.jpg! |
+| "jmod.fluoride%":modules/jmod.fluoride%25.html |=. Neon glow effect |=. !images/modules/jmod.fluoride%25.jpg! |
+| "jmod.foregroundMask%":modules/jmod.foregroundMask%25.html |=. Create mask based on image foreground. |=. !images/modules/jmod.foregroundMask%25.jpg! |
+| "jmod.ifft%":modules/jmod.ifft%25.html |=. Inverse fft processing of incoming matrix. |=. !images/modules/jmod.ifft%25.jpg! |
+| "jmod.input%":modules/jmod.input%25.html |=. Generic video input module |=. !images/modules/jmod.input%25.jpg! |
+| "jmod.keyscreen%":modules/jmod.keyscreen%25.html |=. Choke chromakey 3 sources |=. !images/modules/jmod.keyscreen%25.jpg! |
+| "jmod.mblur%":modules/jmod.mblur%25.html |=. Motion blur effect |=. !images/modules/jmod.mblur%25.jpg! |
+| "jmod.motion%":modules/jmod.motion%25.html |=. Display a motion image |=. !images/modules/jmod.motion%25.jpg! |
+| "jmod.motion2%":modules/jmod.motion2%25.html |=. A simplified motion module |=. !images/modules/jmod.motion2%25.jpg! |
+| "jmod.motiongram%":modules/jmod.motiongram%25.html |=. Create motiongrams from video stream |=. !images/modules/jmod.motiongram%25.jpg! |
+| "jmod.moviePlayer%":modules/jmod.moviePlayer%25.html |=. Playback of Quicktime movies |=. !images/modules/jmod.moviePlayer%25.jpg! |
+| "jmod.op%":modules/jmod.op%25.html |=. Mathematical operations on one or two matrices |=. !images/modules/jmod.op%25.jpg! |
+| "jmod.orsize%":modules/jmod.orsize%25.html |=. Change orientation and size of video |=. !images/modules/jmod.orsize%25.jpg! |
+| "jmod.output%":modules/jmod.output%25.html |=. Output video to an OpenGl driven window |=. !images/modules/jmod.output%25.jpg! |
+| "jmod.posterize%":modules/jmod.posterize%25.html |=. Video posterize effect |=. !images/modules/jmod.posterize%25.jpg! |
+| "jmod.plur%":modules/jmod.plur%25.html |=. Video feedback/washout effect |=. !images/modules/jmod.plur%25.jpg! |
+| "jmod.record%":modules/jmod.record%25.html |=. A module for recording video to disk |=. !images/modules/jmod.record%25.jpg! |
+| "jmod.rgb2gray%":modules/jmod.rgb2gray%25.html |=. Change rgb to grayscale image |=. !images/modules/jmod.rgb2gray%25.jpg! |
+| "jmod.similarity%":modules/jmod.similarity%25.html |=. Create a similarity matrix from a video stream |=. !images/modules/jmod.similarity%25.jpg! |
+| "jmod.slitscan%":modules/jmod.slitscan%25.html |=. Slit-scanning effect based on xray.jit.timecube |=. !images/modules/jmod.slitscan%25.jpg! |
+| "jmod.television%":modules/jmod.television%25.html |=. Bad TV' effect |=. !images/modules/jmod.television%25.jpg! |
+| "jmod.wake%":modules/jmod.wake%25.html |=. Video feedback/washout effect |=. !images/modules/jmod.wake%25.jpg! |
+| "jmod.xfade%":modules/jmod.xfade%25.html |=. Crossfade between two incoming video matrices |=. !images/modules/jmod.xfade%25.jpg! |
+| "jmod.yfade%":modules/jmod.yfade%25.html |=. Crossfade (Pan) a source to two outputs |=. !images/modules/jmod.yfade%25.jpg! |

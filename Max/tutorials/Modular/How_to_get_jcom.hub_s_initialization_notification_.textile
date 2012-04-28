@@ -70,17 +70,25 @@ bq. Remember that there is currently no way to define an initialization order fo
 When provided @'notifications'@ as argument, "jcom.receive":components/jcom.receive.html can be used to notify of various operations done in Jamoma framework, i.e module creation, module deletion and more importantly here: module initialization. Thus, for each module in a patch, "jcom.receive notifications":components/jcom.receive.html will send the message @module.initialized@ followed by the class of the module and its instance name. In the previously used example, "jcom.receive":components/jcom.receive.html would send the following messages: 
 
 bc. module.new jmod.output~ /myDac
-module.new jmod.qmetro /myClock
-module.new jmod.10harmonics~ /mySynth
-module.initialized jmod.output~ /myDac
-module.initialized jmod.qmetro /myClock
-module.initialized jmod.10harmonics~ /mySynth
+
+bc. module.new jmod.qmetro /myClock
+
+bc. module.new jmod.10harmonics~ /mySynth
+
+bc. module.initialized jmod.output~ /myDac
+
+bc. module.initialized jmod.qmetro /myClock
+
+bc. module.initialized jmod.10harmonics~ /mySynth
 
 Thus "jcom.initialized":components/jcom.initialized.html is a handy component that filters out notifications sent by "jcom.receive notifications":components/jcom.receive.html and sends a @bang@ when matching initialization notification for a given named module defined as argument.
 
-h3(seealso). See also
+<!-- obsolete   -->
+<!-- h3(seealso). See also  -->
 
-* "jcom.init":components/jcom.init.html
-* "jmod.initialization":modules/jmod.initialization.html
-* "jcom.receive":components/jcom.receive.html
+
+<!-- * "jcom.init":components/jcom.init.html -->
+<!-- * "jcom.initialization":modules/jcom.initialization.html -->
+<!-- * "jcom.receive":components/jcom.receive.html  -->
+
 <!-- * "Remote_communication_within_Jamoma" TODO -->

@@ -84,3 +84,5 @@ The argument to "jcom.receive":components/jcom.receive.html can be changed on th
 !images/remote.module.from.png!
 
 Turn the toggle on, and try changing parameter values in the various modules.
+
+There is a similar behavior in "jcom.send":components/jcom.send.html, when provided the @jcom.remote.module.to@ argument, it will allow sending data to any of the Jamoma messages/parameters, by simpling prepending the desired data by its address (such as /degrade/samplerateRatio 0.2)

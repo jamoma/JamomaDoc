@@ -9,11 +9,11 @@ objref: []
 
 As a community driven project, Jamoma Modular includes a growing number of modules sharded by users and developpers. If you feel to share your work as well, follow these steps to add your work to Jamoma User Library.
 
-Let's start by opening Terminal.app. Then, (assuming you previously installed Jamoma source code from "Github":gh), from the command line, go to the main Jamoma folder :
+Let's start by opening Terminal.app. Then, (assuming you previously installed Jamoma source code from "Github":https://github.com/Jamoma and have your project already shared on github), from the command line, go to the main Jamoma folder :
 
 bc. cd /path/to/my/main/Jamoma
 
-After having made sure your Jamoma repository is up to date (or run @git pull@ if you have not done so), let's add our project as a Git "submodule":http://www.kernel.org/pub/software/scm/git/docs/git-submodule.html of Jamoma. We will add our project to the _UserLib_ folder inside the main Jamoma folder where all users' project reside. Type the following command in the Terminal window to do so :
+After having made sure your Jamoma repository is up to date (or run @git pull@ if you have not done so), let's add our project as a Git "submodule":http://progit.org/book/ch6-6.html of Jamoma. We will add our project to the _UserLib_ folder inside the main Jamoma folder where all users' project reside. Type the following command in the Terminal window to do so :
 
 bc. git submodule add git@github.com:username/myUserLib.git UserLib/myUserLib
 

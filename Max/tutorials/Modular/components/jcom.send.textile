@@ -1,0 +1,10 @@
+--- 
+title: jcom.send
+description: Send messages to any Jamoma module
+author: [Jamoma, Julien Rabin]
+created_at: 2010/11/11
+tags: [OSC, messages, parsing]
+objref: []
+---
+
+!../images/jcom.send.refpage.png!

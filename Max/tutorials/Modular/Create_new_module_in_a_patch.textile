@@ -15,7 +15,7 @@ h3. Using Jamoma modules as abstractions
 Modules can be created as "abstractions":http://www.cycling74.com/docs/max5/vignettes/core/abstractions.html, just like any regular Max patch saved to disk. In Max, open a blank patcher window and double-click in the window or press the %(kbd)n% key to create a new object.
 
 
-Once the object box is created, type in the name of the desired module. In this example, we will create a "jmod.degrade~":jmod.degrade~.html module.
+Once the object box is created, type in the name of the desired module. In this example, we will create a "jmod.degrade~":Modules/jmod.degrade~.html module.
 
 !images/new_obj.png!
 
@@ -41,7 +41,7 @@ Once an empty bpatcher has been created, select it then right-click to bring up 
 
 !images/new_bpatcher_2.png!
 
-Within the bpatcher inspector %(seq)1%, scroll down to the %(samp)Patcher File% item, then click the %(samp)Choose% button  %seq2% to navigate through the files on your computer and select the desired Jamoma module. Just like when using modules as object box, you may want to specify a specific name set as argument %(seq)3%.
+Within the bpatcher inspector %(seq)1%, scroll down to the %(samp)Patcher File% item, then click the %(samp)Choose% button %(seq)2% to navigate through the files on your computer and select the desired Jamoma module. Just like when using modules as object box, you may want to specify a specific name set as argument %(seq)3%.
 
 !images/new_bpatcher_3.png!
 
@@ -49,12 +49,23 @@ Your module GUI can now be used from within the main Max patch. Note that the bp
 
 !images/new_bpatcher_4.png!
 
-bq. Jamoma also have some shortcuts to ease the creation of modules as bpatchers. Use %(kbd)SHIFT;
-% + %(kbd)d% or %(kbd)SHIFT% + %(kbd)b% to create a bpatcher box with containers for module name and arguments.
+bq. Jamoma also have some shortcuts to ease the creation of modules as bpatchers. Use %(kbd)SHIFT% + %(kbd)d% or %(kbd)SHIFT% + %(kbd)b% to create a bpatcher box with containers for module name and arguments.
+
+h4. Clippings
+
+If you'd rather not type the module names, Jamoma also installs a set of Max clippings for all modules. With the patch in edit mode, right-click in the patch to bring Max's contextual menu and navigate to the clippings items as below:
+
+!images/clippings1.png!
+
+You will find in the various sub-menus clippings for all modules sorted with their category. Select one module and it will be automatically created with a default name assigned. You can now just start patching!
+
+!images/clippings2.png!
+
+bq. Note that clippings for all modules from the User Library are also provided with the dedicated installer.
 
 h3. Using jmod.layout
 
-Now that you know how to create an initial module, here is a special module which can come handy to build a whole patch. First, as explained previously, create a bpatcher containing Jamoma module named "jmod.layout":components/jmod.layout.html %(seq)1%. Once the module is initialized, click the top-right %(samp)EDIT% button %(seq)2%.
+Now that you know how to create an initial module, here is a special module which can come handy to build a whole patch. First, as explained previously, create a bpatcher containing Jamoma module named "jmod.layout":Modules/jmod.layout.html %(seq)1%. Once the module is initialized, click the top-right %(samp)EDIT% button %(seq)2%.
 
 !images/using_jcom.layout_1.png!
 
@@ -64,24 +75,25 @@ From the floating panel window, select the %(samp)Add% top tab %(seq)1%, then se
 
 Jamoma modules are organized into various categories :
 
-- _Audio_, containing modules dedicated to generation and process of audio signal
-- _Control_, containing modules dedicated to control of other modules
-- _Data_, containing modules dedicated to process of non-audio signal
-- _OpenGL_, containing modules dedicated to generation and process of OpenGL-based video
-- _Spatialization_, containing modules dedicated to spacialization audio signal
-- _Video_, containing modules dedicated to generation and process of matrix-based video signal
+* _Audio_, containing modules dedicated to generation and process of audio signal
+* _Control_, containing modules dedicated to control of other modules
+* _Data_, containing modules dedicated to process of non-audio signal
+* _OpenGL_, containing modules dedicated to generation and process of OpenGL-based video
+* _Spatialization_, containing modules dedicated to spacialization audio signal
+* _Video_, containing modules dedicated to generation and process of matrix-based video signal
 
 Select a category using one of the afore-mentioned menu %(seq)1% and choose a module to insert in your patch by scrolling the menu below %(seq)2%.
 
 !images/using_jcom.layout_3.png!
 
-Once a module selected, you may optionally set a name to the module using the text input field %(seq)1%. By default, "jcom.layout":components/jcom.layout.html will display the module's name and use as a default name for the module. When done, clic the %(samp)button% beside to insert a Jamoma module in your patch %(seq)2%.
+Once a module selected, you may optionally set a name to the module using the text input field %(seq)1%. By default, "jmod.layout":Modules/jmod.layout.html will display the module's name and use as a default name for the module. When done, clic the %(samp)button% beside to insert a Jamoma module in your patch %(seq)2%.
 
 You can insert as many modules as you like. When all your modules are created, you can close the window using the %(samp)Done% button %(seq)3%.
 !images/using_jcom.layout_4.png!
 
 h3. Summary
 
-- Modules can be created inside regular object boxes or as bpatchers
-- Modules can be created using %(kbd)SHIFT% + %(kbd)m%, %(kbd)SHIFT% + %(kbd)d% or %(kbd)SHIFT% + %(kbd)b%
-- "jmod.layout":components/jcom.layout.html can be useful to explore the growing list of modules and insert them in a patch
+* Modules can be created inside regular object boxes or as bpatchers
+* Modules can be created using %(kbd)SHIFT% + %(kbd)m%, %(kbd)SHIFT% + %(kbd)d% or %(kbd)SHIFT% + %(kbd)b%, see also "Overview of shortcuts":Shortcuts_in_Jamoma.html
+* Clippings provide a fast way for browsing and adding modules  
+* "jmod.layout":Modules/jmod.layout.html can be useful to explore all modules and insert them in a patch

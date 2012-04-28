@@ -1,0 +1,81 @@
+--- 
+title: Credits
+description: Jamoma credits and acknowledgements
+author: [Jamoma]
+created_at: 2012/04/23
+tags: []
+objref: []
+---
+
+h3. Overview
+
+This is an overview of the contributions made to the Jamoma project. This list is not fully comprehensive.
+
+For instance, it cannot reflect the extensive discussion and dialog of the entire group that contributes much to the development of Jamoma - not to mention our tinkering with each other's code!
+	
+h3. Core Developers
+
+In order of the  "amount of commits":https://www.ohloh.net/p/jamoma/contributors to the Jamoma repository, Jamoma is what it is through:
+
+* Tim Place (5607) 
+* Trond Lossius (2509)  
+* Nils Peters (2346)
+* Pascal Baltazar (872) 
+* Theo de la Hogue (804)
+* Alexander Refsum Jensenius (560)
+* Julien Rabin (389)
+* Dave Watson (retired) (323) 		
+* Adrian Gierakowski (85)
+
+h3. Additional Contributions
+
+Ideas, advices, code, tutorials, modules for the UserLib, etc...
+
+In alphabetical order:
+
+Matthew Aidekman, Charles Bascou, Jeremy Bernstein, Jamie Bullock, Nicolas Carriere, Mathieu Chamagne, Nicolas Deflache, Henrik Frisk, Laurent Garnier, Thomas Grill, Tristan Matthews, Kristian Nymoen, Ricardo del Pozo, Renaud Rubiano, Marlon Schumacher, Diemo Schwarz, Thorolf Thuestad, Nathan Wolek 
+
+h3. Support
+
+The development of Jamoma is supported by
+
+* "BEK - Bergen Center for Electronic Arts":http://bek.no/
+* "Electrotap":http://electrotap.com/
+* "GMEA - Centre National de Creation Musicale d'Albi-Tarn":http://www.gmea.net/
+
+and has received support through
+
+* "Bergen National Academy of the Arts":http://www.khib.no/ through the "The Artistic Research Fellowships Programme":http://www.kunststipendiat.no/en
+* "Canada Council for the Arts (CCA)":http://www.canadacouncil.ca/
+* "COST Action Gesture Controlled Audio Systems (ConGAS)":http://www.cost287.org/
+* "COST Action Sonic Interaction Design (SID)":http://www.cost-sid.org/
+* "didascalie.net":http://didascalie.net/
+* The French National Agency for Research through the "Virage research platform":http://www.virage-platform.org/
+* "iMAL":http://www.imal.org/
+* "Natural Sciences and Engineering Research Council of Canada (NSERC)":http://www.nserc-crsng.gc.ca/
+* "Norwegian Academy of Music":http://www.nmh.no/
+* "Norwegian Research Council":http://www.forskningsradet.no/
+* "The Municipailty of Bergen":http://www.bergen.kommune.no/
+* "University of Oslo":http://www.fourms.uio.no/
+
+h3. Third Party Software
+
+Other open-source packages that we are using within Jamoma:
+
+h4. TTBlue
+
+Tap.Tools Blue is the open source dsp library by Tim Place that is underlying both Tap.Tools Max (available from Electrotap) and Jamoma. It has been renamed as JamomaDSP.
+
+h4. ICST Ambisonics Library for Max
+
+The ICST Ambisonics Tools are a set of externals for Max/MSP for audio spatialisation and source placement control by Jan Schacher (Jasch) and Philippe Kocher.
+
+h4. PCRE
+
+C Library for using regular expressions in the jmod.oscroute external to match wildcards and patterns.
+
+h3. More Due Credits
+
+Not to forget...
+
+The OSC implementation of namespace for the "VST module":modules/jmod.vst~.html is based on "ideas":http://opensoundcontrol.org/VST suggested by M. Zbyszynski and A. Freed: "Control of VST Plug-ins using OSC":http://archive.cnmat.berkeley.edu/ICMC2005/ICMC_mzed6.html. Proceedings of the ICMC 2005. The interface for the module was partly inspired by the brilliant "Radial":http://cycling74.com/downloads/discontinued/ application.

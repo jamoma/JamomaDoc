@@ -4,7 +4,7 @@ description: This tutorial explains how to communicate with the Jamoma modules
 author: [Jamoma, Trond Lossius]
 created_at: 2010/11/11
 tags: [osc, message, setup, feature]
-objref: [jmod.tremolo~]
+objref: [jmod.tremolo~, jmod.input~, jmod.output~]
 ---
 
 h3. Open Sound Control (OSC)
@@ -33,16 +33,16 @@ Make the patch much the same way as in the previous tutorial, and while you are 
 
 Now we have to set up each of the modules so that we have some sound to play around with:
 
-* Input module:
+# Input module:
 ** Click the Open button and select a sound file to play. For this tutorial we recommend that you find a sound file with relative static content, e.g. a loop with one or more organ chords.
 ** Turn on audio using the Audio On/Off button on top of the input module.
 ** Hit the Play button, so that the sound file start playing.
 ** Bring up the master gain of the input module.
-* Tremolo module
+# Tremolo module
 ** Unmute the module by clicking the mute button.
-** Bring up the level using the gain (green) dial in the top of the module..
+** Bring up the level using the gain (green) dial in the top of the module.
 ** Make sure that the output from the module is 100% wet using the mix (blue) dial at the top of the module.
-* Output module
+# Output module
 ** Finally bring up the master gain of the output module so that you have sound coming out.
 
 h4. Receiving OSC messages from the module
@@ -52,10 +52,14 @@ You will notice that whenever you change a parameter in the tremolo module, this
 The messages sent out from the module are all OSC messages, containing the OSC address and the value of the parameter. Here are some examples of output from the tremolo module:
 
 bc. /audio/gain 100.
-/audio/mix 100.
-/audio/mute 0
-/lfo/frequency 5.
-/lfo/depth 50.
+
+bc. /audio/mix 100.
+
+bc.  /audio/mute 0
+
+bc. /lfo/frequency 5.
+
+bc. /lfo/depth 50.
 
 One of the benefits of OSC is that the messages above are easy to read and we quickly get an idea of what parameter each of them are referring to.
 
@@ -90,3 +94,7 @@ h3. Summary
 * The leftmost inlet and outlet of modules is reserved for OSC communication to and from the module.
 * Parameters can be updated by sending OSC messages to the module.
 * Parameters can also be changed gradually by applying a ramp.
+
+h3. What's next?
+
+For the next tutorial we are going to take a look at "Saving and recalling states of modules through cues":Saving_and_recalling_state_of_modules.html.

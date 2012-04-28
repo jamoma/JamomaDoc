@@ -1,0 +1,10 @@
+--- 
+title: jcom.pass
+description: Routes Open Sound Control messages without truncating them
+author: [Jamoma, Julien Rabin]
+created_at: 2010/11/11
+tags: [OSC, messages, parsing]
+objref: []
+---
+
+!../images/jcom.pass.refpage.png!

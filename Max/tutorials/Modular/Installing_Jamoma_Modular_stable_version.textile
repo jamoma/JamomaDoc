@@ -9,11 +9,11 @@ objref: []
 
 h3. Downloading Jamoma installer
 
-Installer can be downloaded from "Jamoma web site":jamoma. Please visit jamoma.org %(seq)1% and follow the "download":http://jamoma.org/download.html link %(seq)2%.
+Installer can be downloaded from the Jamoma web site. Please visit "jamoma.org":http://www.jamoma.org %(seq)1% and follow the "download":http://jamoma.org/download.html link %(seq)2%.
 
 !images/download_installer_1.png!
 
-From the %(samp)download% menu, follow the %(samp)Jamoma Modular% link %(seq)3%, then download the desired OS version by clicking on the appropriate link %(seq)4%.
+From the %(samp)download% menu, follow the %(samp)Installer% link %(seq)3%, then download the desired OS version by clicking on the appropriate link %(seq)4%.
 
 !images/download_installer_2.png!
 
@@ -33,13 +33,11 @@ h3. Setting up Max 5 preferences
 
 Jamoma modules are based on UI objects which default appearance need to be set. To do so, launch Max 5 and go to the %(samp)Object Defaults% window, found in the %(samp)Options% menu.
 
-!images/Max_obj_setup_2.png!
+!images/Max_obj_setup_1.png!
 
 In the %(samp)Object Defaults% window, click the %(samp)Load Settings% button in the lower-left corner of the window %(seq)1%. Then, from the popup menu, select %(samp)JamomaMax% %(seq)2% so all Jamoma modules will be displayed as expected.
 
-!images/Max_obj_setup_1.png!
-
-Max is now properly set up for Jamoma. Have fun exploring the various provided modules "and":Index_of_modules.html examples !
-
 !images/Max_obj_setup_3.png!
+
+Max is now properly set up for Jamoma. Have fun exploring the various provided "modules":Index_of_modules.html and examples !
 

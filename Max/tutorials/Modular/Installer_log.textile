@@ -1,52 +1,1793 @@
 --- 
 title: Installed files
-description: An log file listing all files installed by Jamoma Modular
+description: An log file listing all files installed by Jamoma Modular (0.5.6.b7)
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
 tags: [log, installer, system]
 objref: []
 ---
 
-h3. Installed files under OSX
+"Mac":#OSX | "Max folder":#OSX-max | "usr folder":#OSX-usr | 
+"Windows":#windows |  "Max folder":#win-max | |
 
-* /Applications/Max5/Cycling '74/Jamoma
-* /Applications/Max5/Cycling '74/default-definitions/jcom.textslider.maxdefines
-* /Applications/Max5/Cycling '74/default-definitions/jcom.ui.maxdefines
-* /Applications/Max5/Cycling '74/default-settings/JamomaArarat.maxdefaults
-* /Applications/Max5/Cycling '74/default-settings/JamomaDark.maxdefaults
-* /Applications/Max5/Cycling '74/default-settings/JamomaGraphite.maxdefaults
-* /Applications/Max5/Cycling '74/default-settings/JamomaKulerBologna.maxdefaults
-* /Applications/Max5/Cycling '74/default-settings/JamomaKulerQuietCry.maxdefaults
-* /Applications/Max5/Cycling '74/default-settings/JamomaLight.maxdefaults
-* /Applications/Max5/Cycling '74/default-settings/JamomaMax.maxdefaults
-* /Applications/Max5/Cycling '74/default-settings/JamomaNoir.maxdefaults
+h2(#OSX). OSX
 
-* /Applications/Max5/patches/extras/jamoma-overview.maxpat
+h3(#OSX-usr). Installed files in the usr folder
 
-* /Applications/Max5/patches/templates/_Jamoma_Patcher_.maxpat
-* /Applications/Max5/patches/templates/jalg.template.audio~.maxpat
-* /Applications/Max5/patches/templates/jalg.template.video%.maxpat
-* /Applications/Max5/patches/templates/jmod.template.audio~.maxpat
-* /Applications/Max5/patches/templates/jmod.template.control.maxpat
-* /Applications/Max5/patches/templates/jmod.template.maxhelp
-* /Applications/Max5/patches/templates/jmod.template.video%.maxpat
-* /Applications/Max5/patches/templates/layout.xml
+* /usr/local/jamoma/extensions/AnalysisLib.ttdylib
+* /usr/local/jamoma/extensions/AudioGraphUtilityLib.ttdylib
+* /usr/local/jamoma/extensions/AudioUnit.ttdylib
+* /usr/local/jamoma/extensions/Clipper.ttdylib
+* /usr/local/jamoma/extensions/Crossfade.ttdylib
+* /usr/local/jamoma/extensions/DataspaceLib.ttdylib
+* /usr/local/jamoma/extensions/DictionaryLib.ttdylib
+* /usr/local/jamoma/extensions/EffectsLib.ttdylib
+* /usr/local/jamoma/extensions/FFTLib.ttdylib
+* /usr/local/jamoma/extensions/FilterLib.ttdylib
+* /usr/local/jamoma/extensions/FunctionLib.ttdylib
+* /usr/local/jamoma/extensions/GeneratorLib.ttdylib
+* /usr/local/jamoma/extensions/Hipnoscope.ttdylib
+* /usr/local/jamoma/extensions/Label.ttdylib
+* /usr/local/jamoma/extensions/MathLib.ttdylib
+* /usr/local/jamoma/extensions/MatrixProcessingLib.ttdylib
+* /usr/local/jamoma/extensions/MidiLib.ttdylib
+* /usr/local/jamoma/extensions/NetworkLib.ttdylib
+* /usr/local/jamoma/extensions/ResamplingLib.ttdylib
+* /usr/local/jamoma/extensions/SoundfileLib.ttdylib
+* /usr/local/jamoma/extensions/SpatDisplay.ttdylib
+* /usr/local/jamoma/extensions/SpatLib.ttdylib
+* /usr/local/jamoma/extensions/TrajectoryLib.ttdylib
+* /usr/local/jamoma/extensions/WindowFunctionLib.ttdylib
+* /usr/local/jamoma/includes/Jamoma.h
+* /usr/local/jamoma/includes/JamomaObject.h
+* /usr/local/jamoma/includes/JamomaSymbols.h
+* /usr/local/jamoma/includes/JamomaThreading.h
+* /usr/local/jamoma/includes/JamomaTypes.h
+* /usr/local/jamoma/includes/jcom.core.h
+* /usr/local/jamoma/includes/jcom.io.h
+* /usr/local/jamoma/includes/jcom.list.h
+* /usr/local/jamoma/includes/jcom.sendreceive.h
+* /usr/local/jamoma/includes/Plugtastic.h
+* /usr/local/jamoma/includes/PlugtasticAPI.h
+* /usr/local/jamoma/includes/PlugtasticInput.h
+* /usr/local/jamoma/includes/PlugtasticOutput.h
+* /usr/local/jamoma/includes/PlugtasticParameter.h
+* /usr/local/jamoma/includes/TTAttribute.h
+* /usr/local/jamoma/includes/TTAudioEngine.h
+* /usr/local/jamoma/includes/TTAudioGraph.h
+* /usr/local/jamoma/includes/TTAudioGraphAPI.h
+* /usr/local/jamoma/includes/TTAudioGraphDescription.h
+* /usr/local/jamoma/includes/TTAudioGraphGenerator.h
+* /usr/local/jamoma/includes/TTAudioGraphInlet.h
+* /usr/local/jamoma/includes/TTAudioGraphInput.h
+* /usr/local/jamoma/includes/TTAudioGraphObject.h
+* /usr/local/jamoma/includes/TTAudioGraphOutlet.h
+* /usr/local/jamoma/includes/TTAudioGraphOutput.h
+* /usr/local/jamoma/includes/TTAudioGraphSource.h
+* /usr/local/jamoma/includes/TTAudioObject.h
+* /usr/local/jamoma/includes/TTAudioObjectArray.h
+* /usr/local/jamoma/includes/TTAudioSignal.h
+* /usr/local/jamoma/includes/TTAudioSignalArray.h
+* /usr/local/jamoma/includes/TTBase.h
+* /usr/local/jamoma/includes/TTBuffer.h
+* /usr/local/jamoma/includes/TTCallback.h
+* /usr/local/jamoma/includes/TTClass.h
+* /usr/local/jamoma/includes/TTDataObject.h
+* /usr/local/jamoma/includes/TTDelay.h
+* /usr/local/jamoma/includes/TTDelayBuffer.h
+* /usr/local/jamoma/includes/TTDictionary.h
+* /usr/local/jamoma/includes/TTDSP.h
+* /usr/local/jamoma/includes/TTEnvironment.h
+* /usr/local/jamoma/includes/TTFoundation.h
+* /usr/local/jamoma/includes/TTFoundationAPI.h
+* /usr/local/jamoma/includes/TTGraph.h
+* /usr/local/jamoma/includes/TTGraphAPI.h
+* /usr/local/jamoma/includes/TTGraphDescription.h
+* /usr/local/jamoma/includes/TTGraphDestination.h
+* /usr/local/jamoma/includes/TTGraphics.h
+* /usr/local/jamoma/includes/TTGraphicsAPI.h
+* /usr/local/jamoma/includes/TTGraphicsColor.h
+* /usr/local/jamoma/includes/TTGraphicsContext.h
+* /usr/local/jamoma/includes/TTGraphicsObject.h
+* /usr/local/jamoma/includes/TTGraphicsSurface.h
+* /usr/local/jamoma/includes/TTGraphicsWindow.h
+* /usr/local/jamoma/includes/TTGraphInlet.h
+* /usr/local/jamoma/includes/TTGraphInput.h
+* /usr/local/jamoma/includes/TTGraphObject.h
+* /usr/local/jamoma/includes/TTGraphOutlet.h
+* /usr/local/jamoma/includes/TTGraphOutput.h
+* /usr/local/jamoma/includes/TTGraphSource.h
+* /usr/local/jamoma/includes/TTHash.h
+* /usr/local/jamoma/includes/TTLimits.h
+* /usr/local/jamoma/includes/TTList.h
+* /usr/local/jamoma/includes/TTMatrix.h
+* /usr/local/jamoma/includes/TTMatrixArray.h
+* /usr/local/jamoma/includes/TTMessage.h
+* /usr/local/jamoma/includes/TTModularVersion.h
+* /usr/local/jamoma/includes/TTModularVersion.template.h
+* /usr/local/jamoma/includes/TTMutex.h
+* /usr/local/jamoma/includes/TTNode.h
+* /usr/local/jamoma/includes/TTNodeAddress.h
+* /usr/local/jamoma/includes/TTNodeAddressCache.h
+* /usr/local/jamoma/includes/TTNodeAddressTable.h
+* /usr/local/jamoma/includes/TTNodeDirectory.h
+* /usr/local/jamoma/includes/TTNodeLib.h
+* /usr/local/jamoma/includes/TTObject.h
+* /usr/local/jamoma/includes/TTPath.h
+* /usr/local/jamoma/includes/TTQueue.h
+* /usr/local/jamoma/includes/TTRegex.h
+* /usr/local/jamoma/includes/TTSymbol.h
+* /usr/local/jamoma/includes/TTSymbolCache.h
+* /usr/local/jamoma/includes/TTSymbolTable.h
+* /usr/local/jamoma/includes/TTThread.h
+* /usr/local/jamoma/includes/TTUnitTest.h
+* /usr/local/jamoma/includes/TTValue.h
+* /usr/local/jamoma/includes/TTValueCache.h
+* /usr/local/jamoma/lib/JamomaAudioGraph.dylib
+* /usr/local/jamoma/lib/JamomaDSP.dylib
+* /usr/local/jamoma/lib/JamomaFoundation.dylib
+* /usr/local/jamoma/lib/JamomaGraph.dylib
+* /usr/local/jamoma/lib/JamomaGraphics.dylib
+* /usr/local/jamoma/lib/JamomaModular.dylib
+* /usr/local/jamoma/lib/JamomaPlugtastic.dylib
 
-* /Library/Application Support/Jamoma/Extensions/AnalysisLib.ttdylib
-* /Library/Application Support/Jamoma/Extensions/AudioUnit.ttdylib
-* /Library/Application Support/Jamoma/Extensions/Clipper.ttdylib
-* /Library/Application Support/Jamoma/Extensions/Crossfade.ttdylib
-* /Library/Application Support/Jamoma/Extensions/DataspaceLib.ttdylib
-* /Library/Application Support/Jamoma/Extensions/EffectsLib.ttdylib
-* /Library/Application Support/Jamoma/Extensions/FFTLib.ttdylib
-* /Library/Application Support/Jamoma/Extensions/FilterLib.ttdylib
-* /Library/Application Support/Jamoma/Extensions/FunctionLib.ttdylib
-* /Library/Application Support/Jamoma/Extensions/GeneratorLib.ttdylib
-* /Library/Application Support/Jamoma/Extensions/Label.ttdylib
-* /Library/Application Support/Jamoma/Extensions/MathLib.ttdylib
-* /Library/Application Support/Jamoma/Extensions/SpatDisplay.ttdylib
-* /Library/Application Support/Jamoma/Extensions/WindowFunctionLib.ttdylib
 
-h3. Installed files under Windows
+h3(#OSX-max). Installed files in the Max folder
+
+* /Max5/Cycling '74/default-definitions/jcom.label.maxdefines
+* /Max5/Cycling '74/default-definitions/jcom.textslider.maxdefines
+* /Max5/Cycling '74/default-definitions/jcom.ui.maxdefines
+* /Max5/Cycling '74/default-settings/JamomaArarat.maxdefaults
+* /Max5/Cycling '74/default-settings/JamomaDark.maxdefaults
+* /Max5/Cycling '74/default-settings/JamomaGraphite.maxdefaults
+* /Max5/Cycling '74/default-settings/JamomaKulerBologna.maxdefaults
+* /Max5/Cycling '74/default-settings/JamomaKulerQuietCry.maxdefaults
+* /Max5/Cycling '74/default-settings/JamomaLight.maxdefaults
+* /Max5/Cycling '74/default-settings/JamomaMax.maxdefaults
+* /Max5/Cycling '74/default-settings/JamomaNoir.maxdefaults
+* /Max5/Cycling '74/extensions/jcom.loader.mxo/Contents/MacOS/jcom.loader
+* /Max5/Cycling '74/extensions/jcom.loader.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/init/jamoma-init.txt
+* /Max5/Cycling '74/Jamoma/ChangeLog.rtf
+* /Max5/Cycling '74/Jamoma/deprecated/About This Folder.rtf
+* /Max5/Cycling '74/Jamoma/deprecated/vtext/jcom.vtext.maxhelp
+* /Max5/Cycling '74/Jamoma/deprecated/vtext/jcom.vtext.maxpat
+* /Max5/Cycling '74/Jamoma/deprecated/vtext/vtext.js
+* /Max5/Cycling '74/Jamoma/documentation/examples/BigJamomaPatch.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/BigPatchLayout.xml
+* /Max5/Cycling '74/Jamoma/documentation/examples/GenerateHTML.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/GenerateModuleIndex.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/JamomaDefaultSymphony.txt
+* /Max5/Cycling '74/Jamoma/documentation/examples/jcom.parameter_create.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/jmod.mappings-examplefile.txt
+* /Max5/Cycling '74/Jamoma/documentation/examples/layout.xml
+* /Max5/Cycling '74/Jamoma/documentation/examples/module_highlighting.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/ModuleAliasDemo.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/ModuleAliasDemoCues.txt
+* /Max5/Cycling '74/Jamoma/documentation/examples/Plugtastic/Plugin examples/A Plugtastic Adventure.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/Plugtastic/Plugin examples/A Plugtastic Instrument.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/Plugtastic/Plugin examples/A Plugtastic Sidechain.als
+* /Max5/Cycling '74/Jamoma/documentation/examples/Plugtastic/Plugin examples/A Plugtastic Sidechain.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/Plugtastic/Plugin patches/plugtastic.gain.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/Plugtastic/plugtastic-overview.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/Scripting_Example.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/separate-interface.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/simpleRecorder~.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/teatrix-mapping.txt
+* /Max5/Cycling '74/Jamoma/documentation/examples/teatrix.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/test-loadtime.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/test-message_speed.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/Video_Example.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/wildcard_demo.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/examples/WindowShade.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/graphics/jmod.icon.mod.png
+* /Max5/Cycling '74/Jamoma/documentation/graphics/jmodular.icon.png
+* /Max5/Cycling '74/Jamoma/documentation/html/credits.html
+* /Max5/Cycling '74/Jamoma/documentation/html/index.html
+* /Max5/Cycling '74/Jamoma/documentation/html/interface_guidelines.html
+* /Max5/Cycling '74/Jamoma/documentation/html/modules.html
+* /Max5/Cycling '74/Jamoma/documentation/html/styles/jamoma.css
+* /Max5/Cycling '74/Jamoma/documentation/Jamoma Builder.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/helppatch.xml
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.adc≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.adsr≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.allpass~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.append#.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.array~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.array≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.audiounit≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.average~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.average≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.balance~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.clip~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.clip≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.cubicInterpolate.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.cuemanager.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.dac≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.dataspace#.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.dataspace.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.dbap.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.dbapBformat.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.dcblocker≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.dcblock~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.degrade~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.degrade≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.delay~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.delay≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.delta.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.envexp.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.fft≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.filter~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.filter≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.folder.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.function~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.gain%.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.gain~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.gain≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.gang.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.graphics.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.graphicsui.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.hilbert≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.hipnoscope.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.hmlshelf~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.hub.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.hub_help.xml
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.in.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.info≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.init.helppatch.xml
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.init.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.in~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.iter#.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.join≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.js_systeminfo.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.jsui_multigain.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.label.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.limiter~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.limiter≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.map.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.matrixmixer≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.matrix≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.message.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.meter~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.midi.filter#.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.midi.format#.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.midi.in#.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.midi.out#.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.mkdir.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.net.receive.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.net.send.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.noise≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.offset≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.onepole~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.op#.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.op~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.op≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.oscinstance.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.oscroute.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.out.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.out~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.overdrive~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.overdrive≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.pack#.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.pack≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.panorama~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.parameter.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.parameter_help.xml
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.paramui.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.pass.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.phasor≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.pick≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.plug.in≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.plug.out≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.plug.parameter#.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.pulsesub≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.push.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.ramp.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.ramp~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.ramp≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.receive.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.receive~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.remote.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.resample≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.return.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.route.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.savebang.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.send.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.send~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.sig≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.soundfile.player≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.soundfile.recorder≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.SpatDIF.coordinates.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.spatDisplay.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.spat≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.split≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.stats.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.stencil%.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.textslider.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.trajectory≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.ui.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.unpack#.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.unpack≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.unsig≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.vimic~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.waveshaper~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.waveshaper≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.wavetable≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.window≈.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.xfade~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jcom.zerox~.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jmod.attr_params.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jmod.gain_params.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jmod.preset_params.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-help/jmod.video_params.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-overview.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-templates/_Jamoma_Patcher_.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-templates/jalg.template.audio~.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-templates/jalg.template.video%.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-templates/jmod.template.audio~.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-templates/jmod.template.control.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-templates/jmod.template.maxhelp
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-templates/jmod.template.video%.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-templates/layout.xml
+* /Max5/Cycling '74/Jamoma/documentation/jamoma-tutorials.maxpat
+* /Max5/Cycling '74/Jamoma/documentation/media/aashild-short.mov
+* /Max5/Cycling '74/Jamoma/documentation/media/aashild_full4_lines.jpg
+* /Max5/Cycling '74/Jamoma/documentation/media/aashild_strip.jpg
+* /Max5/Cycling '74/Jamoma/documentation/media/dancers_t005_brcosa2.jpg
+* /Max5/Cycling '74/Jamoma/documentation/media/tri_bw2.jpg
+* /Max5/Cycling '74/Jamoma/documentation/media/visualization.gif
+* /Max5/Cycling '74/Jamoma/externals/jcom.adc≈.mxo/Contents/MacOS/jcom.adc≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.adc≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.adsr≈.mxo/Contents/MacOS/jcom.adsr≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.adsr≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.allpass~.mxo/Contents/MacOS/jcom.allpass~
+* /Max5/Cycling '74/Jamoma/externals/jcom.allpass~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.append#.mxo/Contents/MacOS/jcom.append#
+* /Max5/Cycling '74/Jamoma/externals/jcom.append#.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.array~.mxo/Contents/MacOS/jcom.array~
+* /Max5/Cycling '74/Jamoma/externals/jcom.array~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.array≈.mxo/Contents/MacOS/jcom.array≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.array≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.audiounit≈.mxo/Contents/MacOS/jcom.audiounit≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.audiounit≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.average~.mxo/Contents/MacOS/jcom.average~
+* /Max5/Cycling '74/Jamoma/externals/jcom.average~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.average≈.mxo/Contents/MacOS/jcom.average≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.average≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.balance~.mxo/Contents/MacOS/jcom.balance~
+* /Max5/Cycling '74/Jamoma/externals/jcom.balance~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.clip~.mxo/Contents/MacOS/jcom.clip~
+* /Max5/Cycling '74/Jamoma/externals/jcom.clip~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.clip≈.mxo/Contents/MacOS/jcom.clip≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.clip≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.cubicInterpolate.mxo/Contents/MacOS/jcom.cubicInterpolate
+* /Max5/Cycling '74/Jamoma/externals/jcom.cubicInterpolate.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.cuemanager.mxo/Contents/MacOS/jcom.cuemanager
+* /Max5/Cycling '74/Jamoma/externals/jcom.cuemanager.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.dac≈.mxo/Contents/MacOS/jcom.dac≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.dac≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.dataspace#.mxo/Contents/MacOS/jcom.dataspace#
+* /Max5/Cycling '74/Jamoma/externals/jcom.dataspace#.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.dataspace.mxo/Contents/MacOS/jcom.dataspace
+* /Max5/Cycling '74/Jamoma/externals/jcom.dataspace.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.dbap.mxo/Contents/MacOS/jcom.dbap
+* /Max5/Cycling '74/Jamoma/externals/jcom.dbap.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.dbapBformat.mxo/Contents/MacOS/jcom.dbapBformat
+* /Max5/Cycling '74/Jamoma/externals/jcom.dbapBformat.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.dcblocker≈.mxo/Contents/MacOS/jcom.dcblocker≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.dcblocker≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.dcblock~.mxo/Contents/MacOS/jcom.dcblock~
+* /Max5/Cycling '74/Jamoma/externals/jcom.dcblock~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.degrade~.mxo/Contents/MacOS/jcom.degrade~
+* /Max5/Cycling '74/Jamoma/externals/jcom.degrade~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.degrade≈.mxo/Contents/MacOS/jcom.degrade≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.degrade≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.delay~.mxo/Contents/MacOS/jcom.delay~
+* /Max5/Cycling '74/Jamoma/externals/jcom.delay~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.delay≈.mxo/Contents/MacOS/jcom.delay≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.delay≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.delta.mxo/Contents/MacOS/jcom.delta
+* /Max5/Cycling '74/Jamoma/externals/jcom.delta.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.envexp.mxo/Contents/MacOS/jcom.envexp
+* /Max5/Cycling '74/Jamoma/externals/jcom.envexp.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.fft≈.mxo/Contents/MacOS/jcom.fft≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.fft≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.filter~.mxo/Contents/MacOS/jcom.filter~
+* /Max5/Cycling '74/Jamoma/externals/jcom.filter~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.filter≈.mxo/Contents/MacOS/jcom.filter≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.filter≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.folder.mxo/Contents/MacOS/jcom.folder
+* /Max5/Cycling '74/Jamoma/externals/jcom.folder.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.function~.mxo/Contents/MacOS/jcom.function~
+* /Max5/Cycling '74/Jamoma/externals/jcom.function~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.gain%.mxo/Contents/MacOS/jcom.gain%
+* /Max5/Cycling '74/Jamoma/externals/jcom.gain%.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.gain~.mxo/Contents/MacOS/jcom.gain~
+* /Max5/Cycling '74/Jamoma/externals/jcom.gain~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.gain≈.mxo/Contents/MacOS/jcom.gain≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.gain≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.gang.mxo/Contents/MacOS/jcom.gang
+* /Max5/Cycling '74/Jamoma/externals/jcom.gang.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.graphics.mxo/Contents/MacOS/jcom.graphics
+* /Max5/Cycling '74/Jamoma/externals/jcom.graphics.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.graphicsui.mxo/Contents/MacOS/jcom.graphicsui
+* /Max5/Cycling '74/Jamoma/externals/jcom.graphicsui.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.hilbert≈.mxo/Contents/MacOS/jcom.hilbert≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.hilbert≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.hipnoscope.mxo/Contents/MacOS/jcom.hipnoscope
+* /Max5/Cycling '74/Jamoma/externals/jcom.hipnoscope.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.hmlshelf~.mxo/Contents/MacOS/jcom.hmlshelf~
+* /Max5/Cycling '74/Jamoma/externals/jcom.hmlshelf~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.hub.mxo/Contents/MacOS/jcom.hub
+* /Max5/Cycling '74/Jamoma/externals/jcom.hub.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.in.mxo/Contents/MacOS/jcom.in
+* /Max5/Cycling '74/Jamoma/externals/jcom.in.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.info≈.mxo/Contents/MacOS/jcom.info≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.info≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.init.mxo/Contents/MacOS/jcom.init
+* /Max5/Cycling '74/Jamoma/externals/jcom.init.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.in~.mxo/Contents/MacOS/jcom.in~
+* /Max5/Cycling '74/Jamoma/externals/jcom.in~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.iter#.mxo/Contents/MacOS/jcom.iter#
+* /Max5/Cycling '74/Jamoma/externals/jcom.iter#.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.join≈.mxo/Contents/MacOS/jcom.join≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.join≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.label.mxo/Contents/MacOS/jcom.label
+* /Max5/Cycling '74/Jamoma/externals/jcom.label.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.limiter~.mxo/Contents/MacOS/jcom.limiter~
+* /Max5/Cycling '74/Jamoma/externals/jcom.limiter~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.limiter≈.mxo/Contents/MacOS/jcom.limiter≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.limiter≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.map.mxo/Contents/MacOS/jcom.map
+* /Max5/Cycling '74/Jamoma/externals/jcom.map.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.matrixmixer≈.mxo/Contents/MacOS/jcom.matrixmixer≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.matrixmixer≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.matrix≈.mxo/Contents/MacOS/jcom.matrix≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.matrix≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.message.mxo/Contents/MacOS/jcom.message
+* /Max5/Cycling '74/Jamoma/externals/jcom.message.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.meter~.mxo/Contents/MacOS/jcom.meter~
+* /Max5/Cycling '74/Jamoma/externals/jcom.meter~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.midi.filter#.mxo/Contents/MacOS/jcom.midi.filter#
+* /Max5/Cycling '74/Jamoma/externals/jcom.midi.filter#.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.midi.format#.mxo/Contents/MacOS/jcom.midi.format#
+* /Max5/Cycling '74/Jamoma/externals/jcom.midi.format#.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.midi.in#.mxo/Contents/MacOS/jcom.midi.in#
+* /Max5/Cycling '74/Jamoma/externals/jcom.midi.in#.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.midi.out#.mxo/Contents/MacOS/jcom.midi.out#
+* /Max5/Cycling '74/Jamoma/externals/jcom.midi.out#.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.net.receive.mxo/Contents/MacOS/jcom.net.receive
+* /Max5/Cycling '74/Jamoma/externals/jcom.net.receive.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.net.send.mxo/Contents/MacOS/jcom.net.send
+* /Max5/Cycling '74/Jamoma/externals/jcom.net.send.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.noise≈.mxo/Contents/MacOS/jcom.noise≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.noise≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.offset≈.mxo/Contents/MacOS/jcom.offset≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.offset≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.onepole~.mxo/Contents/MacOS/jcom.onepole~
+* /Max5/Cycling '74/Jamoma/externals/jcom.onepole~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.op#.mxo/Contents/MacOS/jcom.op#
+* /Max5/Cycling '74/Jamoma/externals/jcom.op#.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.op~.mxo/Contents/MacOS/jcom.op~
+* /Max5/Cycling '74/Jamoma/externals/jcom.op~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.op≈.mxo/Contents/MacOS/jcom.op≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.op≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.oscinstance.mxo/Contents/MacOS/jcom.oscinstance
+* /Max5/Cycling '74/Jamoma/externals/jcom.oscinstance.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.oscroute.mxo/Contents/MacOS/jcom.oscroute
+* /Max5/Cycling '74/Jamoma/externals/jcom.oscroute.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.out.mxo/Contents/MacOS/jcom.out
+* /Max5/Cycling '74/Jamoma/externals/jcom.out.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.out~.mxo/Contents/MacOS/jcom.out~
+* /Max5/Cycling '74/Jamoma/externals/jcom.out~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.overdrive~.mxo/Contents/MacOS/jcom.overdrive~
+* /Max5/Cycling '74/Jamoma/externals/jcom.overdrive~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.overdrive≈.mxo/Contents/MacOS/jcom.overdrive≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.overdrive≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.pack#.mxo/Contents/MacOS/jcom.pack#
+* /Max5/Cycling '74/Jamoma/externals/jcom.pack#.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.pack≈.mxo/Contents/MacOS/jcom.pack≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.pack≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.panorama~.mxo/Contents/MacOS/jcom.panorama~
+* /Max5/Cycling '74/Jamoma/externals/jcom.panorama~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.parameter.mxo/Contents/MacOS/jcom.parameter
+* /Max5/Cycling '74/Jamoma/externals/jcom.parameter.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.paramui.mxo/Contents/MacOS/jcom.paramui
+* /Max5/Cycling '74/Jamoma/externals/jcom.paramui.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.pass.mxo/Contents/MacOS/jcom.pass
+* /Max5/Cycling '74/Jamoma/externals/jcom.pass.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.phasor≈.mxo/Contents/MacOS/jcom.phasor≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.phasor≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.pick≈.mxo/Contents/MacOS/jcom.pick≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.pick≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.in≈.mxo/Contents/MacOS/jcom.plug.in≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.in≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Info.plist
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/MacOS/jcom.plug.out≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/all-wcprops
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/entries
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUBase.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUBase.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUBuffer.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUBuffer.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUDispatch.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUDispatch.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUEffectBase.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUEffectBase.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUInputElement.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUInputElement.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUMIDIBase.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUMIDIBase.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUMIDIEffectBase.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUMIDIEffectBase.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUOutputElement.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUOutputElement.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUResources.r.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUScopeElement.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUScopeElement.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/AUSilentTimeout.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CAAtomicStack.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CAAudioChannelLayout.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CAAudioChannelLayout.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CADebugMacros.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CAHostTimeBase.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CAMath.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CAReferenceCounted.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CAStreamBasicDescription.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CAStreamBasicDescription.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CAThreadSafeList.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CAVectorUnit.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CAVectorUnit.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/CAVectorUnitTypes.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/ComponentBase.cpp.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/.svn/text-base/ComponentBase.h.svn-base
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUBase.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUBase.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUBaseHelper.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUBaseHelper.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUBuffer.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUBuffer.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUDebugDispatcher.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUDebugDispatcher.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUDispatch.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUDispatch.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUEffectBase.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUEffectBase.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUInputElement.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUInputElement.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUInputFormatConverter.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUInstrumentBase.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUInstrumentBase.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUMIDIBase.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUMIDIBase.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUMIDIEffectBase.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUMIDIEffectBase.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUOutputBL.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUOutputBL.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUOutputElement.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUOutputElement.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUParamInfo.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUParamInfo.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUResources.r
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUScopeElement.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUScopeElement.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUSilentTimeout.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUTimestampGenerator.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/AUTimestampGenerator.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAtomic.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAtomicStack.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioBufferList.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioBufferList.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioChannelLayout.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioChannelLayout.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioChannelLayoutObject.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioFileFormats.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioFileFormats.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioTimeStamp.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioTimeStamp.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioUnit.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioUnit.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioUnitOutputCapturer.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioValueRange.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAudioValueRange.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAUMIDIMap.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAUMIDIMap.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAUMIDIMapManager.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAUMIDIMapManager.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAUParameter.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAUParameter.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAAutoDisposer.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CABitOperations.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CABool.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CABufferList.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CABufferList.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CABundleLocker.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CABundleLocker.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAByteOrder.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFArray.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFArray.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFData.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFDictionary.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFDictionary.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFDistributedNotification.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFDistributedNotification.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFMachPort.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFMachPort.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFMessagePort.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFMessagePort.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFNumber.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFNumber.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFObject.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFPlugIn.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFPreferences.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFPreferences.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFString.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CACFString.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAComponent.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAComponent.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAComponentDescription.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAComponentDescription.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CADebugger.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CADebugger.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CADebugMacros.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CADebugMacros.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CADebugPrintf.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CADebugPrintf.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAException.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAFilePathUtils.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAFilePathUtils.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAGuard.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAGuard.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAHALAudioDevice.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAHALAudioDevice.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAHALAudioObject.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAHALAudioObject.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAHALAudioStream.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAHALAudioStream.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAHALAudioSystemObject.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAHALAudioSystemObject.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAHostTimeBase.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAHostTimeBase.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CALogMacros.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAMath.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAMixMap.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAMutex.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAMutex.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAPersistence.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAProcess.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAProcess.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAPropertyAddress.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAPThread.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAPThread.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAReferenceCounted.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CARingBuffer.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CARingBuffer.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CASettingsStorage.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CASettingsStorage.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CASharedLibrary.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CASharedLibrary.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CASpectralProcessor.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CASpectralProcessor.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAStreamBasicDescription.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAStreamBasicDescription.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAStreamRangedDescription.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAStreamRangedDescription.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAThreadSafeList.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CATink.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CATokenMap.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAVectorUnit.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAVectorUnit.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAVectorUnitTypes.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAVolumeCurve.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAVolumeCurve.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAXException.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/CAXException.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/ComponentBase.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/ComponentBase.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/LockFreeFIFO.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/MatrixMixerVolumes.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/MatrixMixerVolumes.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/MusicDeviceBase.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/MusicDeviceBase.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/SynthElement.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/SynthElement.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/SynthEvent.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/SynthNote.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/SynthNote.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/SynthNoteList.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/AUSDK/SynthNoteList.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUEffect/Info.plist
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUEffect/PlugtasticAUEffect.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUEffect/PlugtasticAUEffect.exp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUEffect/PlugtasticAUEffect.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUEffect/PlugtasticAUEffect.r
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUEffect/PlugtasticAUEffect.xcconfig
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUEffect/PlugtasticAUEffect.xcodeproj/project.pbxproj
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUEffect/PlugtasticAUEffectGraph.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUEffect/PlugtasticAUEffectVersion.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUEffect/version.plist
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUInstrument/English.lproj/InfoPlist.strings
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUInstrument/Info.plist
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUInstrument/PlugtasticAUInstrument.cpp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUInstrument/PlugtasticAUInstrument.exp
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUInstrument/PlugtasticAUInstrument.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUInstrument/PlugtasticAUInstrument.r
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUInstrument/PlugtasticAUInstrument.xcconfig
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUInstrument/PlugtasticAUInstrument.xcodeproj/project.pbxproj
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUInstrument/PlugtasticAUInstrumentGraph.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUInstrument/PlugtasticAUInstrumentVersion.h
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.out≈.mxo/Contents/Resources/PlugtasticAUInstrument/version.plist
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.parameter#.mxo/Contents/MacOS/jcom.plug.parameter#
+* /Max5/Cycling '74/Jamoma/externals/jcom.plug.parameter#.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.pulsesub≈.mxo/Contents/MacOS/jcom.pulsesub≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.pulsesub≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.push.mxo/Contents/MacOS/jcom.push
+* /Max5/Cycling '74/Jamoma/externals/jcom.push.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.ramp.mxo/Contents/MacOS/jcom.ramp
+* /Max5/Cycling '74/Jamoma/externals/jcom.ramp.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.ramp~.mxo/Contents/MacOS/jcom.ramp~
+* /Max5/Cycling '74/Jamoma/externals/jcom.ramp~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.ramp≈.mxo/Contents/MacOS/jcom.ramp≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.ramp≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.remote.mxo/Contents/MacOS/jcom.remote
+* /Max5/Cycling '74/Jamoma/externals/jcom.remote.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.resample≈.mxo/Contents/MacOS/jcom.resample≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.resample≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.return.mxo/Contents/MacOS/jcom.return
+* /Max5/Cycling '74/Jamoma/externals/jcom.return.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.route.mxo/Contents/MacOS/jcom.route
+* /Max5/Cycling '74/Jamoma/externals/jcom.route.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.savebang.mxo/Contents/MacOS/jcom.savebang
+* /Max5/Cycling '74/Jamoma/externals/jcom.savebang.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.sig≈.mxo/Contents/MacOS/jcom.sig≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.sig≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.soundfile.player≈.mxo/Contents/MacOS/jcom.soundfile.player≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.soundfile.player≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.soundfile.recorder≈.mxo/Contents/MacOS/jcom.soundfile.recorder≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.soundfile.recorder≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.spatDisplay.mxo/Contents/MacOS/jcom.spatDisplay
+* /Max5/Cycling '74/Jamoma/externals/jcom.spatDisplay.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.spat≈.mxo/Contents/MacOS/jcom.spat≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.spat≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.split≈.mxo/Contents/MacOS/jcom.split≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.split≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.stats.mxo/Contents/MacOS/jcom.stats
+* /Max5/Cycling '74/Jamoma/externals/jcom.stats.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.stencil%.mxo/Contents/MacOS/jcom.stencil%
+* /Max5/Cycling '74/Jamoma/externals/jcom.stencil%.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.textslider.mxo/Contents/MacOS/jcom.textslider
+* /Max5/Cycling '74/Jamoma/externals/jcom.textslider.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.trajectory≈.mxo/Contents/MacOS/jcom.trajectory≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.trajectory≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.ui.mxo/Contents/MacOS/jcom.ui
+* /Max5/Cycling '74/Jamoma/externals/jcom.ui.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.unfocus.mxo/Contents/MacOS/jcom.unfocus
+* /Max5/Cycling '74/Jamoma/externals/jcom.unfocus.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.unpack#.mxo/Contents/MacOS/jcom.unpack#
+* /Max5/Cycling '74/Jamoma/externals/jcom.unpack#.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.unpack≈.mxo/Contents/MacOS/jcom.unpack≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.unpack≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.unsig≈.mxo/Contents/MacOS/jcom.unsig≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.unsig≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.vimic~.mxo/Contents/MacOS/jcom.vimic~
+* /Max5/Cycling '74/Jamoma/externals/jcom.vimic~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.waveshaper~.mxo/Contents/MacOS/jcom.waveshaper~
+* /Max5/Cycling '74/Jamoma/externals/jcom.waveshaper~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.waveshaper≈.mxo/Contents/MacOS/jcom.waveshaper≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.waveshaper≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.wavetable≈.mxo/Contents/MacOS/jcom.wavetable≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.wavetable≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.window≈.mxo/Contents/MacOS/jcom.window≈
+* /Max5/Cycling '74/Jamoma/externals/jcom.window≈.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.xfade~.mxo/Contents/MacOS/jcom.xfade~
+* /Max5/Cycling '74/Jamoma/externals/jcom.xfade~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/jcom.zerox~.mxo/Contents/MacOS/jcom.zerox~
+* /Max5/Cycling '74/Jamoma/externals/jcom.zerox~.mxo/Contents/PkgInfo
+* /Max5/Cycling '74/Jamoma/externals/placeholder
+* /Max5/Cycling '74/Jamoma/library/components/absdiff/jcom.absdiff.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/absdiff/jcom.absdiff.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/ambimonitor2position/jcom.ambimonitor2position.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/ambimonitor2position/jcom.ambimonitor2position.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/audioOnOff/jcom.audioOnOff.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/autocrop%/jcom.autocrop%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/autocrop%/jcom.autocrop%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/autoexpose%/jcom.autoexpose%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/autoexpose%/jcom.autoexpose%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/autoscale/jcom.autoscale.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/autoscale/jcom.autoscale.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/autosize%/jcom.autosize%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/autosize%/jcom.autosize%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/avoidStackOverflow/jcom.avoidStackOverflow.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/avoidStackOverflow/jcom.avoidStackOverflow.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/binary%/jcom.binary%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/binary%/jcom.binary%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/char2float%/jcom.char2float%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/char2float%/jcom.char2float%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/checkplanes%/jcom.checkplanes%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/checkplanes%/jcom.checkplanes%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/chromacolor%/jcom.chromacolor%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/chromacolor%/jcom.chromacolor%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/class.gl_group.inspect/jcom.class.gl_group.inspect.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/class.gl_group.route/jcom.class.gl_group.route.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/class.gl_slab.inspect/jcom.class.gl_slab.inspect.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/class.gl_slab.route/jcom.class.gl_slab.route.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/class.lfoParameters/jcom.class.lfoParameter.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/class.lfoParameters/jcom.class.lfoParameters.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/class.matrix.inspector/jcom.class.matrix.inspector.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/class.matrix.route/jcom.class.matrix.route.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/cpuTimer/jcom.cpuTimer.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/cpuTimer/jcom.cpuTimer.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/crop%/jcom.crop%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/crop%/jcom.crop%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/datetime/jcom.datetime.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/datetime/jcom.datetime.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/debug.listType/jcom.debug.listType.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/debug.listType/jcom.debug.listType.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/eno/eno.txt
+* /Max5/Cycling '74/Jamoma/library/components/eno/jcom.eno.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/eno/jcom.eno.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/filesaver/jcom.filesaver.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/filewatcher/jcom.filewatcher.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/float2char%/jcom.float2char%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/float2char%/jcom.float2char%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/fullscreen/jcom.fullscreen.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/fullscreen/jcom.fullscreen.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/fullscreen%/jcom.fullscreen%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/fullscreen%/jcom.fullscreen%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/getAllAttributes/jcom.getAllAttributes.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/getAllAttributes/jcom.getAllAttributes.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/getDescriptionFromHtml/jcom.getDescriptionFromHtml.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/getMessageNames/jcom.getMessageNames.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/getMessageNames/jcom.getMessageNames.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/getModuleNames/jcom.getModuleNames.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/getModuleNames/jcom.getModuleNames.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/getOneAttribute/jcom.getOneAttribute.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/getOneAttribute/jcom.getOneAttribute.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/getParameterNames/jcom.getParameterNames.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/getParameterNames/jcom.getParameterNames.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/getReturnNames/jcom.getReturnNames.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/getReturnNames/jcom.getReturnNames.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/gizmo_transpose/jcom.gizmo_transpose.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/HSLColorPicker/jcom.HSLColorPicker.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/idle/jcom.idle.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/idle/jcom.idle.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/initialized/jcom.initialized.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/initialized/jcom.initialized.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/instance2instance/jcom.instance2instance.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/instance2instance/jcom.instance2instance.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/jamomaPath/jcom.jamomaPath.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/jamomaPath/jcom.jamomaPath.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/list2parameter/jcom.list2parameter.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/list2parameter/jcom.list2parameter.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/luma2rgb%/jcom.luma2rgb%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/luma2rgb%/jcom.luma2rgb%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/maxhelpui/jcom.maxhelpui.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/maxhelpui/jcom.maxhelpui.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/maxhelpui/jcom.maxhelpuiButton.png
+* /Max5/Cycling '74/Jamoma/library/components/maxhelpui/jcom.maxhelpuiResize.js
+* /Max5/Cycling '74/Jamoma/library/components/mean%/jcom.mean%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/mean%/jcom.mean%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/message.array/jcom.message.array.instance.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/message.array/jcom.message.array.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/message.array/jcom.message.array.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/meter_receive/jcom.meter_receive.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/metro/jcom.metro.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/metro/jcom.metro.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/midi.channel_messages_receive/jcom.midi.channel_messages_receive.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/moduleColor/jcom.moduleColor.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/moduleColor/jcom.moduleColor.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/modulesDumper/jcom.modulesDumper.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/modulesDumper/jcom.modulesDumper.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/motion%/jcom.motion%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/motion%/jcom.motion%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/multi.in%/jcom.multi.in%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/multi.in%/jcom.multi.in%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/multi.in%/jcom.multi.in~.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/multi.in%/jcom.multi.in~.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/multi.out%/jcom.multi.out%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/multi.out%/jcom.multi.out%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/multi.out%/jcom.multi.out~.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/multi.out%/jcom.multi.out~.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/namespaceBrowse/jcom.namespaceBrowse.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/noiseremoval%/jcom.noiseremoval%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/noiseremoval%/jcom.noiseremoval%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/numberslider/jcom.numberslider.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/numberslider/jcom.numberslider.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/op/jcom.op.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/op/jcom.op.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/osc2opml/jcom.osc2opml.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/osc2opml/jcom.osc2opml.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/parameter.array/jcom.parameter.array.instance.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/parameter.array/jcom.parameter.array.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/parameter.array/jcom.parameter.array.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/parameterCreate/jcom.parameterCreate.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/parameterCreate/jcom.parameterCreate.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/passmatrixinfo%/jcom.passmatrixinfo%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/passmatrixinfo%/jcom.passmatrixinfo%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/pi/jcom.pi.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/pi/jcom.pi.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/position2ambimonitor/jcom.position2ambimonitor.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/position2ambimonitor/jcom.position2ambimonitor.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/post/jcom.post.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/post/jcom.post.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/preset_interface/jcom.preset_interface.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/pwindow.mouse/jcom.pwindow.mouse.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/pwindow.mouse/jcom.pwindow.mouse.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/qom/jcom.qom.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/qom/jcom.qom.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/qom%/jcom.qom%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/qom%/jcom.qom%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/random/jcom.random.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/random/jcom.random.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/randomizer/jcom.randomizer.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/randomizer/jcom.randomizer.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/rgb2luma%/jcom.rgb2luma%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/rgb2luma%/jcom.rgb2luma%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/spray%/jcom.spray%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/spray%/jcom.spray%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/sum%/jcom.sum%.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/sum%/jcom.sum%.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/sur.ambi.getW/jcom.sur.ambi.getW~.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/sur.ambi.getW/jcom.sur.ambi.getW~.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/sur.ambi2UHJ/jcom.sur.ambi2UHJ~.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/sur.ambi2UHJ/jcom.sur.ambi2UHJ~.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/sur.UHJ2ambi/jcom.sur.UHJ2ambi~.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/sur.UHJ2ambi/jcom.sur.UHJ2ambi~.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/thru/jcom.thru.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/thru/jcom.thru.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/thru/jcom.thru~.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/thru/jcom.thru~.maxpat
+* /Max5/Cycling '74/Jamoma/library/components/webservice/jcom.AppleScript.ControlWebService.applescript
+* /Max5/Cycling '74/Jamoma/library/components/webservice/jcom.AppleScript.MonitorWebService.applescript
+* /Max5/Cycling '74/Jamoma/library/components/webservice/jcom.webservice.maxhelp
+* /Max5/Cycling '74/Jamoma/library/components/webservice/jcom.webservice.maxpat
+* /Max5/Cycling '74/Jamoma/library/jamoma.xsd
+* /Max5/Cycling '74/Jamoma/library/javascript/jcom.js_systeminfo.js
+* /Max5/Cycling '74/Jamoma/library/javascript/jcom.js_systeminfo.template.js
+* /Max5/Cycling '74/Jamoma/library/javascript/jcom.jsui_multigain.js
+* /Max5/Cycling '74/Jamoma/library/javascript/jcom.osc2opml.js
+* /Max5/Cycling '74/Jamoma/library/javascript/jcom.preset_interface.js
+* /Max5/Cycling '74/Jamoma/modules/audio/10harmonics~/jalg.10harmonics~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/10harmonics~/jmod.10harmonics~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/10harmonics~/jmod.10harmonics~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/10harmonics~/jmod.10harmonics~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/10harmonics~/jmod.10harmonics~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/_template~/jalg._template~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/_template~/jmod._template~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/_template~/jmod._template~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/_template~/jmod._template~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/_template~/jmod._template~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/audiounit~/jalg.audiounit~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/audiounit~/jmod.audiounit~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/audiounit~/jmod.audiounit~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/audiounit~/jmod.audiounit~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/audiounit~/jmod.audiounit~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/crossfade~/jalg.crossfade~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/crossfade~/jmod.crossfade~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/crossfade~/jmod.crossfade~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/crossfade~/jmod.crossfade~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/crossfade~/jmod.crossfade~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/degrade~/jalg.degrade~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/degrade~/jmod.degrade~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/degrade~/jmod.degrade~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/degrade~/jmod.degrade~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/degrade~/jmod.degrade~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/delay~/jalg.delay~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/delay~/jmod.delay~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/delay~/jmod.delay~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/delay~/jmod.delay~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/delay~/jmod.delay~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/echo~/jalg.echo~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/echo~/jmod.echo~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/echo~/jmod.echo~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/echo~/jmod.echo~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/echo~/jmod.echo~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/equalizer~/jalg.equalizer~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/equalizer~/jalg.equalizer~_params.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/equalizer~/jmod.equalizer~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/equalizer~/jmod.equalizer~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/equalizer~/jmod.equalizer~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/equalizer~/jmod.equalizer~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/filter~/jalg.filter~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/filter~/jmod.filter~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/filter~/jmod.filter~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/filter~/jmod.filter~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/filter~/jmod.filter~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/fluidsynth~/jalg.fluidsynth~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/fluidsynth~/jmod.fluidsynth~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/fluidsynth~/jmod.fluidsynth~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/fluidsynth~/jmod.fluidsynth~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/fluidsynth~/jmod.fluidsynth~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/hilbertModulator~/jalg.hilbertModulator~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/hilbertModulator~/jmod.hilbertModulator~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/hilbertModulator~/jmod.hilbertModulator~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/hilbertModulator~/jmod.hilbertModulator~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/hilbertModulator~/jmod.hilbertModulator~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/input~/jmod.input~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/input~/jmod.input~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/input~/jmod.input~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/input~/jmod.input~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/limiter~/jalg.limiter~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/limiter~/jmod.limiter~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/limiter~/jmod.limiter~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/limiter~/jmod.limiter~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/limiter~/jmod.limiter~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/multidelay~/jalg.multidelay~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/multidelay~/jmod.multidelay~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/multidelay~/jmod.multidelay~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/multidelay~/jmod.multidelay~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/multidelay~/jmod.multidelay~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/noisegate~/jalg.noisegate~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/noisegate~/jmod.noisegate~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/noisegate~/jmod.noisegate~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/noisegate~/jmod.noisegate~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/noisegate~/jmod.noisegate~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/noise~/jalg.noise~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/noise~/jmod.noise~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/noise~/jmod.noise~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/noise~/jmod.noise~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/noise~/jmod.noise~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/output~/jmod.output~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/output~/jmod.output~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/output~/jmod.output~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/output~/jmod.output~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/panpot~/jalg.panpot~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/panpot~/jmod.panpot~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/panpot~/jmod.panpot~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/panpot~/jmod.panpot~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/panpot~/jmod.panpot~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/rissetGlissando/jalg.rissetGlissando~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/rissetGlissando/jmod.rissetGlissando~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/rissetGlissando/jmod.rissetGlissando~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/rissetGlissando/jmod.rissetGlissando~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/rissetGlissando/jmod.rissetGlissando~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/samplePlayer2~/jalg.samplePlayer2~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/samplePlayer2~/jmod.samplePlayer2~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/samplePlayer2~/jmod.samplePlayer2~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/samplePlayer2~/jmod.sampleplayer2~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/samplePlayer2~/jmod.samplePlayer2~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/samplePlayer~/jalg.samplePlayer~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/samplePlayer~/jmod.samplePlayer~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/samplePlayer~/jmod.samplePlayer~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/samplePlayer~/jmod.samplePlayer~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/samplePlayer~/jmod.samplePlayer~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/saturation~/jmod.saturation~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/saturation~/jmod.saturation~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/saturation~/jmod.saturation~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/saturation~/jmod.saturation~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/scope~/jmod.scope~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/scope~/jmod.scope~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/scope~/jmod.scope~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/scope~/jmod.scope~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/sine~/jalg.sine~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/sine~/jmod.sine~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/sine~/jmod.sine~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/sine~/jmod.sine~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/sine~/jmod.sine~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/sonifyer~/jalg.sonifyer~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/sonifyer~/jmod.sonifyer~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/sonifyer~/jmod.sonifyer~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/sonifyer~/jmod.sonifyer~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/sonifyer~/jmod.sonifyer~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/spectralGate~/jalg.spectralGate_lib.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/spectralGate~/jalg.spectralGate~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/spectralGate~/jmod.spectralGate~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/spectralGate~/jmod.spectralGate~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/spectralGate~/jmod.spectralGate~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/spectralGate~/jmod.spectralGate~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/spectralShift~/jalg.spectralShift~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/spectralShift~/jcom.spectralShiftVoice~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/spectralShift~/jmod.spectralShift~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/spectralShift~/jmod.spectralShift~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/spectralShift~/jmod.spectralShift~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/spectralShift~/jmod.spectralShift~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/spectrogram~/jalg.spectrogram~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/spectrogram~/jmod.spectrogram~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/spectrogram~/jmod.spectrogram~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/spectrogram~/jmod.spectrogram~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/spectrogram~/jmod.spectrogram~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/tremolo~/jalg.tremolo~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/tremolo~/jmod.tremolo~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/tremolo~/jmod.tremolo~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/tremolo~/jmod.tremolo~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/tremolo~/jmod.tremolo~.xml
+* /Max5/Cycling '74/Jamoma/modules/audio/vst~/jalg.vst~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/vst~/jmod.vst~.html
+* /Max5/Cycling '74/Jamoma/modules/audio/vst~/jmod.vst~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/audio/vst~/jmod.vst~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/audio/vst~/jmod.vst~.xml
+* /Max5/Cycling '74/Jamoma/modules/control/_template/jalg._template.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/_template/jmod._template.html
+* /Max5/Cycling '74/Jamoma/modules/control/_template/jmod._template.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/_template/jmod._template.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/_template/jmod._template.xml
+* /Max5/Cycling '74/Jamoma/modules/control/bcf2000/BCFFader.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/bcf2000/BCFKey.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/bcf2000/jalg.bcf2000.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/bcf2000/jmod.bcf2000.html
+* /Max5/Cycling '74/Jamoma/modules/control/bcf2000/jmod.bcf2000.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/bcf2000/jmod.bcf2000.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/bcf2000/jmod.bcf2000.xml
+* /Max5/Cycling '74/Jamoma/modules/control/bcf2000/Push_encoder_press.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/bcf2000/Push_encoder_turn.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/colorpicker/jmod.colorpicker.html
+* /Max5/Cycling '74/Jamoma/modules/control/colorpicker/jmod.colorpicker.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/colorpicker/jmod.colorpicker.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/colorpicker/jmod.colorpicker.xml
+* /Max5/Cycling '74/Jamoma/modules/control/continuum/jalg.continuum.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/continuum/jalg.continuum_synth.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/continuum/jmod.continuum.html
+* /Max5/Cycling '74/Jamoma/modules/control/continuum/jmod.continuum.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/continuum/jmod.continuum.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/continuum/jmod.continuum.xml
+* /Max5/Cycling '74/Jamoma/modules/control/cueComment/jmod.cueComment.html
+* /Max5/Cycling '74/Jamoma/modules/control/cueComment/jmod.cueComment.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/cueComment/jmod.cueComment.xml
+* /Max5/Cycling '74/Jamoma/modules/control/cueManager/cuelist_help.txt
+* /Max5/Cycling '74/Jamoma/modules/control/cueManager/CuePrioritiesPropagator.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/cueManager/jmod.cueManager.html
+* /Max5/Cycling '74/Jamoma/modules/control/cueManager/jmod.cueManager.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/cueManager/jmod.cueManager.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/cueManager/jmod.cueManager.xml
+* /Max5/Cycling '74/Jamoma/modules/control/cueScript/jalg.cueScript.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/cueScript/jmod.cueScript.html
+* /Max5/Cycling '74/Jamoma/modules/control/cueScript/jmod.cueScript.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/cueScript/jmod.cueScript.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/cueScript/jmod.cueScript.xml
+* /Max5/Cycling '74/Jamoma/modules/control/cueScript/jmod.demo_cuescript.txt
+* /Max5/Cycling '74/Jamoma/modules/control/cueTrigger/jmod.cueTrigger.html
+* /Max5/Cycling '74/Jamoma/modules/control/cueTrigger/jmod.cueTrigger.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/cueTrigger/jmod.cueTrigger.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/cueTrigger/jmod.cueTrigger.xml
+* /Max5/Cycling '74/Jamoma/modules/control/fileBrowser/jmod.fileBrowser.html
+* /Max5/Cycling '74/Jamoma/modules/control/fileBrowser/jmod.fileBrowser.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/fileBrowser/jmod.fileBrowser.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/fileBrowser/jmod.fileBrowser.xml
+* /Max5/Cycling '74/Jamoma/modules/control/fileNameGenerator/jmod.fileNameGenerator.html
+* /Max5/Cycling '74/Jamoma/modules/control/fileNameGenerator/jmod.fileNameGenerator.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/fileNameGenerator/jmod.fileNameGenerator.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/fileNameGenerator/jmod.fileNameGenerator.xml
+* /Max5/Cycling '74/Jamoma/modules/control/globalTransport/jmod.globalTransport.html
+* /Max5/Cycling '74/Jamoma/modules/control/globalTransport/jmod.globalTransport.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/globalTransport/jmod.globalTransport.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/globalTransport/jmod.globalTransport.xml
+* /Max5/Cycling '74/Jamoma/modules/control/hi/jalg.hi.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/hi/jmod.hi.html
+* /Max5/Cycling '74/Jamoma/modules/control/hi/jmod.hi.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/hi/jmod.hi.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/hi/jmod.hi.xml
+* /Max5/Cycling '74/Jamoma/modules/control/layout/jmod.layout.html
+* /Max5/Cycling '74/Jamoma/modules/control/layout/jmod.layout.locate_patcher.js
+* /Max5/Cycling '74/Jamoma/modules/control/layout/jmod.layout.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/layout/jmod.layout.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/layout/jmod.layout.xml
+* /Max5/Cycling '74/Jamoma/modules/control/layout/jmod.layouthelp.xml
+* /Max5/Cycling '74/Jamoma/modules/control/layout/modules.txt
+* /Max5/Cycling '74/Jamoma/modules/control/mapper/jalg.mapper.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/mapper/jalg.transformation.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/mapper/jcom.mappings.js
+* /Max5/Cycling '74/Jamoma/modules/control/mapper/jmod.mapper.html
+* /Max5/Cycling '74/Jamoma/modules/control/mapper/jmod.mapper.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/mapper/jmod.mapper.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/mapper/jmod.mapper.xml
+* /Max5/Cycling '74/Jamoma/modules/control/mapperContinuous/jmod.mapperContinuous.html
+* /Max5/Cycling '74/Jamoma/modules/control/mapperContinuous/jmod.mapperContinuous.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/mapperContinuous/jmod.mapperContinuous.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/mapperContinuous/jmod.mapperContinuous.xml
+* /Max5/Cycling '74/Jamoma/modules/control/mapperDiscrete/jmod.mapperDiscrete.html
+* /Max5/Cycling '74/Jamoma/modules/control/mapperDiscrete/jmod.mapperDiscrete.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/mapperDiscrete/jmod.mapperDiscrete.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/mapperDiscrete/jmod.mapperDiscrete.xml
+* /Max5/Cycling '74/Jamoma/modules/control/mapperDiscrete/mappperDiscreteHelp1.xml
+* /Max5/Cycling '74/Jamoma/modules/control/mapperDiscrete/mappperDiscreteHelp2.xml
+* /Max5/Cycling '74/Jamoma/modules/control/messages/jmod.messages.html
+* /Max5/Cycling '74/Jamoma/modules/control/messages/jmod.messages.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/messages/jmod.messages.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/messages/jmod.messages.xml
+* /Max5/Cycling '74/Jamoma/modules/control/midiin/jalg.midiin.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/midiin/jmod.midiin.html
+* /Max5/Cycling '74/Jamoma/modules/control/midiin/jmod.midiin.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/midiin/jmod.midiin.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/midiin/jmod.midiin.xml
+* /Max5/Cycling '74/Jamoma/modules/control/mouse/jalg.mouse.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/mouse/jmod.mouse.html
+* /Max5/Cycling '74/Jamoma/modules/control/mouse/jmod.mouse.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/mouse/jmod.mouse.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/mouse/jmod.mouse.xml
+* /Max5/Cycling '74/Jamoma/modules/control/mouse.gdif/jalg.mouse.gdif.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/mouse.gdif/jmod.mouse.gdif.html
+* /Max5/Cycling '74/Jamoma/modules/control/mouse.gdif/jmod.mouse.gdif.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/mouse.gdif/jmod.mouse.gdif.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/mouse.gdif/jmod.mouse.gdif.xml
+* /Max5/Cycling '74/Jamoma/modules/control/multicast/jalg.multicast.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/multicast/jalg.multicast_core.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/multicast/jmod.multicast.html
+* /Max5/Cycling '74/Jamoma/modules/control/multicast/jmod.multicast.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/multicast/jmod.multicast.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/multicast/jmod.multicast.xml
+* /Max5/Cycling '74/Jamoma/modules/control/oscnet/jalg.oscnet.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/oscnet/jalg.oscnet.ui.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/oscnet/jmod.oscnet.html
+* /Max5/Cycling '74/Jamoma/modules/control/oscnet/jmod.oscnet.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/oscnet/jmod.oscnet.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/oscnet/jmod.oscnet.xml
+* /Max5/Cycling '74/Jamoma/modules/control/palette/jalg.palette.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/palette/jmod.palette.html
+* /Max5/Cycling '74/Jamoma/modules/control/palette/jmod.palette.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/palette/jmod.palette.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/palette/jmod.palette.xml
+* /Max5/Cycling '74/Jamoma/modules/control/polhemus/jalg.polhemus.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/polhemus/jmod.polhemus.html
+* /Max5/Cycling '74/Jamoma/modules/control/polhemus/jmod.polhemus.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/polhemus/jmod.polhemus.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/polhemus/jmod.polhemus.xml
+* /Max5/Cycling '74/Jamoma/modules/control/qmetro/jalg.qmetro.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/qmetro/jmod.qmetro.html
+* /Max5/Cycling '74/Jamoma/modules/control/qmetro/jmod.qmetro.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/qmetro/jmod.qmetro.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/qmetro/jmod.qmetro.xml
+* /Max5/Cycling '74/Jamoma/modules/control/qmetro/qmetro.test.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/qualisys/jalg.qualisys.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/qualisys/jmod.qualisys.html
+* /Max5/Cycling '74/Jamoma/modules/control/qualisys/jmod.qualisys.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/qualisys/jmod.qualisys.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/qualisys/jmod.qualisys.xml
+* /Max5/Cycling '74/Jamoma/modules/control/spacenavigator/jalg.spacenavigator.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/spacenavigator/jmod.spacenavigator.html
+* /Max5/Cycling '74/Jamoma/modules/control/spacenavigator/jmod.spacenavigator.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/spacenavigator/jmod.spacenavigator.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/spacenavigator/jmod.spacenavigator.xml
+* /Max5/Cycling '74/Jamoma/modules/control/uc-33/jalg.uc-33-masterFader.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/uc-33/jalg.uc-33.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/uc-33/jmod.uc-33.html
+* /Max5/Cycling '74/Jamoma/modules/control/uc-33/jmod.uc-33.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/uc-33/jmod.uc-33.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/uc-33/jmod.uc-33.xml
+* /Max5/Cycling '74/Jamoma/modules/control/wacom/jalg.wacom.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/wacom/jmod.wacom.html
+* /Max5/Cycling '74/Jamoma/modules/control/wacom/jmod.wacom.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/control/wacom/jmod.wacom.maxpat
+* /Max5/Cycling '74/Jamoma/modules/control/wacom/jmod.wacom.xml
+* /Max5/Cycling '74/Jamoma/modules/data/condition/jalg.condition.maxpat
+* /Max5/Cycling '74/Jamoma/modules/data/condition/jmod.condition.html
+* /Max5/Cycling '74/Jamoma/modules/data/condition/jmod.condition.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/data/condition/jmod.condition.maxpat
+* /Max5/Cycling '74/Jamoma/modules/data/condition/jmod.condition.xml
+* /Max5/Cycling '74/Jamoma/modules/data/textwriter/jalg.textwriter.maxpat
+* /Max5/Cycling '74/Jamoma/modules/data/textwriter/jalg.textwriter.mxt
+* /Max5/Cycling '74/Jamoma/modules/data/textwriter/jmod.textwriter.html
+* /Max5/Cycling '74/Jamoma/modules/data/textwriter/jmod.textwriter.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/data/textwriter/jmod.textwriter.maxpat
+* /Max5/Cycling '74/Jamoma/modules/data/textwriter/jmod.textwriter.xml
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.alphamixer%/jalg.gl.alphamixer%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.alphamixer%/jmod.gl.alphamixer%.html
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.alphamixer%/jmod.gl.alphamixer%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.alphamixer%/jmod.gl.alphamixer%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.alphamixer%/jmod.gl.alphamixer%.xml
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.alphamixer%/shaders/jcom.4ch_alphamixer.jxs
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.alphamixer%/shaders/jcom.4ch_alphamixer.vp.glsl
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.chromakey%/jalg.gl.chromakey%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.chromakey%/jmod.gl.chromakey%.html
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.chromakey%/jmod.gl.chromakey%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.chromakey%/jmod.gl.chromakey%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.chromakey%/jmod.gl.chromakey%.xml
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.chromakey%/jmod.gl.td.chromakey-demo.txt
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.edgeblend%/jalg.gl.edgeblend%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.edgeblend%/jmod.gl.edgeblend%.html
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.edgeblend%/jmod.gl.edgeblend%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.edgeblend%/jmod.gl.edgeblend%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.edgeblend%/jmod.gl.edgeblend%.xml
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.td.background%/jalg.gl.background%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.td.background%/jmod.gl.background%.html
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.td.background%/jmod.gl.background%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.td.background%/jmod.gl.background%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.td.background%/jmod.gl.background%.xml
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.td.rota%/jalg.gl.td.rota%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.td.rota%/jmod.gl.td.rota%.html
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.td.rota%/jmod.gl.td.rota%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.td.rota%/jmod.gl.td.rota%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.td.rota%/jmod.gl.td.rota%.xml
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.text2d%/GNU-LGPL.txt
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.text2d%/jalg.gl.text2d%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.text2d%/jmod.gl.text2d%-demo.txt
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.text2d%/jmod.gl.text2d%.html
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.text2d%/jmod.gl.text2d%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.text2d%/jmod.gl.text2d%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.text2d%/jmod.gl.text2d%.xml
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.videoplane%/jalg.gl.videoplane%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.videoplane%/jmod.gl.videoplane%.html
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.videoplane%/jmod.gl.videoplane%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.videoplane%/jmod.gl.videoplane%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/openGL/gl.videoplane%/jmod.gl.videoplane%.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.adjust~/jalg.sur.ambi.adjust~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.adjust~/jmod.sur.ambi.adjust~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.adjust~/jmod.sur.ambi.adjust~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.adjust~/jmod.sur.ambi.adjust~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.adjust~/jmod.sur.ambi.adjust~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.decode~/jalg.sur.ambi.decode~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.decode~/jmod.sur.ambi.decode~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.decode~/jmod.sur.ambi.decode~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.decode~/jmod.sur.ambi.decode~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.decode~/jmod.sur.ambi.decode~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.encodeM~/jalg.sur.ambi.encodeM~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.encodeM~/jmod.sur.ambi.encodeM~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.encodeM~/jmod.sur.ambi.encodeM~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.encodeM~/jmod.sur.ambi.encodeM~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambi.encodeM~/jmod.sur.ambi.encodeM~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambipanning~/jalg.sur.ambipanning~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambipanning~/jcom.ambipanSource.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambipanning~/jmod.sur.ambipanning~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambipanning~/jmod.sur.ambipanning~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambipanning~/jmod.sur.ambipanning~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambipanning~/jmod.sur.ambipanning~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambisonics~/jalg.sur.ambisonics~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambisonics~/jmod.sur.ambisonics~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambisonics~/jmod.sur.ambisonics~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambisonics~/jmod.sur.ambisonics~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.ambisonics~/jmod.sur.ambisonics~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.audiounit~/jalg.sur.audiounit~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.audiounit~/jmod.sur.audiounit~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.audiounit~/jmod.sur.audiounit~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.audiounit~/jmod.sur.audiounit~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.audiounit~/jmod.sur.audiounit~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.aux~/jalg.sur.aux~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.aux~/jmod.sur.aux~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.aux~/jmod.sur.aux~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.aux~/jmod.sur.aux~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.aux~/jmod.sur.aux~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.dbapBformat~/jalg.sur.dbapBformat~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.dbapBformat~/jmod.sur.dbapBformat~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.dbapBformat~/jmod.sur.dbapBformat~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.dbapBformat~/jmod.sur.dbapBformat~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.dbapBformat~/jmod.sur.dbapBformat~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.dbap~/jalg.sur.dbap~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.dbap~/jmod.sur.dbap~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.dbap~/jmod.sur.dbap~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.dbap~/jmod.sur.dbap~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.dbap~/jmod.sur.dbap~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.doppler~/jalg.sur.doppler~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.doppler~/jcom.sur.ch.doppler~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.doppler~/jcom.sur.doppler.js
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.doppler~/jmod.sur.doppler~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.doppler~/jmod.sur.doppler~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.doppler~/jmod.sur.doppler~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.doppler~/jmod.sur.doppler~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.info~/jalg.sur.info~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.info~/jmod.sur.info~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.info~/jmod.sur.info~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.info~/jmod.sur.info~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.info~/jmod.sur.info~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.input~/input.timeDisplay.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.input~/jalg.sur.input~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.input~/jmod.sur.input~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.input~/jmod.sur.input~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.input~/jmod.sur.input~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.input~/jmod.sur.input~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.meters~/jmod.sur.meters~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.meters~/jmod.sur.meters~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.meters~/jmod.sur.meters~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.meters~/jmod.sur.meters~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.multi.in~/jalg.sur.multi.in~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.multi.in~/jmod.sur.multi.in~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.multi.in~/jmod.sur.multi.in~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.multi.in~/jmod.sur.multi.in~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.multi.in~/jmod.sur.multi.in~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.multi.out~/jalg.sur.multi.out~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.multi.out~/jmod.sur.multi.out~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.multi.out~/jmod.sur.multi.out~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.multi.out~/jmod.sur.multi.out~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.multi.out~/jmod.sur.multi.out~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.output~/jalg.sur.output~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.output~/jmod.sur.output~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.output~/jmod.sur.output~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.output~/jmod.sur.output~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.output~/jmod.sur.output~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.position/jmod.sur.position.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.position/jmod.sur.position.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.position/jmod.sur.position.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.position/jmod.sur.position.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.race~/jalg.sur.race~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.race~/jmod.sur.race~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.race~/jmod.sur.race~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.race~/jmod.sur.race~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.race~/jmod.sur.race~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.race~/pingpong.poly.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.rolloff~/jalg.sur.rolloff~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.rolloff~/jcom.sur.ch.rolloff~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.rolloff~/jcom.sur.rolloff.js
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.rolloff~/jmod.sur.rolloff~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.rolloff~/jmod.sur.rolloff~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.rolloff~/jmod.sur.rolloff~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.rolloff~/jmod.sur.rolloff~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.setup/jcom.sur.channel.xyz_setup.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.setup/jmod.sur.setup.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.setup/jmod.sur.setup.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.setup/jmod.sur.setup.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.setup/jmod.sur.setup.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.speaker.delay~/jalg.sur.speaker.delay~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.speaker.delay~/jcom.sur.speaker.delays.js
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.speaker.delay~/jmod.sur.speaker.delay~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.speaker.delay~/jmod.sur.speaker.delay~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.speaker.delay~/jmod.sur.speaker.delay~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.speaker.delay~/jmod.sur.speaker.delay~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.speaker.distamp~/jalg.sur.speaker.distamp~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.speaker.distamp~/jmod.sur.speaker.distamp~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.speaker.distamp~/jmod.sur.speaker.distamp~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.speaker.distamp~/jmod.sur.speaker.distamp~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.speaker.distamp~/jmod.sur.speaker.distamp~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.vbap~/jalg.sur.vbap~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.vbap~/jmod.sur.vbap~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.vbap~/jmod.sur.vbap~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.vbap~/jmod.sur.vbap~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.vbap~/jmod.sur.vbap~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.waveformViewer/jmod.sur.waveformViewer~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.waveformViewer/jmod.sur.waveformViewer~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.waveformViewer/jmod.sur.waveformViewer~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.waveformViewer/jmod.sur.waveformViewer~.xml
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.zoomH2ambi~/jmod.sur.zoomH2ambi~.html
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.zoomH2ambi~/jmod.sur.zoomH2ambi~.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.zoomH2ambi~/jmod.sur.zoomH2ambi~.maxpat
+* /Max5/Cycling '74/Jamoma/modules/spatialization/sur.zoomH2ambi~/jmod.sur.zoomH2ambi~.xml
+* /Max5/Cycling '74/Jamoma/modules/video/alphablend%/jalg.alphablend%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/alphablend%/jmod.alphablend%.html
+* /Max5/Cycling '74/Jamoma/modules/video/alphablend%/jmod.alphablend%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/alphablend%/jmod.alphablend%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/alphablend%/jmod.alphablend%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/avg4%/jalg.avg4%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/avg4%/jmod.avg4%.html
+* /Max5/Cycling '74/Jamoma/modules/video/avg4%/jmod.avg4%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/avg4%/jmod.avg4%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/avg4%/jmod.avg4%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/background%/jalg.background%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/background%/jmod.background%.html
+* /Max5/Cycling '74/Jamoma/modules/video/background%/jmod.background%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/background%/jmod.background%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/background%/jmod.background%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/blur%/jalg.blur%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/blur%/jmod.blur%.html
+* /Max5/Cycling '74/Jamoma/modules/video/blur%/jmod.blur%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/blur%/jmod.blur%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/blur%/jmod.blur%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/box%/jalg.box%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/box%/jmod.box%.html
+* /Max5/Cycling '74/Jamoma/modules/video/box%/jmod.box%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/box%/jmod.box%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/box%/jmod.box%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/brcosa%/jalg.brcosa%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/brcosa%/jmod.brcosa%.html
+* /Max5/Cycling '74/Jamoma/modules/video/brcosa%/jmod.brcosa%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/brcosa%/jmod.brcosa%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/brcosa%/jmod.brcosa%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/chromakey%/jalg.chromakey%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/chromakey%/jmod.chromakey%.html
+* /Max5/Cycling '74/Jamoma/modules/video/chromakey%/jmod.chromakey%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/chromakey%/jmod.chromakey%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/chromakey%/jmod.chromakey%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/edge%/jalg.edge%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/edge%/jmod.edge%.html
+* /Max5/Cycling '74/Jamoma/modules/video/edge%/jmod.edge%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/edge%/jmod.edge%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/edge%/jmod.edge%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/emboss%/jalg.emboss%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/emboss%/jmod.emboss%.html
+* /Max5/Cycling '74/Jamoma/modules/video/emboss%/jmod.emboss%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/emboss%/jmod.emboss%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/emboss%/jmod.emboss%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/fft%/jmod.fft%.html
+* /Max5/Cycling '74/Jamoma/modules/video/fft%/jmod.fft%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/fft%/jmod.fft%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/fft%/jmod.fft%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/fluoride%/jalg.fluoride%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/fluoride%/jmod.fluoride%.html
+* /Max5/Cycling '74/Jamoma/modules/video/fluoride%/jmod.fluoride%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/fluoride%/jmod.fluoride%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/fluoride%/jmod.fluoride%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/foregroundMask%/jalg.foregroundMask%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/foregroundMask%/jmod.foregroundMask%.html
+* /Max5/Cycling '74/Jamoma/modules/video/foregroundMask%/jmod.foregroundMask%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/foregroundMask%/jmod.foregroundMask%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/foregroundMask%/jmod.foregroundMask%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/ifft%/jmod.ifft%.html
+* /Max5/Cycling '74/Jamoma/modules/video/ifft%/jmod.ifft%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/ifft%/jmod.ifft%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/ifft%/jmod.ifft%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/input%/jalg.input%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/input%/jalg.input%.ui.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/input%/jmod.input%.html
+* /Max5/Cycling '74/Jamoma/modules/video/input%/jmod.input%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/input%/jmod.input%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/input%/jmod.input%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/keyscreen%/jalg.keyscreen%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/keyscreen%/jmod.keyscreen%.html
+* /Max5/Cycling '74/Jamoma/modules/video/keyscreen%/jmod.keyscreen%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/keyscreen%/jmod.keyscreen%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/keyscreen%/jmod.keyscreen%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/mblur%/jalg.mblur%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/mblur%/jmod.mblur%.html
+* /Max5/Cycling '74/Jamoma/modules/video/mblur%/jmod.mblur%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/mblur%/jmod.mblur%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/mblur%/jmod.mblur%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/motion%/jalg.motion%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/motion%/jmod.motion%.html
+* /Max5/Cycling '74/Jamoma/modules/video/motion%/jmod.motion%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/motion%/jmod.motion%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/motion%/jmod.motion%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/motion2%/jalg.motion2%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/motion2%/jmod.motion2%.html
+* /Max5/Cycling '74/Jamoma/modules/video/motion2%/jmod.motion2%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/motion2%/jmod.motion2%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/motion2%/jmod.motion2%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/motiongram%/jalg.motiongram%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/motiongram%/jmod.motiongram%.html
+* /Max5/Cycling '74/Jamoma/modules/video/motiongram%/jmod.motiongram%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/motiongram%/jmod.motiongram%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/motiongram%/jmod.motiongram%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/moviePlayer%/jalg.moviePlayer%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/moviePlayer%/jmod.moviePlayer%.html
+* /Max5/Cycling '74/Jamoma/modules/video/moviePlayer%/jmod.moviePlayer%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/moviePlayer%/jmod.moviePlayer%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/moviePlayer%/jmod.moviePlayer%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/op%/jalg.op%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/op%/jmod.op%.html
+* /Max5/Cycling '74/Jamoma/modules/video/op%/jmod.op%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/op%/jmod.op%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/op%/jmod.op%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/orsize%/jalg.orsize%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/orsize%/jmod.orsize%.html
+* /Max5/Cycling '74/Jamoma/modules/video/orsize%/jmod.orsize%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/orsize%/jmod.orsize%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/orsize%/jmod.orsize%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/output%/jalg.output%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/output%/jmod.output%.html
+* /Max5/Cycling '74/Jamoma/modules/video/output%/jmod.output%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/output%/jmod.output%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/output%/jmod.output%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/plur%/jalg.plur%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/plur%/jmod.plur%.html
+* /Max5/Cycling '74/Jamoma/modules/video/plur%/jmod.plur%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/plur%/jmod.plur%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/plur%/jmod.plur%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/posterize%/jmod.posterize%.html
+* /Max5/Cycling '74/Jamoma/modules/video/posterize%/jmod.posterize%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/posterize%/jmod.posterize%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/posterize%/jmod.posterize%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/record%/jalg.record%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/record%/jmod.record%.html
+* /Max5/Cycling '74/Jamoma/modules/video/record%/jmod.record%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/record%/jmod.record%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/record%/jmod.record%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/rgb2gray%/jmod.rgb2gray%.html
+* /Max5/Cycling '74/Jamoma/modules/video/rgb2gray%/jmod.rgb2gray%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/rgb2gray%/jmod.rgb2gray%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/rgb2gray%/jmod.rgb2gray%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/similarity%/jalg.similarity%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/similarity%/jmod.similarity%.html
+* /Max5/Cycling '74/Jamoma/modules/video/similarity%/jmod.similarity%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/similarity%/jmod.similarity%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/similarity%/jmod.similarity%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/slitscan%/jalg.slitscan%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/slitscan%/jmod.slitscan%.html
+* /Max5/Cycling '74/Jamoma/modules/video/slitscan%/jmod.slitscan%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/slitscan%/jmod.slitscan%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/slitscan%/jmod.slitscan%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/television%/jalg.television%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/television%/jmod.television%.html
+* /Max5/Cycling '74/Jamoma/modules/video/television%/jmod.television%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/television%/jmod.television%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/television%/jmod.television%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/wake%/jalg.wake%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/wake%/jmod.wake%.html
+* /Max5/Cycling '74/Jamoma/modules/video/wake%/jmod.wake%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/wake%/jmod.wake%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/wake%/jmod.wake%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/xfade%/jalg.xfade%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/xfade%/jmod.xfade%.html
+* /Max5/Cycling '74/Jamoma/modules/video/xfade%/jmod.xfade%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/xfade%/jmod.xfade%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/xfade%/jmod.xfade%.xml
+* /Max5/Cycling '74/Jamoma/modules/video/yfade%/jalg.yfade%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/yfade%/jmod.yfade%.html
+* /Max5/Cycling '74/Jamoma/modules/video/yfade%/jmod.yfade%.maxhelp
+* /Max5/Cycling '74/Jamoma/modules/video/yfade%/jmod.yfade%.maxpat
+* /Max5/Cycling '74/Jamoma/modules/video/yfade%/jmod.yfade%.xml
+* /Max5/Cycling '74/object-palettes/jamoma-palette.json
+* /Max5/Cycling '74/object-palettes/jcom.label.svg
+* /Max5/Cycling '74/object-palettes/jcom.spatDisplay.svg
+* /Max5/Cycling '74/object-palettes/jcom.ui.svg
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.10harmonics~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.audiounit~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.crossfade~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.degrade~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.delay~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.echo~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.equalizer~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.filter~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.fluidsynth~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.hilbertModulator~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.input~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.limiter~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.multidelay~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.noisegate~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.noise~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.output~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.panpot~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.rissetGlissando~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.sampleplayer2~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.samplePlayer~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.saturation~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.scope~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.sine~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.sonifyer~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.spectralGate~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.spectralShift~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.spectrogram~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.tremolo~.maxpat
+* /Max5/patches/clippings/jamoma/audio modules/jmod.clip.vst~.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.bcf2000.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.colorpicker.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.continuum.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.cueComment.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.cueManager.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.cueScript.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.cueTrigger.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.fileBrowser.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.fileNameGenerator.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.globalTransport.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.hi.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.layout.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.mapper.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.mapperContinuous.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.mapperDiscrete.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.messages.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.midiin.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.mouse.gdif.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.mouse.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.multicast.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.oscnet.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.palette.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.polhemus.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.qmetro.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.qualisys.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.spacenavigator.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.uc-33.maxpat
+* /Max5/patches/clippings/jamoma/control modules/jmod.clip.wacom.maxpat
+* /Max5/patches/clippings/jamoma/data modules/jmod.clip.condition.maxpat
+* /Max5/patches/clippings/jamoma/data modules/jmod.clip.textwriter.maxpat
+* /Max5/patches/clippings/jamoma/openGL modules/jmod.clip.gl.alphamixer%.maxpat
+* /Max5/patches/clippings/jamoma/openGL modules/jmod.clip.gl.background%.maxpat
+* /Max5/patches/clippings/jamoma/openGL modules/jmod.clip.gl.chromakey%.maxpat
+* /Max5/patches/clippings/jamoma/openGL modules/jmod.clip.gl.edgeblend%.maxpat
+* /Max5/patches/clippings/jamoma/openGL modules/jmod.clip.gl.td.rota%.maxpat
+* /Max5/patches/clippings/jamoma/openGL modules/jmod.clip.gl.text2d%.maxpat
+* /Max5/patches/clippings/jamoma/openGL modules/jmod.clip.gl.videoplane%.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.ambi.adjust~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.ambi.decode~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.ambi.encodeM~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.ambipanning~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.ambisonics~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.audiounit~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.aux~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.dbapBformat~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.dbap~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.doppler~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.info~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.input~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.meters~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.multi.in~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.multi.out~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.output~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.position.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.race~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.rolloff~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.setup.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.speaker.delay~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.speaker.distamp~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.vbap~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.waveformViewer~.maxpat
+* /Max5/patches/clippings/jamoma/spatialization modules/jmod.clip.sur.zoomH2ambi~.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.alphablend%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.avg4%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.background%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.blur%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.box%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.brcosa%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.chromakey%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.edge%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.emboss%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.fft%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.fluoride%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.foregroundMask%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.ifft%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.input%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.keyscreen%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.mblur%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.motion%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.motion2%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.motiongram%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.moviePlayer%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.op%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.orsize%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.output%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.plur%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.posterize%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.record%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.rgb2gray%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.similarity%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.slitscan%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.television%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.wake%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.xfade%.maxpat
+* /Max5/patches/clippings/jamoma/video modules/jmod.clip.yfade%.maxpat
+* /Max5/patches/extras/jamoma-overview.maxpat
+* /Max5/patches/Jamoma-doc/_jdoc_common.css
+* /Max5/patches/Jamoma-doc/_jdoc_common.xml
+* /Max5/patches/Jamoma-doc/_jdoc_common.xsl
+* /Max5/patches/Jamoma-doc/_jdoc_compat.html
+* /Max5/patches/Jamoma-doc/_jdoc_platform.xsl
+* /Max5/patches/Jamoma-doc/refpages/_jdoc_ref_common.xsl
+* /Max5/patches/Jamoma-doc/refpages/_jdoc_ref_modules.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaFoundation/_jdoc_contents.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaFoundation/_jdoc_ref.xsl
+* /Max5/patches/Jamoma-doc/refpages/JamomaFoundation/images/jcom.dataspace.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaFoundation/jcom.dataspace.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaGraph/_jdoc_contents.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaGraph/_jdoc_ref.xsl
+* /Max5/patches/Jamoma-doc/refpages/JamomaGraph/images/jcom.dataspace#.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaGraph/jcom.dataspace#.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/_jdoc_contents.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/_jdoc_ref.xsl
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.absdiff.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.ambimonitor2position.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.dbap.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.delta.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.init.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.initialized.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.instance2instance.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.message.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.oscinstance.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.oscroute.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.parameter.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.pass.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.position2ambimonitor.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.return.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/images/jcom.stats.maxref.png
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.absdiff.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.ambimonitor2position.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.dbap.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.delta.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.hub.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.init.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.initialized.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.instance2instance.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.map.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.message.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.meter~.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.oscinstance.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.oscroute.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.parameter.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.pass.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.position2ambimonitor.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.return.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaModular/jcom.stats.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaPlugtastic/_jdoc_contents.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaPlugtastic/_jdoc_ref.xsl
+* /Max5/patches/Jamoma-doc/refpages/JamomaPlugtastic/jcom.plug.parameter#.maxref.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaTest/_jdoc_contents.xml
+* /Max5/patches/Jamoma-doc/refpages/JamomaTest/_jdoc_ref.xsl
+* /Max5/patches/Jamoma-doc/refpages/JamomaTest/jcom.test.assert.equal.maxref.xml
+* /Max5/patches/templates/_Jamoma_Patcher_.maxpat
+* /Max5/patches/templates/jalg.template.audio~.maxpat
+* /Max5/patches/templates/jalg.template.video%.maxpat
+* /Max5/patches/templates/jmod.template.audio~.maxpat
+* /Max5/patches/templates/jmod.template.control.maxpat
+* /Max5/patches/templates/jmod.template.maxhelp
+* /Max5/patches/templates/jmod.template.video%.maxpat
+* /Max5/patches/templates/layout.xml
+
+
+h2(#windows). Installed files under Windows
+
+h3(#win-max). Installed files in the Max folder
 
 Not yet available.

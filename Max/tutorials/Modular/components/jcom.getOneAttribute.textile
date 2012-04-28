@@ -1,0 +1,10 @@
+--- 
+title: jcom.getOneAttribute
+description: Get the value of one attribute of a parameter, message or return
+author: [Jamoma, Julien Rabin]
+created_at: 2010/11/11
+tags: [OSC, messages, parsing]
+objref: []
+---
+
+!../images/jcom.getOneAttribute.refpage.png!

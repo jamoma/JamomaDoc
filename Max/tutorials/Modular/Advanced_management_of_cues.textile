@@ -1,17 +1,17 @@
 ---
-title: Advanced manipulation of cues
-description: This lesson goes thru some advanced feature provided by jmod.cueManager
+title: Advanced management of cues
+description: This lesson goes thru some advanced features provided by jmod.cueManager
 author: [Jamoma]
 created_at: 2012/04/21
 tags: [cues, presets, states, advanced]
-objref: [jcom.cuemanager, jmod.cueManager]
+objref: [jmod.cueManager, jmod.output~, jmod.mapperContinuous, jmod.mouse]
 ---
 
 In a "previous tutorial":Saving_and_recalling_state_of_modules.html, we learned how to save and recall some parameters values from the modules used in a patch. Thanks to Jamoma framework features, we saw that remotely getting and setting jcom.parameter values is made easy. However, as a patch grows in density and complexity, a better control of the default function is often required.
 
 h3. Advanced control of saved modules settings
 
-By default, jmod.cueManager stores all modules settings for each cue. While very handy, there may be some cases where you want to exclude some modules from some particular cues or use various jmod.cueManagers in your patch. Hence, jmod.cueManager allows to define for each stored cue which modules' settings will be stored.
+By default, "jmod.cueManager":modules/jmod.cueManager.html stores all modules settings for each cue. While very handy, there may be some cases where you want to exclude some modules from some particular cues or use various jmod.cueManagers in your patch. Hence, jmod.cueManager allows to define for each stored cue which modules' settings will be stored.
 
 Open the advanced features panels by clicking on jmod.cueManager top-right corner %(samp)+% button.
 
@@ -21,7 +21,7 @@ This panel lists all modules in the patch. Modules included in the current cue a
 
 bq. To select a serie of module, just click on the first, then last module while holding the %(kbd)shift% key.
 
-For this tutorial, we will unselect jmod.cueManager (named %(samp)myCues%) and jmod.output~ (named %(samp)myAudioOut%), assuming we want their settings to stay static for all the project. Thus, next time we save a cue, all jcom.parameter values for all modules but these two will be saved in the cue.
+For this tutorial, we will unselect jmod.cueManager (named %(samp)myCues%) and "jmod.output~":modules/jmod.output~.html (named %(samp)myAudioOut%), assuming we want their settings to stay static for all the project. Thus, next time we save a cue, all jcom.parameter values for all modules but these two will be saved in the cue.
 
 !images/modules_sel2.png!
 
@@ -37,7 +37,7 @@ So far, we saw that jmod.cueManager takes care of us of saving and recalling val
 
 While including or excluding some modules from cues, we will have noticed that the advanced features panel of jmod.cueManager provides a second column filled with the value %(samp)99%. This column allows to define a priority order for our modules. The default value (99) mean that no particular priority is applied. Changing the priority can be done by double-clicking in the right column then typing the desired order value. Order is defined from 1. This means that modules of priority 1 will be recalled first, then modules with priority 2 and so on.
 
-For the demonstration purpose, we will want here to have the settings of our sound processing (%(samp)myEQ% and %(samp)myDegrader%) to be recalled first, then the settings of %(samp)myAudioOut% which turn Max audio calculation on, then the settings of %(samp)myAudioPlayer% that load a soundfile and start playing it. Assuming the order is non critical, the order of jmod.mouse and jmod.mapperContinuous is left unchanged meaning that their settings will be recalled last.
+For the demonstration purpose, we will want here to have the settings of our sound processing (%(samp)myEQ% and %(samp)myDegrader%) to be recalled first, then the settings of %(samp)myAudioOut% which turn Max audio calculation on, then the settings of %(samp)myAudioPlayer% that load a soundfile and start playing it. Assuming the order is non critical, the order of "jmod.mouse":modules/jmod.mouse.html and "jmod.mapperContinuous":modules/jmod.mapperContinuous.html is left unchanged meaning that their settings will be recalled last.
 
 !images/modules_order.png!
 
@@ -45,3 +45,12 @@ When done, a new cue can be created or the current cue can be updated, following
 
 h3. Absolute cues vs relative cues
 
+h4. General concept
+
+jmod.cueManager relies on the concept of two different types of cues: *absolute* or *relative* (also refered as Keycues or Differential). So far, we used the absolute type of cue which is the default used by jmod.cueManager. That is, when storing a new cue, jmod.cueManager listen to ALL parameters values for each included module.
+
+When storing a relative cue, jmod.cueManager will only store the parameter values that changed from all previously stored/recalled cue, up to the latest absolute cue. This is somehow similar to temporal ("interframe":http://en.wikipedia.org/wiki/Temporal_compression#Video) compression in Video codecs.
+
+!images/abs-rel_cue1.png!
+
+<!-- h4. Recalling relative cues -->

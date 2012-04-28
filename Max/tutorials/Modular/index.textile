@@ -1,0 +1,59 @@
+---
+title: Table of Content
+description:
+created_at: 2010/11/11
+tags: []
+objref: []
+---
+
+h2. Jamoma Modular
+
+h3. Installation
+
+* "Installing Jamoma's stable version":./docs/Installing_Jamoma_Modular_stable_version.html
+* "Installing Jamoma's development version":./docs/Installing_Jamoma_Modular_development_version.html
+
+h3. First Steps
+
+* "Browsing the various modules":./docs/Browsing_the_various_modules.html
+* "Adding Modules to a patch":./docs/Create_new_module_in_a_patch.html
+* "Exploring modules' documentation":./docs/Exploring_modules_documentation.html
+
+h3. Using Modules
+
+* "A simple Sound FX module":./docs/Tutorial_-_Sound_FX_modules.html
+* "Sending messages to modules":./docs/Sending_messages_to_modules.html
+* "Mapping between Jamoma modules":./docs/Mapping_between_modules.html
+* "Saving and recalling states of modules through cues":./docs/Saving_and_recalling_state_of_modules.html
+* "Advanced cues management":./docs/Advanced_management_of_cues.html
+
+h3. Developing Your Own Modules
+
+* "How to create a Jamoma module":./docs/How_to_build_jmod.qmetro.html
+* "How to get jcom.hub's initialization notification":./docs/How_to_get_jcom.hub_s_initialization_notification_.html
+* "Retrieving information about existing Jamoma modules":./docs/Retrieving_information_about_existing_Jamoma_modules.html
+
+h3. Sharing
+
+* "How to add your project to the UserLib":./docs/How_to_add_project_to_User_Library.html
+* "Hosting modules at Github":./docs/Hosting_Jamoma_modules_at_Github.html
+
+h3. Compiling
+
+* "Setting up a development environment in OSX":./docs/Setting_up_development_environment_Mac.html
+* "Setting up a developer environment in Windows":./docs/Setting_up_dev_env_Windows.html
+* "Building externals":./docs/Building_externals.html
+
+h3. FAQ
+
+* "Why are some parameters not recalled ?":./docs/some_parameters_are_not_recalled.html
+* "How to create a Standalone with Jamoma dependencies ?":./docs/How_to_create_a_standalone.html
+* "What files are installed ?":./docs/Installer_log.html
+
+h3. Annexes
+
+* "Anatomy of a preset":./docs/anatomy_of_a_preset.html
+* "Index of modules":./docs/Index_of_Modules.html
+* "Index of components":./docs/Index_of_components.html
+* "Shortcuts":./docs/Shortcuts_in_Jamoma.html
+* "Credits":./docs/credits.html

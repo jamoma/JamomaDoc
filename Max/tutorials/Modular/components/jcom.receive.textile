@@ -1,0 +1,10 @@
+--- 
+title: jcom.receive
+description: Receive messages from any Jamoma module
+author: [Jamoma, Julien Rabin]
+created_at: 2010/11/11
+tags: [OSC, messages, parsing]
+objref: []
+---
+
+!../images/jcom.receive.refpage.png!

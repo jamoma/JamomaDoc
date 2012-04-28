@@ -1,0 +1,22 @@
+---
+title: Setting up development environment on Mac
+description: This tutorial goes thru the various setup process to get and compile Jamoma on Mac
+author: [Jamoma, Pascal Baltazar, Julien Rabin]
+created_at: 2011/06/05
+tags: [xcode, setup, install]
+objref: []
+---
+
+Before downloading Jamoma sources and compile them a few steps are required to properly setting up your development environment.
+
+Install Apple's "Xcode":https://developer.apple.com/resources/ tools (you will need an Apple ID).
+
+bq.  The current version is 4, but we recommend using 3.X until more testing has been done.
+
+If you don't have it, you can download it from developer.apple.com. It is roughly 4GB of downloading and requires a free login.
+
+When done, go to your application folder and select Max application.
+Then, show the package contents (ctrl-click on the application) of Max, go to Contents/Frameworks and copy the four framework folders to /Library/Frameworks
+
+Read the readme.txt in the root folder of the Jamoma project for further instructions.
+

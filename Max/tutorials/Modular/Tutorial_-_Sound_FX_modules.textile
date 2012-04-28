@@ -18,7 +18,7 @@ The input and output modules are used often, so Jamoma adds two shortcuts to the
 * With the patch in edit mode, we can type %(kbd)SHIFT% + %(kbd)I% to create an input module. The module will show up at the position the mouse is pointing at when we type the shortcut.
 * In the same way we can type %(kbd)SHIFT% + %(kbd)O% to create an output module.
 
-bq. The "Shortcuts_in_Jamoma":Shortcuts_in_Jamoma.html in Jamoma.html reference page lists all available key combinations jn Jamoma.
+bq. The "Shortcuts in Jamoma":Shortcuts_in_Jamoma.html reference page lists all available key combinations jn Jamoma.
 
 h4. Naming instances
 
@@ -42,7 +42,7 @@ All we need to provide info on now is:
 
 And yes, it is a bit confusing that we set the name with the @@args@ attribute and the type with the @@name@ attribute. But these are attributes passed to "bpatcher":http://cycling74.com/docs/max5/refpages/max-ref/bpatcher.html, not the module itself, so we have to adhere to the attribute namespace that "bpatcher":http://cycling74.com/docs/max5/refpages/max-ref/bpatcher.html have. Hence @@name@ is the name of the patch that we want to load as a subpatcher, while @@args@ are the arguments we want to pass to that patch.
 
-We want to load the "jmod.echo~":modules/jmod.echo~.html module, and give it the name _echo~_, so we will type in bpacther @@args myecho~ @name jmod.echo~@.
+We want to load the "jmod.echo~":modules/jmod.echo~.html module, and give it the name _echo~_, so we will type in @bpacther @args myecho~ @name jmod.echo~@.
 
 That is enough shortcuts for now. If you want the full overview of what shortcuts are supported in Jamoma, you can find it here.
 
@@ -60,7 +60,9 @@ h4. Some common module features
 
 As you can see the echo module has some dials and buttons in its upper rightmost corner. These are common to many of the audio processing modules, and provides a standardised interface to some features that you will often want audio effects to have.
 
-* Gain dial controls the level output of the module. Click-drag it to adjust the output signal level from the module. When you change the gain level, you will see current value displayed further to the left in the toolbar of the module.
+!images/audio-widgets.png!
+
+* The green dial controls the level output of the module. Click-drag it to adjust the output signal level from the module. When you change the gain level, you will see current value displayed further to the left in the toolbar of the module.
 The gain dial use a MIDI range that differs from what you might be used to in MSP:
 ** Although the standard range is 0-127, we use floats instead of ints. This enables fine resolution control of the gain level.
 ** While you have to send the value @128@ (sic!) to gain~ to get unity level, Jamoma map MIDI values in a different way mimicing gain faders on mixing consoles:
@@ -71,10 +73,11 @@ The gain dial use a MIDI range that differs from what you might be used to in MS
 
 If you want to apply the Jamoma MIDI range elsewhere in your patches and modules, the external "jcom.dataspace":components/jcom.dataspace.html can be used for mappings between linear, decibel and midi representations of gain levels. Set %(samp)@dataspace% to @gain@, and choose the @input and @output attributes appropriate for what you want to do. Please refer to the help file for "jcom.dataspace":components/jcom.dataspace.html for further details.
 
-* The Mix dial controls the mix between the dry (original) input (0.0 %) and the wet (100.0 %) (processed) signals. When changed, mix levels are briefly displayed in the module toolbar in the same way as for gain levels. Mixing between dry and wet signals is done using equal power (logarithmic) crossfade to avoid a dip in the middle.
-* The Mute button mutes the output signal of the module. It will also stop audio processing internally in the module, thus freeing up CPU for other purposes when the module is not in use. Muting is done in a similar way to how the mute~ object works as we have found this to be more CPU efficient than using poly~.
-* The Bypass button sends the original signal through the module without applying any effects.
-* All Jamoma audio modules has signal output level metering. Metering is done using the jcom.meter~ GUI external rather than the meter~ object, providing more detailed information (in particular at low levels) than meter~ do by default.
+* The blue dial controls the mix between the dry (original) input (0.0 %) and the wet (100.0 %) (processed) signals. When changed, mix levels are briefly displayed in the module toolbar in the same way as for gain levels. Mixing between dry and wet signals is done using equal power (logarithmic) crossfade to avoid a dip in the middle.
+* The 'm' button mutes the output signal of the module. It will also stop audio processing internally in the module, thus freeing up CPU for other purposes when the module is not in use. Muting is done in a similar way to how the mute~ object works as we have found this to be more CPU efficient than using "poly~":http://cycling74.com/docs/max5/refpages/msp-ref/poly~.html.
+If the button is red, the audio is muted.
+* The 'b' button sends the original signal through the module without applying any effects. If the button is blue, the audio is bypassed.
+* All Jamoma audio modules has signal output level metering. Metering is done using the "jcom.meter~":components/jcom.meter~.html GUI external rather than the meter~ object, providing more detailed information (in particular at low levels) than meter~ do by default.
 
 h4. Parameters particular to the echo effect
 
@@ -108,29 +111,29 @@ h3. Some other audio FX modules
 
 Now might be a good time to test out some of the other audio effect modules that Jamoma has to offer. Here are some to get you going:
 
-* jmod.degrade~ - degrade sample rate and bitdepth of audio signals
-* jmod.delay~ - delay signal by one or more samples
-* jmod.equalizer~ - graphical equalizing
-* jmod.filter~ - 2nd order filters
-* jmod.limiter~ - a limiter
-* jmod.multidelay~ - multiple delays
-* jmod.noisegate~ - noise gating
-* jmod.saturation~ - saturation
-* jmod.spectralShift~ - a spectral shifter with delay, feedback and limiting
-* jmod.tremolo~ - tremolo effect
-* jmod.vst~ - a wrapper for VST plugins
+* "jmod.degrade~":modules/jmod.degrade~.html - degrade sample rate and bitdepth of audio signals
+* "jmod.delay~":modules/jmod.delay~.html - delay signal by one or more samples
+* "jmod.equalizer~":modules/jmod.equalizer~.html - graphical equalizing
+* "jmod.filter~":modules/jmod.filter~.html - 2nd order filters
+* "jmod.limiter~":modules/jmod.limiter~.html - a limiter
+* "jmod.multidelay~":modules/jmod.multidelay~.html - multiple delays
+* "jmod.noisegate~":modules/jmod.noisegate~.html - noise gating
+* "jmod.saturation~":modules/jmod.saturation~.html - saturation
+* "jmod.spectralShift~":modules/jmod.spectralShift~.html - a spectral shifter with delay, feedback and limiting
+* "jmod.tremolo~":modules/jmod.tremolo~.html - tremolo effect
+* "jmod.vst~":modules/jmod.vst~.html - a wrapper for VST plugins
 
 h3. Summary
 
 * Shortcuts in Jamoma.
 ** Type %(kbd)SHIFT% + %(kbd)I% to create an input module.
 ** Type %(kbd)SHIFT% + %(kbd)O% to create an output module.
-** Naming instances:
-*** Jamoma wants each module to have a unique name.
-*** If we forget to provide names, Jamoma will try to help us out.
-** Creating modules using %(kbd)SHIFT% + %(kbd)B%:
-*** What kind of module we want using the @name attribute
-*** What name we want for the module, using the @args attribute.
+* Naming instances:
+** Jamoma wants each module to have a unique name.
+** If we forget to provide names, Jamoma will try to help us out.
+* Creating modules using %(kbd)SHIFT% + %(kbd)B%:
+** What Jamoma module we want using the @name attribute
+** What name we want for the module, using the @args attribute.
 * Features within the module.
 ** Audio modules can be provided with mix, gain, metering, bypass and mute.
 

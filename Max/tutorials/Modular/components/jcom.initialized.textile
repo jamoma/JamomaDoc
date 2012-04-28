@@ -1,0 +1,45 @@
+--- 
+title: jcom.initialized
+description: Send a 'bang' when a module has been initialized
+author: [Jamoma, Julien Rabin]
+created_at: 2010/11/11
+tags: [loadbang, initialization, order, loading]
+objref: []
+---
+
+h3. Description
+
+p. jcom.initialized is somewhat similar to Max's "loadbang":http://cycling74.com/docs/max5/refpages/max-ref/loadbang.html object and sends a @bang@ when a particular module has been initialized.
+
+h3. Inputs
+
+_none_
+
+h3. Outputs
+
+|_.Output number |_.Description |
+| 1st output | A @bang@ is output when the module defined as argument is initialized |
+
+h3. Arguments
+
+|_.Argument name |_.Type |_.Description |_.Default Unit |_.Default Value |
+| name | string | Defines the module instance name (such as @/myModule.1@) to get initialization notification from. |  |  |
+| output delay | {integer/decimal} | This optional argument defines a delay time before outputting a @bang@. | millisecond | 0 |
+
+h3. Attributes
+
+_none_
+
+h3. Messages
+
+_none_
+
+h3. User Action
+
+_none_
+
+h3(seealso). See also
+
+* "jcom.init":jcom.init.html
+* "jcom.receive":jcom.receive.html
+* "loadbang":http://cycling74.com/docs/max5/refpages/max-ref/loadbang.html

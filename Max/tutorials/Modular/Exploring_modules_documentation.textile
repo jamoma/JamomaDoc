@@ -1,15 +1,15 @@
---
+---
 title: Exploring documentation
 description: This tutorial show some of the documentation features included in Jamoma Modular
 created_at: 2010/11/11
 authors: [Jamoma, Trond Lossius?]
 tags: [index, toc]
-objref: []
+objref: [jmod.tremolo~, jmod.output~]
 ---
 
 h3. Documentation of the module
 
-Some modules rely on a high number of parameters, which can make a complex and hard to remember "namespace":http://en.wikipedia.org/wiki/Namespace_%28computer_science%29 or get the inner working of the module. Thanks to Jamoma consistent architecture and GUI, modules offer some input to help you go thru a module.
+Some complex modules can contain many parameters, which make its "namespace":http://en.wikipedia.org/wiki/Namespace_%28computer_science%29 complex and hard to remember. Thanks to Jamoma consistent architecture and GUI, there are some tools to help you with that.
 
 h3. Pop-up namespace reminder
 
@@ -19,17 +19,24 @@ If you click and hold the mouse over the displayed name of the module almost all
 
 h3. HTML reference page
 
-If you instead click further to the left, you will bring up another pop-up menu. In the previous tutorial we used this to peek inside the module, by choosing the "View Internal Components" menu item. Now it is time to try a few other options that aid in documenting the module.
+If you click further left onto the grey button with the triangle, you will bring up another pop-up menu. In the previous tutorial we used this to peek inside the module, by choosing the  %(samp)View Internal Components% menu item. Now it is time to try a few other options that documents the module.
 
-If you select "Open reference Page" a web page will show up in your default web browser. This will provide you with a detailed list of all parameters, messages and returns, a description explaining what the parameter does, and additional information on how it behaves, e.g:
+!images/menu_widget.png!
 
-- What type of data is expected (decimal, integer, etc.).
-- The default range of the parameter.
-- Whether it is clipping or not at the boundaries of the default range.
-- The default function used for ramping.
-- The default mechanism used to drive the ramping.
-- What dataspace the parameter use, if any.
-- Whether or not repeted values will be filtered out.
+
+If you select  %(samp)Open Reference Page% a web page will show up in your default web browser, such as this "reference page for jmod.tremolo~":modules/jmod.tremolo~.html. 
+
+!images/Open_Reference_Page.png!
+
+This will provide you with a detailed list of all parameters, messages and returns, a description explaining what the parameter does, and additional information on how it behaves, e.g:
+
+* What type of data is expected (decimal, integer, etc.).
+* The default range of the parameter.
+* Whether it is clipping or not at the boundaries of the default range.
+* The default function used for ramping.
+* The default mechanism used to drive the ramping.
+* What dataspace the parameter use, if any.
+* Whether or not repeted values will be filtered out.
 
 Some of this will make more sense as we move further.
 

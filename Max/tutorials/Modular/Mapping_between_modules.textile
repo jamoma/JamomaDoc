@@ -1,0 +1,53 @@
+---
+title: Mapping between Jamoma modules
+description: This lesson bring an overview or mappings modules offers by Jamoma
+author: [Jamoma]
+created_at: 2012/04/27
+tags: [mapping, continuous, discrete]
+objref: [jmod.mapper, jmod.mapperContinuous, jmod.mapperDiscrete, jmod.mouse, jmod.filter~~]
+---
+
+Jamoma has several ways to create mappings between modules, that is linking an output (a jcom.parameter or a jcom.return) of a Jamoma module and an input (a jcom.parameter or a jcom.message) of another (or even the same) Jamoma module. 
+Imagine, you want to map the position of your mouse to one of the parameters of a filter~ module. 
+The illustration below shows a simple Jamoma patch. The mouse position is sensed by the module on the right side ("jmod.mouse":modules/jmod.mouse.html) and its return message for the horizontal coordinate of your mouse pointer is @/position/x@
+
+The "jmod.filter~":modules/jmod.filter~.html module is on the left side in the patch and provides several parameter we could map to. 
+
+
+!images/parameters_and_returns.png!
+
+Hence, when mapping parameter A to parameter B, changing the value of parameter A, will somehow affect the value of parameter B. Moreover, these modules dedicated to mapping offer a number of features to vary the  nature of the link between the two parameters from one mapping to another.
+
+Jamoma 0.5 offers three different modules for defining mappings without the need of manually creating new max objects or patch-cord connections. This means you can create mappings quicker, keep your patches cleaner and also save and recall different mappings on the fly. This tutorial, we will cover these three modules:
+
+* "jmod.mapperContinuous":modules/jmod.mapperContinuous.html
+* "jmod.mapperDiscrete":modules/jmod.mapperDiscrete.html
+* "jmod.mapper":modules/jmod.mapper.html
+
+bq. A video version of this tutorial is available. Be sure to "watch it":./videos/mapping_in_Jamoma_0.5-overview.mov or read the transcript below.
+
+h3. Mapping continuous and discrete values
+
+h4. jmod.mapperContinuous
+
+The first module is called jmod.mapperContinuous. An instance of this module can be used to map a range of values from a single parameter or return to a range of values of another parameter or message. 
+
+It allows for adjusting of the input and output ranges (which are detected automatically, based on range-bounds, attribute of mapped parameters), has built in clipping, ramping, and provides a set of transfer functions (like exponential, logarithmic, power, etc). It also allows for smoothing of the input signal, and provides an option to use its first or second derivative instead of the raw values, which is particularly useful when working with sensors.
+
+!images/mapperContinuous.png!
+
+h4. jmod.mapperDiscrete
+
+The second module called jmod.mapperDiscrete, can be used to detect specific events within a stream of values coming from one parameter (or a return) and use them to trigger different actions, which then modify values of another parameter or trigger messages. 
+
+The events to be detected can be for example: the input parameter arriving at a specific value, or crossing a defined threshold. Actions to be triggered can be as simple as setting the output parameter to a specific value, incrementing it by a predefined amount, or a bit more complex, like setting it to random value within a set range or ramping it to a value within a set time interval. The action can be additionally delayed, and the time between consecutive triggers limited to a specific time interval.
+
+!images/mapperDiscrete.png!
+
+h4. jmod.mapper
+
+The last module is called simply jmod.mapper. One instance of this module allows for creation of multiple mappings. 
+
+Even though this module doesn't have any predefined algorithms and actions for processing the messages as they are being routed from the input to the output parameters, it makes it possible to dynamically load an external or an abstraction and insert it between the input and output of each mapping, in order to perform any desired processing.
+
+!images/mapper.png!

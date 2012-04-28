@@ -1,0 +1,38 @@
+--- 
+title: jcom.init
+description: Utility for initialization of module
+author: [Jamoma, Julien Rabin]
+created_at: 2010/11/11
+tags: [initialization, loadbang]
+objref: []
+---
+
+h3. Description
+
+p. "jcom.init":jcom.init.html is a kind of loadbang that outputs a 'bang' when a module is initialized. It connects to jmod.hub in order to link to all other instances of jmod.init within the same module. It also makes jmod.hub reset all parameters to the default preset.
+
+h3. Outputs
+
+|_.Output number |_.Description |
+| 1st output | "jcom.init":components/init.html outputs a 'bang' when the module containingit is initialized |
+
+h3. Arguments
+
+|_.Argument name |_.Type |_.Description |
+| name | string | Set a name for "jcom.init":jcom.init.html  |
+
+h3. Attributes
+
+|_.Attribute name |_.Value type |_.Description |
+| @name | string | Set a name for "jcom.init":jcom.init.html |
+
+h3. Messages
+
+|_.Message name |_.Argument type |_.Description |
+| bang | generic | Make "jcom.hub":components/hub.html reset all parameters to the default preset |
+| name/get | generic | Make "jcom.hub":components/hub.html to output its name out of its right-most outlet |
+
+h3(seealso). See also
+
+* "jmod.initialized":jcom.initialized.html 
+* "jcom.hub":jcom.hub.html 
