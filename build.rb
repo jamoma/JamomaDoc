@@ -111,7 +111,7 @@ puts "--------\nCOPYING REFPAGES IN MAX FOLDER\n"
 maxVersion = ["Max5", "Max6"]
 
 maxVersion.each do |v|
-  FileUtils.copy_entry("#{libdir}/Builds", "/Applications/#{v}/patches")
+  FileUtils.copy_entry("#{libdir}/Builds", "/Applications/#{v}/patches") if File.exist?("#{libdir}/Builds", "/Applications/#{v}/patches")
 end
 
 puts "\n=================DONE===================="
