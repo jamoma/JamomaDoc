@@ -36,6 +36,7 @@ projects.delete("Documentation")
 projectsTOC = Array::new
 
 projects.each do |project|
+  next if (!File.exists? "#{project}")
   Dir.chdir("#{project}")
 
   search = `find . -name jcom*maxref.yml`
