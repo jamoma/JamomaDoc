@@ -706,24 +706,24 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is 
 # run.
 
-EXCLUDE                = ../../Foundation/library/json \
+EXCLUDE                = ../../DSP/extensions/SoundfileLib/libsndfile \
+                         ../../DSP/extensions/SoundfileLib/libsndfile/* \
                          ../../DSP/library/portaudio \
-                         ../../Graphics/library/cairo-lib \
-                         ../../Foundation/library/boost \
-                         ../../DSP/extensions/SoundfileLib \
-                         ../../Graphics/library/cairo-mac \
-                         ../../Foundation/library/boost \
-                         */supports/* \
-                         */.git/* \
-                         ../../DSP/extensions/SoundfileLib/* \
-                         ../../Graphics/library/cairo-mac/* \
-                         ../../Foundation/library/boost/* \
-                         ../../Foundation/library/json/* \
                          ../../DSP/library/portaudio/* \
-                         ../../Graphics/library/cairo-lib/* \
+                         ../../Foundation/library/boost \
                          ../../Foundation/library/boost/* \
-                         ../../Foundation/library/json \
-                         ../../Foundation/library/json
+                         ../../Foundation/library/libiconv \
+                         ../../Foundation/library/libiconv/* \
+                         ../../Foundation/library/libxml2 \
+                         ../../Foundation/library/libxml2/* \
+                         ../../Foundation/library/Mersenne-1.1 \
+                         ../../Foundation/library/Mersenne-1.1/* \
+                         ../../Graph/extensions/MidiLib/portmidi \
+                         ../../Graph/extensions/MidiLib/portmidi/* \
+                         ../../Graphics/library/cairo-lib \
+                         ../../Graphics/library/cairo-lib/* \
+                         ../../Graphics/library/cairo-mac \
+                         ../../Graphics/library/cairo-mac/*
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or 
 # directories that are symbolic links (a Unix file system feature) are excluded 
@@ -738,6 +738,7 @@ EXCLUDE_SYMLINKS       = NO
 # for example use the pattern */test/*
 
 EXCLUDE_PATTERNS       = */*.framework \
+                         */.git/* \
                          */archive/* \
                          */build/* \
                          */supports/*
