@@ -33,7 +33,7 @@
 
 	Symbols are never created directly. Rather, to use a symbol you lookup the symbol in the symbol table. If the symbol is there, then a pointer to the symbol is returned to you. If the symbol is not in the table, then it is created, added to the table, and the pointer is returned to you. Because looking up symbols is such a central operation in Jamoma, and because we will use it so often, the easy-to-type macro #TT is defined to do this. For example:
 
-	@code
+	@code{.cpp}
 		TTSymbolPtr bearSymbol = TT("bear");
 	@endcode
 
@@ -45,7 +45,7 @@
 	While is important to have defined the basic data types for numbers, strings, and booleans, this is not the way that values are typically passed in TTBlue. Instead, values are passed as TTValues. 
 	#TTValue is a generic type that can hold any of the number, string, boolean, or a few other types that we use in TTBlue. In fact, it can even hold an array of values made up of these various types. The following example shows several assignments using TTValues.
 
-	@code
+	@code{.cpp}
 		// Assigning numbers and symbols to TTValues
 		TTValue v = 3.1415;
 		TTValue s = TT("hog");

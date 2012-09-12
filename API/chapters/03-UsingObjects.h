@@ -15,7 +15,7 @@
 	You can safely ignore the fact that one of the variables is a TTAudioObjectPtr instead of a TTObjectPtr.  
 	TTAudioObject is simply a specialized version of TTObject.
 
-	@code
+	@code{.cpp}
 		TTAudioObjectPtr  myObject      = NULL;
 		TTObjectPtr       myAudioInput  = NULL;
 		TTObjectPtr       myAudioOutput = NULL;
@@ -29,7 +29,7 @@
 	You can do this with the TTObjectRelease() function.  
 	For example:
 
-	@code
+	@code{.cpp}
 		TTObjectRelease(&myObject);
 		TTObjectRelease(&myAudioInput);
 		TTObjectRelease(&myAudioOutput);
@@ -39,7 +39,7 @@
 
 	TTObject’s are reference counted.  This means that you can create references to existing objects, and the object will not be freed until all references have been released.  This is demonstrated in the following example:
 
-	@code
+	@code{.cpp}
 		TTObjectPtr myObject = NULL;
 		TTObjectPtr aReferenceToMyObject = NULL;
 
@@ -62,7 +62,7 @@
 
 	To obtain a list of all class in the Foundation's registry, you call the TTGetRegisteredClassNames() function as in the following example:
 
-	@code
+	@code{.cpp}
 		TTErr err;
 		TTValue classNames;
 
@@ -89,7 +89,7 @@
 
 	In this case we call TTGetRegisteredClassNamesForTags(), and process the results in the same manner as we did for TTGetRegisteredClassNames().  This is demonstrated in the example below:
 
-	@code
+	@code{.cpp}
 		TTErr err;
 		TTValue classNames;
 		TTValue searchTags;
@@ -122,7 +122,7 @@
 
 	Here is an example that searches based on tags for a lowpass filter using a Butterworth algorithm, and then creates an instance of that class.
 
-	@code
+	@code{.cpp}
 		// In this case there are multiple matches returned. 
 		// Since more specific information was not provided, 
 		// we just instantiate the first one.
@@ -155,7 +155,7 @@
 	Given the Butterworth filter example in @ref chapter_usingobjects_queryenvironment_searchbasedontags_example, we can now send the filter the 'clear' message to zero its sample history
 	@note The Butterworth filter is an IIR filter, meaning that it stores the results of previous calculations to perform future calculations.  This feedback can sometimes get out of control, and thus the necessity for a 'clear' message.
 
-	@code
+	@code{.cpp}
 		butterworthFilter->sendMessage(TT("clear"));
 	@endcode
 
@@ -163,7 +163,7 @@
 	Other messages, however, do require additional information.  
 	This information can be provided using an optional argument to the sendMessage method.  Here are some samples:
 
-	@code
+	@code{.cpp}
 		someObject->sendMessage(TT("foo"), 3.14);
 		someObject->sendMessage(TT("draw"), TT("circle"));
 

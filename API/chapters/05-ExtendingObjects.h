@@ -42,7 +42,7 @@
 	In the example below we have an object and two observers.  
 	The observers provide a way to view any changes to the state of our object.
 
-	@code
+	@code{.cpp}
 	TTObjectPtr	ourObject;
 	TTObjectPtr	firstView;
 	TTObjectPtr	secondView;
