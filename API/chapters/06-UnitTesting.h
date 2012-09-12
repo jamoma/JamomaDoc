@@ -1,10 +1,7 @@
---- 
-title: Unit testing
-description: An introduction to unit testing in Jamoma
-author: [Jamoma, Timothy Place]
-created_at: 2011/2/10
-tags: [subclassing, API]
----
+/** 
+ 	@page chapter_unittesting Unit testing
+
+	@author Jamoma, Timothy Place
 
 h2. Running Tests in Ruby
 
@@ -102,7 +99,4 @@ If any of these conditions are not true, then they are logged to the console and
 	}
 </pre>
 
-
-
-
-
+*/

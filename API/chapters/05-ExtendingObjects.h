@@ -1,10 +1,7 @@
---- 
-title: Extending Objects
-description: How to extend objects
-author: [Jamoma, Timothy Place]
-created_at: 2011/2/10
-tags: [subclassing, API]
----
+/** 
+ 	@page chapter_extendingobjects Extending Objects
+
+	@author Jamoma, Timothy Place
 
 h2. Subclassing Objects
 
@@ -54,3 +51,5 @@ The observers provide a way to view any changes to the state of our object.
 	TTObjectPtr	firstView;
 	TTObjectPtr	secondView;
 </pre>
+
+*/

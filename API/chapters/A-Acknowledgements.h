@@ -1,10 +1,7 @@
---- 
-title: Aknowledgements
-description: A short look back at Jamoma history
-author: [Jamoma, Timothy Place]
-created_at: 2011/2/10
-tags: [background, API, history]
----
+/** 
+ 	@page appendix_acknowledgements Aknowledgements
+
+	@author Jamoma, Timothy Place
 
 The _Jamoma Foundation_ and _Jamoma DSP_ projects were originally parts of the same project, a project named _TTBlue_.
 
@@ -18,3 +15,5 @@ I can't hope to acknowledge everyone here. Trond Lossius and Dave Watson have bo
 Many aspects of these libraries were first developed by the _Jamoma Modular_ team, including the FunctionLib developed at a Jamoma workshop hosted by "iMal":http://imal.org/. Through its support of _Jamoma_, "GMEA":http://gmea.net/ has supported the development of the Jamoma Foundation and DSP libraries. "BEK":http://bek.no/ sponsored the initial development of _Jamoma Audio Graph_ through the efforts of Trond Lossius while the development of the _Jamoma Graph_ has been funded by _74 Objects_. _McGill University_ sponsored the initial development of _Jamoma Graphics_ through the efforts of Nils Peters.
 
 This document owes its creation in part Trond Lossius, who introduced me to the Not So Short Introduction to \LaTeX which is part of the inspiration for this document. He is also largely responsible for the creation of the ttblue.org website, now part of jamoma.org, both of which are generously hosted by BEK.
+
+*/

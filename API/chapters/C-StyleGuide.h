@@ -1,10 +1,7 @@
---- 
-title: Appendix A
-description: Appendix A: C++ Coding Style Guide
-author: [Jamoma, Timothy Place]
-created_at: 2011/2/10
-tags: [coding style, API]
----
+/** 
+ 	@page appendix_styleguide C++ Coding Style Guide
+
+	@author Jamoma, Timothy Place
 
 h2. Variables
 
@@ -76,6 +73,4 @@ h2. Constructors
 2. prefer initializers to assigning values
 3. initializers should be indented one tab
 
-
-
-
+*/
