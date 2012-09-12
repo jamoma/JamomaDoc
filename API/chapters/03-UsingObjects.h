@@ -1,5 +1,7 @@
 /** 
 	@page chapter_usingobjects How to use objects from the Jamoma API
+	
+	@author Jamoma, Timothy Place
 
 	@section chapter_usingobjects_lifecycle Object Life Cycle
 

@@ -1,5 +1,7 @@
 /** 
 	@page chapter_datatypes An introduction to the data types in Jamoma
+	
+	@author Jamoma, Timothy Place
 
 	We will begin our introduction of the TTBlue environment by looking at the basic data types. 
 	All other aspects of the environment, creating objects, writing extensions, etc., all require some knowledge about how data is represented.

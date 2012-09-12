@@ -1,5 +1,7 @@
 /**
 	@mainpage A non-exhaustive introduction to the Jamoma platform
+	
+	@author Jamoma, Timothy Place
 
 	The Jamoma Platform is composed of a layered framework architecture that creates an object model 
 	and then specializes that object model for advanced purposes such as audio and graphics.
