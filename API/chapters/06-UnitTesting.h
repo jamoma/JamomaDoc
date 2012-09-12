@@ -3,39 +3,40 @@
 
 	@author Jamoma, Timothy Place
 
-h2. Running Tests in Ruby
+	@section chapter_unittesting_runningtests Running Tests in Ruby
 
-To run a unit test, the easiest way to do it is in ruby.  In the DSP/Tests folder, there is a simple example (gain.test.rb) which looks like this:
-<pre class="ruby">
+	To run a unit test, the easiest way to do it is in ruby.  In the DSP/Tests folder, there is a simple example (<tt>gain.test.rb</tt>) which looks like this:
+
+	@code{.rb}
 	#!/usr/bin/ruby
 
 	require 'Jamoma'
 
 	o = TTObject.new "gain"
 	o.send "test"
-</pre>
+	@endcode
 
-The @require@ statement loads the Jamoma Foundation.  The following line instantiates the TTGain class.  Once we have an instance, we send it the test message to run the test.  You can run this ruby script in the terminal using @./gain.test.rb@ and it will quickly return the results to you.
+	The <tt>require</tt> statement loads the Jamoma Foundation.  The following line instantiates the TTGain class.  Once we have an instance, we send it the test message to run the test.  You can run this ruby script in the terminal by typing <tt>'ruby gain.test.rb'</tt> and it will quickly return the results to you.
 
-h2. Writing Tests in C++
+	@section chapter_unittesting_writingtests Writing Tests in C++
 
-Any object inheriting from TTAudioObject or TTDataObject will inherit a 'test' message.  Object inheriting directly from TTObject or other base classes may need to add this message binding manually in the constructor with a line like this:
+	Any object inheriting from TTAudioObject or TTDataObject will inherit a 'test' message.  Object inheriting directly from TTObject or other base classes may need to add this message binding manually in the constructor with a line like this:
 
-<pre class="cpp">
+	@code{.cpp}
 	addMessageWithArgument(test);
-</pre>
+	@endcode
 
-TTObject defines a virtual default test method.  This test will be run unless you specify your own test method.  The default test method simply reports a failure because you haven't written a custom test.  To define your test method, you can use the following prototype (which is the same as for any message with an argument in Jamoma):
+	TTObject defines a virtual default test method.  This test will be run unless you specify your own test method.  The default test method simply reports a failure because you haven't written a custom test.  To define your test method, you can use the following prototype (which is the same as for any message with an argument in Jamoma):
 
-<pre class="cpp">
+	@code{.cpp}
 	virtual TTErr test(TTValue& returnedTestInfo);
-</pre>
+	@endcode
 
-You can then implement a test with code such as the block that follows.
-A test may make 'assertions' that certain conditions be true.
-If any of these conditions are not true, then they are logged to the console and test will fail.
+	You can then implement a test with code such as the block that follows.
+	A test may make 'assertions' that certain conditions be true.
+	If any of these conditions are not true, then they are logged to the console and test will fail.
 
-<pre class="cpp">
+	@code{.cpp}
 	TTErr TTGain::test(TTValue& returnedTestInfo)
 	{	
 		int	errorCount = 0;
@@ -97,6 +98,6 @@ If any of these conditions are not true, then they are logged to the console and
 		// Wrap up the test results to pass back to whoever called this test
 		return TTTestFinish(testAssertionCount, errorCount, returnedTestInfo);
 	}
-</pre>
+	@endcode
 
 */
