@@ -5,23 +5,19 @@
 
 	@section appendix_styleguide_variables Variables
 
-	<ul>
-		<li>Declare all variables on separate lines.
-		<li>If a variable is assigned immediately, then give it a default value in the declaration.
-		<li>Prefer explicit types, e.g. TTObjectPtr rather than TTObject*.
-		<li>User tabular formatting, as mentioned in the section "Whitespace"
-	</ul>
+	- Declare all variables on separate lines.
+	- If a variable is assigned immediately, then give it a default value in the declaration.
+	- Prefer explicit types, e.g. TTObjectPtr rather than TTObject*.
+	- User tabular formatting, as mentioned in the section "Whitespace"
 
 	@section appendix_styleguide_functions Functions
 
 	Functions always appear:
 
-	<ol>
-		<li>With the return type on the same line as the function name
-		<li>With the arguments on the same line as the function name, unless they dont fit. In this case they follow in tabular format below the first argument name.
-		<li>The open curly brace is on the line below the function name -- not the same line.
-		<li>The closing curly brace is always on its own line
-	</ol>
+	-# With the return type on the same line as the function name
+	-# With the arguments on the same line as the function name, unless they dont fit. In this case they follow in tabular format below the first argument name.
+	-# The open curly brace is on the line below the function name -- not the same line.
+	-# The closing curly brace is always on its own line
 
 	@code{.cpp}
 	TTHashPtr	TTNodeDirectory::getDirectory()
@@ -30,10 +26,8 @@
 	}
 	@endcode
 
-	<ul>
-		<li>Whitespace between two functions should generally be two blank lines.
-		<li>There should never be two consecutive blank lines within a function.
-	</ul>
+	- Whitespace between two functions should generally be two blank lines.
+	- There should never be two consecutive blank lines within a function.
 
  	@section appendix_styleguide_arguments Arguments
 
@@ -49,33 +43,28 @@
 	Macros should be all upper case, words divided by underscores
 
 	Variables
-	<ol>
-		<li>CamelCase.
-		<li>Variable names begin with lower-case letters
-		<li>Class Member variables begin with 'm'
-		<li>Constants begin with a 'k'
-		<li>Globals begin with 'g'
-		<li>Statics begin with 's'
-		<li>member method names begin with lower-case letters
-		<li>Classes or Global scope functions beggin with upper-case letters.
-		<li>Library functions begin with 'TT', non-library functions do not.
-	</ol>
+	-# CamelCase.
+	-# Variable names begin with lower-case letters
+	-# Class Member variables begin with 'm'
+	-# Constants begin with a 'k'
+	-# Globals begin with 'g'
+	-# Statics begin with 's'
+	-# member method names begin with lower-case letters
+	-# Classes or Global scope functions beggin with upper-case letters.
+	-# Library functions begin with 'TT', non-library functions do not.
 
  	@section appendix_styleguide_casting Casting
 
-	<ol>
-		<li>Be wary of casting if the problem/warning can be avoided in another way.
-		<li>Readability is the most important thing.  So we dont always use the crazy C++ casting stuff...
-		<li>Prefer C++ Style <tt>int(someValue)</tt> casts to <tt>(int)someValue</tt> casts.
-	</ol>
+	-# Be wary of casting if the problem/warning can be avoided in another way.
+	-# Readability is the most important thing.  So we dont always use the crazy C++ casting stuff...
+	-# Prefer C++ Style <tt>int(someValue)</tt> casts to <tt>(int)someValue</tt> casts.
 
 
  	@section appendix_styleguide_constructors Constructors
 
-	<ol>
-		<li>for TTObject subclasses, use the appropriate macro (such as TT_OBJECT_CONSTRUCTOR) to implement the function signature correctly
-		<li>prefer initializers to assigning values
-		<li>initializers should be indented one tab
-	</ol>
+	-# for TTObject subclasses, use the appropriate macro (such as TT_OBJECT_CONSTRUCTOR) to implement the function signature correctly
+	-# prefer initializers to assigning values
+	-# initializers should be indented one tab
+
 
 */
