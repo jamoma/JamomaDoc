@@ -1,5 +1,5 @@
 /** 
- 	@page appendix_tags Common tags
+ 	@page appendix_tags B. Common tags
 
 	@author Jamoma, Timothy Place
 

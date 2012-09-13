@@ -1,5 +1,5 @@
 /**
-	@mainpage A non-exhaustive introduction to the Jamoma platform
+	@mainpage 01. A non-exhaustive introduction to the Jamoma platform
 	
 	@author Jamoma, Timothy Place
 

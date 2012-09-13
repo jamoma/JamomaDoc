@@ -1,5 +1,5 @@
 /** 
-	@page chapter_datatypes An introduction to the data types in Jamoma
+	@page chapter_datatypes 02. An introduction to the data types in Jamoma
 	
 	@author Jamoma, Timothy Place
 

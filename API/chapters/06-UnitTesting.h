@@ -1,5 +1,5 @@
 /** 
- 	@page chapter_unittesting Unit testing
+ 	@page chapter_unittesting 06. Unit testing
 
 	@author Jamoma, Timothy Place
 
