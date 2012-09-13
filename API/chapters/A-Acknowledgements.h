@@ -1,5 +1,5 @@
 /** 
- 	@page appendix_acknowledgements A. Aknowledgements
+ 	@page appendix_acknowledgements A. Acknowledgements
 
 	@author Jamoma, Timothy Place
 
