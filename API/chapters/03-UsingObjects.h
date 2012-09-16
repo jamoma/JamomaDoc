@@ -190,7 +190,7 @@
 		}
 	@endcode
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
 
 	@section chapter_usingobjects_setgetattributes Setting and Getting Attributes
 
