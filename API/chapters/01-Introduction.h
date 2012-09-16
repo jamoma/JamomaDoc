@@ -15,6 +15,9 @@
 	- Ruby : Jamoma Ruby - Language Bindings for the Jamoma Platform
 	- Test : Automated unit test system for Jamoma
 	- Tools : Tools and Utilities for the Development and Distribution of Jamoma
+	
+	@image html jamoma-frameworks.png
+	@image latex jamoma-frameworks.eps
 
 	TTBlue is a reflective...  (copy and paste from website).
 
