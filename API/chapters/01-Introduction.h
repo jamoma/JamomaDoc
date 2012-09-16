@@ -9,15 +9,15 @@
 	@image html jamoma-frameworks.png
 	@image latex jamoma-frameworks.eps
 	
-	- Foundation : Runtime and API implementing a light-weight, dynamically bound, reflective object-oriented architecture layer on top of C++
-	- DSP : A C++ framework for audio processing objects
-	- Graph : A coding layer for the creation of dynamic asynchronous graph topographies
-	- Audio Graph : A coding layer for the creation of dynamic audio graph topographies
-	- Graphics : A Cairo-based graphics system build on the Jamoma Foundation API
-	- Modular : A modular framework for patching in Max
-	- Ruby : Jamoma Ruby - Language Bindings for the Jamoma Platform
-	- Test : Automated unit test system for Jamoma
-	- Tools : Tools and Utilities for the Development and Distribution of Jamoma
+	- Foundation : Runtime and API implementing a light-weight, dynamically bound, reflective object-oriented architecture layer on top of C++.
+	- DSP : A C++ framework for audio processing objects. Jamoma DSP is further documented in \cite Place:2010.
+	- Graph : A coding layer for the creation of dynamic asynchronous graph topographies.
+	- Audio Graph : A coding layer for the creation of dynamic audio graph topographies. AudioGraph is further documented in \cite Place2010:AudioGraph.
+	- Graphics : A <a href="http://www.cairographics.org">Cairo</a>-based graphics system build on the Jamoma Foundation API.
+	- Modular : A modular framework for patching in Max.
+	- Ruby : Jamoma Ruby - Language Bindings for the Jamoma Platform.
+	- Test : Automated unit test system for Jamoma. A detailed discussion of Jamoma testing can be found in \cite Peters:2012testing.
+	- Tools : Tools and Utilities for the Development and Distribution of Jamoma.
 
 
 	Jamoma makes use of polymorphic typing, dynamic binding, and introspection to create a cross-platform API 
