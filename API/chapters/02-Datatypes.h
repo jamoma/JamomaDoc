@@ -3,7 +3,7 @@
 	
 	@author Jamoma, Timothy Place
 
-	We will begin our introduction of the TTBlue environment by looking at the basic data types. 
+	We will begin our introduction of the Jamoma environment by looking at the basic data types. 
 	All other aspects of the environment, creating objects, writing extensions, etc., all require some knowledge about how data is represented.
 
 
@@ -11,7 +11,7 @@
 
 	@subsection chapter_datatypes_primitive_numbers Numbers
 
-	To begin, TTBlue defines a variety of basic types for representing integers and a floating-point numbers with various degrees of resolution, and in signed or unsigned variants. The following table lists the basic numeric types according to their properties.
+	To begin, Jamoma Foundation defines a variety of basic types for representing integers and a floating-point numbers with various degrees of resolution, and in signed or unsigned variants. The following table lists the basic numeric types according to their properties.
 
 	@code
 	| 			| Unsigned Integer	| Signed Integer	| Floating-Point	|
@@ -27,7 +27,7 @@
 
 	@subsection chapter_datatypes_primitive_strings Strings and Symbols
 
-	Strings can be represented in several different ways in TTBlue. Of course, arrays of the standard char type is well understood way to work with text in C. The #TTString type, at the time of this writing, is a typedef of the C++ std::string, and thus follows the conventions of the string provided by the C++ standard library.
+	Strings can be represented in several different ways in Jamoma. Of course, arrays of the standard char type is a well understood way to work with text in C. The #TTString type, at the time of this writing, is a typedef of the C++ std::string, and thus follows the conventions of the string provided by the C++ standard library.
 
 	In addition to #TTString, there is also a #TTSymbol type. A symbol is simply a wrapper around a string that is cached in a fast lookup table. While comparing #TTString values is relatively slow, comparing #TTSymbol values is extremely fast.
 
