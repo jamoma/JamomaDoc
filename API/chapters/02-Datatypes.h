@@ -29,10 +29,8 @@
 
 	In addition to #TTString, there is also a #TTSymbol type. A symbol is simply a wrapper around a string that is cached in a fast lookup table. While comparing #TTString values is relatively slow, comparing #TTSymbol values is extremely fast.
 
-	Symbols are never created directly. Rather, to use a symbol you lookup the symbol in the symbol table. If the symbol is there, then a pointer to the symbol is returned to you. If the symbol is not in the table, then it is created, added to the table, and the pointer is returned to you. Because looking up symbols is such a central operation in Jamoma, and because we will use it so often, the easy-to-type macro #TT is defined to do this. For example:
-
 	@code
-		TTSymbolPtr bearSymbol = TT("bear");
+		TTSymbol bearSymbol("bear");
 	@endcode
 
 
@@ -46,7 +44,7 @@
 	@code
 		// Assigning numbers and symbols to TTValues
 		TTValue v = 3.1415;
-		TTValue s = TT("hog");
+		TTValue s = TTSymbol("hog");
 
 		// Assigning TTValues to numbers
 		TTUInt16 i = v;

@@ -18,9 +18,9 @@
 		TTObjectPtr       myAudioInput  = NULL;
 		TTObjectPtr       myAudioOutput = NULL;
 
-		TTObjectInstantiate(TT("allpass")), &myObject, 2);
-		TTObjectInstantiate(TT("audiosignal")), &myAudioInput, 2);
-		TTObjectInstantiate(TT("audiosignal")), &myAudioOutput, 2);
+		TTObjectInstantiate("allpass", &myObject, 2);
+		TTObjectInstantiate("audiosignal", &myAudioInput, 2);
+		TTObjectInstantiate("audiosignal", &myAudioOutput, 2);
 	</pre>
 
 	When you are all done using the objects, you need to release them.  
@@ -41,7 +41,7 @@
 		TTObjectPtr myObject = NULL;
 		TTObjectPtr aReferenceToMyObject = NULL;
 
-		TTObjectInstantiate(TT(“noise”)), &myObject, 2);
+		TTObjectInstantiate(“noise”, &myObject, 2);
 		// reference count is now 1
 		aReferenceToMyObject = TTObjectReference(myObject);
 		// reference count is now 2
@@ -66,17 +66,17 @@
 
 		err = TTGetRegisteredClassNames(classNames);
 		if(!err){
-			// The classNames value now contains an array of TTSymbolPtrs, 
+			// The classNames value now contains an array of TTSymbols, 
 			// one for each class in the TTBlue registry.
 			// For example, we can print them all to console:
 
 			TTUInt16 numClassNames = classNames.getSize();
 
 			for(TTUInt16 i=0; i<numClassNames; i++){
-				TTSymbolPtr aClassName;
+				TTSymbol aClassName;
 
 				classNames.get(i, aClassName);
-				TTLogMessage("class name: %s", aClassName->getCString());
+				TTLogMessage("class name: %s", aClassName.c_str());
 			}
 		}
 	</pre>
@@ -93,23 +93,23 @@
 		TTValue searchTags;
 
 		searchTags.clear();
-		searchTags.append(TT("audio"));
-		searchTags.append(TT("filter"));
-		searchTags.append(TT("lowpass"));
+		searchTags.append(TTSymbol("audio"));
+		searchTags.append(TTSymbol("filter"));
+		searchTags.append(TTSymbol("lowpass"));
 
 		err = TTGetRegisteredClassNamesForTags(classNames, searchTags);
 		if(!err){
-			// The classNames value now contains an array of TTSymbolPtrs, 
+			// The classNames value now contains an array of TTSymbols, 
 			// one for each class in the TTBlue registry.
 			// For example, we can print them all to console:
 
 			TTUInt16 numClassNames = classNames.getSize();
 
 			for(TTUInt16 i=0; i<numClassNames; i++){
-				TTSymbolPtr aClassName;
+				TTSymbol aClassName;
 
 				classNames.get(i, aClassName);
-				TTLogMessage("class name: %s", aClassName->getCString());
+				TTLogMessage("class name: %s", aClassName.c_str());
 			}
 		}
 	</pre>
@@ -131,10 +131,10 @@
 		TTAudioObjectPtr  butterworthFilter = NULL;
 	
 		searchTags.clear();
-		searchTags.append(TT("audio"));
-		searchTags.append(TT("filter"));
-		searchTags.append(TT("lowpass"));
-		searchTags.append(TT("butterworth"));
+		searchTags.append(TTSymbol("audio"));
+		searchTags.append(TTSymbol("filter"));
+		searchTags.append(TTSymbol("lowpass"));
+		searchTags.append(TTSymbol("butterworth"));
 	
 		err = TTGetRegisteredClassNamesForTags(classNames, searchTags);
 		if(!err){
@@ -153,7 +153,7 @@
 	Given the Butterworth filter example in \ref{Tag Searching and Instantiation in Action}, we can now send the filter the 'clear' message to zero its sample history\footnote{The Butterworth filter is an IIR filter, meaning that it stores the results of previous calculations to perform future calculations.  This feedback can sometimes get out of control, and thus the necessity for a 'clear' message.}.
 
 	<pre class="cpp">
-		butterworthFilter->sendMessage(TT("clear"));
+		butterworthFilter->sendMessage("clear");
 	</pre>
 
 	Some messages, like the 'clear' message for the Butterworth filter, require no additional information to perform the requested action.
@@ -161,12 +161,12 @@
 	This information can be provided using an optional argument to the sendMessage method.  Here are some samples:
 
 	<pre class="cpp">
-		someObject->sendMessage(TT("foo"), 3.14);
-		someObject->sendMessage(TT("draw"), TT("circle"));
+		someObject->sendMessage("foo", 3.14);
+		someObject->sendMessage("draw", "circle");
 
 		// create a TTValue that holds a list and pass the TTValue
 		TTValue v(1.0, 2.0));
-		someObject->sendMessage(TT("w"), v);
+		someObject->sendMessage("w", v);
 	
 		// when you send a message, it can return a value as well.
 		TTValue whatIsInThere;

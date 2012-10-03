@@ -49,14 +49,14 @@ If any of these conditions are not true, then they are logged to the console and
 		// N test assertions
 	
 		// Test 1: trival value conversion
-		this->setAttributeValue(TT("midiGain"), 100);
+		this->setAttributeValue("midiGain", 100);
 		TTTestAssertion("midi gain of 100 == linear gain of 1.", 
 						TTTestFloatEquivalence(this->mGain, 1.0), 
 						testAssertionCount, 
 						errorCount);
 	
 		// Test 2: trival value conversion
-		this->setAttributeValue(TT("midiGain"), 99);
+		this->setAttributeValue("midiGain", 99);
 		TTTestAssertion("midi gain of 99 != linear gain of 1.", 
 						TTTestFloatEquivalence(this->mGain, 1.0), 
 						testAssertionCount, 
@@ -78,7 +78,7 @@ If any of these conditions are not true, then they are logged to the console and
 			for (int i=0; i<vectorsize; i++)
 				input->mSampleVectors[0][i] = 1.0;
 
-			this->setAttributeValue(TT("gain"), -6.0);
+			this->setAttributeValue("gain", -6.0);
 			this->process(input, output);
 
 			TTSampleValuePtr samples = output->mSampleVectors[0];
