@@ -22,6 +22,9 @@ html
 *.maxtut.xml
 *.maxvig.xml
 
+# Ignore latex temp files:
+API/*.aux
+
 # Ignore VST SDK
 vstsdk-2.4
 

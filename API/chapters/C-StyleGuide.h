@@ -1,81 +1,70 @@
---- 
-title: Appendix A
-description: Appendix A: C++ Coding Style Guide
-author: [Jamoma, Timothy Place]
-created_at: 2011/2/10
-tags: [coding style, API]
----
+/** 
+ 	@page appendix_styleguide C. C++ Coding Style Guide
 
-h2. Variables
+	@author Jamoma, Timothy Place
 
-Declare all variables on separate lines.
-If a variable is assigned immediately, then give it a default value in the declaration.
-Prefer explicit types, e.g. TTObjectPtr rather than TTObject*.
-User tabular formatting, as mentioned in the section "Whitespace"
+	@section appendix_styleguide_variables Variables
 
-h2. Functions
+	- Declare all variables on separate lines.
+	- If a variable is assigned immediately, then give it a default value in the declaration.
+	- Prefer explicit types, e.g. TTObjectPtr rather than TTObject*.
+	- User tabular formatting, as mentioned in the section "Whitespace"
 
-Functions always appear:
+	@section appendix_styleguide_functions Functions
 
-1. With the return type on the same line as the function name
-2. With the arguments on the same line as the function name, unless they dont fit.  
-	In this case they follow in tabular format below the first argument name.
-3. The open curly brace is on the line below the function name -- not the same line.
-4. The closing curly brace is always on its own line
+	Functions always appear:
 
-<pre class ="cpp>"
-TTHashPtr	TTNodeDirectory::getDirectory()
-{
-	return this->directory;
-}
-</pre>
+	-# With the return type on the same line as the function name
+	-# With the arguments on the same line as the function name, unless they dont fit. In this case they follow in tabular format below the first argument name.
+	-# The open curly brace is on the line below the function name -- not the same line.
+	-# The closing curly brace is always on its own line
 
-Whitespace between two functions should generally be two blank lines.
-There should never be two consecutive blank lines within a function.
+	@code{.cpp}
+	TTHashPtr	TTNodeDirectory::getDirectory()
+	{
+		return this->directory;
+	}
+	@endcode
 
-h2. Arguments
+	- Whitespace between two functions should generally be two blank lines.
+	- There should never be two consecutive blank lines within a function.
 
-Prefer passing arguments as TTValueRef or const TTValueRef.
+ 	@section appendix_styleguide_arguments Arguments
 
-h2. Whitespace
+	Prefer passing arguments as TTValueRef or const TTValueRef.
 
-# Multiple lines of similar function calls, similar definitions, should prefer tabular style formatting 
-	(which is to say, things are lined up in columns).
-	This makes it faster to see the variant information between the lines, and also to edit multiple lines 
-	simultaneously using an editor such as TextMate.
-	
-	
-	
-h2. Naming Conventions
+ 	@section appendix_styleguide_whitespace Whitespace
 
-Macros -- all upper case, words divided by underscores
-
-Variables
-1. CamelCase.
-2. Variable names begin with lower-case letters
-3. Class Member variables begin with 'm'
-4. Constants begin with a 'k'
-5. Globals begin with 'g'
-6. Statics begin with 's'
-7. member method names begin with lower-case letters
-8. Classes or Global scope functions beggin with upper-case letters.
-9. Library functions begin with 'TT', non-library functions do not.
-
-h2. Casting
-
-1. Be wary of casting if the problem/warning can be avoided in another way.
-
-Readability is the most important thing.  So we dont always use the crazy C++ casting stuff...
-
-2. Prefer C++ Style int(someValue) casts to (int)someValue casts.  
+	Multiple lines of similar function calls, similar definitions, should prefer tabular style formatting (which is to say, things are lined up in columns). This makes it faster to see the variant information between the lines, and also to edit multiple lines simultaneously using an editor such as TextMate.
 
 
-h2. Constructors
+ 	@section appendix_styleguide_namingconventions Naming Conventions
 
-1. for TTObject subclasses, use the appropriate macro (such as TT_OBJECT_CONSTRUCTOR) to implement the function signature correctly
-2. prefer initializers to assigning values
-3. initializers should be indented one tab
+	Macros should be all upper case, words divided by underscores
+
+	Variables
+	-# CamelCase.
+	-# Variable names begin with lower-case letters
+	-# Class Member variables begin with 'm'
+	-# Constants begin with a 'k'
+	-# Globals begin with 'g'
+	-# Statics begin with 's'
+	-# member method names begin with lower-case letters
+	-# Classes or Global scope functions beggin with upper-case letters.
+	-# Library functions begin with 'TT', non-library functions do not.
+
+ 	@section appendix_styleguide_casting Casting
+
+	-# Be wary of casting if the problem/warning can be avoided in another way.
+	-# Readability is the most important thing.  So we dont always use the crazy C++ casting stuff...
+	-# Prefer C++ Style <tt>int(someValue)</tt> casts to <tt>(int)someValue</tt> casts.
 
 
+ 	@section appendix_styleguide_constructors Constructors
+
+	-# for TTObject subclasses, use the appropriate macro (such as TT_OBJECT_CONSTRUCTOR) to implement the function signature correctly
+	-# prefer initializers to assigning values
+	-# initializers should be indented one tab
 
 
+*/

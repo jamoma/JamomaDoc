@@ -1,16 +1,14 @@
---- 
-title: Appendix B
-description: Common tags
-author: [Jamoma, Timothy Place]
-created_at: 2011/2/10
-tags: [subclassing, API]
----
+/** 
+ 	@page appendix_tags B. Common tags
 
-_audio_ - indicates that this object derived from TTAudioObject can can process audio
+	@author Jamoma, Timothy Place
 
-_filter_ - indicates that the object is a processor that implements a standard type of filtering whereby the frequencies of the input are attenuated or boosted to produce a spectrally transformed version at the output.
+	_audio_ - indicates that this object derived from TTAudioObject can can process audio
 
-_generator_ - indicates that this object generates its own audio, and may not respond to audio input.
+	_filter_ - indicates that the object is a processor that implements a standard type of filtering whereby the frequencies of the input are attenuated or boosted to produce a spectrally transformed version at the output.
 
-_processor_ - indicates that this object uses an audio input source to produce a transformed audio output.
+	_generator_ - indicates that this object generates its own audio, and may not respond to audio input.
 
+	_processor_ - indicates that this object uses an audio input source to produce a transformed audio output.
+
+*/
