@@ -69,6 +69,13 @@
 */
 
 /**
+ * @defgroup dspFunctionLib FunctionLib
+ * @ingroup dspExtensions
+ * 
+ * Implementation of mapping functions.
+*/
+
+/**
  * @defgroup dspGeneratorLib GeneratorLib
  * @ingroup dspExtensions
  * 
