@@ -1,0 +1,63 @@
+//-----------------------------------------------------
+// Graphics Group Definitions for Doxygen
+//-----------------------------------------------------
+
+/**
+ * @defgroup graphics Jamoma Graphics
+ * @ingroup framework
+ * 
+ * Jamoma Graphics provides screen graphics.
+*/
+
+// Graphics Extensions
+
+/**
+ * @defgroup graphicsExtensions Extensions
+ * @ingroup graphics
+ * 
+ * Extends Jamoma Graphics capabilities
+*/
+
+/**
+ * @defgroup graphicsHipnoscope Hipnoscope
+ * @ingroup graphicsExtensions
+ * 
+ * Hipnoscope widget based for preset navigation and interpolation
+*/
+
+/**
+ * @defgroup graphicsLabel	Label
+ * @ingroup graphicsExtensions
+ * 
+ * A label widget.
+*/
+
+/**
+ * @defgroup graphicsSpatDisplay SpatDisplay
+ * @ingroup graphicsExtensions
+ * 
+ * A widget for spatialisation audio scene visualisation.
+*/
+
+// Graphics Implementations
+
+/**
+ * @defgroup graphicsImplementations Implementations
+ * @ingroup graphics
+ * 
+ * Implementation of Graphics in various hosting environments
+*/
+
+/**
+ * @defgroup graphicsAudioUnit AudioUnit
+ * @ingroup graphicsImplementations
+ * 
+ * Graphics implementation used in AudioUnit plugins
+*/
+
+/**
+ * @defgroup graphicsMax Max
+ * @ingroup graphicsImplementations
+ * 
+ * Graphics implementation for the Max environment
+*/

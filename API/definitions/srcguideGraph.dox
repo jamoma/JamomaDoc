@@ -1,0 +1,52 @@
+//-----------------------------------------------------
+// Graph Group Definitions for Doxygen
+//-----------------------------------------------------
+
+/**
+ * @defgroup graph Jamoma Graph
+ * @ingroup framework
+ * 
+ * Networking Jamoma Foundation based objects into graph structures, 
+ * providing a basic asynchronous processing model for objects (nodes) in the 
+ * graph structure.
+*/
+
+// Graph Extensions
+
+/**
+ * @defgroup graphExtensions Extensions
+ * @ingroup graph
+ * 
+ * Extends Jamoma Graph capabilities
+*/
+
+/**
+ * @defgroup graphDictionayLib DictionayLib
+ * @ingroup graphExtensions
+ * 
+ * Provides Jamoma Graph with dictionary capabilities.
+*/
+
+/**
+ * @defgroup graphMidiLib MidiLib
+ * @ingroup graphExtensions
+ * 
+ * MIDI messages expressed and processed as dictionaries.
+*/
+
+
+// Graph Implementations
+
+/**
+ * @defgroup graphImplementations Implementations
+ * @ingroup graph
+ * 
+ * Implementation of Graph in various hosting environments
+*/
+
+/**
+ * @defgroup graphMax Max
+ * @ingroup graphImplementations
+ * 
+ * Graph implementation for the Max environment
+*/

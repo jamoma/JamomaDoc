@@ -1,0 +1,155 @@
+//-----------------------------------------------------
+// DSP Group Definitions for Doxygen
+//-----------------------------------------------------
+
+/**
+ * @defgroup dsp Jamoma DSP
+ * @ingroup framework
+ * 
+ * Jamoma DSP specializes the Foundation classes to provide a framework for 
+ * creating a library of unit generators.
+*/
+
+// DSP Extensions
+
+/**
+ * @defgroup dspExtensions Extensions
+ * @ingroup dsp
+ * 
+ * Extends Jamoma DSP capabilities
+*/
+
+/**
+ * @defgroup dspAnalysisLib AnalysisLib
+ * @ingroup dspExtensions
+ * 
+ * Audio analysis utilities
+*/
+
+/**
+ * @defgroup dspAudioUnit AudioUnit
+ * @ingroup dspExtensions
+ * 
+ * Extension adding support for hosting AudioUnit plugins.
+*/
+
+/**
+ * @defgroup dspClipper Clipper
+ * @ingroup dspExtensions
+ * 
+ * Audio clipping utility
+*/
+
+/**
+ * @defgroup dspCrossfade Crossfade
+ * @ingroup dspExtensions
+ * 
+ * Utility for crossfading between signals.
+*/
+
+/**
+ * @defgroup dspEffectsLib EffectsLib
+ * @ingroup dspExtensions
+ * 
+ * Various audio effects units.
+*/
+
+/**
+ * @defgroup dspFFTLib FFT Lib
+ * @ingroup dspExtensions
+ * 
+ * Fast Fourier Transform utilities for spectral processing.
+*/
+
+/**
+ * @defgroup dspFilterLib FilterLib
+ * @ingroup dspExtensions
+ * 
+ * Implementation of a wide set of audio filters.
+*/
+
+/**
+ * @defgroup dspGeneratorLib GeneratorLib
+ * @ingroup dspExtensions
+ * 
+ * Audio signal unit generators.
+*/
+
+/**
+ * @defgroup dspMathLib MathLib
+ * @ingroup dspExtensions
+ * 
+ * Math operations for audio processing purposes.
+*/
+
+/**
+ * @defgroup dspResamplingLib ResamplingLib
+ * @ingroup dspExtensions
+ * 
+ * Utilities for resampling of audio signals.
+*/
+
+/**
+ * @defgroup dspSoundFileLib SoundFileLib
+ * @ingroup dspExtensions
+ * 
+ * Support for reading and writing soundfiles using libsndfile.
+*/
+
+/**
+ * @defgroup dspSpatLib SpatLib
+ * @ingroup dspExtensions
+ * 
+ * Implementation of a number of spatialisation techniques.
+*/
+
+/**
+ * @defgroup dspTrajectoryLib TrajectoryLib
+ * @ingroup dspExtensions
+ * 
+ * Description of trajectories for describing source positionign and movement in spatialisation.
+*/
+
+/**
+ * @defgroup dspWindowFunctionLib WindowFunctionLib
+ * @ingroup dspExtensions
+ * 
+ * Window functions to be used for spectral and granular processing, etc.
+*/
+
+// DSP Implementations
+
+/**
+ * @defgroup dspImplementations Implementations
+ * @ingroup dsp
+ * 
+ * Implementation of DSP in various hosting environments
+*/
+
+/**
+ * @defgroup dspAudioUnit AudioUnit
+ * @ingroup dspImplementations
+ * 
+ * DSP implementation as AudioUnit plugins
+*/
+
+/**
+ * @defgroup dspMax Max
+ * @ingroup dspImplementations
+ * 
+ * DSP implementation for the Max environment
+*/
+
+/**
+ * @defgroup dspPd Pd
+ * @ingroup dspImplementations
+ * 
+ * DSP implementation for the PureData environment
+*/
+
+/**
+ * @defgroup dspVst VST
+ * @ingroup dspImplementations
+ * 
+ * DSP implementation as VST plugins
+*/

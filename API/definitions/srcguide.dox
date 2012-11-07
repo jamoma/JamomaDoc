@@ -2,8 +2,10 @@
  Define doxygen groups used to structure the documentation.
 */
 
-
-/* Groups for structuring files according to framework. */
+/*
+ Groups for structuring files according to framework.
+ Further detailing for each framework is done in separate files
+*/
 
 /**
  * @defgroup framework Jamoma Frameworks
@@ -11,82 +13,10 @@
  * The various frameworks that constitutes the Jamoma project.
 */
 
-/**
- * @defgroup audioGraph Jamoma AudioGraph
- * @ingroup framework
- * 
- * Jamoma AudioGraph extends and specializes the Jamoma Graph layer. It 
- * provides ability to create and network Jamoma DSP objects into dynamic 
- * graph structures for synchronous audio processing.
-*/
 
-/**
- * @defgroup dsp Jamoma DSP
- * @ingroup framework
- * 
- * Jamoma DSP specializes the Foundation classes to provide a framework for 
- * creating a library of unit generators.
+/* 
+ Groups for structuring constants and declarations: 
 */
-
-/**
- * @defgroup foundation Jamoma Foundation
- * @ingroup framework
- * 
- * Jamoma Foundation provides low-level support, base classes, and 
- * communication systems.
-*/
-
-/**
- * @defgroup graph Jamoma Graph
- * @ingroup framework
- * 
- * Jamoma Graph networks Jamoma Foundation based objects into graph structures, 
- * providing a basic asynchronous processing model for objects (nodes) in the 
- * graph structure.
-*/
-
-/**
- * @defgroup graphics Jamoma Graphics
- * @ingroup framework
- * 
- * Jamoma Graphics provides screen graphics.
-*/
-
-/**
- * @defgroup modular Jamoma Modular
- * @ingroup framework
- * 
- * Jamoma Modular provides a structured approach to development and control 
- * of modules in the graphical media environment Max.
-*/
-
-/**
- * @defgroup plugtastic Jamoma Plugtastic
- * @ingroup framework
- * 
- * Jamoma Plugtastic enables graphs created in Jamoma Graph and AudioGraph 
- * to be described, exported and compiled as AudioUnit plugins.
-*/
-
-/**
- * @defgroup support Jamoma Support
- * @ingroup framework
- * 
- * Jamoma Support provides functionalities and scripts required for building
- * the various frameworks. This includes embedding libraries and SDKs
- * such as the Max SDK, rosc (OSC implementation for Ruby) and 
- * ObjectiveMax.
-*/
-
-/**
- * @defgroup test Jamoma Test
- * @ingroup framework
- * 
- * Jamoma Framework provides the infrastructure required for unit testing
- * using Ruby and implementation testing in Max.
-*/
-
-/* Groups for structuring constants and declarations: */
 
 /** @defgroup consts Constants
  *

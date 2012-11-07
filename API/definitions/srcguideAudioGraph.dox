@@ -1,0 +1,51 @@
+//-----------------------------------------------------
+// AudioGraph Group Definitions for Doxygen
+//-----------------------------------------------------
+
+/**
+ * @defgroup audioGraph Jamoma AudioGraph
+ * @ingroup framework
+ * 
+ * Jamoma AudioGraph extends and specializes the Jamoma Graph layer. It 
+ * provides ability to create and network Jamoma DSP objects into dynamic 
+ * graph structures for synchronous audio processing.
+*/
+
+// AudioGraph Extensions
+
+/**
+ * @defgroup audioGraphExtensions Extensions
+ * @ingroup audioGraph
+ * 
+ * Extends Jamoma AudioGraph capabilities
+*/
+
+/**
+ * @defgroup audioGraphUtilityLib UtilityLib
+ * @ingroup audioGraphExtensions
+ * 
+ * Utilities for splitting and joining multichannel signals, etc.
+*/
+
+// AudioGraph Implementations
+
+/**
+ * @defgroup audioGraphImplementations Implementations
+ * @ingroup audioGraph
+ * 
+ * Implementation of AudioGraph in various hosting environments
+*/
+
+/**
+ * @defgroup audioGraphMax Max
+ * @ingroup audioGraphImplementations
+ * 
+ * AudioGraph implementation for the Max environment
+*/
+
+/**
+ * @defgroup audioGraphPd Pd
+ * @ingroup audioGraphImplementations
+ * 
+ * AudioGraph implementation for the Pure Data (Pd) environment
+*/
