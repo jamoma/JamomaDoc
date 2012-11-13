@@ -11,17 +11,26 @@
  * graph structures for synchronous audio processing.
 */
 
+// Library
+
+/**
+ * @defgroup audioGraphLibrary Jamoma AudioGraph Library
+ * @ingroup audioGraph
+ * 
+ * The Jamoma AudioGraph Library
+*/
+
 // AudioGraph Extensions
 
 /**
- * @defgroup audioGraphExtensions Extensions
+ * @defgroup audioGraphExtensions Jamoma AudioGraph Extensions
  * @ingroup audioGraph
  * 
  * Extends Jamoma AudioGraph capabilities
 */
 
 /**
- * @defgroup audioGraphUtilityLib UtilityLib
+ * @defgroup audioGraphUtilityLib Jamoma AudioGraph UtilityLib
  * @ingroup audioGraphExtensions
  * 
  * Utilities for splitting and joining multichannel signals, etc.
@@ -30,21 +39,21 @@
 // AudioGraph Implementations
 
 /**
- * @defgroup audioGraphImplementations Implementations
+ * @defgroup audioGraphImplementations Jamoma AudioGraph Implementations
  * @ingroup audioGraph
  * 
  * Implementation of AudioGraph in various hosting environments
 */
 
 /**
- * @defgroup audioGraphMax Max
+ * @defgroup audioGraphMax Max implementation of Jamoma AudioGraph
  * @ingroup audioGraphImplementations
  * 
  * AudioGraph implementation for the Max environment
 */
 
 /**
- * @defgroup audioGraphPd Pd
+ * @defgroup audioGraphPd Pd implementation of Jamoma AudioGraph
  * @ingroup audioGraphImplementations
  * 
  * AudioGraph implementation for the Pure Data (Pd) environment

@@ -10,17 +10,26 @@
  * of modules in the graphical media environment Max.
 */
 
+// Library
+
+/**
+ * @defgroup modularLibrary Jamoma Modular Library
+ * @ingroup modular
+ * 
+ * The Jamoma Foundation Library
+*/
+
 // Modular Extensions
 
 /**
- * @defgroup modularExtensions Extensions
+ * @defgroup modularExtensions Jamoma Modular Extensions
  * @ingroup modular
  * 
  * Extends Jamoma Modular capabilities
 */
 
 /**
- * @defgroup modularMinuit Minuit
+ * @defgroup modularMinuit Jamoma Modular Minuit
  * @ingroup modularExtensions
  * 
  * The Minuit extension is in developed for Jamoma 0.6.
@@ -29,14 +38,14 @@
 // Modular Implementations
 
 /**
- * @defgroup modularImplementations Implementations
+ * @defgroup modularImplementations Jamoma Modular Implementations
  * @ingroup modular
  * 
  * Implementation of Modular in various hosting environments
 */
 
 /**
- * @defgroup modularMax Max
+ * @defgroup modularMax Max implementation of Jamoma Modular
  * @ingroup modularImplementations
  * 
  * Modular implementation for the Max environment.

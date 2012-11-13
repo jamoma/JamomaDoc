@@ -11,24 +11,33 @@
  * graph structure.
 */
 
+// Library
+
+/**
+ * @defgroup graphLibrary Jamoma Graph Library
+ * @ingroup graph
+ * 
+ * The Jamoma Graph Library
+*/
+
 // Graph Extensions
 
 /**
- * @defgroup graphExtensions Extensions
+ * @defgroup graphExtensions Jamoma Graph Extensions
  * @ingroup graph
  * 
  * Extends Jamoma Graph capabilities
 */
 
 /**
- * @defgroup graphDictionayLib DictionayLib
+ * @defgroup graphDictionayLib Jamoma Graph DictionayLib
  * @ingroup graphExtensions
  * 
  * Provides Jamoma Graph with dictionary capabilities.
 */
 
 /**
- * @defgroup graphMidiLib MidiLib
+ * @defgroup graphMidiLib Jamoma Graph MidiLib
  * @ingroup graphExtensions
  * 
  * MIDI messages expressed and processed as dictionaries.
@@ -38,14 +47,14 @@
 // Graph Implementations
 
 /**
- * @defgroup graphImplementations Implementations
+ * @defgroup graphImplementations Jamoma Graph Implementations
  * @ingroup graph
  * 
  * Implementation of Graph in various hosting environments
 */
 
 /**
- * @defgroup graphMax Max
+ * @defgroup graphMax Max implementation of Jamoma Graph
  * @ingroup graphImplementations
  * 
  * Graph implementation for the Max environment
