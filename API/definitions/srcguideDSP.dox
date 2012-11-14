@@ -10,115 +10,124 @@
  * creating a library of unit generators.
 */
 
+// Library
+
+/**
+ * @defgroup dspLibrary Jamoma DSP Library
+ * @ingroup dsp
+ * 
+ * The Jamoma DSP Library
+*/
+
 // DSP Extensions
 
 /**
- * @defgroup dspExtensions Extensions
+ * @defgroup dspExtensions Jamoma DSP Extensions
  * @ingroup dsp
  * 
  * Extends Jamoma DSP capabilities
 */
 
 /**
- * @defgroup dspAnalysisLib AnalysisLib
+ * @defgroup dspAnalysisLib Jamoma DSP AnalysisLib
  * @ingroup dspExtensions
  * 
  * Audio analysis utilities
 */
 
 /**
- * @defgroup dspAudioUnit AudioUnit
+ * @defgroup dspAudioUnitExtension Jamoma DSP AudioUnit
  * @ingroup dspExtensions
  * 
  * Extension adding support for hosting AudioUnit plugins.
 */
 
 /**
- * @defgroup dspClipper Clipper
+ * @defgroup dspClipper Jamoma DSP Clipper
  * @ingroup dspExtensions
  * 
  * Audio clipping utility
 */
 
 /**
- * @defgroup dspCrossfade Crossfade
+ * @defgroup dspCrossfade Jamoma DSP Crossfade
  * @ingroup dspExtensions
  * 
  * Utility for crossfading between signals.
 */
 
 /**
- * @defgroup dspEffectsLib EffectsLib
+ * @defgroup dspEffectsLib Jamoma DSP EffectsLib
  * @ingroup dspExtensions
  * 
  * Various audio effects units.
 */
 
 /**
- * @defgroup dspFFTLib FFT Lib
+ * @defgroup dspFFTLib Jamoma DSP FFT Lib
  * @ingroup dspExtensions
  * 
  * Fast Fourier Transform utilities for spectral processing.
 */
 
 /**
- * @defgroup dspFilterLib FilterLib
+ * @defgroup dspFilterLib Jamoma DSP FilterLib
  * @ingroup dspExtensions
  * 
  * Implementation of a wide set of audio filters.
 */
 
 /**
- * @defgroup dspFunctionLib FunctionLib
+ * @defgroup dspFunctionLib Jamoma DSP FunctionLib
  * @ingroup dspExtensions
  * 
  * Implementation of mapping functions.
 */
 
 /**
- * @defgroup dspGeneratorLib GeneratorLib
+ * @defgroup dspGeneratorLib Jamoma DSP GeneratorLib
  * @ingroup dspExtensions
  * 
  * Audio signal unit generators.
 */
 
 /**
- * @defgroup dspMathLib MathLib
+ * @defgroup dspMathLib Jamoma DSP MathLib
  * @ingroup dspExtensions
  * 
  * Math operations for audio processing purposes.
 */
 
 /**
- * @defgroup dspResamplingLib ResamplingLib
+ * @defgroup dspResamplingLib Jamoma DSP ResamplingLib
  * @ingroup dspExtensions
  * 
  * Utilities for resampling of audio signals.
 */
 
 /**
- * @defgroup dspSoundFileLib SoundFileLib
+ * @defgroup dspSoundFileLib Jamoma DSP SoundFileLib
  * @ingroup dspExtensions
  * 
  * Support for reading and writing soundfiles using libsndfile.
 */
 
 /**
- * @defgroup dspSpatLib SpatLib
+ * @defgroup dspSpatLib Jamoma DSP SpatLib
  * @ingroup dspExtensions
  * 
  * Implementation of a number of spatialisation techniques.
 */
 
 /**
- * @defgroup dspTrajectoryLib TrajectoryLib
+ * @defgroup dspTrajectoryLib Jamoma DSP TrajectoryLib
  * @ingroup dspExtensions
  * 
  * Description of trajectories for describing source positionign and movement in spatialisation.
 */
 
 /**
- * @defgroup dspWindowFunctionLib WindowFunctionLib
+ * @defgroup dspWindowFunctionLib Jamoma DSP WindowFunctionLib
  * @ingroup dspExtensions
  * 
  * Window functions to be used for spectral and granular processing, etc.
@@ -127,35 +136,35 @@
 // DSP Implementations
 
 /**
- * @defgroup dspImplementations Implementations
+ * @defgroup dspImplementations Jamoma DSP Implementations
  * @ingroup dsp
  * 
  * Implementation of DSP in various hosting environments
 */
 
 /**
- * @defgroup dspAudioUnit AudioUnit
+ * @defgroup dspAudioUnitImplementation AudioUnit implementation of Jamoma DSP
  * @ingroup dspImplementations
  * 
  * DSP implementation as AudioUnit plugins
 */
 
 /**
- * @defgroup dspMax Max
+ * @defgroup dspMax Max implementation of Jamoma DSP
  * @ingroup dspImplementations
  * 
  * DSP implementation for the Max environment
 */
 
 /**
- * @defgroup dspPd Pd
+ * @defgroup dspPd PureData implementation of Jamoma DSP
  * @ingroup dspImplementations
  * 
  * DSP implementation for the PureData environment
 */
 
 /**
- * @defgroup dspVst VST
+ * @defgroup dspVst VST implementation of Jamoma DSP
  * @ingroup dspImplementations
  * 
  * DSP implementation as VST plugins

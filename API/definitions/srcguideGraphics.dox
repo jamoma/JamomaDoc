@@ -9,31 +9,40 @@
  * Jamoma Graphics provides screen graphics.
 */
 
+// Library
+
+/**
+ * @defgroup graphicsLibrary Jamoma Graphics Library
+ * @ingroup graphics
+ * 
+ * The Jamoma Graphics Library
+*/
+
 // Graphics Extensions
 
 /**
- * @defgroup graphicsExtensions Extensions
+ * @defgroup graphicsExtensions Jamoma Graphics Extensions
  * @ingroup graphics
  * 
  * Extends Jamoma Graphics capabilities
 */
 
 /**
- * @defgroup graphicsHipnoscope Hipnoscope
+ * @defgroup graphicsHipnoscope Jamoma Graphics Hipnoscope
  * @ingroup graphicsExtensions
  * 
  * Hipnoscope widget based for preset navigation and interpolation
 */
 
 /**
- * @defgroup graphicsLabel	Label
+ * @defgroup graphicsLabel Jamoma Graphics Label
  * @ingroup graphicsExtensions
  * 
  * A label widget.
 */
 
 /**
- * @defgroup graphicsSpatDisplay SpatDisplay
+ * @defgroup graphicsSpatDisplay Jamoma Graphics SpatDisplay
  * @ingroup graphicsExtensions
  * 
  * A widget for spatialisation audio scene visualisation.
@@ -42,21 +51,21 @@
 // Graphics Implementations
 
 /**
- * @defgroup graphicsImplementations Implementations
+ * @defgroup graphicsImplementations Jamoma Graphics Implementations
  * @ingroup graphics
  * 
  * Implementation of Graphics in various hosting environments
 */
 
 /**
- * @defgroup graphicsAudioUnit AudioUnit
+ * @defgroup graphicsAudioUnit AudioUnit implementation of Jamoma Graphics
  * @ingroup graphicsImplementations
  * 
  * Graphics implementation used in AudioUnit plugins
 */
 
 /**
- * @defgroup graphicsMax Max
+ * @defgroup graphicsMax Max implementation of Jamoma Graphics
  * @ingroup graphicsImplementations
  * 
  * Graphics implementation for the Max environment
