@@ -116,14 +116,14 @@
  * @defgroup dspSpatLib Jamoma DSP SpatLib
  * @ingroup dspExtensions
  * 
- * Implementation of a number of spatialisation techniques.
+ * Implementation of a number of spatialization techniques.
 */
 
 /**
  * @defgroup dspTrajectoryLib Jamoma DSP TrajectoryLib
  * @ingroup dspExtensions
  * 
- * Description of trajectories for describing source positionign and movement in spatialisation.
+ * Description of trajectories e.g., for describing source positioning and movement in spatialization.
 */
 
 /**
