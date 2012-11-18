@@ -30,7 +30,6 @@ Dir.chdir("../.")
 # removing useless stuff
 projects = Dir.entries(".")
 projects.delete_if {|nonFolder| nonFolder =~ /^\./} # we remove entries starting with a dot
-projects.delete("Support")
 projects.delete("Documentation")
 
 projectsTOC = Array::new

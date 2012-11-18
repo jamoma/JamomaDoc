@@ -710,16 +710,16 @@ RECURSIVE              = YES
 
 EXCLUDE                = ../../DSP/extensions/SoundfileLib/libsndfile \
                          ../../DSP/extensions/SoundfileLib/libsndfile/* \
-                         ../../DSP/library/portaudio \
-                         ../../DSP/library/portaudio/* \
-                         ../../Foundation/library/boost \
-                         ../../Foundation/library/boost/* \
-                         ../../Foundation/library/libiconv \
-                         ../../Foundation/library/libiconv/* \
-                         ../../Foundation/library/libxml2 \
-                         ../../Foundation/library/libxml2/* \
-                         ../../Foundation/library/Mersenne-1.1 \
-                         ../../Foundation/library/Mersenne-1.1/* \
+                         ../../../Core/DSP/library/portaudio \
+                         ../../../Core/DSP/library/portaudio/* \
+                         ../../../Core/Foundation/library/boost \
+                         ../../../Core/Foundation/library/boost/* \
+                         ../../../Core/Foundation/library/libiconv \
+                         ../../../Core/Foundation/library/libiconv/* \
+                         ../../../Core/Foundation/library/libxml2 \
+                         ../../../Core/Foundation/library/libxml2/* \
+                         ../../../Core/Foundation/library/Mersenne-1.1 \
+                         ../../../Core/Foundation/library/Mersenne-1.1/* \
                          ../../Graph/extensions/MidiLib/portmidi \
                          ../../Graph/extensions/MidiLib/portmidi/* \
                          ../../Graphics/library/cairo-lib \
