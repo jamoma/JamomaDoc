@@ -1,117 +1,57 @@
-#!/usr/bin/ruby -wKU
-# TAP: changed the above so that on the Mac it always uses the version of ruby installed by the OS
-# this is because version 1.8.7 works, but 1.9.1 does not
-#/usr/bin/env ruby -wKU
+#!/usr/bin/env ruby
 
-require "FileUtils"
+# REQUIRES: Doxygen 1.6.1 to have been installed
+# REQUIRES: Graphviz 2.14 to have been installed as per the instructions accompanying Doxygen 1.6.1
+# REQUIRES: Latex to be installed from http://www.tug.org/mactex/
+#           and "/usr/texbin" to be added to your path in the MacOS environment variables
 
-libdir = "."
-Dir.chdir libdir
-libdir = Dir.pwd
-
-# JamomaDocLib contains xml IO and specific doc methods (refpages, tutorials, etc. parsers)
-require "#{libdir}/Tools/JamomaDocLib"
+# REQUIRES: currently this must be run from this directory in which it resides.
 
 
-puts" "
-puts"Building Jamoma Documentation"
-puts"==================================================="
-
-# =================================
-# SETUP
-# =================================
-dst = "#{libdir}/Builds/Jamoma-doc"
-
-# create the folder structure we need
-FileUtils.remove_entry("#{dst}") if File.exist?("#{dst}")
+@html_root = "build/html"
+@pdf_root = "build/latex"
+@doxygen_root = "."
 
 
-Dir.chdir("../.")
-# removing useless stuff
-projects = Dir.entries(".")
-projects.delete_if {|nonFolder| nonFolder =~ /^\./} # we remove entries starting with a dot
-projects.delete("Documentation")
+#### SUBROUTINES
 
-projectsTOC = Array::new
-
-projects.each do |project|
-  next if (!File.exists? "#{project}")
-  Dir.chdir("#{project}")
-
-  search = `find . -name jcom*maxref.yml`
-  refs = search.split("\n")
-
-# =================================
-# PROCESS REFPAGES
-# =================================
-  unless refs.empty?
-    puts "\n-------- #{project} --------\n"
-    FileUtils.mkdir_p("#{dst}/refpages/Jamoma#{project}")
-
-    projectsTOC.push("#{project}") #if there are some refpages, we add the Jamoma Module to the table of content array
-    puts "WRITING REFPAGES\n"
-    refs.each do |jcom|
-
-      refName = jcom.sub(/.*(jcom.*maxref).yml/,'\1.xml')
-      imagePath = jcom.sub(/(.*jcom.*).maxref.yml/,'\1.maxref.png')
-      imageName = imagePath.sub(/.*(jcom.*maxref.png)/, '\1')
-
-      puts "Writing reference page for #{refName}..."
-      ref = YamlToMaxDoc.new
-      ref.makeRefpage("#{jcom}")
-      ref.write("#{libdir}/Builds/Jamoma-doc/refpages/Jamoma#{project}/#{refName}")
-        if File.exist?(imagePath) then
-          FileUtils.mkdir("#{dst}/refpages/Jamoma#{project}/images") unless File.exist?("#{dst}/refpages/Jamoma#{project}/images")
-          FileUtils.copy_entry("#{imagePath}", "#{dst}/refpages/Jamoma#{project}/images/#{imageName}")
-        end
-
-    end
-# =================================
-# PROCESS REFPAGES TABLE OF CONTENT
-# =================================
-
-    puts "\n"
-    puts "BUILDING TABLE OF CONTENT OF ALL REFPAGES IN JAMOMA#{project.upcase}"
-    puts "\n"
-    toc = YamlToMaxDoc.new
-    toc.refpagesTOC(refs)
-    toc.write("#{dst}/refpages/Jamoma#{project}/_jdoc_contents.xml")
-
-    FileUtils.copy("#{libdir}/Max/support/refpages/jamoma/_jdoc_ref.xsl", "#{dst}/refpages/Jamoma#{project}/_jdoc_ref.xsl")
-
-  end
-
-  Dir.chdir("../.")
-
+def substitute_strings_in_file(file_path, old_string, new_string)
+  f = File.open("#{file_path}", "r+")
+  str = f.read
+  str.gsub!(/#{old_string}/, new_string)
+  f.rewind
+  f.write(str)
+  f.truncate(f.pos)
+  f.close
 end
 
-# =================================
-# PROCESS JAMOMA MODULES TABLE OF CONTENT
-# =================================
 
-refDir = YamlToMaxDoc.new
-refDir.moduleTOC(projectsTOC)
-refDir.write("#{dst}/refpages/_jdoc_ref_modules.xml")
 
-# =================================
-# COPYING CSS AND XSL STUFF
-# =================================
-FileUtils.copy("#{libdir}/Max/support/refpages/_jdoc_ref_common.xsl", "#{dst}/refpages")
-FileUtils.copy("#{libdir}/Max/support/_jdoc_common.css", dst)
-FileUtils.copy("#{libdir}/Max/support/_jdoc_common.xml", dst)
-FileUtils.copy("#{libdir}/Max/support/_jdoc_common.xsl", dst)
-FileUtils.copy("#{libdir}/Max/support/_jdoc_compat.html", dst)
-FileUtils.copy("#{libdir}/Max/support/_jdoc_platform.xsl", dst)
+# Remove old API doc build
+`rm -rf #{@html_root}/[!.]*`
+`rm -rf #{@pdf_root}/[!.]*`
 
-# =================================
-# INSTALLING
-# =================================
 
-puts "--------\nCOPYING REFPAGES IN MAX FOLDER\n"
-maxVersion = ["Max5", "Max6"]
+`/Applications/Doxygen.app/Contents/Resources/doxygen #{@doxygen_root}/doxyfile`
 
-maxVersion.each do |v|
-  FileUtils.copy_entry("#{libdir}/Builds", "/Applications/#{v}/patches") if File.exist?("/Applications/#{v}/patches")
-end
 
-puts "\n=================DONE===================="
+# Build our PDF
+Dir.chdir @pdf_root
+
+# First, we have to strip out the files generated from our example source code:
+# otherwise we end up with a corrupted PDF due to screwed up UTF8 chars that Latex can't handle.
+f = File.open("#{@pdf_root}/refman.tex", "r+")
+str = f.read
+str.gsub!(/\\chapter\{File Index\}/, '')
+str.gsub!(/\\input\{files\}/, '')
+str.gsub!(/\\chapter\{File Documentation\}.*\\printindex/m, '\printindex')
+f.rewind
+f.write(str)
+f.truncate(str.size)
+f.close
+
+# This is the usual, albeit goofy, process of getting latex cross-dependencies all built and linked correctly.
+puts `make`
+puts `pdflatex -interaction=nonstopmode -file-line-error-style -synctex=1 refman.tex`
+puts `makeindex refman.idx`
+puts `pdflatex -interaction=nonstopmode -file-line-error-style -synctex=1 refman.tex`
