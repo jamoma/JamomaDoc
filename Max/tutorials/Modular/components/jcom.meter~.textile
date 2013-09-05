@@ -1,5 +1,5 @@
 --- 
-title: jcom.meter~
+title: j.meter~
 description: Logarithmic GUI level meter
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
@@ -9,7 +9,7 @@ objref: []
 
 h3. Description
 
-p. jcom.meter~ is a GUI object used in modules to display audio signal level on a logarithmic scale.
+p. j.meter~ is a GUI object used in modules to display audio signal level on a logarithmic scale.
 
 h3. Inputs
 

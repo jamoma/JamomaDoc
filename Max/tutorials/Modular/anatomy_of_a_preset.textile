@@ -33,7 +33,7 @@ bc[xml]. <?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
 	</preset>
 </jamoma>
 
-A preset is defined by a set of items surrounded by an opening @[xml] <preset>@ tag containing a number and a name for the preset (@[xml] number='1' name='default'@) and a closing @[xml]</preset>@ tag. Each parameter is defined by an @[xml] <item>@ tag containing the name of the "jcom.parameter":components/jcom.parameter.html in your module and its type (@[xml] name='samplerateRatio' type='decimal'@), followed by its value (@1.00@) and a closing @[xml] <item>@ tag. Thus, the first preset for "jmod.degrade~":modules/jmod.degrade~.html looks like this:
+A preset is defined by a set of items surrounded by an opening @[xml] <preset>@ tag containing a number and a name for the preset (@[xml] number='1' name='default'@) and a closing @[xml]</preset>@ tag. Each parameter is defined by an @[xml] <item>@ tag containing the name of the "j.parameter":components/j.parameter.html in your module and its type (@[xml] name='samplerateRatio' type='decimal'@), followed by its value (@1.00@) and a closing @[xml] <item>@ tag. Thus, the first preset for "jmod.degrade~":modules/jmod.degrade~.html looks like this:
 	
 bc[xml]. <preset number='1' name='default'>
 	<item name='samplerateRatio' type='decimal'>1.000000</item>

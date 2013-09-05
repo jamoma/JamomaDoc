@@ -1,5 +1,5 @@
 --- 
-title: jcom.ui
+title: j.ui
 description: Graphical User Interface object for the Jamoma Modules
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
@@ -7,4 +7,4 @@ tags: [GUI]
 objref: []
 ---
 
-!../images/jcom.ui.refpage.png!
+!../images/j.ui.refpage.png!

@@ -15,7 +15,7 @@ class YamlToMaxDoc
 
 
   def makeRefpage filepath
-    imagepath = filepath.sub(/(.*jcom.*)\.maxref.yml/, '\1.maxref.png')
+    imagepath = filepath.sub(/(.*j.*)\.maxref.yml/, '\1.maxref.png')
     yaml = YAML.load_file(filepath)
     categoryStr  = String.new # adding Jamoma subproject (e.g., DSP) as default cateory ?
     tags = yaml["tags"] # we use the tags info to create the category attribute
@@ -214,7 +214,7 @@ class YamlToMaxDoc
     comment = Comment.new('EXAMPLE')
     root.add comment
     if File.exist? "#{imagepath}"
-      imagefilename = imagepath.sub(/.*(jcom.*.maxref.png)/,'\1')
+      imagefilename = imagepath.sub(/.*(j.*.maxref.png)/,'\1')
       e = Element.new("examplelist")
       image = Element.new("example")
       image.attributes["img"] = imagefilename
@@ -311,7 +311,7 @@ class YamlToMaxDoc
 #    jcomArray.delete_if {|nonFolder| nonFolder =~ /^\./ || nonFolder =~ /images/} # we remove ".", ".." and "images" entries
     root = Element.new("root")
     jcomArray.each do |j|
-      j = j.sub(/.*(jcom.*maxref).yml/,'\1.xml')
+      j = j.sub(/.*(j.*maxref).yml/,'\1.xml')
       r = Element.new("refpage")
       r.attributes["name"] = j
       root.add_element r

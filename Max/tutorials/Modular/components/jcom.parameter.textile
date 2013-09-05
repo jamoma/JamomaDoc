@@ -1,5 +1,5 @@
 --- 
-title: jcom.parameter
+title: j.parameter
 description: Handling parameters in a module
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
@@ -7,4 +7,4 @@ tags: [parameter, parsing]
 objref: []
 ---
 
-!../images/jcom.parameter.refpage.png!
+!../images/j.parameter.refpage.png!

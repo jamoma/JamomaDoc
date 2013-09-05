@@ -7,7 +7,7 @@ tags: [mapping, continuous, discrete]
 objref: [jmod.mapper, jmod.mapperContinuous, jmod.mapperDiscrete, jmod.mouse, jmod.filter~~]
 ---
 
-Jamoma has several ways to create mappings between modules, that is linking an output (a jcom.parameter or a jcom.return) of a Jamoma module and an input (a jcom.parameter or a jcom.message) of another (or even the same) Jamoma module. 
+Jamoma has several ways to create mappings between modules, that is linking an output (a j.parameter or a j.return) of a Jamoma module and an input (a j.parameter or a j.message) of another (or even the same) Jamoma module. 
 Imagine, you want to map the position of your mouse to one of the parameters of a filter~ module. 
 The illustration below shows a simple Jamoma patch. The mouse position is sensed by the module on the right side ("jmod.mouse":modules/jmod.mouse.html) and its return message for the horizontal coordinate of your mouse pointer is @/position/x@
 

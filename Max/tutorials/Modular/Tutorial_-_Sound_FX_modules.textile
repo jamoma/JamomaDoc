@@ -71,13 +71,13 @@ The gain dial use a MIDI range that differs from what you might be used to in MS
 *** Midi value @127.0@ equals +10 dB.
 *** In general you will find that the midi range is more sensitive at the top of the range, around 0dB, making it easier to do fine adjustments of balances in the mix.
 
-If you want to apply the Jamoma MIDI range elsewhere in your patches and modules, the external "jcom.dataspace":components/jcom.dataspace.html can be used for mappings between linear, decibel and midi representations of gain levels. Set %(samp)@dataspace% to @gain@, and choose the @input and @output attributes appropriate for what you want to do. Please refer to the help file for "jcom.dataspace":components/jcom.dataspace.html for further details.
+If you want to apply the Jamoma MIDI range elsewhere in your patches and modules, the external "j.dataspace":components/j.dataspace.html can be used for mappings between linear, decibel and midi representations of gain levels. Set %(samp)@dataspace% to @gain@, and choose the @input and @output attributes appropriate for what you want to do. Please refer to the help file for "j.dataspace":components/j.dataspace.html for further details.
 
 * The blue dial controls the mix between the dry (original) input (0.0 %) and the wet (100.0 %) (processed) signals. When changed, mix levels are briefly displayed in the module toolbar in the same way as for gain levels. Mixing between dry and wet signals is done using equal power (logarithmic) crossfade to avoid a dip in the middle.
 * The 'm' button mutes the output signal of the module. It will also stop audio processing internally in the module, thus freeing up CPU for other purposes when the module is not in use. Muting is done in a similar way to how the mute~ object works as we have found this to be more CPU efficient than using "poly~":http://cycling74.com/docs/max5/refpages/msp-ref/poly~.html.
 If the button is red, the audio is muted.
 * The 'b' button sends the original signal through the module without applying any effects. If the button is blue, the audio is bypassed.
-* All Jamoma audio modules has signal output level metering. Metering is done using the "jcom.meter~":components/jcom.meter~.html GUI external rather than the meter~ object, providing more detailed information (in particular at low levels) than meter~ do by default.
+* All Jamoma audio modules has signal output level metering. Metering is done using the "j.meter~":components/j.meter~.html GUI external rather than the meter~ object, providing more detailed information (in particular at low levels) than meter~ do by default.
 
 h4. Parameters particular to the echo effect
 
@@ -101,7 +101,7 @@ From the pop-up-menu you might now choose %(samp)View Internal Components%. A ne
 
 !images/jalg.echo.png!
 
-From this you might see that the audio processing of this module consists of a pair of "tapin~":http://cycling74.com/docs/max5/refpages/msp-ref/tapin~.html / "tapout~":http://cycling74.com/docs/max5/refpages/msp-ref/tapout~.html objects providing the delays, standard "biquad~":http://cycling74.com/docs/max5/refpages/msp-ref/biquad~.html filters and a limiter using the Jamoma external "jcom.limiter~":components/jcom.limiter~.html. The output of the limiter is passed on and out of the module.
+From this you might see that the audio processing of this module consists of a pair of "tapin~":http://cycling74.com/docs/max5/refpages/msp-ref/tapin~.html / "tapout~":http://cycling74.com/docs/max5/refpages/msp-ref/tapout~.html objects providing the delays, standard "biquad~":http://cycling74.com/docs/max5/refpages/msp-ref/biquad~.html filters and a limiter using the Jamoma external "j.limiter~":components/j.limiter~.html. The output of the limiter is passed on and out of the module.
 
 In addition the output from the limiter is passed on to two "*~":http://cycling74.com/docs/max5/refpages/msp-ref/times~.html objects controlling the level of the feedback and through a "matrix~":http://cycling74.com/docs/max5/refpages/msp-ref/matrix~.html so that left and right channels might be swapped, before being passed back up to "tapin~":http://cycling74.com/docs/max5/refpages/msp-ref/tapin~.html.
 

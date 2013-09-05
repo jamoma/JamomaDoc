@@ -42,7 +42,7 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>A key cue is an absolute cue in jcom.cuemanager</string>
+			<string>A key cue is an absolute cue in j.cuemanager</string>
 			<key>end</key>
 			<string>(\n)|(?=(ramp))|(?=#)</string>
 			<key>name</key>

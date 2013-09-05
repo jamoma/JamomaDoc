@@ -11,14 +11,14 @@ h3. Dealing with module's parameters using jmod.cueManager
 
 p. Jamoma offers several ways to deal with each module's parameters. While using the module's presets can be handy, storing and recalling presets can be limiting when using a high number of modules in the patch for a particular project. Thus, the Jamoma library of module provides a specific module called "jmod.cueManager":modules/jmod.cueManager.html which can be used to save and recall the values of all modules in a patch and offers a number of advanced feature.
 
-bq. Since Jamoma modules rely on a common architecture, jmod.cuemanager will work with all modules using jcom.parameters, including modules from the User Library.
+bq. Since Jamoma modules rely on a common architecture, jmod.cuemanager will work with all modules using j.parameters, including modules from the User Library.
 
 In this tutorials, we will use a simple patch composed of an audio soundfiles player "jmod.input~":modules/jmod.input~.html, our multiband equalizer "jmod.equalizer~":modules/jmod.equalizer~.html,  and the audio effect "jmod.degrade~":modules/jmod.equalizer~.html.
 Our "jmod.mapperContinuous":modules/jmod.mapperContinuous.html allows us to remotely control parameters using "jmod.mouse":modules/jmod.mouse.html.
 
 !images/making_cues1.png!
 
-"jmod.cueManager":modules/jmod.cueManager.html relies on the features provided by the Jamoma Modular framework to internally get and set jcom.parameter values from all Jamoma modules in the patch. Hence, no particular patch cord connection between jmod.cueManager and other modules: it will take care of all remote communication needed for us.
+"jmod.cueManager":modules/jmod.cueManager.html relies on the features provided by the Jamoma Modular framework to internally get and set j.parameter values from all Jamoma modules in the patch. Hence, no particular patch cord connection between jmod.cueManager and other modules: it will take care of all remote communication needed for us.
 
 bq. When instantiated in a patch, jmod.cueManager will listen to all module addition notification. Thus you will want to create the jmod.cueManager first, then add all you needed modules. Otherwise, you may need to save and re-open your patch so that jmod.cueManager deal with all modules' parameters.
 

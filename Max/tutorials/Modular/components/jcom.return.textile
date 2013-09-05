@@ -1,5 +1,5 @@
 --- 
-title: jcom.return
+title: j.return
 description: Return information from the module to the outside world
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
@@ -7,4 +7,4 @@ tags: [OSC, messages, parsing]
 objref: []
 ---
 
-!../images/jcom.return.refpage.png!
+!../images/j.return.refpage.png!
