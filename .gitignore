@@ -24,6 +24,8 @@ html
 
 # Ignore latex temp files:
 API/*.aux
+# Ignore Bibtex temp files
+Doxygen/*.aux
 
 # Ignore VST SDK
 vstsdk-2.4
