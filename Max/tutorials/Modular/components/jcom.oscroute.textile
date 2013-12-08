@@ -1,5 +1,5 @@
 --- 
-title: jcom.oscroute
+title: j.oscroute
 description: Routes Open Sound Control messages
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
@@ -7,4 +7,4 @@ tags: [OSC, messages, parsing]
 objref: []
 ---
 
-!../images/jcom.oscroute.refpage.png!
+!../images/j.oscroute.refpage.png!

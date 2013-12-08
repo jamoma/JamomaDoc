@@ -14,193 +14,193 @@ h3. Jamoma components
 h4(#Modular). Modular
 
 |_. Component name |_. Component description |
-| "jcom.absdiff":components/jcom.absdiff.html | Calculate the absolute difference between two numbers |
-| jcom.ambi.getW~ | Get omni component of an ambisonic multicable signal |
-| jcom.ambimonitor2position | Translate position description from ambimonitor format to OSC position |
-| jcom.autocrop% | Automatically crops video |
-| jcom.autoexpose% | Automatically change the brightness of the video image |
-| jcom.autoscale | Automatically scale incoming signal messages |
-| jcom.autosize% | Resize the output window from incoming video |
-| jcom.avoidStackOverflow | utility to prevent stack overflow when looped patching is required |
-| jcom.binary% | Create a binary image |
-| jcom.char2float% | Adjust subsequent modules if matrix info changes |
-| jcom.checkplanes% | Adjust subsequent modules if plane number changes |
-| jcom.chromacolor% | Change the color in the image based on chromakeying |
-| jcom.class.lfoParameter | Parameters for LFO frequency and depth |
-| jcom.cpuTimer | Report elapsed time between two events according to the cpu clock |
-| jcom.crop% | Manually crop video |
-| jcom.cubicInterpolate | Cubic interpolation on a stream of number |
-| jcom.cuemanager | Manage cues |
-| jcom.datetime | Return the date and time in ISO8601 format |
-| "jcom.dbap":components/jcom.dbap.html | Distance based amplitude panning |
-| jcom.dbapBformat | DBAP using B-format signals as input |
-| jcom.debug.listType | Utility for debugging list types |
-| "jcom.delta":components/jcom.delta.html | 1st order difference: delta = x[n] - x[n-1] |
-| jcom.eno | Oblique strategies |
-| jcom.envexp | Envelope with linear rise and exponential decay. |
-| jcom.float2char% | Adjust subsequent modules if matrix info changes |
-| jcom.folder | Create copy folders in the filesystem |
-| jcom.fullscreen | Make the patch fill the screen when hitting escape |
-| jcom.fullscreen% | Make a jit.window fill the screen when hitting a escape |
-| jcom.gang | Link objects together |
-| "jcom.getAllParameters":components/jcom.getModuleNames.html | Find names of all parameters in an existing Jamoma module |
-| "jcom.getMessageNames":components/jcom.getModuleNames.html | Find names of all messages in an existing Jamoma module |
-| "jcom.getModuleNames":components/jcom.getModuleNames.html | Find names of all existing Jamoma modules |
-| "jcom.getOneAttribute":components/jcom.getOneAttribute.html | Get the value of one attribute of a parameter message or return |
-| "jcom.getParameterNames":components/jcom.getParameterNames.html | Find names of all parameters in an existing Jamoma module |
-| jcom.getReturnNames | Find name of all returns in an existing Jamoma module |
-| "jcom.hub":components/jcom.hub.html | The central nervous system of a Jamoma module |
-| jcom.idle | Output a bang when there is NO input signal after a specific time |
-| jcom.in | Module conduit for non-audio input |
-| "jcom.init":components/jcom.init.html | Jamoma's loadbang |
-| "jcom.initialized":components/jcom.initialized.html | Send a bang when a module has been initialized |
-| jcom.instance2instance | Convert an OSC instance into another |
-| jcom.in~ | Module conduit for audio input |
-| jcom.jamomaPath | Report Jamoma absolute path |
-| jcom.jsui_multigain.js | Adjust and monitor gains for multiple audio channels |
-| jcom.js_systeminfo.js | Javascript providing informations on the system |
-| jcom.list2parameter | Make life easier when accessing the individual members of a @type array parameter in the GUI |
-| jcom.luma2rgb% | Convert from greyscale to color |
-| jcom.map | scaling and mapping input to output using the Jamoma function library |
-| jcom.mean | output mean of columns or rows of a matrix |
-| jcom.message | Handling messages in the modules |
-| jcom.message.array | Define an array of message instances |
-| "jcom.meter~":components/jcom.meter~.html | Logarithmic level meter |
-| jcom.metro | An adaptative metronome |
-| jcom.moduleColor | Utility for managing module colors |
-| jcom.modulesDumper | Dump list of all module names |
-| jcom.motion% | Display motion image based on simple frame-differencing |
-| jcom.multi.in% | Put video signals on a multicable |
-| jcom.multi.in~ | Put audio signals on a multicable |
-| jcom.multi.out% | Split video signals from a multicable |
-| jcom.multi.out~ | Split audio signals from a multicable |
-| jcom.noiseremoval% | Remove noises from images |
-| jcom.numberslider | LCD based slider with value display in a bpatcher |
-| jcom.op | For all those times you wished you could use jit.op for numbers |
-| jcom.osc2opml | Make a .opml file describing a Jamoma patcher's namespace |
-| "jcom.oscinstance":components/jcom.oscinstance.html | Retrieve the instance addressed in OSC messages |
-| "jcom.oscroute":components/jcom.oscroute.html | Route Open Sound Control messages |
-| jcom.out | Module conduit for non-audio output |
-| jcom.out~ | Module conduit for audio output |
-| "jcom.parameter":components/jcom.parameter.html | Handling parameters in the modules |
-| jcom.parameter.array | Define an array of parameter instances |
-| jcom.parameterCreate | A utility to help the creation of jcom.parameter jcom.message or jcom.return |
-| jcom.paramui | An object which do some nice things |
-| jcom.passmatrixinfo% | Adjust subsequent objects when changing matrixinfo |
-| jcom.pi | Give the result of π |
-| jcom.position2ambimonitor | Translate position description from Jamoma OSC position to ambimonitor |
-| "jcom.pass":components/jcom.pass.html | OSC parsing without trancation |
-| jcom.post | Logging utility |
-| jcom.push | Push an object around by applying force to it |
-| jcom.pwindow.mouse | Return cooked values from the mouse in a pwindow |
-| jcom.qom | Calculate the Quantity of Motion (QoM) |
-| jcom.qom% | Calculate the Quantity of Motion (QoM) |
-| jcom.ramp | Ramping from a value to a value... with some extra features |
-| jcom.random | Create a random number |
-| jcom.randomizer | Randomize the input number a little |
-| "jcom.receive":components/jcom.receive.html | Receive messages from any Jamoma module |
-| jcom.receive~ | Receive audio to any Jamoma module |
-| jcom.remote | Internal component for module communication |
-| "jcom.return":components/jcom.return.html | Return information from the module to the outside world |
-| jcom.rgb2luma% | Check and convert rgb to monochrom matrix if necessary |
-| jcom.route | A routing object with some advanced features |
-| jcom.savebang | Out a bang message on save |
-| "jcom.send":components/jcom.send.html | Send messages to any Jamoma module |
-| jcom.send~ | Send audio to any Jamoma module |
-| jcom.spray% | Distribute a video over multiple outlets |
-| jcom.stats | Calculate statistics on running data |
-| jcom.sum% | Sum the contents of a jitter matrix |
-| jcom.sur.ambi2UHJ~ | Encode Ambisonics B-format into two channel stereo UHJ |
-| jcom.sur.UHJ2ambi~ | Encode two channel stereo UHJ into Ambisonic B-format |
-| jcom.textslider | Slider with value and text display |
-| jcom.thru | Utility to keep patches tidy |
-| jcom.thru~ | A simple utility for breaking feedback loops |
-| "jcom.ui":components/jcom.ui.html | User interface object for Jamoma modules |
-| jcom.webservice | Control Web Sharing from Jamoma |
+| "j.absdiff":components/j.absdiff.html | Calculate the absolute difference between two numbers |
+| j.ambi.getW~ | Get omni component of an ambisonic multicable signal |
+| j.ambimonitor2position | Translate position description from ambimonitor format to OSC position |
+| j.autocrop% | Automatically crops video |
+| j.autoexpose% | Automatically change the brightness of the video image |
+| j.autoscale | Automatically scale incoming signal messages |
+| j.autosize% | Resize the output window from incoming video |
+| j.avoidStackOverflow | utility to prevent stack overflow when looped patching is required |
+| j.binary% | Create a binary image |
+| j.char2float% | Adjust subsequent modules if matrix info changes |
+| j.checkplanes% | Adjust subsequent modules if plane number changes |
+| j.chromacolor% | Change the color in the image based on chromakeying |
+| j.class.lfoParameter | Parameters for LFO frequency and depth |
+| j.cpuTimer | Report elapsed time between two events according to the cpu clock |
+| j.crop% | Manually crop video |
+| j.cubicInterpolate | Cubic interpolation on a stream of number |
+| j.cuemanager | Manage cues |
+| j.datetime | Return the date and time in ISO8601 format |
+| "j.dbap":components/j.dbap.html | Distance based amplitude panning |
+| j.dbapBformat | DBAP using B-format signals as input |
+| j.debug.listType | Utility for debugging list types |
+| "j.delta":components/j.delta.html | 1st order difference: delta = x[n] - x[n-1] |
+| j.eno | Oblique strategies |
+| j.envexp | Envelope with linear rise and exponential decay. |
+| j.float2char% | Adjust subsequent modules if matrix info changes |
+| j.folder | Create copy folders in the filesystem |
+| j.fullscreen | Make the patch fill the screen when hitting escape |
+| j.fullscreen% | Make a jit.window fill the screen when hitting a escape |
+| j.gang | Link objects together |
+| "j.getAllParameters":components/j.getModuleNames.html | Find names of all parameters in an existing Jamoma module |
+| "j.getMessageNames":components/j.getModuleNames.html | Find names of all messages in an existing Jamoma module |
+| "j.getModuleNames":components/j.getModuleNames.html | Find names of all existing Jamoma modules |
+| "j.getOneAttribute":components/j.getOneAttribute.html | Get the value of one attribute of a parameter message or return |
+| "j.getParameterNames":components/j.getParameterNames.html | Find names of all parameters in an existing Jamoma module |
+| j.getReturnNames | Find name of all returns in an existing Jamoma module |
+| "j.hub":components/j.hub.html | The central nervous system of a Jamoma module |
+| j.idle | Output a bang when there is NO input signal after a specific time |
+| j.in | Module conduit for non-audio input |
+| "j.init":components/j.init.html | Jamoma's loadbang |
+| "j.initialized":components/j.initialized.html | Send a bang when a module has been initialized |
+| j.instance2instance | Convert an OSC instance into another |
+| j.in~ | Module conduit for audio input |
+| j.jamomaPath | Report Jamoma absolute path |
+| j.jsui_multigain.js | Adjust and monitor gains for multiple audio channels |
+| j.js_systeminfo.js | Javascript providing informations on the system |
+| j.list2parameter | Make life easier when accessing the individual members of a @type array parameter in the GUI |
+| j.luma2rgb% | Convert from greyscale to color |
+| j.map | scaling and mapping input to output using the Jamoma function library |
+| j.mean | output mean of columns or rows of a matrix |
+| j.message | Handling messages in the modules |
+| j.message.array | Define an array of message instances |
+| "j.meter~":components/j.meter~.html | Logarithmic level meter |
+| j.metro | An adaptative metronome |
+| j.moduleColor | Utility for managing module colors |
+| j.modulesDumper | Dump list of all module names |
+| j.motion% | Display motion image based on simple frame-differencing |
+| j.multi.in% | Put video signals on a multicable |
+| j.multi.in~ | Put audio signals on a multicable |
+| j.multi.out% | Split video signals from a multicable |
+| j.multi.out~ | Split audio signals from a multicable |
+| j.noiseremoval% | Remove noises from images |
+| j.numberslider | LCD based slider with value display in a bpatcher |
+| j.op | For all those times you wished you could use jit.op for numbers |
+| j.osc2opml | Make a .opml file describing a Jamoma patcher's namespace |
+| "j.oscinstance":components/j.oscinstance.html | Retrieve the instance addressed in OSC messages |
+| "j.oscroute":components/j.oscroute.html | Route Open Sound Control messages |
+| j.out | Module conduit for non-audio output |
+| j.out~ | Module conduit for audio output |
+| "j.parameter":components/j.parameter.html | Handling parameters in the modules |
+| j.parameter.array | Define an array of parameter instances |
+| j.parameterCreate | A utility to help the creation of j.parameter j.message or j.return |
+| j.paramui | An object which do some nice things |
+| j.passmatrixinfo% | Adjust subsequent objects when changing matrixinfo |
+| j.pi | Give the result of π |
+| j.position2ambimonitor | Translate position description from Jamoma OSC position to ambimonitor |
+| "j.pass":components/j.pass.html | OSC parsing without trancation |
+| j.post | Logging utility |
+| j.push | Push an object around by applying force to it |
+| j.pwindow.mouse | Return cooked values from the mouse in a pwindow |
+| j.qom | Calculate the Quantity of Motion (QoM) |
+| j.qom% | Calculate the Quantity of Motion (QoM) |
+| j.ramp | Ramping from a value to a value... with some extra features |
+| j.random | Create a random number |
+| j.randomizer | Randomize the input number a little |
+| "j.receive":components/j.receive.html | Receive messages from any Jamoma module |
+| j.receive~ | Receive audio to any Jamoma module |
+| j.remote | Internal component for module communication |
+| "j.return":components/j.return.html | Return information from the module to the outside world |
+| j.rgb2luma% | Check and convert rgb to monochrom matrix if necessary |
+| j.route | A routing object with some advanced features |
+| j.savebang | Out a bang message on save |
+| "j.send":components/j.send.html | Send messages to any Jamoma module |
+| j.send~ | Send audio to any Jamoma module |
+| j.spray% | Distribute a video over multiple outlets |
+| j.stats | Calculate statistics on running data |
+| j.sum% | Sum the contents of a jitter matrix |
+| j.sur.ambi2UHJ~ | Encode Ambisonics B-format into two channel stereo UHJ |
+| j.sur.UHJ2ambi~ | Encode two channel stereo UHJ into Ambisonic B-format |
+| j.textslider | Slider with value and text display |
+| j.thru | Utility to keep patches tidy |
+| j.thru~ | A simple utility for breaking feedback loops |
+| "j.ui":components/j.ui.html | User interface object for Jamoma modules |
+| j.webservice | Control Web Sharing from Jamoma |
 
 
 h4(#JAG). Audio Graph
 
 |_. Component name |_. Component description |
-| jcom.adc≈ | Get input from an Analog to Digital Converter. |
-| jcom.adsr≈ | ADSR envelope generator |
-| jcom.audiounit≈ | Host AudioUnit plugins |
-| jcom.dac≈ | multichannel dac |
-| jcom.dcblock≈ | Block DC offset |
-| jcom.degrade≈ | Degrade audio fidelity |
-| jcom.delay≈ | Delay for multicore signal |
-| jcom.fft≈ | Fast Fourier Transform |
-| jcom.filter≈ | An audio filter swiss army knife |
-| jcom.gain≈ | Control overall level |
-| jcom.hilbert≈ | Perform a Hilbert Transform on a signal. |
-| jcom.info≈ | get information about multichannel signals |
-| jcom.join≈ | merging multichannel signals |
-| jcom.limiter≈ | Look-ahead limiter with built-in DC blocking and overdrive |
-| jcom.matrixmixer≈ | Mixing matrix for NxM multicore signals |
-| jcom.matrix≈ | Apply matrix to channels within multicore signals |
-| jcom.noise≈ | noise generator with multicore output |
-| jcom.op≈ | A multi-operator DSP object |
-| jcom.overdrive≈ | Saturate audio signal |
-| jcom.pack≈ | MSP signals to multicore |
-| jcom.phasor≈ | Generate a cyclic ramp wave |
-| jcom.resample≈ | Resample an input signal at a different sample rate or block size. |
-| jcom.sig≈ | signal generator |
-| jcom.soundfile.player≈ | Play back sound files. |
-| jcom.soundfile.recorder≈ | Record sound files. |
-| jcom.spat≈ | Jamoma's Spatialization Lib (not fully implemented yet)|
-| jcom.split≈ | Takes a multichannel signal and splits it into N smaller multichannel signals |
-| jcom.trajectory≈ | trajectory generator |
-| jcom.unpack≈ | Jamoma multicore to MSP signals |
-| jcom.wavetable≈ | wavetablelator with multicore output |
-| jcom.window≈ | Apply windowing functions |
+| j.adc≈ | Get input from an Analog to Digital Converter. |
+| j.adsr≈ | ADSR envelope generator |
+| j.audiounit≈ | Host AudioUnit plugins |
+| j.dac≈ | multichannel dac |
+| j.dcblock≈ | Block DC offset |
+| j.degrade≈ | Degrade audio fidelity |
+| j.delay≈ | Delay for multicore signal |
+| j.fft≈ | Fast Fourier Transform |
+| j.filter≈ | An audio filter swiss army knife |
+| j.gain≈ | Control overall level |
+| j.hilbert≈ | Perform a Hilbert Transform on a signal. |
+| j.info≈ | get information about multichannel signals |
+| j.join≈ | merging multichannel signals |
+| j.limiter≈ | Look-ahead limiter with built-in DC blocking and overdrive |
+| j.matrixmixer≈ | Mixing matrix for NxM multicore signals |
+| j.matrix≈ | Apply matrix to channels within multicore signals |
+| j.noise≈ | noise generator with multicore output |
+| j.op≈ | A multi-operator DSP object |
+| j.overdrive≈ | Saturate audio signal |
+| j.pack≈ | MSP signals to multicore |
+| j.phasor≈ | Generate a cyclic ramp wave |
+| j.resample≈ | Resample an input signal at a different sample rate or block size. |
+| j.sig≈ | signal generator |
+| j.soundfile.player≈ | Play back sound files. |
+| j.soundfile.recorder≈ | Record sound files. |
+| j.spat≈ | Jamoma's Spatialization Lib (not fully implemented yet)|
+| j.split≈ | Takes a multichannel signal and splits it into N smaller multichannel signals |
+| j.trajectory≈ | trajectory generator |
+| j.unpack≈ | Jamoma multicore to MSP signals |
+| j.wavetable≈ | wavetablelator with multicore output |
+| j.window≈ | Apply windowing functions |
 
 h4(#DSP). DSP
 
 |_. Component name |_. Component description |
-| jcom.balance~ | Balance intensity of a signal to match that of a referential signal |
-| jcom.dcblock~ | Block DC offset |
-| jcom.degrade~ | Degrade audio fidelity |
-| jcom.filter~ | An audio filter swiss army knife |
-| jcom.function~ | FunctionLib for MSP |
-| jcom.gain~ | Control level as well as dry/wet mix |
-| jcom.hmlshelf~ | High mid low shelf-filter implementation using one biquad filter |
-| jcom.limiter~ | Look-ahead limiter with built-in DC blocking and overdrive |
-| jcom.onepole~ | One Pole Filter |
-| jcom.op~ | A multi-operator DSP object |
-| jcom.overdrive~ | Saturate audio signal |
-| jcom.ramp~ | Generate ramping signal |
-| jcom.vimic~ | Virtual Microphone Control |
-| jcom.xfade~ | Crossfade object for n channels |
-| jcom.zerox~ | A zero crossing counter |
+| j.balance~ | Balance intensity of a signal to match that of a referential signal |
+| j.dcblock~ | Block DC offset |
+| j.degrade~ | Degrade audio fidelity |
+| j.filter~ | An audio filter swiss army knife |
+| j.function~ | FunctionLib for MSP |
+| j.gain~ | Control level as well as dry/wet mix |
+| j.hmlshelf~ | High mid low shelf-filter implementation using one biquad filter |
+| j.limiter~ | Look-ahead limiter with built-in DC blocking and overdrive |
+| j.onepole~ | One Pole Filter |
+| j.op~ | A multi-operator DSP object |
+| j.overdrive~ | Saturate audio signal |
+| j.ramp~ | Generate ramping signal |
+| j.vimic~ | Virtual Microphone Control |
+| j.xfade~ | Crossfade object for n channels |
+| j.zerox~ | A zero crossing counter |
 
 h4(#Foundation). Foundations
 
 |_. Component name |_. Component description |
-| jcom.gain% | scale values in a matrix |
-| jcom.net.receive | receive data via a network socket |
-| jcom.net.send | send data over a network socket |
-| jcom.stencil% | perform operations on a stencil of points in a matrix |
+| j.gain% | scale values in a matrix |
+| j.net.receive | receive data via a network socket |
+| j.net.send | send data over a network socket |
+| j.stencil% | perform operations on a stencil of points in a matrix |
 
 h4(#Graph). Graph
 
 |_. Component name |_. Component description |
-| jcom.append# | A multi-operator graph object |
-| jcom.dataspace# | A multi-operator graph object |
-| jcom.iter# | A multi-operator graph object |
-| jcom.midi.filter# | A multi-operator graph object |
-| jcom.midi.format# | A multi-operator graph object |
-| jcom.midi.in# | A multi-operator graph object |
-| jcom.midi.out# | A multi-operator graph object |
-| jcom.op# | A multi-operator graph object |
-| jcom.pack# | A multi-operator graph object |
-| jcom.unpack# | A multi-operator graph object |
+| j.append# | A multi-operator graph object |
+| j.dataspace# | A multi-operator graph object |
+| j.iter# | A multi-operator graph object |
+| j.midi.filter# | A multi-operator graph object |
+| j.midi.format# | A multi-operator graph object |
+| j.midi.in# | A multi-operator graph object |
+| j.midi.out# | A multi-operator graph object |
+| j.op# | A multi-operator graph object |
+| j.pack# | A multi-operator graph object |
+| j.unpack# | A multi-operator graph object |
 
 h4(#Graphics). Graphics
 
 |_. Component name |_. Component description |
-| jcom.graphics | Draw graphics in separate window |
-| jcom.graphicsui | Draw graphics embedded in the patch window. |
-| jcom.label | Draw text labels in patch window |
-| jcom.spatDisplay | spatial scene description widget |
+| j.graphics | Draw graphics in separate window |
+| j.graphicsui | Draw graphics embedded in the patch window. |
+| j.label | Draw text labels in patch window |
+| j.spatDisplay | spatial scene description widget |
 
 

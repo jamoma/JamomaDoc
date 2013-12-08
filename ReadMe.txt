@@ -23,7 +23,7 @@ WRITING DOCUMENTATION
 --------------------------------------------------
 * PREFERRED FORMAT
 
-Max's refpages are written as in yaml. There are automatically converted as xml files by the build.rb script. Use the provided template (./Tools/jcom.object-template.maxref.yml) to get you started.
+Max's refpages are written as in yaml. There are automatically converted as xml files by the build.rb script. Use the provided template (./Tools/j.object-template.maxref.yml) to get you started.
 
 Max's tutorials and vignette are written as Textile format as much as possible since it proves to be light, easy to maintain and can be exported in various format. A template is also provided (./Tools/TextileTemplate.textile).
 

@@ -1,5 +1,5 @@
 --- 
-title: jcom.hub
+title: j.hub
 description: The core object of each module
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
@@ -7,4 +7,4 @@ tags: [OSC, messages, parsing]
 objref: []
 ---
 
-!../images/jcom.hub.refpage.png!
+!../images/j.hub.refpage.png!

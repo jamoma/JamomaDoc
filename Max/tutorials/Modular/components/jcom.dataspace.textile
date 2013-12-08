@@ -1,6 +1,6 @@
 --- 
-title: jcom.dataspace
-description: jcom.dataspace converts between various types of units using the Jamoma dataspaceLib.
+title: j.dataspace
+description: j.dataspace converts between various types of units using the Jamoma dataspaceLib.
 author: [Jamoma, Nils Peters]
 created_at: 2012/4/4
 tags: conversion, math, units]
@@ -9,7 +9,7 @@ objref: []
 
 h3. Description
 
-p. jcom.dataspace converts between various types of units using the Jamoma dataspaceLib.
+p. j.dataspace converts between various types of units using the Jamoma dataspaceLib.
 
 h3. Inputs
 
@@ -38,10 +38,10 @@ h3. Messages
 | units.get | generic |A @units.get@ message returns a list of all units of the selected dataspace at the dumpout outlet  | | |
 | dataspaces.get | generic| A @dataspaces.get@ message returns a list of all implemented dataspaces at the dumpout outlet | | |
 
-!../images/jcom.dataspace.refpage.png!
+!../images/j.dataspace.refpage.png!
 
 
 h3(seealso). See also
-* "jcom.parameter":jcom.parameter.html
-* jcom.message
-* jcom.dataspace#
+* "j.parameter":j.parameter.html
+* j.message
+* j.dataspace#

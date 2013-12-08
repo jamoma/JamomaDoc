@@ -30,7 +30,7 @@ h3. Using Modules
 h3. Developing Your Own Modules
 
 * "How to create a Jamoma module":./docs/How_to_build_jmod.qmetro.html
-* "How to get jcom.hub's initialization notification":./docs/How_to_get_jcom.hub_s_initialization_notification_.html
+* "How to get j.hub's initialization notification":./docs/How_to_get_j.hub_s_initialization_notification_.html
 * "Retrieving information about existing Jamoma modules":./docs/Retrieving_information_about_existing_Jamoma_modules.html
 
 h3. Sharing

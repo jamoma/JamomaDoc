@@ -43,7 +43,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 99.0, 103.0, 139.0, 19.0 ],
-					"text" : "jcom.initialized /mySynth"
+					"text" : "j.initialized /mySynth"
 				}
 
 			}
@@ -183,7 +183,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 280.0, 167.0, 126.0, 20.0 ],
-					"text" : "jcom.oscroute /trigger"
+					"text" : "j.oscroute /trigger"
 				}
 
 			}

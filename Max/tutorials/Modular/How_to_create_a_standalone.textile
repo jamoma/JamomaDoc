@@ -75,8 +75,8 @@ The following folders and files were added:
 * /foo.app/Contents/Jamoma/Extensions
 * /foo.app/Contents/Jamoma/lib
 * /foo.app/Contents/Jamoma/Presets
-* /foo.app/Contents/support/extensions/jcom.loader.mxo
-* /foo.app/Contents/support/jcom.preset_interface.js
-* /foo.app/Contents/support/jcom.preset_interface.maxpat
+* /foo.app/Contents/support/extensions/j.loader.mxo
+* /foo.app/Contents/support/j.preset_interface.js
+* /foo.app/Contents/support/j.preset_interface.maxpat
 
 bq. If you want to add modules wich are not part of the Jamoma distribution or the Jamoma UserLib, you need to copy the XML preset file manually into foo.app/Contents/Jamoma/Presets

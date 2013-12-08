@@ -19,7 +19,7 @@
 
 You can delete the aliases above once the text is compiled as html -->
 
-h2(LessonTitle). jcom.whatever
+h2(LessonTitle). j.whatever
 
 p. Short object description
 
@@ -67,5 +67,5 @@ fn1. _r_ = _r_equired, _o_ = _o_ptional
 
 h3(seealso). See also
 
-#"jcom.object":components/object.html
-#"jcom.object2":components/object2.html 
+#"j.object":components/object.html
+#"j.object2":components/object2.html 

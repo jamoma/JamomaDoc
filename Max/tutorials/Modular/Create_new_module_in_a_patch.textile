@@ -67,11 +67,11 @@ h3. Using jmod.layout
 
 Now that you know how to create an initial module, here is a special module which can come handy to build a whole patch. First, as explained previously, create a bpatcher containing Jamoma module named "jmod.layout":Modules/jmod.layout.html %(seq)1%. Once the module is initialized, click the top-right %(samp)EDIT% button %(seq)2%.
 
-!images/using_jcom.layout_1.png!
+!images/using_j.layout_1.png!
 
 From the floating panel window, select the %(samp)Add% top tab %(seq)1%, then select the desired tab below %(seq)2%. As their name imply, the %(samp)Jamoma% tab will open access to all module within the main Jamoma distribution, whereas the %(samp)UserLib% open access to modules shared by Jamoma users and developers.
 
-!images/using_jcom.layout_2.png!
+!images/using_j.layout_2.png!
 
 Jamoma modules are organized into various categories :
 
@@ -84,12 +84,12 @@ Jamoma modules are organized into various categories :
 
 Select a category using one of the afore-mentioned menu %(seq)1% and choose a module to insert in your patch by scrolling the menu below %(seq)2%.
 
-!images/using_jcom.layout_3.png!
+!images/using_j.layout_3.png!
 
 Once a module selected, you may optionally set a name to the module using the text input field %(seq)1%. By default, "jmod.layout":Modules/jmod.layout.html will display the module's name and use as a default name for the module. When done, clic the %(samp)button% beside to insert a Jamoma module in your patch %(seq)2%.
 
 You can insert as many modules as you like. When all your modules are created, you can close the window using the %(samp)Done% button %(seq)3%.
-!images/using_jcom.layout_4.png!
+!images/using_j.layout_4.png!
 
 h3. Summary
 

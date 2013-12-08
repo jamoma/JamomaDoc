@@ -1,5 +1,5 @@
 --- 
-title: jcom.getModuleNames 
+title: j.getModuleNames 
 description: Find names of all existing Jamoma modules
 author: [Jamoma, Julien Rabin]
 created_at: 2010/11/11
@@ -7,4 +7,4 @@ tags: [OSC, messages, parsing]
 objref: []
 ---
 
-!../images/jcom.getModuleNames.refpage.png!
+!../images/j.getModuleNames.refpage.png!

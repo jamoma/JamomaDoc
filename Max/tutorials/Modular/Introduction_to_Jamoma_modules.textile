@@ -4,7 +4,7 @@ description: This tutorial gives a general overview of Jamoma modules and their 
 author: [Jamoma, Trond Lossius]
 created_at: 2010/11/11
 tags: [introduction, overview]
-objref: [jmod.input~, jcom.textslider, jmod.output~, jcom.meter~]
+objref: [jmod.input~, j.textslider, jmod.output~, j.meter~]
 ---
 
 h3. Jamoma modules
@@ -106,8 +106,8 @@ Pink noise test signal
 
 Some additional useful features of the module should be mentioned:
 
-* The output level is controlled by the horizontal slider.This slider is one of Jamoma's custom UI objects: "jcom.textslider":components/jcom.textslider.html. See the "Shortcuts in Jamoma":Shortcuts_in_Jamoma.html to learn about the features of "jcom.textslider":components/jcom.textslider.html.
-* The two meters indicate levels on a logarithmic (dB) scale. This is done using one of the custom externals developed for Jamoma: "jcom.meter~":components/jcom.meter~.html. This level indicator can be useful as a GUI object on its own, and we suggest that you check out the help file for it.
+* The output level is controlled by the horizontal slider.This slider is one of Jamoma's custom UI objects: "j.textslider":components/j.textslider.html. See the "Shortcuts in Jamoma":Shortcuts_in_Jamoma.html to learn about the features of "j.textslider":components/j.textslider.html.
+* The two meters indicate levels on a logarithmic (dB) scale. This is done using one of the custom externals developed for Jamoma: "j.meter~":components/j.meter~.html. This level indicator can be useful as a GUI object on its own, and we suggest that you check out the help file for it.
 * To the left of the slider controlling output level, there's a dial for controlling panning.
 * The %(samp)DSP% button brings up the DSP Status window
 * The %(samp)Audio On/Off% button means that we don't have to add an ezdac~ or ezadc~ object to the patch to get audio started.

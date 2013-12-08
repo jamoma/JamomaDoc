@@ -7,7 +7,7 @@ tags: [cues, presets, states, advanced]
 objref: [jmod.cueManager, jmod.output~, jmod.mapperContinuous, jmod.mouse]
 ---
 
-In a "previous tutorial":Saving_and_recalling_state_of_modules.html, we learned how to save and recall some parameters values from the modules used in a patch. Thanks to Jamoma framework features, we saw that remotely getting and setting jcom.parameter values is made easy. However, as a patch grows in density and complexity, a better control of the default function is often required.
+In a "previous tutorial":Saving_and_recalling_state_of_modules.html, we learned how to save and recall some parameters values from the modules used in a patch. Thanks to Jamoma framework features, we saw that remotely getting and setting j.parameter values is made easy. However, as a patch grows in density and complexity, a better control of the default function is often required.
 
 h3. Advanced control of saved modules settings
 
@@ -21,7 +21,7 @@ This panel lists all modules in the patch. Modules included in the current cue a
 
 bq. To select a serie of module, just click on the first, then last module while holding the %(kbd)shift% key.
 
-For this tutorial, we will unselect jmod.cueManager (named %(samp)myCues%) and "jmod.output~":modules/jmod.output~.html (named %(samp)myAudioOut%), assuming we want their settings to stay static for all the project. Thus, next time we save a cue, all jcom.parameter values for all modules but these two will be saved in the cue.
+For this tutorial, we will unselect jmod.cueManager (named %(samp)myCues%) and "jmod.output~":modules/jmod.output~.html (named %(samp)myAudioOut%), assuming we want their settings to stay static for all the project. Thus, next time we save a cue, all j.parameter values for all modules but these two will be saved in the cue.
 
 !images/modules_sel2.png!
 

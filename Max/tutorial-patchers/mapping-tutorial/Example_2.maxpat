@@ -134,7 +134,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 463.0, 267.0, 96.0, 19.0 ],
-					"text" : "jcom.oscroute /q"
+					"text" : "j.oscroute /q"
 				}
 
 			}
@@ -161,7 +161,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 29.0, 202.0, 161.0, 19.0 ],
-					"text" : "jcom.oscroute /position/beats"
+					"text" : "j.oscroute /position/beats"
 				}
 
 			}

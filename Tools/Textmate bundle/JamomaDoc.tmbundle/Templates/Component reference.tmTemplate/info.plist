@@ -24,7 +24,7 @@
 
 You can delete the aliases above once the text is compiled as html --&gt;
 
-h2(LessonTitle). jcom.whatever
+h2(LessonTitle). j.whatever
 
 p. Short object description
 
@@ -63,8 +63,8 @@ h3. Messages
 
 h3(seealso). See also
 
-#"jcom.object":components/object.html
-#"jcom.object2":components/object2.html </string>
+#"j.object":components/object.html
+#"j.object2":components/object2.html </string>
 	<key>extension</key>
 	<string>textile</string>
 	<key>name</key>
