@@ -1,18 +1,16 @@
-Date: 2014-01-20  
+DateStarted: 2014-01-04  
 Title:	'Build & Test in the Jamoma Core'	
-Published: true  
-Type: post  
-Excerpt:   
+Author:	Nathan Wolek	  
 
 ---
 
-In response to Core Issue \#166
+In response to [Core Issue \#166](https://github.com/jamoma/JamomaCore/issues/166)
 
 Opening remarks
 ===============
 
 * Recap benefits of integrated testing 
-* SMC 2012 paper
+* [SMC 2012 paper](http://jamoma.org/publications/attachments/smc2012-testing.pdf)
 
 Comparison
 ==========
@@ -22,7 +20,7 @@ The old way
 
 1. write a test method 
 2. build C++ library 
-3. build Ruby language bindings 
+3. build [Ruby language bindings](https://github.com/jamoma/JamomaRuby) 
 4. run Ruby script to call “test” message 
 5. read results and figure out where your code went wrong
 
@@ -44,28 +42,24 @@ Benefits
 --------
 
 * immediate feedback during build whenever something breaks 
-* easier to code via test driven development or red-green-refactor approach 
+* easier to code via [test driven development](http://en.wikipedia.org/wiki/Test-driven_development) or [red-green-refactor](http://www.jamesshore.com/Blog/Red-Green-Refactor.html) approach 
 * should encourage development of more unit tests
 
 How it works
 ============
+Before "how" it is important to understand "why": objects derive from a single superclass with template for a [test method](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTDataObjectBase.h#L120) and it also registers [the test message](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/source/TTDataObjectBase.cpp#L38).
 
-1. makefile now looks for test.cpp file in a given project - if present, it runs 
-2. test.cpp in each project searches for registered classes with a specified tag. For example: in the DSP library we look for this tag, but in the FilterLib extension, we look for this tag. Tags should be defined near the head of each cpp file via \#define like us.
-3. Once a list is generated, the test.cpp program runs through the list of classes and calls the “test” message for each one. If no customized test method is specified, we get a harmless message suggesting that we should create one. If it has been customized, the test method runs. 
+1. makefile now looks for test.cpp file in a [given project](https://github.com/jamoma/JamomaCore/blob/dev/Shared/jamomalib.rb#L1708) - if present, it runs 
+2. test.cpp in each project searches for registered classes with a specified tag. For example: in the DSP library we look for [this tag](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/source/TTDataObjectBase.cpp#L38), but in the FilterLib extension, we look for [this tag](https://github.com/jamoma/JamomaCore/blob/dev/DSP/extensions/FilterLib/test.cpp#L25). Tags should be defined near the head of each cpp file via [\#define like us](https://github.com/jamoma/JamomaCore/blob/dev/DSP/extensions/FilterLib/source/TTHalfband9.cpp#L13).
+3. Once a list is generated, the test.cpp program runs through the list of classes and calls the “test” message for each one. If no customized test method is specified, we get a [harmless message](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTDataObjectBase.h#L126) suggesting that we should create one. If it has been customized, the test method runs. 
 4. Xcode is now aware of the various test assertions. If one fails, the build will stop and Xcode will highlight the line where an assertion failed. 
 5. Since you know your test failed and what code lead to the failure, you can easily refactor until it works.
-
-Why it works
-------------
-
-* objects derive from a single superclass with template for a test method and it also registers the test message.
 
 
 What our C++ developers need to know
 ------------------------------------
 
-* Every existing library and extension is now setup to take advantage of the build & test system on the “dev” branch. See Issue \#131. 
+* Every existing library and extension is now setup to take advantage of the build & test system on the “dev” branch. [See Issue \#131](https://github.com/jamoma/JamomaCore/issues/131). 
 * If an assertion in your test fails, the project that contains it will not build. You should either solve the problem OR comment out the assertion and log an issue on GitHub.
 
 What our C++ developers need to do
