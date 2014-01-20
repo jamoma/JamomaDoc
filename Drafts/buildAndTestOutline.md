@@ -4,19 +4,19 @@ Author:	Nathan Wolek
 
 ---
 
-In response to [Core Issue \#166](https://github.com/jamoma/JamomaCore/issues/166)
+#Build & Test in the Jamoma Core
 
-Opening remarks
-===============
+Note: written in response to [Core Issue \#166](https://github.com/jamoma/JamomaCore/issues/166)
 
+##Opening remarks
+
+* [The Pragmatic Programmer](http://pragprog.com/the-pragmatic-programmer): Hunt & Thomas emphasize "ruthless testing"
 * Recap benefits of integrated testing 
 * [SMC 2012 paper](http://jamoma.org/publications/attachments/smc2012-testing.pdf)
 
-Comparison
-==========
+##Comparison
 
-The old way
------------
+###The old way
 
 1. write a test method 
 2. build C++ library 
@@ -24,29 +24,26 @@ The old way
 4. run Ruby script to call “test” message 
 5. read results and figure out where your code went wrong
 
-Issues
-------
+###Issues
 
 * too many steps 
 * remembering to re-build Ruby each time 
 * potentially switching between development environments (Xcode & command line)
 
-The new way
------------
+###The new way
 
 1. write a test method 
 2. build C++ library 
 3. if test assertion fails, Xcode will stop build and point you to line in code
 
-Benefits
---------
+###Benefits
 
 * immediate feedback during build whenever something breaks 
 * easier to code via [test driven development](http://en.wikipedia.org/wiki/Test-driven_development) or [red-green-refactor](http://www.jamesshore.com/Blog/Red-Green-Refactor.html) approach 
 * should encourage development of more unit tests
 
-How it works
-============
+##How it works
+
 Before "how" it is important to understand "why": objects derive from a single superclass with template for a [test method](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTDataObjectBase.h#L120) and it also registers [the test message](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/source/TTDataObjectBase.cpp#L38).
 
 1. makefile now looks for test.cpp file in a [given project](https://github.com/jamoma/JamomaCore/blob/dev/Shared/jamomalib.rb#L1708) - if present, it runs 
@@ -56,21 +53,18 @@ Before "how" it is important to understand "why": objects derive from a single s
 5. Since you know your test failed and what code lead to the failure, you can easily refactor until it works.
 
 
-What our C++ developers need to know
-------------------------------------
+###What our C++ developers need to know
 
 * Every existing library and extension is now setup to take advantage of the build & test system on the “dev” branch. [See Issue \#131](https://github.com/jamoma/JamomaCore/issues/131). 
 * If an assertion in your test fails, the project that contains it will not build. You should either solve the problem OR comment out the assertion and log an issue on GitHub.
 
-What our C++ developers need to do
-----------------------------------
+###What our C++ developers need to do
 
 1. Write a customized test method for each object class. 
 2. Make sure any new object classes you create include the tag for that existing project. This is easily found in the test.cpp file of the relevant directory. 
 3. If you are creating a new library or extension, the work is more involved. Since this is unlikely to happen without consulting other developers, I will leave it for another time.
 
-Closing remarks
-===============
+##Conclusion
 
 * If you notice an odd behavior, create a test that demonstrates the problem and fails each time you build. You can then work on a fix and know when immediately when you have a solution. 
 * If you are adding features
