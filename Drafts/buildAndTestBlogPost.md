@@ -16,17 +16,56 @@ In the months that followed, we collaborated on a solution that we now call **Bu
 
 ##Comparison
 
-###The old way with Ruby
+###The old way using Ruby
 
-
+Prior to Build & Test, myself and other C++ developers on Jamoma would follow a multi-step process for unit testing that went something like this:
 
 1. [write a test method](http://api.jamoma.org/chapter_unittesting.html#chapter_unittesting_writingtests) 
-2. build C++ library 
-3. build [Ruby language bindings](https://github.com/jamoma/JamomaRuby) 
-4. run Ruby script to call “test” message 
-5. read results and figure out where your code went wrong
+2. build the C++ library that contained the test
+3. build the [Ruby language bindings](https://github.com/jamoma/JamomaRuby) 
+4. run Ruby script to call the “test” message for an object
+5. read results posted in the Terminal and figure out where your code went wrong
 
-Alternatively: you could also send the "test" message to an object in the Max. This however adds the extra step of compiling the Max Implementation, opening Max, instantiating the object, etc.
+The Terminal output from Ruby would look something like this:
+
+	Test checkout of first SampleMatrix...
+		PASS -- checkOutMatrix returns a valid pointer
+		PASS -- numChannels is set properly
+		PASS -- userCount reports proper value
+		PASS -- bufferPoolStage reports proper value
+		
+	Test second checkout of first SampleMatrix...
+		PASS -- checkOutMatrix returns the same pointer
+		PASS -- userCount reports proper value after second checkout
+		
+	Test if changing lengthInSamples attribute spawns new SampleMatrix...
+		PASS -- checkOutMatrix returns pointer to different SampleMatrix
+		PASS -- userCount reports proper value
+		
+	Repeat with numChannels attribute...
+		PASS -- checkOutMatrix returns pointer to different SampleMatrix
+		PASS -- userCount reports proper value
+		
+	At this point, 3 SampleMatrix objects are checked out via 4 pointers:
+			myFirstCheckOut: userCount 2, Active 0, Becoming Idle 1
+			myFirstCheckOut2: userCount 2, Active 0, Becoming Idle 1
+			mySecondCheckOut: userCount 1, Active 0, Becoming Idle 1
+			myThirdCheckOut: userCount 1, Active 1, Becoming Idle 0
+		
+	Testing check in process...
+		PASS -- checkInMatrix(myFirstCheckOut) resets pointer to NULL
+		PASS -- myFirstCheckOut2 is still a valid pointer
+		PASS -- poke/peek sample value still works
+		PASS -- checkInMatrix(myFirstCheckOut2) resets pointer to NULL
+		PASS -- checkInMatrix(mySecondCheckOut) resets pointer to NULL
+		PASS -- checkInMatrix(myThirdCheckOut) resets pointer to NULL
+		
+
+			Number of assertions: 16
+			Number of failed assertions: 0
+
+
+Alternatively: you could also send the "test" message to an object in the Max. However, this adds more manual steps like building the [Max Implementation](https://github.com/jamoma/JamomaMax), opening Max, instantiating the object, etc.
 
 ###Issues
 
@@ -37,7 +76,7 @@ Alternatively: you could also send the "test" message to an object in the Max. T
 ###The new way in IDE
 
 1. [write a test method](http://api.jamoma.org/chapter_unittesting.html#chapter_unittesting_writingtests) 
-2. build C++ library 
+2. build the C++ library that contained the test
 3. if test assertion fails, IDE will stop build and point you to line in code
 
 ###Benefits
