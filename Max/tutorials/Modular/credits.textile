@@ -62,9 +62,9 @@ h3. Third Party Software
 
 Other open-source packages that we are using within Jamoma:
 
-h4. TTBlue
+h4. JamomaCore
 
-Tap.Tools Blue is the open source dsp library by Tim Place that is underlying both Tap.Tools Max (available from Electrotap) and Jamoma. It has been renamed as JamomaDSP.
+Jamoma Core is the open source C++ media processing library that is underlying both Jamoma and Tap.tools. JamomaCore first started out as a DSP-related library named Tap.Tools.Blue (ttblue), developed by Tim Place. It was later renamed JamomaDSP and became part of Jamoma Core alongside Jamoma Foundation, Jamoma Graph, Jamoma AudioGraph and Jamoma Modular.
 
 h4. ICST Ambisonics Library for Max
 
