@@ -32,7 +32,7 @@ Prior to Build & Test, myself and other C++ developers on Jamoma would follow a 
 
 1. [write a `test()` method](http://api.jamoma.org/chapter_unittesting.html#chapter_unittesting_writingtests) 
 2. build the C++ library that contained the test
-3. build the [Ruby language bindings](https://github.com/jamoma/JamomaRuby) 
+3. re-build the [Ruby language bindings](https://github.com/jamoma/JamomaRuby) 
 4. run the Ruby script to call the “test” message for an object
 5. read the results posted in the Terminal and figure out where your code went wrong
 
@@ -75,7 +75,7 @@ The Terminal output from Ruby would look something like this:
 			Number of failed assertions: 0
 
 
-Alternatively: you could also send the "test" message to an object in the Max. However, this adds more manual steps like building the [Max Implementation](https://github.com/jamoma/JamomaMax), opening Max, instantiating the object, etc.
+Alternatively: you could also send the "test" message to an object in the Max. However, this adds more manual steps like building the [Max Implementation](https://github.com/jamoma/JamomaMax), opening Max, instantiating the object, etc, etc...
 
 ###Issues
 
@@ -101,7 +101,7 @@ In Xcode, the error looks something like this:
 
 ###Benefits
 
-The biggest benefit is the ability to receive immediate feedback when something breaks. If a test exists and your changes to the code cause that test to fail, you get feedback from the IDE as soon as you try to build. This makes it much easier to code via [test driven development](http://en.wikipedia.org/wiki/Test-driven_development) or [red-green-refactor](http://www.jamesshore.com/Blog/Red-Green-Refactor.html) approach. Even if you don't take the extreme path and establish your tests first, the immediate feedback should  encourage our developers to spend more time making unit tests.
+The biggest benefit is the ability to receive immediate feedback when something breaks. If a test exists and your changes to the code cause that test to fail, you get feedback from the IDE as soon as you try to build. This makes it much easier to code via [test driven development](http://en.wikipedia.org/wiki/Test-driven_development) or [red-green-refactor](http://www.jamesshore.com/Blog/Red-Green-Refactor.html) approach. Even if you don't take the extreme path of establishing your tests first, the immediate feedback should encourage our developers to spend more time making unit tests.
 
 ##How it works
 
@@ -109,22 +109,22 @@ The biggest benefit is the ability to receive immediate feedback when something 
 
 There were several key design decisions made earlier in the development of Jamoma that made our Build & Test solution relatively easy to implement:
 
-1. **All objects derive from a single parent class.** The `TTDataObjectBase` class contains a template for a [`test()` method](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTDataObjectBase.h#L120) and it also registers [the "test" message](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/source/TTDataObjectBase.cpp#L38). Inheritance then ensures that unit testing is built into every Jamoma object by default. 
-* **Tags are used by each object.** In general, tags allow us to group objects and enable searching based on common features. Tags are typically defined near the head of each cpp file via preprocessor [`#define` statements](https://github.com/jamoma/JamomaCore/blob/dev/DSP/extensions/FilterLib/source/TTHalfband9.cpp#L13) and our [macros for class definition](https://github.com/jamoma/JamomaCore/blob/master/DSP/library/includes/TTDSP.h#L49) take care of the rest. 
-* **Tags are searchable at runtime.** Jamoma provides the static method [`GetRegisteredClassNamesForTags`](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTObject.h#L74), which produces an array of all registered classes with a given tag. 
+1. **All objects derive from a single parent class.** The `TTDataObjectBase` class contains a template for a [`test()` method](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTDataObjectBase.h#L120) and registers [the "test" message](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/source/TTDataObjectBase.cpp#L38). Inheritance then ensures that unit testing is built into every Jamoma object by default. 
+* **Tags are used by each object.** In general, tags allow us to group objects and enable searching based on common features. Tags are typically defined near the head of each CPP file via preprocessor [`#define` statements](https://github.com/jamoma/JamomaCore/blob/dev/DSP/extensions/FilterLib/source/TTHalfband9.cpp#L13) and our [macros for class definition](https://github.com/jamoma/JamomaCore/blob/master/DSP/library/includes/TTDSP.h#L49) take care of the rest. 
+* **Tags are searchable at runtime.** Jamoma provides the static method [`GetRegisteredClassNamesForTags`](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTObject.h#L74), which produces a `TTValue` array containing the names of all registered classes with a given tag. 
 
 ###Implementation
 
 For Build & Test, we first defined a tag that was specific to each library or extension in the Jamoma Core and added it to existing classes. For example: in the DSP library we used [`dspLibrary`](https://github.com/jamoma/JamomaCore/blob/dev/DSP/library/test.cpp#L21), but in the FilterLib extension, we used [`dspFilterLib`](https://github.com/jamoma/JamomaCore/blob/dev/DSP/extensions/FilterLib/test.cpp#L25). 
 
-The makefile for each project now looks for `test.cpp` file in a [given project](https://github.com/jamoma/JamomaCore/blob/dev/Shared/jamomalib.rb#L1708). If it is present, the build process will run it. The `test.cpp` file for each project contains a simple [`main` function](https://github.com/jamoma/JamomaCore/blob/dev/DSP/library/test.cpp) that runs at the end of the build. That `main()` function essentially breaks down into 2 steps:
+The makefile for each project now looks for a `test.cpp` file in a [given project](https://github.com/jamoma/JamomaCore/blob/dev/Shared/jamomalib.rb#L1708). If it is present, the build process will compile it and run the included [`main` function](https://github.com/jamoma/JamomaCore/blob/dev/DSP/library/test.cpp) at the end of the build. That `main()` function essentially breaks down into 2 steps:
 
 1. search for objects registered with a specified project tag
 2. for each object, send it a "test" message
 
-If no customized `test()` method is specified for the object, we get a [harmless message](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTDataObjectBase.h#L126) suggesting that we should create one. If it has been customized, the test method runs. 
+If the `test()` method has not been overridden for a given object, we get a [harmless message](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTDataObjectBase.h#L126) suggesting that we should create a test. If it has been overridden, the test method runs. 
 
-Whenever an assertion fails, the build will stop and IDE will highlight the relevant line of code in your test. 
+Whenever an assertion fails, the build will stop and your IDE will highlight the relevant line of code in your test (see image above). 
 
 ##Summary
 
@@ -134,12 +134,14 @@ But the ultimate success of this system will be dependent on our C++ developers 
 
 ###What our C++ developers need to know
 
-* On the [“dev” branch of Jamoma Core](https://github.com/jamoma/JamomaCore/tree/dev), every existing library and extension is now setup to take advantage of the Build & Test system. If you are interested in details about when specific commits happened, see [Issue \#131](https://github.com/jamoma/JamomaCore/issues/131). 
-* If an assertion in your test fails, the project that contains it will not build. You should either solve the problem OR comment out the assertion and log an issue in [our GitHub repository](https://github.com/jamoma/JamomaCore/issues?state=open).
-* If you are creating a new library or extension, the work is a bit more involved. Since this is unlikely to happen without consulting other developers, I will leave it for another time.
+* **If you want to get started using Build & Test**, checkout the [“dev” branch of Jamoma Core](https://github.com/jamoma/JamomaCore/tree/dev). Every existing library and extension on this branch is now setup to take advantage of the Build & Test system. The details about when specific commits happened are logged on [Issue \#131](https://github.com/jamoma/JamomaCore/issues/131). 
+* **If an assertion in your test fails**, the project that contains it will not build. You should either solve the problem OR comment out the assertion and log an issue in [our GitHub repository](https://github.com/jamoma/JamomaCore/issues?state=open).
+* **If you are creating a new library or extension**, the work is a bit more involved. Since this is unlikely to happen without consulting other developers, I will leave it for another time.
 
 ###What our C++ developers need to do
 
-* If you are adding a class to a project, make sure it includes the designated tag for that project. This is easily found in the `test.cpp` file of the relevant directory. 
-* If you notice an odd behavior, create a test that demonstrates the problem and fails each time you build. You can then set out to work on a fix and know when immediately when you have a solution. 
-* *Write more `test()` methods!!!* If you are adding a new class, design tests at the same time. If you are adding features to a class, design a test that proves they work. If you see a class without a test, design one or two or twenty.
+* **If you are adding a class to a project**, make sure it includes the designated tag for that project. This is easily found in the `test.cpp` file of the relevant directory. 
+* **If you notice an odd behavior**, create a test that demonstrates the problem and fails each time you build. You can then set out to work on a fix and know when immediately when you have a solution. 
+* **If you are adding a new class**, design tests at the same time. 
+* **If you are adding features to a class**, design a test that proves they work. 
+* And finally, **if you see a class without a test**, why not add one or two or twenty? 
