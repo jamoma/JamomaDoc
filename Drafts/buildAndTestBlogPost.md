@@ -69,11 +69,18 @@ Alternatively: you could also send the "test" message to an object in the Max. H
 
 ###Issues
 
-* too many steps 
-* remembering to re-build Ruby each time 
-* potentially switching between development tools (IDE & command line)
+If the goal is to "test automatically", then frankly the old way didn't acheive it. It's certainly better than no testing at all, but having too many manual steps often lead to missteps by the developer. Personally, I would often lose time because I forgot to rebuild the Ruby language bindings, which results in testing old code without the corrections I was working on. It was also a mildly frustrating that I was constantly  compiling a library in Xcode, then switching to the Terminal to run my test in Ruby via the command line. 
 
-###The new way in IDE
+So the questions we started asking in Albi were:
+
+* Can this be more automatic?
+* Could we automate the Ruby steps somehow so we don't forget something?
+* Or do we need to rely on Ruby to run tests at all?
+* Wouldn't it be better if we could stay in one place (the IDE)?
+
+###The new way using the IDE
+
+In the months that followed, the Build & Test solution provided some satisfying answers to these questions. Now the steps for testing your code look something like this:
 
 1. [write a test method](http://api.jamoma.org/chapter_unittesting.html#chapter_unittesting_writingtests) 
 2. build the C++ library that contained the test
@@ -101,6 +108,7 @@ Alternatively: you could also send the "test" message to an object in the Max. H
 4. IDE is now aware of the various test assertions. If one fails, the build will stop and IDE will highlight the line where an assertion failed. 
 5. Since you know your test failed and what code lead to the failure, you can easily refactor until it works.
 
+##Conclusion
 
 ###What our C++ developers need to know
 
@@ -113,21 +121,9 @@ Alternatively: you could also send the "test" message to an object in the Max. H
 2. Make sure any new object classes you create include the tag for that existing project. This is easily found in the test.cpp file of the relevant directory. 
 3. If you are creating a new library or extension, the work is more involved. Since this is unlikely to happen without consulting other developers, I will leave it for another time.
 
-##Shortcomings & Future Work
 
-Notes from @tap:
 
-* For a paper we should also list the shortcomings -- In Xcode for example, the number of messages from the invocation to Make is truncated at 200 lines (maybe there is a way to change that?) -- which means you might not see all of the results or you might not see *any* results if your code generates too many warnings (including deprecation warnings).
 
-* We should always strive for warning-free code, but at some points in the development cycle (e.g. migrating to newer APIs) having a lot of warnings is just part of the process and this trips it up a bit.
-
-* Additionally, for a paper, we should list future work.  One place we try to expand is in the syntax for writing tests to make it more expressive and less tedious.  We could initially try this with some fancy macros or templates.  The idea being that our tests currently look like an over-decorated Christmas tree with too much tinsel which detracts from our examination of the tree itself.
-
-* Finally, for a paper, we should talk about how this system currently uses the actual Foundation code -- which is presumably minimal.  This is as opposed to using "mocks" (classes which are like stubs for the real thing, but maybe do something minimal).  We could also create mock classes for some testing scenarios -- the NodeLib for example where maybe we don't want a test to actually require unbounded network access -- but for most of what we are doing the basic classes are already minimal.
-
-* As hinted at earlier, maybe we could also do something in the testing context to improve logging.  Maybe set a flag in Foundation that redirects most messages to a separate log file that we can examine?
-
-##Conclusion
 
 * If you notice an odd behavior, create a test that demonstrates the problem and fails each time you build. You can then work on a fix and know when immediately when you have a solution. 
 * If you are adding features, make sure you build tests at the same time.
