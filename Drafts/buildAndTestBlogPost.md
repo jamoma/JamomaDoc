@@ -1,10 +1,20 @@
-DateStarted: 2014-01-20  
-Title:	'Build & Test in the Jamoma Core'	
-Author:	Nathan Wolek	  
+---
+layout: post
+title: Build & Test in the Jamoma Core
+h1: Build & Test in the Jamoma Core
+kind: article
+menu: blog
+created_at: 2014-01-29
+location: Florida USA
+author: Nathan Wolek
+categories:
+- testing
+- C++
+- Xcode
+- Ruby
+- Core
 
 ---
-
-#Build & Test in the Jamoma Core
 
 In their book [The Pragmatic Programmer](http://pragprog.com/the-pragmatic-programmer), Hunt & Thomas encourage readers to engage in "ruthless testing". Their ideas are summarized by a three-part message: "Test Early. Test Often. Test Automatically." 
 
