@@ -107,22 +107,19 @@ There were several key design decisions made earlier in the development of Jamom
 
 For Build & Test, we first defined a tag that was specific to each library or extension in the Jamoma Core and added it to existing classes. For example: in the DSP library we used [`dspLibrary`](https://github.com/jamoma/JamomaCore/blob/dev/DSP/library/test.cpp#L21), but in the FilterLib extension, we used [`dspFilterLib`](https://github.com/jamoma/JamomaCore/blob/dev/DSP/extensions/FilterLib/test.cpp#L25). 
 
-The template method doesn't do anything other than report *"No Tests have been written for this class"*, but the point is to encourage developers to override it in a given subclass.
+The makefile for each project now looks for `test.cpp` file in a [given project](https://github.com/jamoma/JamomaCore/blob/dev/Shared/jamomalib.rb#L1708). If it is present, the build process will run it. The `test.cpp` file for each project contains a simple [`main` function](https://github.com/jamoma/JamomaCore/blob/dev/DSP/library/test.cpp) that runs at the end of the build. That `main` function essentially breaks down into 2 steps:
 
-###The steps
+1. search for objects registered with a specified project tag
+2. for each object, send it a "test" message
 
-1. makefile now looks for test.cpp file in a [given project](https://github.com/jamoma/JamomaCore/blob/dev/Shared/jamomalib.rb#L1708) - if present, it runs 
-2. test.cpp in each project searches for classes registered with a specified tag. 
-3. Once a list is generated, the test.cpp program runs through the list of classes and calls the “test” message for each one. If no customized test method is specified, we get a [harmless message](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTDataObjectBase.h#L126) suggesting that we should create one. If it has been customized, the test method runs. 
-4. IDE is now aware of the various test assertions. If one fails, the build will stop and IDE will highlight the line where an assertion failed. 
-5. Since you know your test failed and what code lead to the failure, you can easily refactor until it works.
+If no customized `test` method is specified for given object, we get a [harmless message](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTDataObjectBase.h#L126) suggesting that we should create one. If it has been customized, the test method runs. If an assertion fails, the build will stop and IDE will highlight the line where an assertion failed. 
 
 ##Conclusion
 
 ###What our C++ developers need to know
 
 * Every existing library and extension is now setup to take advantage of the build & test system on the “dev” branch. [See Issue \#131](https://github.com/jamoma/JamomaCore/issues/131). 
-* If an assertion in your test fails, the project that contains it will not build. You should either solve the problem OR comment out the assertion and log an issue on GitHub.
+* If an assertion in your test fails, the project that contains it will not build. You should either solve the problem OR comment out the assertion and log an issue on [our GitHub repository](https://github.com/jamoma/JamomaCore/issues?state=open).
 
 ###What our C++ developers need to do
 
