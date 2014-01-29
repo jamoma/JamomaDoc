@@ -23,8 +23,8 @@ Prior to Build & Test, myself and other C++ developers on Jamoma would follow a 
 1. [write a test method](http://api.jamoma.org/chapter_unittesting.html#chapter_unittesting_writingtests) 
 2. build the C++ library that contained the test
 3. build the [Ruby language bindings](https://github.com/jamoma/JamomaRuby) 
-4. run Ruby script to call the “test” message for an object
-5. read results posted in the Terminal and figure out where your code went wrong
+4. run the Ruby script to call the “test” message for an object
+5. read the results posted in the Terminal and figure out where your code went wrong
 
 The Terminal output from Ruby would look something like this:
 
@@ -84,7 +84,9 @@ In the months that followed, the Build & Test solution provided some satisfying 
 
 1. [write a test method](http://api.jamoma.org/chapter_unittesting.html#chapter_unittesting_writingtests) 
 2. build the C++ library that contained the test
-3. if test assertion fails, IDE will stop build and point you to line in code
+3. if a test assertion fails, the IDE will stop its build and point you to a line in code
+
+![Xcode says my userCount didn't match expectations](images/TTBufferXcodeAssertionFail.png)
 
 ###Benefits
 
