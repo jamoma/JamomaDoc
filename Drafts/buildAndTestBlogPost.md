@@ -16,11 +16,11 @@ In the months that followed, we collaborated on a solution that we now call **Bu
 
 ##Comparison
 
-###The old way using Ruby
+###The old way: using Ruby
 
 Prior to Build & Test, myself and other C++ developers on Jamoma would follow a multi-step process for unit testing that went something like this:
 
-1. [write a test method](http://api.jamoma.org/chapter_unittesting.html#chapter_unittesting_writingtests) 
+1. [write a `test` method](http://api.jamoma.org/chapter_unittesting.html#chapter_unittesting_writingtests) 
 2. build the C++ library that contained the test
 3. build the [Ruby language bindings](https://github.com/jamoma/JamomaRuby) 
 4. run the Ruby script to call the “test” message for an object
@@ -69,7 +69,7 @@ Alternatively: you could also send the "test" message to an object in the Max. H
 
 ###Issues
 
-If the goal is to "test automatically", then frankly the old way didn't acheive it. It's certainly better than no testing at all, but having too many manual steps often lead to missteps by the developer. Personally, I would often lose time because I forgot to rebuild the Ruby language bindings, which results in testing old code without the corrections I was working on. It was also a mildly frustrating that I was constantly  compiling a library in Xcode, then switching to the Terminal to run my test in Ruby via the command line. 
+If the goal is to "test automatically", then frankly the old way didn't achieve it. It's certainly better than no testing at all, but having too many manual steps often lead to missteps by the developer. Personally, I would often lose time because I forgot to rebuild the Ruby language bindings, which results in testing old code without the corrections I was working on. It was also a mildly frustrating that I was constantly  compiling a library in Xcode, then switching to the Terminal to run my test in Ruby via the command line. 
 
 So the questions we started asking in Albi were:
 
@@ -78,29 +78,36 @@ So the questions we started asking in Albi were:
 * Or do we need to rely on Ruby to run tests at all?
 * Wouldn't it be better if we could stay in one place (the IDE)?
 
-###The new way using the IDE
+###The new way: using the IDE
 
 In the months that followed, the Build & Test solution provided some satisfying answers to these questions. Now the steps for testing your code look something like this:
 
-1. [write a test method](http://api.jamoma.org/chapter_unittesting.html#chapter_unittesting_writingtests) 
+1. [write a `test` method](http://api.jamoma.org/chapter_unittesting.html#chapter_unittesting_writingtests) 
 2. build the C++ library that contained the test
 3. if a test assertion fails, the IDE will stop its build and point you to a line in code
 
+In Xcode, the error looks something like this:
 ![Xcode says my userCount didn't match expectations](images/TTBufferXcodeAssertionFail.png)
 
 ###Benefits
 
-* immediate feedback during build whenever something breaks 
-* easier to code via [test driven development](http://en.wikipedia.org/wiki/Test-driven_development) or [red-green-refactor](http://www.jamesshore.com/Blog/Red-Green-Refactor.html) approach 
-* should encourage development of more unit tests
+The biggest benefit is the ability to receive immediate feedback when something breaks. If a test exists and your changes to the code cause that test to fail, you get feedback from the IDE as soon as you try to build. This makes it much easier to code via [test driven development](http://en.wikipedia.org/wiki/Test-driven_development) or [red-green-refactor](http://www.jamesshore.com/Blog/Red-Green-Refactor.html) approach. Even if you don't take the extreme path and establish your tests first, the immediate feedback should  encourage our developers to spend more time making unit tests.
 
 ##How it works
 
-###Basis in these design features
+###Design features
 
-* **Objects derive from a single superclass.** This superclass contains a template for a [test method](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTDataObjectBase.h#L120) and it also registers [the test message](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/source/TTDataObjectBase.cpp#L38).
-* **Tags are used by each object.** In general, tags allow us to group objects based on common features and make them searchable. Here, it allows us to target only the objects we are interested in testing for the given project and avoid any dependencies. For example: in the DSP library we look for [this tag](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/source/TTDataObjectBase.cpp#L38), but in the FilterLib extension, we look for [this tag](https://github.com/jamoma/JamomaCore/blob/dev/DSP/extensions/FilterLib/test.cpp#L25). Tags should be defined near the head of each cpp file via [\#define like this](https://github.com/jamoma/JamomaCore/blob/dev/DSP/extensions/FilterLib/source/TTHalfband9.cpp#L13). 
-> @tap - We do define the tags with a preprocessor #define in 99% of cases, but this is relies on using the macro system throughout (e.g. [TT_AUDIO_CONSTRUCTOR](https://github.com/jamoma/JamomaCore/blob/master/DSP/library/includes/TTDSP.h#L49) for the the constructor instead of e.g. "TTAllpass1a::TTAllpass1a").  It's subtle but for a paper it should be specific.  I guess for a blog post it can be glossed over. 
+There were several key design decisions made earlier in the development of Jamoma that made our Build & Test solution relatively easy to implement:
+
+1. **All objects derive from a single parent class.** The `TTDataObjectBase` class contains a template for a [`test` method](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTDataObjectBase.h#L120) and it also registers [the "test" message](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/source/TTDataObjectBase.cpp#L38). Inheritance then ensures that unit testing is built into every Jamoma object by default. 
+* **Tags are used by each object.** In general, tags allow us to group objects and enable searching based on common features. Tags are typically defined near the head of each cpp file via preprocessor [`#define` statements](https://github.com/jamoma/JamomaCore/blob/dev/DSP/extensions/FilterLib/source/TTHalfband9.cpp#L13) and our [macros for class definition](https://github.com/jamoma/JamomaCore/blob/master/DSP/library/includes/TTDSP.h#L49) take care of the rest. 
+* **Tags are searchable at runtime.** Jamoma provides the static method [`GetRegisteredClassNamesForTags`](https://github.com/jamoma/JamomaCore/blob/dev/Foundation/library/includes/TTObject.h#L74), which produces an array of all registered classes with a given tag. 
+
+###Implementation
+
+For Build & Test, we first defined a tag that was specific to each library or extension in the Jamoma Core and added it to existing classes. For example: in the DSP library we used [`dspLibrary`](https://github.com/jamoma/JamomaCore/blob/dev/DSP/library/test.cpp#L21), but in the FilterLib extension, we used [`dspFilterLib`](https://github.com/jamoma/JamomaCore/blob/dev/DSP/extensions/FilterLib/test.cpp#L25). 
+
+The template method doesn't do anything other than report *"No Tests have been written for this class"*, but the point is to encourage developers to override it in a given subclass.
 
 ###The steps
 
