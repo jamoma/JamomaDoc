@@ -47,3 +47,7 @@ bin
 
 #TextMate
 *.tm_build_errors
+
+# Ignore files generated when building examples
+*.dSYM
+examples/sweepy/sweepy
