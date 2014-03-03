@@ -47,8 +47,10 @@ int main(int argc, const char * argv[])
 	filter.connectAudio(noise);						// Connect filter to noise, so that noise will be filtered
 	dac.connectAudio(filter);						// Connect DAC to filter, so that we can listen to the filtered sound
 
-	// Set attributes of the various objects
+	// 5. Set attributes of the various objects
 	noise.set("maxNumChannels", 2);					// Generate stereo noise signal
+	noise.set("outputNumChannels", 2);
+	noise.set("numChannels", 2);
 	filter.set("type", "lowpass.4");				// Use a lowpass filter...
 	filter.set("frequency", 400.0);					// ...with a frequency of 400 Hz...
 	filter.set("q", 38.0);							// .. and q = 38
