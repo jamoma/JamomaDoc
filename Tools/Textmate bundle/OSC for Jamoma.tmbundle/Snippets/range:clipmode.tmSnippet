@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>/range/clipmode $0</string>
+	<string>/clipmode $0</string>
 	<key>name</key>
-	<string>range/clipmode</string>
+	<string>clipmode</string>
 	<key>tabTrigger</key>
 	<string>clip</string>
 	<key>uuid</key>

@@ -120,7 +120,7 @@ Default is 0 (repetitions are not allowed)
 Suggested normal range of parameter.
 Default value is 0.0-1.0
 
-* @range/clipmode (symbol)@
+* @clipmode (symbol)@
 Define range boundary restrictions. In other words, does it limit the values to the ranges recommended with the @range attribute. Possible modes are:
 none | low | high | both
 Default: none
@@ -134,7 +134,7 @@ The template tries to help you remember the various attributes. For our module t
 
 | @type | boolean | it's a toggle, therefore we use the datatype boolean |
 | @range/bounds | 0 1 | this is all the range that we need |
-| @range/clipmode | both | so anything outside the range is clipped |
+| @clipmode | both | so anything outside the range is clipped |
 | @ramp/drive | none | it doesn't make sense to let a toggle ramp |
 | @repetitions/allow | 0 | neither are repetitions useful |
 | @description | | "Toggle qmetro on/off" |
@@ -143,7 +143,7 @@ The template tries to help you remember the various attributes. For our module t
 
 | @type | integer | it's an integer |
 | @range/bounds | 1 5000 | most of the time the metro will be fired within this time interval |
-| @range/clipmode | low | but we don't want to prevent it from being a higher value |
+| @clipmode | low | but we don't want to prevent it from being a higher value |
 | @ramp/drive | scheduler | can be useful for accelerando and ritardando |
 | @repetitions/allow | 0 | repetitions won't make any differences to the output, so we might just as well filter them out |
 | @description | | "Metro interval (ms)" |
